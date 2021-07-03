@@ -689,6 +689,9 @@ namespace demo1
             HoaDonDTO hd = layHD_update();
             bool kq = customerHDBUS.UpdateNV(hd);
             MessageBox.Show("Tổng tiền nhận được là: " + txttongtiendamua.Text);
+            InHoaDon mayin = new InHoaDon();
+            mayin.mahd = txtmahoadon.Text;
+            mayin.Show();
             Load_Form();
         }
     }

@@ -70,3 +70,15 @@ C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DTO\obj\De
 C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.dll
 C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.pdb
