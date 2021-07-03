@@ -78,6 +78,7 @@ namespace DAO
             {
                 HoaDon customer = demos.HoaDons.Where(u => u.MaHD == hd.MaHD).SingleOrDefault();
                 customer.TongTien = hd.TongTien;
+                customer.MaKH = hd.MaKH;
                 demos.SaveChanges();
                 return true;
             }

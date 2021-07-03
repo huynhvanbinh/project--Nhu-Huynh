@@ -528,7 +528,6 @@ namespace demo1
             this.txtkhuyenmai.SelectionStart = 0;
             this.txtkhuyenmai.ShortcutsEnabled = true;
             this.txtkhuyenmai.Size = new System.Drawing.Size(200, 35);
-            this.txtkhuyenmai.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtkhuyenmai.TabIndex = 63;
             this.txtkhuyenmai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtkhuyenmai.TextMarginBottom = 0;

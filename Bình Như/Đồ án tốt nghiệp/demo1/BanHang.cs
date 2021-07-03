@@ -250,6 +250,7 @@ namespace demo1
             HoaDonDTO NewSP = new HoaDonDTO();
             NewSP.MaHD = txtmahoadon.Text;
             NewSP.TongTien = string.IsNullOrEmpty(txttongtiendamua.Text) ? "" : txttongtiendamua.Text;
+            NewSP.MaKH = string.IsNullOrEmpty(txtmakhachhang.Text) ? "" :txtmakhachhang.Text;
             NewSP.TrangThai = "1";
             return NewSP;
         }
@@ -680,18 +681,29 @@ namespace demo1
                     MessageBox.Show("đã update sản phẩm");
                 }
                 reset();
+                suahoadon();
                 Load_Form();
             }
         }
-
-        private void bunifuButton3_Click(object sender, EventArgs e)
+        private void suahoadon()
         {
             HoaDonDTO hd = layHD_update();
             bool kq = customerHDBUS.UpdateNV(hd);
             MessageBox.Show("Tổng tiền nhận được là: " + txttongtiendamua.Text);
+        }
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            suahoadon();
             InHoaDon mayin = new InHoaDon();
             mayin.mahd = txtmahoadon.Text;
             mayin.Show();
+            Load_Form();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtmakhachhang.Text = "";
+            ThemHD();
             Load_Form();
         }
     }

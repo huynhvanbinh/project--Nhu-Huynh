@@ -68,6 +68,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CTSanPhams">
+      <EntityTypeMapping TypeName="demoModel.CTSanPham">
+        <MappingFragment StoreEntitySet="CTSanPham">
+          <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
+          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+          <ScalarProperty Name="MaMau" ColumnName="MaMau" />
+          <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="CuaHangs">
       <EntityTypeMapping TypeName="demoModel.CuaHang">
         <MappingFragment StoreEntitySet="CuaHang">

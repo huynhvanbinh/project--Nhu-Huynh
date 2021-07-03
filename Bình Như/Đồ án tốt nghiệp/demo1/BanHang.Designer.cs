@@ -137,6 +137,7 @@ namespace demo1
             this.txtthanhtien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -541,7 +542,6 @@ namespace demo1
             this.txtMaNV.SelectionStart = 0;
             this.txtMaNV.ShortcutsEnabled = true;
             this.txtMaNV.Size = new System.Drawing.Size(200, 35);
-            this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaNV.TabIndex = 73;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaNV.TextMarginBottom = 0;
@@ -1340,7 +1340,6 @@ namespace demo1
             this.txtmact.TextMarginBottom = 0;
             this.txtmact.TextMarginLeft = 5;
             this.txtmact.TextMarginTop = 0;
-            this.txtmact.TextPlaceholder = "mã chi tiết hóa đơn";
             this.txtmact.UseSystemPasswordChar = false;
             this.txtmact.WordWrap = true;
             // 
@@ -1622,12 +1621,25 @@ namespace demo1
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             this.bunifuButton3.Click += new System.EventHandler(this.bunifuButton3_Click);
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::demo1.Properties.Resources.tải_xuống;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1090, 198);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 64);
+            this.button3.TabIndex = 72;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Magenta;
             this.ClientSize = new System.Drawing.Size(1182, 675);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.bunifuButton3);
             this.Controls.Add(this.Them);
             this.Controls.Add(this.groupBox3);
@@ -1697,5 +1709,6 @@ namespace demo1
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Them;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
+        private System.Windows.Forms.Button button3;
     }
 }

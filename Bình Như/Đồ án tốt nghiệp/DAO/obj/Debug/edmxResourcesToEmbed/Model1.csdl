@@ -68,6 +68,17 @@
     <NavigationProperty Name="PhieuNhap" Relationship="Self.FK_CTPhieuNhap_PhieuNhap" FromRole="CTPhieuNhap" ToRole="PhieuNhap" />
     <NavigationProperty Name="Size" Relationship="Self.FK_CTPhieuNhap_Size" FromRole="CTPhieuNhap" ToRole="Size" />
   </EntityType>
+  <EntityType Name="CTSanPham">
+    <Key>
+      <PropertyRef Name="MaCTSP" />
+    </Key>
+    <Property Name="MaCTSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KichThuoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="CuaHang">
     <Key>
       <PropertyRef Name="MaCH" />
@@ -351,6 +362,7 @@
     <EntitySet Name="CTHoaDons" EntityType="Self.CTHoaDon" />
     <EntitySet Name="CTKhuyenMais" EntityType="Self.CTKhuyenMai" />
     <EntitySet Name="CTPhieuNhaps" EntityType="Self.CTPhieuNhap" />
+    <EntitySet Name="CTSanPhams" EntityType="Self.CTSanPham" />
     <EntitySet Name="CuaHangs" EntityType="Self.CuaHang" />
     <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
     <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />

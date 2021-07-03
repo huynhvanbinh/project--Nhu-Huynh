@@ -30,6 +30,7 @@ namespace DAO
         public virtual DbSet<CTHoaDon> CTHoaDons { get; set; }
         public virtual DbSet<CTKhuyenMai> CTKhuyenMais { get; set; }
         public virtual DbSet<CTPhieuNhap> CTPhieuNhaps { get; set; }
+        public virtual DbSet<CTSanPham> CTSanPhams { get; set; }
         public virtual DbSet<CuaHang> CuaHangs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }

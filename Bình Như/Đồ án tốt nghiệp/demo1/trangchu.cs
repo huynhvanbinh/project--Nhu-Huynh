@@ -123,18 +123,32 @@ namespace demo1
             chucvu.Show();
         }
 
-        private void dsHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void hóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             HoaDon hoadon = new HoaDon();
             hoadon.MdiParent = this;
             hoadon.Show();
         }
 
-        private void cTHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loạiSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CTHoaDon chitiethoadon = new CTHoaDon();
-            chitiethoadon.MdiParent = this;
-            chitiethoadon.Show();
+            LoaiSanPham loaisanpham = new LoaiSanPham();
+            loaisanpham.MdiParent = this;
+            loaisanpham.Show();
+        }
+
+        private void màuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MauSac mau = new MauSac();
+            mau.MdiParent = this;
+            mau.Show();
+        }
+
+        private void kíchThướcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Size kichthuoc = new Size();
+            kichthuoc.MdiParent = this;
+            kichthuoc.Show();
         }
     }
 }

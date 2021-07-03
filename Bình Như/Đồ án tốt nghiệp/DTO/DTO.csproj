@@ -54,6 +54,7 @@
     <Compile Include="CTHoaDonDTO.cs" />
     <Compile Include="CTKhuyenMaiDTO.cs" />
     <Compile Include="CTPhieuNhapDTO.cs" />
+    <Compile Include="CTSanPhamDTO.cs" />
     <Compile Include="CuaHangDTO.cs" />
     <Compile Include="HoaDonDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />

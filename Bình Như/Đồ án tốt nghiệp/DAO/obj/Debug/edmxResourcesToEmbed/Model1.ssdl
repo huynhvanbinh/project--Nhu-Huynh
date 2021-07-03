@@ -62,6 +62,17 @@
     <Property Name="MaSize" Type="nvarchar" MaxLength="20" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
   </EntityType>
+  <EntityType Name="CTSanPham">
+    <Key>
+      <PropertyRef Name="MaCTSP" />
+    </Key>
+    <Property Name="MaCTSP" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MaSP" Type="nvarchar" MaxLength="10" />
+    <Property Name="MaMau" Type="nvarchar" MaxLength="10" />
+    <Property Name="KichThuoc" Type="nvarchar" MaxLength="10" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
+    <Property Name="SoLuong" Type="nvarchar" MaxLength="10" />
+  </EntityType>
   <EntityType Name="CuaHang">
     <Key>
       <PropertyRef Name="MaCH" />
@@ -333,6 +344,7 @@
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTKhuyenMai" EntityType="Self.CTKhuyenMai" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPhieuNhap" EntityType="Self.CTPhieuNhap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTSanPham" EntityType="Self.CTSanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CuaHang" EntityType="Self.CuaHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />

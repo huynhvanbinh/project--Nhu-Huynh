@@ -54,6 +54,7 @@
     <Compile Include="CTHoaDonBUS.cs" />
     <Compile Include="CTKhuyenMaiBUS.cs" />
     <Compile Include="CTPhieuNhapBUS.cs" />
+    <Compile Include="CTSanPhamBUS.cs" />
     <Compile Include="CuaHangBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />

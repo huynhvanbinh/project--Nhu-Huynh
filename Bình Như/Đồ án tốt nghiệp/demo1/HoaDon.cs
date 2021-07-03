@@ -22,6 +22,11 @@ namespace demo1
         HoaDonBUS customerBUS = new HoaDonBUS();
         BindingSource bs = new BindingSource();
         List<HoaDonDTO> dskhs = new List<HoaDonDTO>();
+
+        //chi tiet hoa don
+        CTHoaDonBUS customerCTHDBUS = new CTHoaDonBUS();
+        BindingSource bscthd = new BindingSource();
+        List<CTHoaDonDTO> dscthd = new List<CTHoaDonDTO>();
         private void Load_Form()
         {
             Load_DSKH();
@@ -33,7 +38,12 @@ namespace demo1
             string ngay= dtpngay.Value.ToString("dd/MM/yyyy");
             dskhs = customerBUS.LayDssp(ngay);
             bs.DataSource = dskhs.ToList();
-            dtgv_ttkh.DataSource = bs;          
+            dtgv_ttkh.DataSource = bs;
+
+            string ma = txtMaHD.Text;
+            dscthd = customerCTHDBUS.LayDssp(ma);
+            bscthd.DataSource = dscthd.ToList();
+            cthd.DataSource = bscthd;
         }
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,6 +56,11 @@ namespace demo1
                 txtMaKH.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
                 txtTongTien.Text = dtgv_ttkh.Rows[i].Cells[4].Value.ToString();
                 dtpngay.Text=dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
+
+                string ma = txtMaHD.Text;
+                dscthd = customerCTHDBUS.LayDssp(ma);
+                bscthd.DataSource = dscthd.ToList();
+                cthd.DataSource = bscthd;
             }
         }
         

@@ -18,6 +18,8 @@ namespace demo1
         {
             InitializeComponent();
             dtgv_ttsp.AutoGenerateColumns = false;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Visible = false;
             Load_Form();
         }
         SanPhamBUS customerBUS = new SanPhamBUS();
@@ -27,6 +29,18 @@ namespace demo1
         LoaiSanPhamBUS customerLSPBUS = new LoaiSanPhamBUS();
         BindingSource bscv = new BindingSource();
         List<LoaiSanPhamDTO> dssps = new List<LoaiSanPhamDTO>();
+
+        MauSacBUS customerMauBUS = new MauSacBUS();
+        BindingSource bsmau = new BindingSource();
+        List<MauSacDTO> dsmau = new List<MauSacDTO>();
+
+        SizeBUS customerKTBUS = new SizeBUS();
+        BindingSource bskt = new BindingSource();
+        List<SizeDTO> dskt = new List<SizeDTO>();
+
+        CTSanPhamBUS customerCTSPBUS = new CTSanPhamBUS();
+        BindingSource bsctsp = new BindingSource();
+        List<CTSanPhamDTO> dsctsp = new List<CTSanPhamDTO>();
         private void Load_Form()
         {
             Load_DSSP();
@@ -39,7 +53,19 @@ namespace demo1
             // khoi tao load du lieu bang chuc vu
             dssps = customerLSPBUS.LayDssp();
             bscv.DataSource = dssps.ToList();
+            //mau
+            dsmau = customerMauBUS.LayDsmau();
+            bsmau.DataSource = dssps.ToList();
+            //kich thuoc
+            dskt = customerKTBUS.LayDskt();
+            bskt.DataSource = dskt.ToList();
 
+            //chi tiet san pham
+            string ma = txtMaSP.Text;
+            dsctsp = customerCTSPBUS.LayDsmau(ma);
+            bsctsp.DataSource = dsctsp.ToList();
+            dataGridView1.DataSource = bsctsp;
+          
         }
 
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +81,29 @@ namespace demo1
                 txtSoLuong.Text = dtgv_ttsp.Rows[i].Cells[5].Value.ToString();
                 txtMoTa.Text = dtgv_ttsp.Rows[i].Cells[6].Value.ToString();
                 txtloaisp.Text = dtgv_ttsp.Rows[i].Cells[3].Value.ToString();
+                int ktctsp = 0;
+                dsctsp = customerCTSPBUS.LayDsCTSP();
+                bsctsp.DataSource = dsctsp.ToList();
+                foreach (CTSanPhamDTO ct in dsctsp)
+                {
+                    if(ct.MaSP.Equals(txtMaSP.Text))
+                    {
+                        ktctsp = 1;
+                    }    
+                }
+                if(ktctsp==0)
+                {
+                    dataGridView1.Visible = false;
+                }    
+                if(ktctsp==1)
+                {
+                    //load chi tiet san pham
+                    string ma = txtMaSP.Text;
+                    dsctsp = customerCTSPBUS.LayDsmau(ma);
+                    bsctsp.DataSource = dsctsp.ToList();
+                    dataGridView1.DataSource = bsctsp;
+                    dataGridView1.Visible = true;
+                }    
             }    
         }
         private SanPhamDTO layTTSP_moi()
@@ -74,7 +123,17 @@ namespace demo1
             NewSP.TrangThai = "1";
             return NewSP;
         }
-
+        private CTSanPhamDTO layCTSP_moi()
+        {
+            CTSanPhamDTO NewSP = new CTSanPhamDTO();
+            NewSP.MaCTSP="SP"+ DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
+            NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
+            NewSP.MaMau= string.IsNullOrEmpty(mamau.Text) ? "" : mamau.Text;
+            NewSP.KichThuoc= string.IsNullOrEmpty(kichthuoc.Text) ? "" : kichthuoc.Text;
+            NewSP.SoLuong= string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
+            NewSP.TrangThai = "1";
+            return NewSP;
+        }
         private void Them_Click()
         {
             SanPhamDTO khAdd = layTTSP_moi();
@@ -87,9 +146,22 @@ namespace demo1
             {
                 bool kq = customerBUS.DKSP(khAdd);
                 MessageBox.Show("Thêm thành công");
-                reset();
-                Load_Form();
             }      
+        }
+        private void themCTSP()
+        {
+            CTSanPhamDTO khAdd = layCTSP_moi();
+            if (khAdd.MaSP=="")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+            else
+            {
+                bool kq = customerCTSPBUS.DKKH(khAdd);
+                MessageBox.Show("Thêm thành công");
+                Load_Form();
+            }
         }
         private void reset()
         {
@@ -114,6 +186,14 @@ namespace demo1
             foreach (LoaiSanPhamDTO sps in dssps)
             {
                 cmbloaisanpham.Items.Add(sps.MaLoai.ToString());
+            }
+            foreach (MauSacDTO sps in dsmau)
+            {
+                cmbmau.Items.Add(sps.TenMau.ToString());
+            }
+            foreach (SizeDTO sps in dskt)
+            {
+                cmbkichthuoc.Items.Add(sps.TenSize.ToString());
             }
         }
 
@@ -192,6 +272,8 @@ namespace demo1
         private void btnthem_Click(object sender, EventArgs e)
         {
             Them_Click();
+            dataGridView1.Visible = true;
+            themCTSP();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -206,7 +288,29 @@ namespace demo1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            dataGridView1.Visible = false;
             reset();
+        }
+
+        private void cmbmau_onItemSelected(object sender, EventArgs e)
+        {
+            foreach (MauSacDTO cv in dsmau)
+            {
+                if (cmbmau.selectedValue.Equals(cv.TenMau))
+                {
+                    mamau.Text = cv.MaMau;
+                }
+            }
+        }
+        private void cmbkichthuoc_onItemSelected(object sender, EventArgs e)
+        {
+            foreach (SizeDTO cv in dskt)
+            {
+                if (cmbkichthuoc.selectedValue.Equals(cv.TenSize))
+                {
+                    kichthuoc.Text = cv.MaSize;
+                }
+            }
         }
     }
 }
