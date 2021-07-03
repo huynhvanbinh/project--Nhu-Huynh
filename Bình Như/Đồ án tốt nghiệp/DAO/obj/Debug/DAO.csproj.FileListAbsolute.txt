@@ -1,0 +1,105 @@
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\project-graduatings\file tốt nghiệp\demo3lop\demo1\demo1\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\demo1\demo1\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\doanNhuHuynh\demo1\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\đồ án\NhuHuynh\demo1\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.dll.config
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.pdb
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\DTO.dll.config
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.dll
+C:\Users\Van_Binh_16\Desktop\binh\Bình Như1\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.pdb

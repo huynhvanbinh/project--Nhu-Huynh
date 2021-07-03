@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e5fd45f26d81400a83e01367ea05c325" Name="Diagram1">
+        <EntityTypeShape EntityType="demoModel.ChamCong" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.ChucVu" Width="1.5" PointX="5.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.CTHoaDon" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.CTKhuyenMai" Width="1.5" PointX="8" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.CTPhieuNhap" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.CuaHang" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.HoaDon" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.KhachHang" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.KhichThuoc" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.KhuyenMai" Width="1.5" PointX="5.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.LoaiSanPham" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.LuongNhanVien" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.MauSac" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.NhanVien" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.PhieuNhap" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.SanPham" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.Size" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.sysdiagram" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.TaiKhoan" Width="1.5" PointX="10.25" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="demoModel.FK_NhanVien_ChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_CTKhuyenMai_KhuyenMai" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_CTPhieuNhap_CuaHang" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_CTPhieuNhap_MauSac" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_CTPhieuNhap_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_CTPhieuNhap_Size" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_PhieuNhap_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="demoModel.FK_TaiKhoan_NhanVien" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

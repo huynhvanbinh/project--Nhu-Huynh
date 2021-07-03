@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace demo1
+{
+    public partial class trangchu : Form
+    {
+        public string taikhoan;
+        public trangchu()
+        {
+            InitializeComponent();
+            //this.FormBorderStyle = FormBorderStyle.None;
+            Load_Form();
+        }
+        
+        public void Load_Form()
+        {
+            int widthScreen = Screen.PrimaryScreen.WorkingArea.Width;
+            int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = widthScreen;
+            this.Height = heightScreen;
+            labngay.Text = DateTime.Now.ToString("dd/MM/yyyy: HH/m/s");
+            paldangchon.Height = home.Height;
+            paldangchon.Top = home.Top;
+
+        }
+
+        public void trangchu_Load(object sender, EventArgs e)
+        {
+            
+            lay.Text = quyen;
+            if (maquyen == "AD")
+            {
+                MessageBox.Show("Toàn quyền hệ thống");
+            }
+            else if (maquyen == "NV")
+            {
+                MessageBox.Show("Đăng nhập quyền Nhân Viên");
+                quanly.Enabled = false;
+               
+            }
+        }
+        public string quyen = "";
+        public string maquyen = "";
+        public string manhanvien = "";
+     
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labgio.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        {
+            paldangchon.Height = home.Height;
+            paldangchon.Top = home.Top;
+        }
+
+        private void banhang_Click(object sender, EventArgs e)
+        {
+            paldangchon.Height = banhang.Height;
+            paldangchon.Top = banhang.Top;
+            BanHang banhangs = new BanHang();
+            banhangs.manhanvien = manhanvien;
+            banhangs.MdiParent = this;
+            banhangs.Show();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 dn = new Form1();
+            dn.MdiParent = this;
+            dn.Show();
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SanPham sp = new SanPham();
+            sp.MdiParent = this;
+            sp.Show();
+        }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HoaDon hd = new HoaDon();
+            hd.MdiParent = this;
+            hd.MaNV = manhanvien;
+            hd.Show();
+        }
+
+        private void khuyếnMãiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KhuyenMai km = new KhuyenMai();
+            km.MdiParent = this;
+            km.Show();
+        }
+
+        private void cửaHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CuaHang ch = new CuaHang();
+            ch.MdiParent = this;
+            ch.Show();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaiKhoan taikhoan = new TaiKhoan();
+            taikhoan.MdiParent = this;
+            taikhoan.Show();
+        }
+
+        private void loạiNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChucVu chucvu = new ChucVu();
+            chucvu.MdiParent = this;
+            chucvu.Show();
+        }
+
+        private void dsHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HoaDon hoadon = new HoaDon();
+            hoadon.MdiParent = this;
+            hoadon.Show();
+        }
+
+        private void cTHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CTHoaDon chitiethoadon = new CTHoaDon();
+            chitiethoadon.MdiParent = this;
+            chitiethoadon.Show();
+        }
+    }
+}
