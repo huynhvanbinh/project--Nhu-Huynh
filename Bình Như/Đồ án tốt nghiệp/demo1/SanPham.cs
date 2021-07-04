@@ -18,8 +18,6 @@ namespace demo1
         {
             InitializeComponent();
             dtgv_ttsp.AutoGenerateColumns = false;
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.Visible = false;
             Load_Form();
         }
         SanPhamBUS customerBUS = new SanPhamBUS();
@@ -64,7 +62,6 @@ namespace demo1
             string ma = txtMaSP.Text;
             dsctsp = customerCTSPBUS.LayDsmau(ma);
             bsctsp.DataSource = dsctsp.ToList();
-            dataGridView1.DataSource = bsctsp;
           
         }
 
@@ -78,32 +75,9 @@ namespace demo1
                 txtTenSP.Text = dtgv_ttsp.Rows[i].Cells[1].Value.ToString();
                 txtDonGia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
                 txtGiaNhap.Text = dtgv_ttsp.Rows[i].Cells[4].Value.ToString();
-                txtSoLuong.Text = dtgv_ttsp.Rows[i].Cells[5].Value.ToString();
                 txtMoTa.Text = dtgv_ttsp.Rows[i].Cells[6].Value.ToString();
                 txtloaisp.Text = dtgv_ttsp.Rows[i].Cells[3].Value.ToString();
-                int ktctsp = 0;
-                dsctsp = customerCTSPBUS.LayDsCTSP();
-                bsctsp.DataSource = dsctsp.ToList();
-                foreach (CTSanPhamDTO ct in dsctsp)
-                {
-                    if(ct.MaSP.Equals(txtMaSP.Text))
-                    {
-                        ktctsp = 1;
-                    }    
-                }
-                if(ktctsp==0)
-                {
-                    dataGridView1.Visible = false;
-                }    
-                if(ktctsp==1)
-                {
-                    //load chi tiet san pham
-                    string ma = txtMaSP.Text;
-                    dsctsp = customerCTSPBUS.LayDsmau(ma);
-                    bsctsp.DataSource = dsctsp.ToList();
-                    dataGridView1.DataSource = bsctsp;
-                    dataGridView1.Visible = true;
-                }    
+               
             }    
         }
         private SanPhamDTO layTTSP_moi()
@@ -114,7 +88,6 @@ namespace demo1
             NewSP.DonGia = string.IsNullOrEmpty(txtDonGia.Text) ? "" : txtDonGia.Text;
             
             NewSP.GiaNhap = string.IsNullOrEmpty(txtGiaNhap.Text) ? "" : txtGiaNhap.Text;
-            NewSP.SoLuongTon = string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
             NewSP.MoTa = string.IsNullOrEmpty(txtMoTa.Text) ? "" : txtMoTa.Text;
             NewSP.HinhAnh = string.IsNullOrEmpty(txtHinhAnh.Text) ? "" : txtHinhAnh.Text;
 
@@ -130,7 +103,6 @@ namespace demo1
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
             NewSP.MaMau= string.IsNullOrEmpty(mamau.Text) ? "" : mamau.Text;
             NewSP.KichThuoc= string.IsNullOrEmpty(kichthuoc.Text) ? "" : kichthuoc.Text;
-            NewSP.SoLuong= string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
             NewSP.TrangThai = "1";
             return NewSP;
         }
@@ -169,7 +141,6 @@ namespace demo1
             txtTenSP.Text = "";
             txtDonGia.Text = "";
             txtGiaNhap.Text = "";
-            txtSoLuong.Text = "";
             txtMoTa.Text = "";
             txtHinhAnh.Text = "";
             txtloaisp.Text = "";
@@ -186,14 +157,6 @@ namespace demo1
             foreach (LoaiSanPhamDTO sps in dssps)
             {
                 cmbloaisanpham.Items.Add(sps.MaLoai.ToString());
-            }
-            foreach (MauSacDTO sps in dsmau)
-            {
-                cmbmau.Items.Add(sps.TenMau.ToString());
-            }
-            foreach (SizeDTO sps in dskt)
-            {
-                cmbkichthuoc.Items.Add(sps.TenSize.ToString());
             }
         }
 
@@ -229,7 +192,6 @@ namespace demo1
             NewSP.DonGia = string.IsNullOrEmpty(txtDonGia.Text) ? "" : txtDonGia.Text;
 
             NewSP.GiaNhap = string.IsNullOrEmpty(txtGiaNhap.Text) ? "" : txtGiaNhap.Text;
-            NewSP.SoLuongTon = string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
             NewSP.TrangThai = "0";
             return NewSP;
         }
@@ -272,8 +234,7 @@ namespace demo1
         private void btnthem_Click(object sender, EventArgs e)
         {
             Them_Click();
-            dataGridView1.Visible = true;
-            themCTSP();
+            themctsampham();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -288,29 +249,19 @@ namespace demo1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible = false;
             reset();
         }
 
-        private void cmbmau_onItemSelected(object sender, EventArgs e)
+       private void themctsampham()
         {
-            foreach (MauSacDTO cv in dsmau)
-            {
-                if (cmbmau.selectedValue.Equals(cv.TenMau))
-                {
-                    mamau.Text = cv.MaMau;
-                }
-            }
+            CTSanPham ctsanpham = new CTSanPham();
+            ctsanpham.masp = txtMaSP.Text;
+            ctsanpham.tensp = txtTenSP.Text;
+            ctsanpham.ShowDialog();
         }
-        private void cmbkichthuoc_onItemSelected(object sender, EventArgs e)
+        private void bunifuButton2_Click(object sender, EventArgs e)
         {
-            foreach (SizeDTO cv in dskt)
-            {
-                if (cmbkichthuoc.selectedValue.Equals(cv.TenSize))
-                {
-                    kichthuoc.Text = cv.MaSize;
-                }
-            }
+            themctsampham();
         }
     }
 }

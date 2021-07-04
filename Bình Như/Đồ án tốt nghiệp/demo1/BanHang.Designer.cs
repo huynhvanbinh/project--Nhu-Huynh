@@ -1190,7 +1190,6 @@ namespace demo1
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDonGia.TextMarginBottom = 0;
             this.txtDonGia.TextMarginLeft = 5;
-            this.txtDonGia.TextMarginTop = 0;
             this.txtDonGia.TextPlaceholder = "Đơn giá";
             this.txtDonGia.UseSystemPasswordChar = false;
             this.txtDonGia.WordWrap = true;
@@ -1334,7 +1333,6 @@ namespace demo1
             this.txtmact.SelectionStart = 0;
             this.txtmact.ShortcutsEnabled = true;
             this.txtmact.Size = new System.Drawing.Size(200, 35);
-            this.txtmact.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmact.TabIndex = 60;
             this.txtmact.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmact.TextMarginBottom = 0;

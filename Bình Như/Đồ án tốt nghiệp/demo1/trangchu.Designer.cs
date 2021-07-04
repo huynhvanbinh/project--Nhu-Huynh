@@ -31,12 +31,12 @@ namespace demo1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(trangchu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.lay = new System.Windows.Forms.Label();
             this.labngay = new System.Windows.Forms.Label();
@@ -68,6 +68,11 @@ namespace demo1
             this.hóaĐơnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zalo0327878264ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuNhậpXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuNhậpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cTPhiếuNhậpDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cTPhiếuXuấtDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -165,11 +170,11 @@ namespace demo1
             this.banhang.ColorContrastOnClick = 45;
             this.banhang.ColorContrastOnHover = 45;
             this.banhang.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.banhang.CustomizableEdges = borderEdges1;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.banhang.CustomizableEdges = borderEdges7;
             this.banhang.DialogResult = System.Windows.Forms.DialogResult.None;
             this.banhang.DisabledBorderColor = System.Drawing.Color.Empty;
             this.banhang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -190,24 +195,24 @@ namespace demo1
             this.banhang.IndicateFocus = false;
             this.banhang.Location = new System.Drawing.Point(3, 169);
             this.banhang.Name = "banhang";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties1.BorderRadius = 3;
-            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            stateProperties1.ForeColor = System.Drawing.Color.White;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.banhang.onHoverState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.BorderRadius = 3;
-            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties2.ForeColor = System.Drawing.Color.White;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.banhang.OnPressedState = stateProperties2;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties13.BorderRadius = 3;
+            stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties13.BorderThickness = 1;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            stateProperties13.ForeColor = System.Drawing.Color.White;
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.banhang.onHoverState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties14.BorderRadius = 3;
+            stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties14.BorderThickness = 1;
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties14.ForeColor = System.Drawing.Color.White;
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.banhang.OnPressedState = stateProperties14;
             this.banhang.Size = new System.Drawing.Size(186, 45);
             this.banhang.TabIndex = 1;
             this.banhang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,11 +234,11 @@ namespace demo1
             this.home.ColorContrastOnClick = 45;
             this.home.ColorContrastOnHover = 45;
             this.home.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.home.CustomizableEdges = borderEdges2;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.home.CustomizableEdges = borderEdges8;
             this.home.DialogResult = System.Windows.Forms.DialogResult.None;
             this.home.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.home.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -254,24 +259,24 @@ namespace demo1
             this.home.IndicateFocus = false;
             this.home.Location = new System.Drawing.Point(3, 89);
             this.home.Name = "home";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.BorderRadius = 3;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            stateProperties3.ForeColor = System.Drawing.Color.White;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.home.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.BorderRadius = 3;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.home.OnPressedState = stateProperties4;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.BorderRadius = 3;
+            stateProperties15.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties15.BorderThickness = 1;
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            stateProperties15.ForeColor = System.Drawing.Color.White;
+            stateProperties15.IconLeftImage = null;
+            stateProperties15.IconRightImage = null;
+            this.home.onHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties16.BorderRadius = 3;
+            stateProperties16.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties16.BorderThickness = 1;
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties16.ForeColor = System.Drawing.Color.White;
+            stateProperties16.IconLeftImage = null;
+            stateProperties16.IconRightImage = null;
+            this.home.OnPressedState = stateProperties16;
             this.home.Size = new System.Drawing.Size(186, 45);
             this.home.TabIndex = 0;
             this.home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,6 +291,7 @@ namespace demo1
             this.quanly,
             this.báoCáoThốngKêToolStripMenuItem,
             this.hóaĐơnToolStripMenuItem1,
+            this.phiếuNhậpXuấtToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -446,8 +452,47 @@ namespace demo1
             this.zalo0327878264ToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
             this.zalo0327878264ToolStripMenuItem.Image = global::demo1.Properties.Resources.Account;
             this.zalo0327878264ToolStripMenuItem.Name = "zalo0327878264ToolStripMenuItem";
-            this.zalo0327878264ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.zalo0327878264ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zalo0327878264ToolStripMenuItem.Text = "Zalo: 0327878264";
+            // 
+            // phiếuNhậpXuấtToolStripMenuItem
+            // 
+            this.phiếuNhậpXuấtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phiếuNhậpToolStripMenuItem1,
+            this.phiếuXuấtToolStripMenuItem1,
+            this.cTPhiếuNhậpDemoToolStripMenuItem,
+            this.cTPhiếuXuấtDemoToolStripMenuItem});
+            this.phiếuNhậpXuấtToolStripMenuItem.Name = "phiếuNhậpXuấtToolStripMenuItem";
+            this.phiếuNhậpXuấtToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.phiếuNhậpXuấtToolStripMenuItem.Text = "Phiếu nhập- xuất";
+            // 
+            // phiếuNhậpToolStripMenuItem1
+            // 
+            this.phiếuNhậpToolStripMenuItem1.Name = "phiếuNhậpToolStripMenuItem1";
+            this.phiếuNhậpToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.phiếuNhậpToolStripMenuItem1.Text = "Phiếu nhập";
+            this.phiếuNhậpToolStripMenuItem1.Click += new System.EventHandler(this.phiếuNhậpToolStripMenuItem1_Click);
+            // 
+            // phiếuXuấtToolStripMenuItem1
+            // 
+            this.phiếuXuấtToolStripMenuItem1.Name = "phiếuXuấtToolStripMenuItem1";
+            this.phiếuXuấtToolStripMenuItem1.Size = new System.Drawing.Size(185, 22);
+            this.phiếuXuấtToolStripMenuItem1.Text = "Phiếu xuất";
+            this.phiếuXuấtToolStripMenuItem1.Click += new System.EventHandler(this.phiếuXuấtToolStripMenuItem1_Click);
+            // 
+            // cTPhiếuNhậpDemoToolStripMenuItem
+            // 
+            this.cTPhiếuNhậpDemoToolStripMenuItem.Name = "cTPhiếuNhậpDemoToolStripMenuItem";
+            this.cTPhiếuNhậpDemoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.cTPhiếuNhậpDemoToolStripMenuItem.Text = "CT phiếu nhập demo";
+            this.cTPhiếuNhậpDemoToolStripMenuItem.Click += new System.EventHandler(this.cTPhiếuNhậpDemoToolStripMenuItem_Click);
+            // 
+            // cTPhiếuXuấtDemoToolStripMenuItem
+            // 
+            this.cTPhiếuXuấtDemoToolStripMenuItem.Name = "cTPhiếuXuấtDemoToolStripMenuItem";
+            this.cTPhiếuXuấtDemoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.cTPhiếuXuấtDemoToolStripMenuItem.Text = "CT Phiếu xuất demo";
+            this.cTPhiếuXuấtDemoToolStripMenuItem.Click += new System.EventHandler(this.cTPhiếuXuấtDemoToolStripMenuItem_Click);
             // 
             // trangchu
             // 
@@ -506,5 +551,10 @@ namespace demo1
         private System.Windows.Forms.ToolStripMenuItem loạiSảnPhẩmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem màuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kíchThướcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuNhậpXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuNhậpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem phiếuXuấtToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cTPhiếuNhậpDemoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cTPhiếuXuấtDemoToolStripMenuItem;
     }
 }

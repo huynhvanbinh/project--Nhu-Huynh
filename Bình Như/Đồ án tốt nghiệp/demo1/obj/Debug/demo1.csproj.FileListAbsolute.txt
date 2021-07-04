@@ -650,3 +650,6 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.csproj.CopyComplete
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.exe
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTSanPham.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTPhieuXuat.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.PhieuXuat.resources

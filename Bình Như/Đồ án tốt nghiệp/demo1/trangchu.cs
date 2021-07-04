@@ -150,5 +150,33 @@ namespace demo1
             kichthuoc.MdiParent = this;
             kichthuoc.Show();
         }
+
+        private void phiếuNhậpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PhieuNhap phieunhap = new PhieuNhap();
+            phieunhap.MdiParent = this;
+            phieunhap.Show();
+        }
+
+        private void cTPhiếuNhậpDemoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CTPhieuNhap ctpn = new CTPhieuNhap();
+            ctpn.MdiParent = this;
+            ctpn.Show();
+        }
+
+        private void phiếuXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PhieuXuat phieuxuat = new PhieuXuat();
+            phieuxuat.MdiParent = this;
+            phieuxuat.Show();
+        }
+
+        private void cTPhiếuXuấtDemoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
+            ctphieuxuat.MdiParent = this;
+            ctphieuxuat.Show();
+        }
     }
 }
