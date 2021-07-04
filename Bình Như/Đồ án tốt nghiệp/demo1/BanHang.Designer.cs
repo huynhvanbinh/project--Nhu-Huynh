@@ -542,6 +542,7 @@ namespace demo1
             this.txtMaNV.SelectionStart = 0;
             this.txtMaNV.ShortcutsEnabled = true;
             this.txtMaNV.Size = new System.Drawing.Size(200, 35);
+            this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaNV.TabIndex = 73;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaNV.TextMarginBottom = 0;
@@ -1190,6 +1191,7 @@ namespace demo1
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDonGia.TextMarginBottom = 0;
             this.txtDonGia.TextMarginLeft = 5;
+            this.txtDonGia.TextMarginTop = 0;
             this.txtDonGia.TextPlaceholder = "Đơn giá";
             this.txtDonGia.UseSystemPasswordChar = false;
             this.txtDonGia.WordWrap = true;
@@ -1333,11 +1335,13 @@ namespace demo1
             this.txtmact.SelectionStart = 0;
             this.txtmact.ShortcutsEnabled = true;
             this.txtmact.Size = new System.Drawing.Size(200, 35);
+            this.txtmact.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmact.TabIndex = 60;
             this.txtmact.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmact.TextMarginBottom = 0;
             this.txtmact.TextMarginLeft = 5;
             this.txtmact.TextMarginTop = 0;
+            this.txtmact.TextPlaceholder = "mã chi tiết hóa đơn";
             this.txtmact.UseSystemPasswordChar = false;
             this.txtmact.WordWrap = true;
             // 
@@ -1635,7 +1639,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Magenta;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1182, 675);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.bunifuButton3);
