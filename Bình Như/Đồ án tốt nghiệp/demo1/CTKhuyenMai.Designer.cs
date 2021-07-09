@@ -29,6 +29,8 @@ namespace demo1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTKhuyenMai));
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -120,6 +122,14 @@ namespace demo1
             // dtgv_ttkh
             // 
             this.dtgv_ttkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_ttkh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_ttkh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_ttkh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -127,12 +137,12 @@ namespace demo1
             this.TenNv,
             this.Column1,
             this.Column2});
-            this.dtgv_ttkh.Location = new System.Drawing.Point(12, 325);
+            this.dtgv_ttkh.Location = new System.Drawing.Point(14, 375);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
             this.dtgv_ttkh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttkh.Size = new System.Drawing.Size(476, 236);
+            this.dtgv_ttkh.Size = new System.Drawing.Size(555, 272);
             this.dtgv_ttkh.TabIndex = 62;
             this.dtgv_ttkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellClick);
             // 
@@ -177,22 +187,30 @@ namespace demo1
             this.cmbcuahang.BackColor = System.Drawing.Color.Transparent;
             this.cmbcuahang.BorderRadius = 3;
             this.cmbcuahang.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbcuahang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbcuahang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbcuahang.ForeColor = System.Drawing.Color.White;
             this.cmbcuahang.items = new string[0];
-            this.cmbcuahang.Location = new System.Drawing.Point(13, 114);
-            this.cmbcuahang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbcuahang.Location = new System.Drawing.Point(15, 132);
+            this.cmbcuahang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.cmbcuahang.Name = "cmbcuahang";
-            this.cmbcuahang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.cmbcuahang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.cmbcuahang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.cmbcuahang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cmbcuahang.selectedIndex = -1;
-            this.cmbcuahang.Size = new System.Drawing.Size(170, 35);
+            this.cmbcuahang.Size = new System.Drawing.Size(198, 40);
             this.cmbcuahang.TabIndex = 70;
             this.cmbcuahang.onItemSelected += new System.EventHandler(this.changmach);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -203,12 +221,12 @@ namespace demo1
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 258);
+            this.dataGridView1.Size = new System.Drawing.Size(555, 298);
             this.dataGridView1.TabIndex = 78;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadsanpham);
             // 
@@ -272,11 +290,11 @@ namespace demo1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Location = new System.Drawing.Point(14, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 26);
+            this.label1.Size = new System.Drawing.Size(204, 25);
             this.label1.TabIndex = 79;
             this.label1.Text = "Thông Tin Sản Phẩm";
             // 
@@ -285,7 +303,7 @@ namespace demo1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(7, 296);
+            this.label2.Location = new System.Drawing.Point(8, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(264, 26);
             this.label2.TabIndex = 80;
@@ -294,11 +312,11 @@ namespace demo1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(6, 157);
+            this.label3.Font = new System.Drawing.Font("Matura MT Script Capitals", 11F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(7, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 26);
+            this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 81;
             this.label3.Text = " Sản Phẩm";
             // 
@@ -307,7 +325,7 @@ namespace demo1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Magenta;
-            this.label4.Location = new System.Drawing.Point(723, 167);
+            this.label4.Location = new System.Drawing.Point(843, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 82;
@@ -318,7 +336,7 @@ namespace demo1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Magenta;
-            this.label5.Location = new System.Drawing.Point(720, 200);
+            this.label5.Location = new System.Drawing.Point(840, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 83;
@@ -329,7 +347,7 @@ namespace demo1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Magenta;
-            this.label6.Location = new System.Drawing.Point(720, 241);
+            this.label6.Location = new System.Drawing.Point(840, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 17);
             this.label6.TabIndex = 84;
@@ -340,7 +358,7 @@ namespace demo1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Magenta;
-            this.label7.Location = new System.Drawing.Point(720, 279);
+            this.label7.Location = new System.Drawing.Point(840, 322);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
             this.label7.TabIndex = 85;
@@ -349,11 +367,11 @@ namespace demo1
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Lime;
-            this.label8.Location = new System.Drawing.Point(6, 80);
+            this.label8.Font = new System.Drawing.Font("Matura MT Script Capitals", 11F, System.Drawing.FontStyle.Italic);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(7, 92);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 26);
+            this.label8.Size = new System.Drawing.Size(69, 20);
             this.label8.TabIndex = 90;
             this.label8.Text = "Cửa hàng";
             // 
@@ -378,11 +396,11 @@ namespace demo1
             this.groupBox1.Controls.Add(this.txtdongia);
             this.groupBox1.Controls.Add(this.txtkhachhang);
             this.groupBox1.Controls.Add(this.txtgiamgia);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.groupBox1.Location = new System.Drawing.Point(506, 6);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(590, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 481);
+            this.groupBox1.Size = new System.Drawing.Size(451, 555);
             this.groupBox1.TabIndex = 96;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết khuyến mãi";
@@ -390,77 +408,77 @@ namespace demo1
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(9, 451);
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(10, 520);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(82, 20);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(76, 18);
             this.bunifuCustomLabel7.TabIndex = 103;
             this.bunifuCustomLabel7.Text = "Đối tượng:";
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(9, 398);
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(10, 459);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(80, 20);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(75, 18);
             this.bunifuCustomLabel6.TabIndex = 102;
             this.bunifuCustomLabel6.Text = "Giảm Giá:";
             // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(9, 346);
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(10, 399);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(82, 20);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(76, 18);
             this.bunifuCustomLabel5.TabIndex = 101;
             this.bunifuCustomLabel5.Text = "Số Lượng:";
             // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(9, 296);
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(10, 342);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(71, 20);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(65, 18);
             this.bunifuCustomLabel4.TabIndex = 100;
             this.bunifuCustomLabel4.Text = "Giá Bán:";
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(9, 250);
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(10, 288);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(118, 20);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(110, 18);
             this.bunifuCustomLabel3.TabIndex = 99;
             this.bunifuCustomLabel3.Text = "Tên Sản Phẩm:";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(9, 201);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(10, 232);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(113, 20);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(106, 18);
             this.bunifuCustomLabel2.TabIndex = 98;
             this.bunifuCustomLabel2.Text = "Mã Sản Phẩm:";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(9, 49);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(10, 57);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(119, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(114, 18);
             this.bunifuCustomLabel1.TabIndex = 97;
             this.bunifuCustomLabel1.Text = "Mã Chi Tiết KM:";
             // 
@@ -481,7 +499,7 @@ namespace demo1
             this.txtkhuyenmai.BorderThickness = 1;
             this.txtkhuyenmai.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtkhuyenmai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtkhuyenmai.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtkhuyenmai.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtkhuyenmai.DefaultText = "";
             this.txtkhuyenmai.Enabled = false;
             this.txtkhuyenmai.FillColor = System.Drawing.Color.White;
@@ -492,9 +510,9 @@ namespace demo1
             this.txtkhuyenmai.IconRight = null;
             this.txtkhuyenmai.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtkhuyenmai.Lines = new string[0];
-            this.txtkhuyenmai.Location = new System.Drawing.Point(134, 34);
+            this.txtkhuyenmai.Location = new System.Drawing.Point(156, 39);
             this.txtkhuyenmai.MaxLength = 32767;
-            this.txtkhuyenmai.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtkhuyenmai.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtkhuyenmai.Modified = false;
             this.txtkhuyenmai.Multiline = false;
             this.txtkhuyenmai.Name = "txtkhuyenmai";
@@ -527,7 +545,8 @@ namespace demo1
             this.txtkhuyenmai.SelectionLength = 0;
             this.txtkhuyenmai.SelectionStart = 0;
             this.txtkhuyenmai.ShortcutsEnabled = true;
-            this.txtkhuyenmai.Size = new System.Drawing.Size(200, 35);
+            this.txtkhuyenmai.Size = new System.Drawing.Size(233, 40);
+            this.txtkhuyenmai.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtkhuyenmai.TabIndex = 63;
             this.txtkhuyenmai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtkhuyenmai.TextMarginBottom = 0;
@@ -554,7 +573,7 @@ namespace demo1
             this.txtmakm.BorderThickness = 1;
             this.txtmakm.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmakm.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmakm.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmakm.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmakm.DefaultText = "";
             this.txtmakm.Enabled = false;
             this.txtmakm.FillColor = System.Drawing.Color.White;
@@ -565,9 +584,9 @@ namespace demo1
             this.txtmakm.IconRight = null;
             this.txtmakm.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmakm.Lines = new string[0];
-            this.txtmakm.Location = new System.Drawing.Point(190, 75);
+            this.txtmakm.Location = new System.Drawing.Point(156, 86);
             this.txtmakm.MaxLength = 32767;
-            this.txtmakm.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtmakm.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtmakm.Modified = false;
             this.txtmakm.Multiline = false;
             this.txtmakm.Name = "txtmakm";
@@ -600,7 +619,7 @@ namespace demo1
             this.txtmakm.SelectionLength = 0;
             this.txtmakm.SelectionStart = 0;
             this.txtmakm.ShortcutsEnabled = true;
-            this.txtmakm.Size = new System.Drawing.Size(200, 35);
+            this.txtmakm.Size = new System.Drawing.Size(233, 40);
             this.txtmakm.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmakm.TabIndex = 93;
             this.txtmakm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -628,7 +647,7 @@ namespace demo1
             this.txtmach.BorderThickness = 1;
             this.txtmach.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmach.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmach.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmach.DefaultText = "";
             this.txtmach.Enabled = false;
             this.txtmach.FillColor = System.Drawing.Color.White;
@@ -639,9 +658,9 @@ namespace demo1
             this.txtmach.IconRight = null;
             this.txtmach.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmach.Lines = new string[0];
-            this.txtmach.Location = new System.Drawing.Point(190, 114);
+            this.txtmach.Location = new System.Drawing.Point(221, 132);
             this.txtmach.MaxLength = 32767;
-            this.txtmach.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtmach.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtmach.Modified = false;
             this.txtmach.Multiline = false;
             this.txtmach.Name = "txtmach";
@@ -674,7 +693,8 @@ namespace demo1
             this.txtmach.SelectionLength = 0;
             this.txtmach.SelectionStart = 0;
             this.txtmach.ShortcutsEnabled = true;
-            this.txtmach.Size = new System.Drawing.Size(200, 35);
+            this.txtmach.Size = new System.Drawing.Size(217, 40);
+            this.txtmach.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmach.TabIndex = 75;
             this.txtmach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmach.TextMarginBottom = 0;
@@ -701,7 +721,7 @@ namespace demo1
             this.txtmasp.BorderThickness = 1;
             this.txtmasp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmasp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmasp.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmasp.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmasp.DefaultText = "";
             this.txtmasp.Enabled = false;
             this.txtmasp.FillColor = System.Drawing.Color.White;
@@ -712,9 +732,9 @@ namespace demo1
             this.txtmasp.IconRight = null;
             this.txtmasp.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmasp.Lines = new string[0];
-            this.txtmasp.Location = new System.Drawing.Point(134, 186);
+            this.txtmasp.Location = new System.Drawing.Point(156, 215);
             this.txtmasp.MaxLength = 32767;
-            this.txtmasp.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtmasp.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtmasp.Modified = false;
             this.txtmasp.Multiline = false;
             this.txtmasp.Name = "txtmasp";
@@ -747,7 +767,8 @@ namespace demo1
             this.txtmasp.SelectionLength = 0;
             this.txtmasp.SelectionStart = 0;
             this.txtmasp.ShortcutsEnabled = true;
-            this.txtmasp.Size = new System.Drawing.Size(200, 35);
+            this.txtmasp.Size = new System.Drawing.Size(233, 40);
+            this.txtmasp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmasp.TabIndex = 86;
             this.txtmasp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmasp.TextMarginBottom = 0;
@@ -774,7 +795,7 @@ namespace demo1
             this.txtsoluong.BorderThickness = 1;
             this.txtsoluong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtsoluong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsoluong.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtsoluong.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtsoluong.DefaultText = "";
             this.txtsoluong.Enabled = false;
             this.txtsoluong.FillColor = System.Drawing.Color.White;
@@ -785,9 +806,9 @@ namespace demo1
             this.txtsoluong.IconRight = null;
             this.txtsoluong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsoluong.Lines = new string[0];
-            this.txtsoluong.Location = new System.Drawing.Point(134, 331);
+            this.txtsoluong.Location = new System.Drawing.Point(156, 382);
             this.txtsoluong.MaxLength = 32767;
-            this.txtsoluong.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtsoluong.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtsoluong.Modified = false;
             this.txtsoluong.Multiline = false;
             this.txtsoluong.Name = "txtsoluong";
@@ -820,7 +841,7 @@ namespace demo1
             this.txtsoluong.SelectionLength = 0;
             this.txtsoluong.SelectionStart = 0;
             this.txtsoluong.ShortcutsEnabled = true;
-            this.txtsoluong.Size = new System.Drawing.Size(200, 35);
+            this.txtsoluong.Size = new System.Drawing.Size(233, 40);
             this.txtsoluong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtsoluong.TabIndex = 89;
             this.txtsoluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -848,7 +869,7 @@ namespace demo1
             this.txttensp.BorderThickness = 1;
             this.txttensp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txttensp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttensp.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txttensp.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txttensp.DefaultText = "";
             this.txttensp.Enabled = false;
             this.txttensp.FillColor = System.Drawing.Color.White;
@@ -859,9 +880,9 @@ namespace demo1
             this.txttensp.IconRight = null;
             this.txttensp.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txttensp.Lines = new string[0];
-            this.txttensp.Location = new System.Drawing.Point(134, 235);
+            this.txttensp.Location = new System.Drawing.Point(156, 271);
             this.txttensp.MaxLength = 32767;
-            this.txttensp.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txttensp.MinimumSize = new System.Drawing.Size(117, 40);
             this.txttensp.Modified = false;
             this.txttensp.Multiline = false;
             this.txttensp.Name = "txttensp";
@@ -887,13 +908,14 @@ namespace demo1
             this.txttensp.OnIdleState = stateProperties24;
             this.txttensp.PasswordChar = '\0';
             this.txttensp.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txttensp.PlaceholderText = "";
             this.txttensp.ReadOnly = false;
             this.txttensp.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txttensp.SelectedText = "";
             this.txttensp.SelectionLength = 0;
             this.txttensp.SelectionStart = 0;
             this.txttensp.ShortcutsEnabled = true;
-            this.txttensp.Size = new System.Drawing.Size(200, 35);
+            this.txttensp.Size = new System.Drawing.Size(233, 40);
             this.txttensp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txttensp.TabIndex = 87;
             this.txttensp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -921,7 +943,7 @@ namespace demo1
             this.txtdongia.BorderThickness = 1;
             this.txtdongia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdongia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdongia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtdongia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtdongia.DefaultText = "";
             this.txtdongia.Enabled = false;
             this.txtdongia.FillColor = System.Drawing.Color.White;
@@ -932,9 +954,9 @@ namespace demo1
             this.txtdongia.IconRight = null;
             this.txtdongia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtdongia.Lines = new string[0];
-            this.txtdongia.Location = new System.Drawing.Point(134, 281);
+            this.txtdongia.Location = new System.Drawing.Point(156, 324);
             this.txtdongia.MaxLength = 32767;
-            this.txtdongia.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtdongia.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtdongia.Modified = false;
             this.txtdongia.Multiline = false;
             this.txtdongia.Name = "txtdongia";
@@ -967,7 +989,7 @@ namespace demo1
             this.txtdongia.SelectionLength = 0;
             this.txtdongia.SelectionStart = 0;
             this.txtdongia.ShortcutsEnabled = true;
-            this.txtdongia.Size = new System.Drawing.Size(200, 35);
+            this.txtdongia.Size = new System.Drawing.Size(233, 40);
             this.txtdongia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtdongia.TabIndex = 88;
             this.txtdongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -995,7 +1017,7 @@ namespace demo1
             this.txtkhachhang.BorderThickness = 1;
             this.txtkhachhang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtkhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtkhachhang.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtkhachhang.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtkhachhang.DefaultText = "";
             this.txtkhachhang.FillColor = System.Drawing.Color.White;
             this.txtkhachhang.ForeColor = System.Drawing.Color.Black;
@@ -1006,9 +1028,9 @@ namespace demo1
             this.txtkhachhang.IconRight = null;
             this.txtkhachhang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtkhachhang.Lines = new string[0];
-            this.txtkhachhang.Location = new System.Drawing.Point(134, 436);
+            this.txtkhachhang.Location = new System.Drawing.Point(156, 503);
             this.txtkhachhang.MaxLength = 32767;
-            this.txtkhachhang.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtkhachhang.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtkhachhang.Modified = false;
             this.txtkhachhang.Multiline = false;
             this.txtkhachhang.Name = "txtkhachhang";
@@ -1041,7 +1063,7 @@ namespace demo1
             this.txtkhachhang.SelectionLength = 0;
             this.txtkhachhang.SelectionStart = 0;
             this.txtkhachhang.ShortcutsEnabled = true;
-            this.txtkhachhang.Size = new System.Drawing.Size(200, 35);
+            this.txtkhachhang.Size = new System.Drawing.Size(233, 40);
             this.txtkhachhang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtkhachhang.TabIndex = 77;
             this.txtkhachhang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1069,7 +1091,7 @@ namespace demo1
             this.txtgiamgia.BorderThickness = 1;
             this.txtgiamgia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtgiamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtgiamgia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtgiamgia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtgiamgia.DefaultText = "";
             this.txtgiamgia.FillColor = System.Drawing.Color.White;
             this.txtgiamgia.ForeColor = System.Drawing.Color.Black;
@@ -1080,9 +1102,9 @@ namespace demo1
             this.txtgiamgia.IconRight = null;
             this.txtgiamgia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtgiamgia.Lines = new string[0];
-            this.txtgiamgia.Location = new System.Drawing.Point(134, 383);
+            this.txtgiamgia.Location = new System.Drawing.Point(156, 442);
             this.txtgiamgia.MaxLength = 32767;
-            this.txtgiamgia.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtgiamgia.MinimumSize = new System.Drawing.Size(117, 40);
             this.txtgiamgia.Modified = false;
             this.txtgiamgia.Multiline = false;
             this.txtgiamgia.Name = "txtgiamgia";
@@ -1115,7 +1137,7 @@ namespace demo1
             this.txtgiamgia.SelectionLength = 0;
             this.txtgiamgia.SelectionStart = 0;
             this.txtgiamgia.ShortcutsEnabled = true;
-            this.txtgiamgia.Size = new System.Drawing.Size(200, 35);
+            this.txtgiamgia.Size = new System.Drawing.Size(233, 40);
             this.txtgiamgia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtgiamgia.TabIndex = 64;
             this.txtgiamgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1131,9 +1153,9 @@ namespace demo1
             this.button4.BackgroundImage = global::demo1.Properties.Resources.kteatime;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(852, 497);
+            this.button4.Location = new System.Drawing.Point(994, 573);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 64);
+            this.button4.Size = new System.Drawing.Size(70, 74);
             this.button4.TabIndex = 101;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -1143,9 +1165,9 @@ namespace demo1
             this.button3.BackgroundImage = global::demo1.Properties.Resources.tải_xuống;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(763, 497);
+            this.button3.Location = new System.Drawing.Point(890, 573);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 64);
+            this.button3.Size = new System.Drawing.Size(70, 74);
             this.button3.TabIndex = 100;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -1154,9 +1176,9 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(677, 497);
+            this.button2.Location = new System.Drawing.Point(790, 573);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 64);
+            this.button2.Size = new System.Drawing.Size(70, 74);
             this.button2.TabIndex = 99;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1166,9 +1188,9 @@ namespace demo1
             this.button1.BackgroundImage = global::demo1.Properties.Resources.delete;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(594, 497);
+            this.button1.Location = new System.Drawing.Point(693, 573);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 64);
+            this.button1.Size = new System.Drawing.Size(70, 74);
             this.button1.TabIndex = 98;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1178,19 +1200,19 @@ namespace demo1
             this.btnthem.BackgroundImage = global::demo1.Properties.Resources.add;
             this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(507, 497);
+            this.btnthem.Location = new System.Drawing.Point(591, 573);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(60, 64);
+            this.btnthem.Size = new System.Drawing.Size(70, 74);
             this.btnthem.TabIndex = 97;
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // CTKhuyenMai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Magenta;
-            this.ClientSize = new System.Drawing.Size(935, 573);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1068, 661);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -1205,6 +1227,7 @@ namespace demo1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dtgv_ttkh);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CTKhuyenMai";
             this.Text = "CTKhuyenMai";
             this.Load += new System.EventHandler(this.Form1_Load);

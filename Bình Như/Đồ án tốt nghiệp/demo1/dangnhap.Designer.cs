@@ -54,8 +54,8 @@ namespace demo1
             this.bunifuThinButton22.ActiveCornerRadius = 20;
             this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Red;
             this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
             this.bunifuThinButton22.ButtonText = "Thoat";
             this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -91,7 +91,7 @@ namespace demo1
             this.txtpass.BorderThickness = 1;
             this.txtpass.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtpass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtpass.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtpass.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtpass.DefaultText = "";
             this.txtpass.FillColor = System.Drawing.Color.White;
             this.txtpass.ForeColor = System.Drawing.Color.Black;
@@ -166,7 +166,7 @@ namespace demo1
             this.txtdangnhap.BorderThickness = 1;
             this.txtdangnhap.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdangnhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdangnhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtdangnhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtdangnhap.DefaultText = "";
             this.txtdangnhap.FillColor = System.Drawing.Color.White;
             this.txtdangnhap.ForeColor = System.Drawing.Color.Black;
@@ -228,10 +228,10 @@ namespace demo1
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
             this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Dang Nhap";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -260,6 +260,7 @@ namespace demo1
             this.linkLabel1.TabIndex = 11;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Quên mật khẩu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox1
             // 
@@ -294,7 +295,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(514, 423);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);

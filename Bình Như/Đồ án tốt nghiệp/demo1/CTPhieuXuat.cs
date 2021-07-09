@@ -16,5 +16,10 @@ namespace demo1
         {
             InitializeComponent();
         }
+
+        private void cmbloaisanpham_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
     }
 }

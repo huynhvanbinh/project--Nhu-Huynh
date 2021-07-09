@@ -129,5 +129,10 @@ namespace demo1
         {
 
         }
+
+        private void dtgv_ttsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

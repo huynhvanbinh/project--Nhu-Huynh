@@ -29,6 +29,7 @@ namespace demo1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDon));
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -49,6 +50,7 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
             this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +89,14 @@ namespace demo1
             // dtgv_ttkh
             // 
             this.dtgv_ttkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_ttkh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_ttkh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_ttkh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaNV,
@@ -178,8 +188,8 @@ namespace demo1
             this.groupBox1.Controls.Add(this.txtTongTien);
             this.groupBox1.Controls.Add(this.txtMaKH);
             this.groupBox1.Controls.Add(this.txtMaNV);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(542, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(390, 458);
@@ -190,55 +200,55 @@ namespace demo1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(9, 402);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(57, 18);
             this.label1.TabIndex = 45;
             this.label1.Text = "Mã NV:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(9, 316);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 20);
+            this.label6.Size = new System.Drawing.Size(78, 18);
             this.label6.TabIndex = 44;
             this.label6.Text = "Tổng Tiền:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(6, 234);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.Size = new System.Drawing.Size(58, 18);
             this.label5.TabIndex = 43;
             this.label5.Text = "Mã KH:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(6, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.Size = new System.Drawing.Size(70, 18);
             this.label4.TabIndex = 42;
             this.label4.Text = "Ngày Lập";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(7, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(59, 18);
             this.label3.TabIndex = 41;
             this.label3.Text = "Mã HĐ:";
             // 
@@ -259,7 +269,7 @@ namespace demo1
             this.txtMaHD.BorderThickness = 1;
             this.txtMaHD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaHD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaHD.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaHD.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaHD.DefaultText = "";
             this.txtMaHD.Enabled = false;
             this.txtMaHD.FillColor = System.Drawing.Color.White;
@@ -291,6 +301,7 @@ namespace demo1
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaHD.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Black;
@@ -306,6 +317,7 @@ namespace demo1
             this.txtMaHD.SelectionStart = 0;
             this.txtMaHD.ShortcutsEnabled = true;
             this.txtMaHD.Size = new System.Drawing.Size(200, 35);
+            this.txtMaHD.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaHD.TabIndex = 29;
             this.txtMaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaHD.TextMarginBottom = 0;
@@ -407,7 +419,7 @@ namespace demo1
             this.txtTongTien.BorderThickness = 1;
             this.txtTongTien.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTongTien.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtTongTien.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtTongTien.DefaultText = "";
             this.txtTongTien.Enabled = false;
             this.txtTongTien.FillColor = System.Drawing.Color.White;
@@ -434,6 +446,7 @@ namespace demo1
             stateProperties8.FillColor = System.Drawing.Color.White;
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtTongTien.OnDisabledState = stateProperties8;
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties9.FillColor = System.Drawing.Color.Empty;
             stateProperties9.ForeColor = System.Drawing.Color.Empty;
@@ -454,6 +467,7 @@ namespace demo1
             this.txtTongTien.SelectionStart = 0;
             this.txtTongTien.ShortcutsEnabled = true;
             this.txtTongTien.Size = new System.Drawing.Size(200, 35);
+            this.txtTongTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtTongTien.TabIndex = 37;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTongTien.TextMarginBottom = 0;
@@ -480,7 +494,7 @@ namespace demo1
             this.txtMaKH.BorderThickness = 1;
             this.txtMaKH.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaKH.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaKH.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaKH.DefaultText = "";
             this.txtMaKH.FillColor = System.Drawing.Color.White;
             this.txtMaKH.ForeColor = System.Drawing.Color.Black;
@@ -555,7 +569,7 @@ namespace demo1
             this.txtMaNV.BorderThickness = 1;
             this.txtMaNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaNV.DefaultText = "";
             this.txtMaNV.Enabled = false;
             this.txtMaNV.FillColor = System.Drawing.Color.White;
@@ -626,6 +640,14 @@ namespace demo1
             // 
             // cthd
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cthd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.cthd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cthd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -685,12 +707,13 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Fuchsia;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(934, 536);
             this.Controls.Add(this.cthd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dtgv_ttkh);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "HoaDon";
             this.Text = "HoaDon";
             this.Load += new System.EventHandler(this.hoadon);

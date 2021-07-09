@@ -35,6 +35,7 @@ namespace demo1
         public void trangchu_Load(object sender, EventArgs e)
         {
             
+
             lay.Text = quyen;
             if (maquyen == "AD")
             {

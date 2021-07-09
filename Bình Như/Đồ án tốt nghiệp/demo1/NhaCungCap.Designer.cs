@@ -86,12 +86,13 @@ namespace demo1
             this.Column2,
             this.Column3,
             this.Column1});
-            this.dtgv_ttkh.Location = new System.Drawing.Point(12, 47);
+            this.dtgv_ttkh.Location = new System.Drawing.Point(18, 65);
+            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
             this.dtgv_ttkh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttkh.Size = new System.Drawing.Size(577, 391);
+            this.dtgv_ttkh.Size = new System.Drawing.Size(688, 541);
             this.dtgv_ttkh.TabIndex = 38;
             this.dtgv_ttkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellClick);
             // 
@@ -148,7 +149,7 @@ namespace demo1
             this.txtsdt.BorderThickness = 1;
             this.txtsdt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtsdt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsdt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtsdt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtsdt.DefaultText = "";
             this.txtsdt.FillColor = System.Drawing.Color.White;
             this.txtsdt.ForeColor = System.Drawing.Color.Black;
@@ -159,9 +160,10 @@ namespace demo1
             this.txtsdt.IconRight = null;
             this.txtsdt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsdt.Lines = new string[0];
-            this.txtsdt.Location = new System.Drawing.Point(95, 155);
+            this.txtsdt.Location = new System.Drawing.Point(142, 215);
+            this.txtsdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsdt.MaxLength = 32767;
-            this.txtsdt.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtsdt.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtsdt.Modified = false;
             this.txtsdt.Multiline = false;
             this.txtsdt.Name = "txtsdt";
@@ -194,7 +196,7 @@ namespace demo1
             this.txtsdt.SelectionLength = 0;
             this.txtsdt.SelectionStart = 0;
             this.txtsdt.ShortcutsEnabled = true;
-            this.txtsdt.Size = new System.Drawing.Size(200, 35);
+            this.txtsdt.Size = new System.Drawing.Size(300, 48);
             this.txtsdt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtsdt.TabIndex = 46;
             this.txtsdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -222,7 +224,7 @@ namespace demo1
             this.txtdiachi.BorderThickness = 1;
             this.txtdiachi.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtdiachi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdiachi.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtdiachi.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtdiachi.DefaultText = "";
             this.txtdiachi.FillColor = System.Drawing.Color.White;
             this.txtdiachi.ForeColor = System.Drawing.Color.Black;
@@ -233,9 +235,10 @@ namespace demo1
             this.txtdiachi.IconRight = null;
             this.txtdiachi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtdiachi.Lines = new string[0];
-            this.txtdiachi.Location = new System.Drawing.Point(95, 258);
+            this.txtdiachi.Location = new System.Drawing.Point(142, 357);
+            this.txtdiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtdiachi.MaxLength = 32767;
-            this.txtdiachi.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtdiachi.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtdiachi.Modified = false;
             this.txtdiachi.Multiline = false;
             this.txtdiachi.Name = "txtdiachi";
@@ -268,7 +271,7 @@ namespace demo1
             this.txtdiachi.SelectionLength = 0;
             this.txtdiachi.SelectionStart = 0;
             this.txtdiachi.ShortcutsEnabled = true;
-            this.txtdiachi.Size = new System.Drawing.Size(200, 35);
+            this.txtdiachi.Size = new System.Drawing.Size(300, 48);
             this.txtdiachi.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtdiachi.TabIndex = 45;
             this.txtdiachi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -296,7 +299,7 @@ namespace demo1
             this.txtTenChucVu.BorderThickness = 1;
             this.txtTenChucVu.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTenChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtTenChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtTenChucVu.DefaultText = "";
             this.txtTenChucVu.FillColor = System.Drawing.Color.White;
             this.txtTenChucVu.ForeColor = System.Drawing.Color.Black;
@@ -307,9 +310,10 @@ namespace demo1
             this.txtTenChucVu.IconRight = null;
             this.txtTenChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenChucVu.Lines = new string[0];
-            this.txtTenChucVu.Location = new System.Drawing.Point(95, 99);
+            this.txtTenChucVu.Location = new System.Drawing.Point(142, 137);
+            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenChucVu.MaxLength = 32767;
-            this.txtTenChucVu.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtTenChucVu.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtTenChucVu.Modified = false;
             this.txtTenChucVu.Multiline = false;
             this.txtTenChucVu.Name = "txtTenChucVu";
@@ -342,7 +346,7 @@ namespace demo1
             this.txtTenChucVu.SelectionLength = 0;
             this.txtTenChucVu.SelectionStart = 0;
             this.txtTenChucVu.ShortcutsEnabled = true;
-            this.txtTenChucVu.Size = new System.Drawing.Size(200, 35);
+            this.txtTenChucVu.Size = new System.Drawing.Size(300, 48);
             this.txtTenChucVu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtTenChucVu.TabIndex = 40;
             this.txtTenChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -370,7 +374,7 @@ namespace demo1
             this.txtMaChucVu.BorderThickness = 1;
             this.txtMaChucVu.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaChucVu.DefaultText = "";
             this.txtMaChucVu.FillColor = System.Drawing.Color.White;
             this.txtMaChucVu.ForeColor = System.Drawing.Color.Black;
@@ -381,9 +385,10 @@ namespace demo1
             this.txtMaChucVu.IconRight = null;
             this.txtMaChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaChucVu.Lines = new string[0];
-            this.txtMaChucVu.Location = new System.Drawing.Point(95, 41);
+            this.txtMaChucVu.Location = new System.Drawing.Point(142, 57);
+            this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaChucVu.MaxLength = 32767;
-            this.txtMaChucVu.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtMaChucVu.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtMaChucVu.Modified = false;
             this.txtMaChucVu.Multiline = false;
             this.txtMaChucVu.Name = "txtMaChucVu";
@@ -416,7 +421,7 @@ namespace demo1
             this.txtMaChucVu.SelectionLength = 0;
             this.txtMaChucVu.SelectionStart = 0;
             this.txtMaChucVu.ShortcutsEnabled = true;
-            this.txtMaChucVu.Size = new System.Drawing.Size(200, 35);
+            this.txtMaChucVu.Size = new System.Drawing.Size(300, 48);
             this.txtMaChucVu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaChucVu.TabIndex = 39;
             this.txtMaChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -444,7 +449,7 @@ namespace demo1
             this.txtemail.BorderThickness = 1;
             this.txtemail.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtemail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtemail.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtemail.DefaultText = "";
             this.txtemail.FillColor = System.Drawing.Color.White;
             this.txtemail.ForeColor = System.Drawing.Color.Black;
@@ -455,9 +460,10 @@ namespace demo1
             this.txtemail.IconRight = null;
             this.txtemail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtemail.Lines = new string[0];
-            this.txtemail.Location = new System.Drawing.Point(95, 207);
+            this.txtemail.Location = new System.Drawing.Point(142, 287);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtemail.MaxLength = 32767;
-            this.txtemail.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtemail.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtemail.Modified = false;
             this.txtemail.Multiline = false;
             this.txtemail.Name = "txtemail";
@@ -490,7 +496,7 @@ namespace demo1
             this.txtemail.SelectionLength = 0;
             this.txtemail.SelectionStart = 0;
             this.txtemail.ShortcutsEnabled = true;
-            this.txtemail.Size = new System.Drawing.Size(200, 35);
+            this.txtemail.Size = new System.Drawing.Size(300, 48);
             this.txtemail.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtemail.TabIndex = 47;
             this.txtemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -505,8 +511,9 @@ namespace demo1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(295, 9);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(442, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 31);
             this.label1.TabIndex = 48;
@@ -525,10 +532,12 @@ namespace demo1
             this.groupBox1.Controls.Add(this.txtemail);
             this.groupBox1.Controls.Add(this.txtsdt);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.groupBox1.Location = new System.Drawing.Point(595, 47);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(737, 65);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 310);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(486, 429);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhà cung cấp";
@@ -536,7 +545,8 @@ namespace demo1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 273);
+            this.label6.Location = new System.Drawing.Point(10, 378);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 52;
@@ -545,7 +555,8 @@ namespace demo1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 222);
+            this.label5.Location = new System.Drawing.Point(10, 307);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
             this.label5.TabIndex = 51;
@@ -554,7 +565,8 @@ namespace demo1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 170);
+            this.label4.Location = new System.Drawing.Point(10, 235);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 50;
@@ -563,7 +575,8 @@ namespace demo1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 114);
+            this.label3.Location = new System.Drawing.Point(9, 158);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 49;
@@ -572,7 +585,8 @@ namespace demo1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 56);
+            this.label2.Location = new System.Drawing.Point(10, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
             this.label2.TabIndex = 48;
@@ -583,9 +597,10 @@ namespace demo1
             this.button3.BackgroundImage = global::demo1.Properties.Resources.tải_xuống;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(859, 374);
+            this.button3.Location = new System.Drawing.Point(1133, 521);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 64);
+            this.button3.Size = new System.Drawing.Size(90, 89);
             this.button3.TabIndex = 53;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -595,9 +610,10 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(773, 374);
+            this.button2.Location = new System.Drawing.Point(985, 517);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 64);
+            this.button2.Size = new System.Drawing.Size(90, 89);
             this.button2.TabIndex = 52;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -607,9 +623,10 @@ namespace demo1
             this.button1.BackgroundImage = global::demo1.Properties.Resources.delete;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(690, 374);
+            this.button1.Location = new System.Drawing.Point(853, 517);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 64);
+            this.button1.Size = new System.Drawing.Size(90, 89);
             this.button1.TabIndex = 51;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -619,19 +636,20 @@ namespace demo1
             this.btnthem.BackgroundImage = global::demo1.Properties.Resources.add;
             this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(603, 374);
+            this.btnthem.Location = new System.Drawing.Point(733, 517);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(60, 64);
+            this.btnthem.Size = new System.Drawing.Size(90, 89);
             this.btnthem.TabIndex = 50;
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // NhaCungCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Fuchsia;
-            this.ClientSize = new System.Drawing.Size(940, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1237, 623);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -639,6 +657,9 @@ namespace demo1
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_ttkh);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NhaCungCap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhaCungCap";

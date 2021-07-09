@@ -79,12 +79,13 @@ namespace demo1
             this.cmbloaisanpham.DisabledColor = System.Drawing.Color.Gray;
             this.cmbloaisanpham.ForeColor = System.Drawing.Color.White;
             this.cmbloaisanpham.items = new string[0];
-            this.cmbloaisanpham.Location = new System.Drawing.Point(574, 304);
+            this.cmbloaisanpham.Location = new System.Drawing.Point(742, 336);
+            this.cmbloaisanpham.Margin = new System.Windows.Forms.Padding(4);
             this.cmbloaisanpham.Name = "cmbloaisanpham";
             this.cmbloaisanpham.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbloaisanpham.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.cmbloaisanpham.selectedIndex = -1;
-            this.cmbloaisanpham.Size = new System.Drawing.Size(200, 35);
+            this.cmbloaisanpham.Size = new System.Drawing.Size(300, 48);
             this.cmbloaisanpham.TabIndex = 58;
             this.cmbloaisanpham.onItemSelected += new System.EventHandler(this.cmbloaisanpham_onItemSelected);
             // 
@@ -98,13 +99,15 @@ namespace demo1
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dtgv_ttsp.Location = new System.Drawing.Point(-1, 12);
+            this.dtgv_ttsp.Location = new System.Drawing.Point(13, 58);
+            this.dtgv_ttsp.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_ttsp.Name = "dtgv_ttsp";
             this.dtgv_ttsp.ReadOnly = true;
             this.dtgv_ttsp.RowTemplate.Height = 24;
             this.dtgv_ttsp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttsp.Size = new System.Drawing.Size(556, 418);
+            this.dtgv_ttsp.Size = new System.Drawing.Size(684, 424);
             this.dtgv_ttsp.TabIndex = 47;
+            this.dtgv_ttsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttsp_CellContentClick);
             // 
             // Column5
             // 
@@ -158,7 +161,7 @@ namespace demo1
             this.txtGiaNhap.BorderThickness = 1;
             this.txtGiaNhap.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtGiaNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGiaNhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtGiaNhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtGiaNhap.DefaultText = "";
             this.txtGiaNhap.FillColor = System.Drawing.Color.White;
             this.txtGiaNhap.HideSelection = true;
@@ -168,9 +171,10 @@ namespace demo1
             this.txtGiaNhap.IconRight = null;
             this.txtGiaNhap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaNhap.Lines = new string[0];
-            this.txtGiaNhap.Location = new System.Drawing.Point(574, 207);
+            this.txtGiaNhap.Location = new System.Drawing.Point(742, 248);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaNhap.MaxLength = 32767;
-            this.txtGiaNhap.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtGiaNhap.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtGiaNhap.Modified = false;
             this.txtGiaNhap.Multiline = false;
             this.txtGiaNhap.Name = "txtGiaNhap";
@@ -203,7 +207,7 @@ namespace demo1
             this.txtGiaNhap.SelectionLength = 0;
             this.txtGiaNhap.SelectionStart = 0;
             this.txtGiaNhap.ShortcutsEnabled = true;
-            this.txtGiaNhap.Size = new System.Drawing.Size(200, 35);
+            this.txtGiaNhap.Size = new System.Drawing.Size(300, 48);
             this.txtGiaNhap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtGiaNhap.TabIndex = 55;
             this.txtGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -231,7 +235,7 @@ namespace demo1
             this.txtDonGia.BorderThickness = 1;
             this.txtDonGia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDonGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDonGia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtDonGia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtDonGia.DefaultText = "";
             this.txtDonGia.FillColor = System.Drawing.Color.White;
             this.txtDonGia.HideSelection = true;
@@ -241,9 +245,10 @@ namespace demo1
             this.txtDonGia.IconRight = null;
             this.txtDonGia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDonGia.Lines = new string[0];
-            this.txtDonGia.Location = new System.Drawing.Point(574, 136);
+            this.txtDonGia.Location = new System.Drawing.Point(742, 177);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.MaxLength = 32767;
-            this.txtDonGia.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtDonGia.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtDonGia.Modified = false;
             this.txtDonGia.Multiline = false;
             this.txtDonGia.Name = "txtDonGia";
@@ -276,7 +281,7 @@ namespace demo1
             this.txtDonGia.SelectionLength = 0;
             this.txtDonGia.SelectionStart = 0;
             this.txtDonGia.ShortcutsEnabled = true;
-            this.txtDonGia.Size = new System.Drawing.Size(200, 35);
+            this.txtDonGia.Size = new System.Drawing.Size(300, 48);
             this.txtDonGia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtDonGia.TabIndex = 54;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -293,7 +298,7 @@ namespace demo1
             this.bunifuButton2.AnimationSpeed = 200;
             this.bunifuButton2.AutoGenerateColors = false;
             this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackColor1 = System.Drawing.Color.Lime;
+            this.bunifuButton2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton2.ButtonText = "Sửa";
@@ -317,14 +322,15 @@ namespace demo1
             this.bunifuButton2.IconMarginLeft = 11;
             this.bunifuButton2.IconPadding = 10;
             this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.IdleBorderRadius = 3;
             this.bunifuButton2.IdleBorderThickness = 1;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.Lime;
+            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(803, 219);
+            this.bunifuButton2.Location = new System.Drawing.Point(1129, 253);
+            this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties9.BorderRadius = 3;
@@ -344,7 +350,7 @@ namespace demo1
             stateProperties10.IconLeftImage = null;
             stateProperties10.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties10;
-            this.bunifuButton2.Size = new System.Drawing.Size(65, 45);
+            this.bunifuButton2.Size = new System.Drawing.Size(98, 62);
             this.bunifuButton2.TabIndex = 52;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -356,7 +362,7 @@ namespace demo1
             this.Them.AnimationSpeed = 200;
             this.Them.AutoGenerateColors = false;
             this.Them.BackColor = System.Drawing.Color.Transparent;
-            this.Them.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.Them.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Them.BackgroundImage")));
             this.Them.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Them.ButtonText = "Thêm ";
@@ -380,14 +386,15 @@ namespace demo1
             this.Them.IconMarginLeft = 11;
             this.Them.IconPadding = 10;
             this.Them.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.Them.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.Them.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.IdleBorderRadius = 3;
             this.Them.IdleBorderThickness = 1;
-            this.Them.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.Them.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.IdleIconLeftImage = null;
             this.Them.IdleIconRightImage = null;
             this.Them.IndicateFocus = false;
-            this.Them.Location = new System.Drawing.Point(803, 82);
+            this.Them.Location = new System.Drawing.Point(1129, 77);
+            this.Them.Margin = new System.Windows.Forms.Padding(4);
             this.Them.Name = "Them";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.BorderRadius = 3;
@@ -407,7 +414,7 @@ namespace demo1
             stateProperties12.IconLeftImage = null;
             stateProperties12.IconRightImage = null;
             this.Them.OnPressedState = stateProperties12;
-            this.Them.Size = new System.Drawing.Size(65, 45);
+            this.Them.Size = new System.Drawing.Size(98, 62);
             this.Them.TabIndex = 50;
             this.Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Them.TextMarginLeft = 0;
@@ -431,7 +438,7 @@ namespace demo1
             this.txtMaSP.BorderThickness = 1;
             this.txtMaSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaSP.DefaultText = "";
             this.txtMaSP.FillColor = System.Drawing.Color.White;
             this.txtMaSP.HideSelection = true;
@@ -441,9 +448,10 @@ namespace demo1
             this.txtMaSP.IconRight = null;
             this.txtMaSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSP.Lines = new string[0];
-            this.txtMaSP.Location = new System.Drawing.Point(574, 12);
+            this.txtMaSP.Location = new System.Drawing.Point(742, 58);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSP.MaxLength = 32767;
-            this.txtMaSP.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtMaSP.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtMaSP.Modified = false;
             this.txtMaSP.Multiline = false;
             this.txtMaSP.Name = "txtMaSP";
@@ -476,7 +484,7 @@ namespace demo1
             this.txtMaSP.SelectionLength = 0;
             this.txtMaSP.SelectionStart = 0;
             this.txtMaSP.ShortcutsEnabled = true;
-            this.txtMaSP.Size = new System.Drawing.Size(200, 35);
+            this.txtMaSP.Size = new System.Drawing.Size(300, 48);
             this.txtMaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaSP.TabIndex = 48;
             this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -494,7 +502,7 @@ namespace demo1
             this.bunifuButton3.AnimationSpeed = 200;
             this.bunifuButton3.AutoGenerateColors = false;
             this.bunifuButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton3.BackColor1 = System.Drawing.Color.Fuchsia;
+            this.bunifuButton3.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton3.BackgroundImage")));
             this.bunifuButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton3.ButtonText = "Reset";
@@ -518,14 +526,15 @@ namespace demo1
             this.bunifuButton3.IconMarginLeft = 11;
             this.bunifuButton3.IconPadding = 10;
             this.bunifuButton3.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.IdleBorderRadius = 3;
             this.bunifuButton3.IdleBorderThickness = 1;
-            this.bunifuButton3.IdleFillColor = System.Drawing.Color.Fuchsia;
+            this.bunifuButton3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
-            this.bunifuButton3.Location = new System.Drawing.Point(803, 294);
+            this.bunifuButton3.Location = new System.Drawing.Point(1129, 341);
+            this.bunifuButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties17.BorderRadius = 3;
@@ -545,7 +554,7 @@ namespace demo1
             stateProperties18.IconLeftImage = null;
             stateProperties18.IconRightImage = null;
             this.bunifuButton3.OnPressedState = stateProperties18;
-            this.bunifuButton3.Size = new System.Drawing.Size(65, 45);
+            this.bunifuButton3.Size = new System.Drawing.Size(98, 62);
             this.bunifuButton3.TabIndex = 53;
             this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton3.TextMarginLeft = 0;
@@ -557,7 +566,7 @@ namespace demo1
             this.Xóa.AnimationSpeed = 200;
             this.Xóa.AutoGenerateColors = false;
             this.Xóa.BackColor = System.Drawing.Color.Transparent;
-            this.Xóa.BackColor1 = System.Drawing.Color.Red;
+            this.Xóa.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Xóa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Xóa.BackgroundImage")));
             this.Xóa.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Xóa.ButtonText = "Xóa";
@@ -581,14 +590,15 @@ namespace demo1
             this.Xóa.IconMarginLeft = 11;
             this.Xóa.IconPadding = 10;
             this.Xóa.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.Xóa.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.Xóa.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Xóa.IdleBorderRadius = 3;
             this.Xóa.IdleBorderThickness = 1;
-            this.Xóa.IdleFillColor = System.Drawing.Color.Red;
+            this.Xóa.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Xóa.IdleIconLeftImage = null;
             this.Xóa.IdleIconRightImage = null;
             this.Xóa.IndicateFocus = false;
-            this.Xóa.Location = new System.Drawing.Point(803, 155);
+            this.Xóa.Location = new System.Drawing.Point(1129, 163);
+            this.Xóa.Margin = new System.Windows.Forms.Padding(4);
             this.Xóa.Name = "Xóa";
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties19.BorderRadius = 3;
@@ -608,7 +618,7 @@ namespace demo1
             stateProperties20.IconLeftImage = null;
             stateProperties20.IconRightImage = null;
             this.Xóa.OnPressedState = stateProperties20;
-            this.Xóa.Size = new System.Drawing.Size(65, 45);
+            this.Xóa.Size = new System.Drawing.Size(98, 62);
             this.Xóa.TabIndex = 51;
             this.Xóa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Xóa.TextMarginLeft = 0;
@@ -616,17 +626,18 @@ namespace demo1
             // 
             // dtpngaylap
             // 
-            this.dtpngaylap.Location = new System.Drawing.Point(574, 82);
+            this.dtpngaylap.Location = new System.Drawing.Point(742, 131);
+            this.dtpngaylap.Margin = new System.Windows.Forms.Padding(4);
             this.dtpngaylap.Name = "dtpngaylap";
-            this.dtpngaylap.Size = new System.Drawing.Size(200, 20);
+            this.dtpngaylap.Size = new System.Drawing.Size(300, 24);
             this.dtpngaylap.TabIndex = 59;
             // 
             // PhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(890, 485);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1370, 520);
             this.Controls.Add(this.dtpngaylap);
             this.Controls.Add(this.cmbloaisanpham);
             this.Controls.Add(this.txtGiaNhap);
@@ -637,6 +648,9 @@ namespace demo1
             this.Controls.Add(this.txtMaSP);
             this.Controls.Add(this.bunifuButton3);
             this.Controls.Add(this.Xóa);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhieuNhap";

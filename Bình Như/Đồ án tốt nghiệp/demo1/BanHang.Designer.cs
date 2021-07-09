@@ -329,8 +329,8 @@ namespace demo1
             this.groupBox3.Controls.Add(this.txtmact);
             this.groupBox3.Controls.Add(this.txtsoluongton);
             this.groupBox3.Controls.Add(this.txtthanhtien);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(661, 43);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(388, 606);
@@ -344,7 +344,7 @@ namespace demo1
             this.bunifuButton2.AnimationSpeed = 200;
             this.bunifuButton2.AutoGenerateColors = false;
             this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton2.ButtonText = "Tạo";
@@ -362,16 +362,16 @@ namespace demo1
             this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuButton2.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton2.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.bunifuButton2.ForeColor = System.Drawing.Color.White;
             this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton2.IconMarginLeft = 11;
             this.bunifuButton2.IconPadding = 10;
             this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.IdleBorderRadius = 3;
             this.bunifuButton2.IdleBorderThickness = 1;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
@@ -469,11 +469,11 @@ namespace demo1
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(27, 81);
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(6, 83);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(82, 20);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(76, 18);
             this.bunifuCustomLabel11.TabIndex = 74;
             this.bunifuCustomLabel11.Text = "Mã N.Viên";
             // 
@@ -494,7 +494,7 @@ namespace demo1
             this.txtMaNV.BorderThickness = 1;
             this.txtMaNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaNV.DefaultText = "";
             this.txtMaNV.Enabled = false;
             this.txtMaNV.FillColor = System.Drawing.Color.White;
@@ -555,11 +555,11 @@ namespace demo1
             // bunifuCustomLabel13
             // 
             this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel13.ForeColor = System.Drawing.Color.Yellow;
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel13.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel13.Location = new System.Drawing.Point(6, 40);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(103, 20);
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(97, 18);
             this.bunifuCustomLabel13.TabIndex = 72;
             this.bunifuCustomLabel13.Text = "Mã Hóa Đơn:";
             // 
@@ -580,7 +580,7 @@ namespace demo1
             this.txtmahoadon.BorderThickness = 1;
             this.txtmahoadon.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmahoadon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmahoadon.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmahoadon.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmahoadon.DefaultText = "";
             this.txtmahoadon.Enabled = false;
             this.txtmahoadon.FillColor = System.Drawing.Color.White;
@@ -641,22 +641,22 @@ namespace demo1
             // bunifuCustomLabel12
             // 
             this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.Blue;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel12.Location = new System.Drawing.Point(7, 437);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(117, 20);
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(109, 18);
             this.bunifuCustomLabel12.TabIndex = 70;
             this.bunifuCustomLabel12.Text = "Số Lượng Mua:";
             // 
             // bunifuCustomLabel10
             // 
             this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(17, 122);
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(4, 122);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(92, 20);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(86, 18);
             this.bunifuCustomLabel10.TabIndex = 68;
             this.bunifuCustomLabel10.Text = "Mã K.Hàng:";
             // 
@@ -674,77 +674,78 @@ namespace demo1
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel8.Location = new System.Drawing.Point(6, 479);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(92, 20);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(85, 18);
             this.bunifuCustomLabel8.TabIndex = 66;
             this.bunifuCustomLabel8.Text = "Thành Tiền:";
             // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Yellow;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel7.Location = new System.Drawing.Point(7, 522);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(92, 20);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(87, 18);
             this.bunifuCustomLabel7.TabIndex = 65;
             this.bunifuCustomLabel7.Text = "Mã Chi Tiết:";
             // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Yellow;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(7, 396);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(91, 20);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(85, 18);
             this.bunifuCustomLabel5.TabIndex = 55;
             this.bunifuCustomLabel5.Text = "Khuyến Mãi";
             // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Yellow;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(6, 346);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(112, 20);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(105, 18);
             this.bunifuCustomLabel4.TabIndex = 54;
             this.bunifuCustomLabel4.Text = "Số Lượng kho:";
+            this.bunifuCustomLabel4.Click += new System.EventHandler(this.bunifuCustomLabel4_Click);
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Yellow;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(6, 296);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(71, 20);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(65, 18);
             this.bunifuCustomLabel3.TabIndex = 53;
             this.bunifuCustomLabel3.Text = "Gía Bán:";
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(6, 255);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(7, 240);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(118, 20);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(110, 18);
             this.bunifuCustomLabel2.TabIndex = 52;
             this.bunifuCustomLabel2.Text = "Tên Sản Phẩm:";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Yellow;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(5, 170);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(5, 155);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(113, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(106, 18);
             this.bunifuCustomLabel1.TabIndex = 51;
             this.bunifuCustomLabel1.Text = "Mã Sản Phẩm:";
             // 
@@ -765,7 +766,7 @@ namespace demo1
             this.txtSP.BorderThickness = 1;
             this.txtSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.txtSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtSP.DefaultText = "";
             this.txtSP.FillColor = System.Drawing.Color.White;
             this.txtSP.ForeColor = System.Drawing.Color.Black;
@@ -839,7 +840,7 @@ namespace demo1
             this.txtkhuyenmai.BorderThickness = 1;
             this.txtkhuyenmai.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtkhuyenmai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtkhuyenmai.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtkhuyenmai.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtkhuyenmai.DefaultText = "";
             this.txtkhuyenmai.Enabled = false;
             this.txtkhuyenmai.FillColor = System.Drawing.Color.White;
@@ -914,7 +915,7 @@ namespace demo1
             this.txtmakhachhang.BorderThickness = 1;
             this.txtmakhachhang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmakhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmakhachhang.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmakhachhang.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmakhachhang.DefaultText = "";
             this.txtmakhachhang.FillColor = System.Drawing.Color.White;
             this.txtmakhachhang.ForeColor = System.Drawing.Color.Black;
@@ -988,7 +989,7 @@ namespace demo1
             this.txttongtiendamua.BorderThickness = 1;
             this.txttongtiendamua.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txttongtiendamua.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttongtiendamua.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txttongtiendamua.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txttongtiendamua.DefaultText = "0";
             this.txttongtiendamua.Enabled = false;
             this.txttongtiendamua.FillColor = System.Drawing.Color.White;
@@ -1064,7 +1065,7 @@ namespace demo1
             this.txtTenSP.BorderThickness = 1;
             this.txtTenSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTenSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.txtTenSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtTenSP.DefaultText = "";
             this.txtTenSP.Enabled = false;
             this.txtTenSP.FillColor = System.Drawing.Color.White;
@@ -1138,7 +1139,7 @@ namespace demo1
             this.txtDonGia.BorderThickness = 1;
             this.txtDonGia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDonGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDonGia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.txtDonGia.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtDonGia.DefaultText = "";
             this.txtDonGia.Enabled = false;
             this.txtDonGia.FillColor = System.Drawing.Color.White;
@@ -1213,7 +1214,7 @@ namespace demo1
             this.txtsoluongmuasanpham.BorderThickness = 1;
             this.txtsoluongmuasanpham.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtsoluongmuasanpham.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsoluongmuasanpham.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtsoluongmuasanpham.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtsoluongmuasanpham.DefaultText = "";
             this.txtsoluongmuasanpham.FillColor = System.Drawing.Color.White;
             this.txtsoluongmuasanpham.ForeColor = System.Drawing.Color.Black;
@@ -1287,7 +1288,7 @@ namespace demo1
             this.txtmact.BorderThickness = 1;
             this.txtmact.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtmact.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmact.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtmact.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtmact.DefaultText = "";
             this.txtmact.Enabled = false;
             this.txtmact.FillColor = System.Drawing.Color.White;
@@ -1362,7 +1363,7 @@ namespace demo1
             this.txtsoluongton.BorderThickness = 1;
             this.txtsoluongton.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtsoluongton.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsoluongton.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.txtsoluongton.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtsoluongton.DefaultText = "";
             this.txtsoluongton.Enabled = false;
             this.txtsoluongton.FillColor = System.Drawing.Color.White;
@@ -1437,7 +1438,7 @@ namespace demo1
             this.txtthanhtien.BorderThickness = 1;
             this.txtthanhtien.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtthanhtien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtthanhtien.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtthanhtien.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtthanhtien.DefaultText = "";
             this.txtthanhtien.Enabled = false;
             this.txtthanhtien.FillColor = System.Drawing.Color.White;
@@ -1501,7 +1502,7 @@ namespace demo1
             this.Them.AnimationSpeed = 200;
             this.Them.AutoGenerateColors = false;
             this.Them.BackColor = System.Drawing.Color.Transparent;
-            this.Them.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.Them.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Them.BackgroundImage")));
             this.Them.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.Them.ButtonText = "Thêm SP";
@@ -1519,16 +1520,16 @@ namespace demo1
             this.Them.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.Them.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.Them.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.Them.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.Them.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.Them.ForeColor = System.Drawing.Color.White;
             this.Them.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.Them.IconMarginLeft = 11;
             this.Them.IconPadding = 10;
             this.Them.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.Them.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.Them.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.IdleBorderRadius = 3;
             this.Them.IdleBorderThickness = 1;
-            this.Them.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.Them.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Them.IdleIconLeftImage = null;
             this.Them.IdleIconRightImage = null;
             this.Them.IndicateFocus = false;
@@ -1565,7 +1566,7 @@ namespace demo1
             this.bunifuButton3.AnimationSpeed = 200;
             this.bunifuButton3.AutoGenerateColors = false;
             this.bunifuButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton3.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton3.BackgroundImage")));
             this.bunifuButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton3.ButtonText = "Thanh toán";
@@ -1583,16 +1584,16 @@ namespace demo1
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuButton3.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton3.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.bunifuButton3.ForeColor = System.Drawing.Color.White;
             this.bunifuButton3.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuButton3.IconMarginLeft = 11;
             this.bunifuButton3.IconPadding = 10;
             this.bunifuButton3.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.IdleBorderRadius = 3;
             this.bunifuButton3.IdleBorderThickness = 1;
-            this.bunifuButton3.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
@@ -1639,7 +1640,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1182, 675);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.bunifuButton3);

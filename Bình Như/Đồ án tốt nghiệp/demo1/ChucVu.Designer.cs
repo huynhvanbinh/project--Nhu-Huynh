@@ -51,6 +51,7 @@ namespace demo1
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
             this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             this.SuspendLayout();
@@ -61,11 +62,13 @@ namespace demo1
             this.groupBox1.Controls.Add(this.bunifuCustomLabel1);
             this.groupBox1.Controls.Add(this.txtMaChucVu);
             this.groupBox1.Controls.Add(this.txtTenChucVu);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.groupBox1.Location = new System.Drawing.Point(407, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(555, 112);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 192);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(409, 202);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chức vụ";
@@ -73,18 +76,20 @@ namespace demo1
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(6, 132);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(8, 138);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(105, 20);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 18);
             this.bunifuCustomLabel2.TabIndex = 16;
             this.bunifuCustomLabel2.Text = "Tên Chức Vụ:";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(6, 56);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(8, 69);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(100, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(93, 18);
             this.bunifuCustomLabel1.TabIndex = 15;
             this.bunifuCustomLabel1.Text = "Mã Chức Vụ:";
             // 
@@ -105,7 +110,7 @@ namespace demo1
             this.txtMaChucVu.BorderThickness = 1;
             this.txtMaChucVu.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaChucVu.DefaultText = "";
             this.txtMaChucVu.FillColor = System.Drawing.Color.White;
             this.txtMaChucVu.ForeColor = System.Drawing.Color.Black;
@@ -116,9 +121,10 @@ namespace demo1
             this.txtMaChucVu.IconRight = null;
             this.txtMaChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaChucVu.Lines = new string[0];
-            this.txtMaChucVu.Location = new System.Drawing.Point(120, 41);
+            this.txtMaChucVu.Location = new System.Drawing.Point(136, 44);
+            this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaChucVu.MaxLength = 32767;
-            this.txtMaChucVu.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtMaChucVu.MinimumSize = new System.Drawing.Size(133, 43);
             this.txtMaChucVu.Modified = false;
             this.txtMaChucVu.Multiline = false;
             this.txtMaChucVu.Name = "txtMaChucVu";
@@ -151,7 +157,7 @@ namespace demo1
             this.txtMaChucVu.SelectionLength = 0;
             this.txtMaChucVu.SelectionStart = 0;
             this.txtMaChucVu.ShortcutsEnabled = true;
-            this.txtMaChucVu.Size = new System.Drawing.Size(200, 35);
+            this.txtMaChucVu.Size = new System.Drawing.Size(239, 43);
             this.txtMaChucVu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaChucVu.TabIndex = 14;
             this.txtMaChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -179,7 +185,7 @@ namespace demo1
             this.txtTenChucVu.BorderThickness = 1;
             this.txtTenChucVu.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtTenChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtTenChucVu.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtTenChucVu.DefaultText = "";
             this.txtTenChucVu.FillColor = System.Drawing.Color.White;
             this.txtTenChucVu.ForeColor = System.Drawing.Color.Black;
@@ -190,9 +196,10 @@ namespace demo1
             this.txtTenChucVu.IconRight = null;
             this.txtTenChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenChucVu.Lines = new string[0];
-            this.txtTenChucVu.Location = new System.Drawing.Point(120, 117);
+            this.txtTenChucVu.Location = new System.Drawing.Point(136, 113);
+            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenChucVu.MaxLength = 32767;
-            this.txtTenChucVu.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtTenChucVu.MinimumSize = new System.Drawing.Size(133, 43);
             this.txtTenChucVu.Modified = false;
             this.txtTenChucVu.Multiline = false;
             this.txtTenChucVu.Name = "txtTenChucVu";
@@ -225,7 +232,7 @@ namespace demo1
             this.txtTenChucVu.SelectionLength = 0;
             this.txtTenChucVu.SelectionStart = 0;
             this.txtTenChucVu.ShortcutsEnabled = true;
-            this.txtTenChucVu.Size = new System.Drawing.Size(200, 35);
+            this.txtTenChucVu.Size = new System.Drawing.Size(239, 43);
             this.txtTenChucVu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtTenChucVu.TabIndex = 15;
             this.txtTenChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -241,9 +248,10 @@ namespace demo1
             this.button3.BackgroundImage = global::demo1.Properties.Resources.tải_xuống;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(673, 210);
+            this.button3.Location = new System.Drawing.Point(870, 371);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 64);
+            this.button3.Size = new System.Drawing.Size(80, 79);
             this.button3.TabIndex = 26;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -253,9 +261,10 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(587, 210);
+            this.button2.Location = new System.Drawing.Point(768, 371);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 64);
+            this.button2.Size = new System.Drawing.Size(80, 79);
             this.button2.TabIndex = 25;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -265,9 +274,10 @@ namespace demo1
             this.button1.BackgroundImage = global::demo1.Properties.Resources.delete;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(504, 210);
+            this.button1.Location = new System.Drawing.Point(661, 371);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 64);
+            this.button1.Size = new System.Drawing.Size(80, 79);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -277,9 +287,10 @@ namespace demo1
             this.btnthem.BackgroundImage = global::demo1.Properties.Resources.add;
             this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(417, 210);
+            this.btnthem.Location = new System.Drawing.Point(555, 371);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(60, 64);
+            this.btnthem.Size = new System.Drawing.Size(80, 79);
             this.btnthem.TabIndex = 17;
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
@@ -293,12 +304,13 @@ namespace demo1
             this.dtgv_ttkh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaNV,
             this.TenNv});
-            this.dtgv_ttkh.Location = new System.Drawing.Point(12, 12);
+            this.dtgv_ttkh.Location = new System.Drawing.Point(13, 112);
+            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
             this.dtgv_ttkh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttkh.Size = new System.Drawing.Size(389, 275);
+            this.dtgv_ttkh.Size = new System.Drawing.Size(519, 338);
             this.dtgv_ttkh.TabIndex = 27;
             this.dtgv_ttkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellClick);
             // 
@@ -317,19 +329,34 @@ namespace demo1
             this.TenNv.Name = "TenNv";
             this.TenNv.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(403, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 31);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Chức Vụ";
+            // 
             // ChucVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Fuchsia;
-            this.ClientSize = new System.Drawing.Size(756, 309);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(981, 492);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_ttkh);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnthem);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChucVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChucVu";
@@ -338,6 +365,7 @@ namespace demo1
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -354,5 +382,6 @@ namespace demo1
         private System.Windows.Forms.DataGridView dtgv_ttkh;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNv;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -706,5 +706,10 @@ namespace demo1
             ThemHD();
             Load_Form();
         }
+
+        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

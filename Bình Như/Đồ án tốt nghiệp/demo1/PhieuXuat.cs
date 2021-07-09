@@ -16,5 +16,10 @@ namespace demo1
         {
             InitializeComponent();
         }
+
+        private void PhieuXuat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

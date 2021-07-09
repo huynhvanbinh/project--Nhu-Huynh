@@ -96,7 +96,6 @@ namespace demo1
             this.cmbsize = new Bunifu.Framework.UI.BunifuDropdown();
             this.cmbcuahang = new Bunifu.Framework.UI.BunifuDropdown();
             this.cmbphieunhap = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -105,6 +104,7 @@ namespace demo1
             this.txtcuahang = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtngaynhap = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,12 +115,13 @@ namespace demo1
             this.cmbloaisanpham.DisabledColor = System.Drawing.Color.Gray;
             this.cmbloaisanpham.ForeColor = System.Drawing.Color.White;
             this.cmbloaisanpham.items = new string[0];
-            this.cmbloaisanpham.Location = new System.Drawing.Point(819, 256);
+            this.cmbloaisanpham.Location = new System.Drawing.Point(874, 266);
+            this.cmbloaisanpham.Margin = new System.Windows.Forms.Padding(4);
             this.cmbloaisanpham.Name = "cmbloaisanpham";
             this.cmbloaisanpham.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbloaisanpham.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.cmbloaisanpham.selectedIndex = -1;
-            this.cmbloaisanpham.Size = new System.Drawing.Size(200, 35);
+            this.cmbloaisanpham.Size = new System.Drawing.Size(300, 48);
             this.cmbloaisanpham.TabIndex = 58;
             this.cmbloaisanpham.onItemSelected += new System.EventHandler(this.cmbloaisanpham_onItemSelected);
             // 
@@ -138,12 +139,13 @@ namespace demo1
             this.Column5,
             this.Column6,
             this.MaSize});
-            this.dtgv_ttsp.Location = new System.Drawing.Point(12, 12);
+            this.dtgv_ttsp.Location = new System.Drawing.Point(18, 17);
+            this.dtgv_ttsp.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_ttsp.Name = "dtgv_ttsp";
             this.dtgv_ttsp.ReadOnly = true;
             this.dtgv_ttsp.RowTemplate.Height = 24;
             this.dtgv_ttsp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttsp.Size = new System.Drawing.Size(678, 418);
+            this.dtgv_ttsp.Size = new System.Drawing.Size(757, 579);
             this.dtgv_ttsp.TabIndex = 47;
             // 
             // col_MaNV
@@ -212,7 +214,7 @@ namespace demo1
             this.MaSize.ReadOnly = true;
             this.MaSize.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.MaSize.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.MaSize.Width = 46;
+            this.MaSize.Width = 61;
             // 
             // txtThanhTien
             // 
@@ -243,9 +245,10 @@ namespace demo1
             this.txtThanhTien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThanhTien.Lines = new string[] {
         "???"};
-            this.txtThanhTien.Location = new System.Drawing.Point(1010, 74);
+            this.txtThanhTien.Location = new System.Drawing.Point(1515, 102);
+            this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtThanhTien.MaxLength = 32767;
-            this.txtThanhTien.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtThanhTien.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtThanhTien.Modified = false;
             this.txtThanhTien.Multiline = false;
             this.txtThanhTien.Name = "txtThanhTien";
@@ -278,8 +281,8 @@ namespace demo1
             this.txtThanhTien.SelectionLength = 0;
             this.txtThanhTien.SelectionStart = 0;
             this.txtThanhTien.ShortcutsEnabled = true;
-            this.txtThanhTien.Size = new System.Drawing.Size(200, 35);
-            
+            this.txtThanhTien.Size = new System.Drawing.Size(300, 48);
+            this.txtThanhTien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtThanhTien.TabIndex = 56;
             this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtThanhTien.TextMarginBottom = 0;
@@ -306,7 +309,7 @@ namespace demo1
             this.txtGiaNhap.BorderThickness = 1;
             this.txtGiaNhap.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtGiaNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGiaNhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtGiaNhap.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtGiaNhap.DefaultText = "";
             this.txtGiaNhap.FillColor = System.Drawing.Color.White;
             this.txtGiaNhap.HideSelection = true;
@@ -316,9 +319,10 @@ namespace demo1
             this.txtGiaNhap.IconRight = null;
             this.txtGiaNhap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaNhap.Lines = new string[0];
-            this.txtGiaNhap.Location = new System.Drawing.Point(696, 190);
+            this.txtGiaNhap.Location = new System.Drawing.Point(846, 164);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaNhap.MaxLength = 32767;
-            this.txtGiaNhap.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtGiaNhap.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtGiaNhap.Modified = false;
             this.txtGiaNhap.Multiline = false;
             this.txtGiaNhap.Name = "txtGiaNhap";
@@ -351,7 +355,7 @@ namespace demo1
             this.txtGiaNhap.SelectionLength = 0;
             this.txtGiaNhap.SelectionStart = 0;
             this.txtGiaNhap.ShortcutsEnabled = true;
-            this.txtGiaNhap.Size = new System.Drawing.Size(200, 35);
+            this.txtGiaNhap.Size = new System.Drawing.Size(300, 48);
             this.txtGiaNhap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtGiaNhap.TabIndex = 55;
             this.txtGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -380,7 +384,7 @@ namespace demo1
             this.txtSoLuong.BorderThickness = 1;
             this.txtSoLuong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoLuong.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtSoLuong.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtSoLuong.DefaultText = "";
             this.txtSoLuong.FillColor = System.Drawing.Color.White;
             this.txtSoLuong.HideSelection = true;
@@ -390,9 +394,10 @@ namespace demo1
             this.txtSoLuong.IconRight = null;
             this.txtSoLuong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoLuong.Lines = new string[0];
-            this.txtSoLuong.Location = new System.Drawing.Point(696, 89);
+            this.txtSoLuong.Location = new System.Drawing.Point(846, 83);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.MaxLength = 32767;
-            this.txtSoLuong.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtSoLuong.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtSoLuong.Modified = false;
             this.txtSoLuong.Multiline = false;
             this.txtSoLuong.Name = "txtSoLuong";
@@ -425,7 +430,7 @@ namespace demo1
             this.txtSoLuong.SelectionLength = 0;
             this.txtSoLuong.SelectionStart = 0;
             this.txtSoLuong.ShortcutsEnabled = true;
-            this.txtSoLuong.Size = new System.Drawing.Size(200, 35);
+            this.txtSoLuong.Size = new System.Drawing.Size(300, 48);
             this.txtSoLuong.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtSoLuong.TabIndex = 54;
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -473,7 +478,8 @@ namespace demo1
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(1236, 246);
+            this.bunifuButton2.Location = new System.Drawing.Point(1854, 341);
+            this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties13.BorderRadius = 3;
@@ -493,7 +499,7 @@ namespace demo1
             stateProperties14.IconLeftImage = null;
             stateProperties14.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties14;
-            this.bunifuButton2.Size = new System.Drawing.Size(65, 45);
+            this.bunifuButton2.Size = new System.Drawing.Size(98, 62);
             this.bunifuButton2.TabIndex = 52;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -536,7 +542,8 @@ namespace demo1
             this.Them.IdleIconLeftImage = null;
             this.Them.IdleIconRightImage = null;
             this.Them.IndicateFocus = false;
-            this.Them.Location = new System.Drawing.Point(1236, 74);
+            this.Them.Location = new System.Drawing.Point(1854, 102);
+            this.Them.Margin = new System.Windows.Forms.Padding(4);
             this.Them.Name = "Them";
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties15.BorderRadius = 3;
@@ -556,7 +563,7 @@ namespace demo1
             stateProperties16.IconLeftImage = null;
             stateProperties16.IconRightImage = null;
             this.Them.OnPressedState = stateProperties16;
-            this.Them.Size = new System.Drawing.Size(65, 45);
+            this.Them.Size = new System.Drawing.Size(98, 62);
             this.Them.TabIndex = 50;
             this.Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Them.TextMarginLeft = 0;
@@ -580,7 +587,7 @@ namespace demo1
             this.txtMaSP.BorderThickness = 1;
             this.txtMaSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtMaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtMaSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
             this.txtMaSP.DefaultText = "";
             this.txtMaSP.FillColor = System.Drawing.Color.White;
             this.txtMaSP.HideSelection = true;
@@ -590,9 +597,10 @@ namespace demo1
             this.txtMaSP.IconRight = null;
             this.txtMaSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaSP.Lines = new string[0];
-            this.txtMaSP.Location = new System.Drawing.Point(696, 12);
+            this.txtMaSP.Location = new System.Drawing.Point(846, 13);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSP.MaxLength = 32767;
-            this.txtMaSP.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtMaSP.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtMaSP.Modified = false;
             this.txtMaSP.Multiline = false;
             this.txtMaSP.Name = "txtMaSP";
@@ -625,7 +633,7 @@ namespace demo1
             this.txtMaSP.SelectionLength = 0;
             this.txtMaSP.SelectionStart = 0;
             this.txtMaSP.ShortcutsEnabled = true;
-            this.txtMaSP.Size = new System.Drawing.Size(200, 35);
+            this.txtMaSP.Size = new System.Drawing.Size(300, 48);
             this.txtMaSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaSP.TabIndex = 48;
             this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -673,7 +681,8 @@ namespace demo1
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
-            this.bunifuButton3.Location = new System.Drawing.Point(1236, 180);
+            this.bunifuButton3.Location = new System.Drawing.Point(1854, 249);
+            this.bunifuButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties21.BorderRadius = 3;
@@ -693,7 +702,7 @@ namespace demo1
             stateProperties22.IconLeftImage = null;
             stateProperties22.IconRightImage = null;
             this.bunifuButton3.OnPressedState = stateProperties22;
-            this.bunifuButton3.Size = new System.Drawing.Size(65, 45);
+            this.bunifuButton3.Size = new System.Drawing.Size(98, 62);
             this.bunifuButton3.TabIndex = 53;
             this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton3.TextMarginLeft = 0;
@@ -736,7 +745,8 @@ namespace demo1
             this.Xóa.IdleIconLeftImage = null;
             this.Xóa.IdleIconRightImage = null;
             this.Xóa.IndicateFocus = false;
-            this.Xóa.Location = new System.Drawing.Point(1236, 129);
+            this.Xóa.Location = new System.Drawing.Point(1854, 179);
+            this.Xóa.Margin = new System.Windows.Forms.Padding(4);
             this.Xóa.Name = "Xóa";
             stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties23.BorderRadius = 3;
@@ -756,7 +766,7 @@ namespace demo1
             stateProperties24.IconLeftImage = null;
             stateProperties24.IconRightImage = null;
             this.Xóa.OnPressedState = stateProperties24;
-            this.Xóa.Size = new System.Drawing.Size(65, 45);
+            this.Xóa.Size = new System.Drawing.Size(98, 62);
             this.Xóa.TabIndex = 51;
             this.Xóa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Xóa.TextMarginLeft = 0;
@@ -769,12 +779,13 @@ namespace demo1
             this.cmbsize.DisabledColor = System.Drawing.Color.Gray;
             this.cmbsize.ForeColor = System.Drawing.Color.White;
             this.cmbsize.items = new string[0];
-            this.cmbsize.Location = new System.Drawing.Point(819, 310);
+            this.cmbsize.Location = new System.Drawing.Point(874, 350);
+            this.cmbsize.Margin = new System.Windows.Forms.Padding(4);
             this.cmbsize.Name = "cmbsize";
             this.cmbsize.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbsize.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.cmbsize.selectedIndex = -1;
-            this.cmbsize.Size = new System.Drawing.Size(200, 35);
+            this.cmbsize.Size = new System.Drawing.Size(300, 48);
             this.cmbsize.TabIndex = 59;
             this.cmbsize.onItemSelected += new System.EventHandler(this.cmbsize_onItemSelected);
             // 
@@ -785,12 +796,13 @@ namespace demo1
             this.cmbcuahang.DisabledColor = System.Drawing.Color.Gray;
             this.cmbcuahang.ForeColor = System.Drawing.Color.White;
             this.cmbcuahang.items = new string[0];
-            this.cmbcuahang.Location = new System.Drawing.Point(819, 366);
+            this.cmbcuahang.Location = new System.Drawing.Point(874, 426);
+            this.cmbcuahang.Margin = new System.Windows.Forms.Padding(4);
             this.cmbcuahang.Name = "cmbcuahang";
             this.cmbcuahang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbcuahang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.cmbcuahang.selectedIndex = -1;
-            this.cmbcuahang.Size = new System.Drawing.Size(200, 35);
+            this.cmbcuahang.Size = new System.Drawing.Size(300, 48);
             this.cmbcuahang.TabIndex = 60;
             this.cmbcuahang.onItemSelected += new System.EventHandler(this.cmbcuahang_onItemSelected);
             // 
@@ -801,30 +813,22 @@ namespace demo1
             this.cmbphieunhap.DisabledColor = System.Drawing.Color.Gray;
             this.cmbphieunhap.ForeColor = System.Drawing.Color.White;
             this.cmbphieunhap.items = new string[0];
-            this.cmbphieunhap.Location = new System.Drawing.Point(819, 420);
+            this.cmbphieunhap.Location = new System.Drawing.Point(874, 502);
+            this.cmbphieunhap.Margin = new System.Windows.Forms.Padding(4);
             this.cmbphieunhap.Name = "cmbphieunhap";
             this.cmbphieunhap.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbphieunhap.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.cmbphieunhap.selectedIndex = -1;
-            this.cmbphieunhap.Size = new System.Drawing.Size(200, 35);
+            this.cmbphieunhap.Size = new System.Drawing.Size(300, 48);
             this.cmbphieunhap.TabIndex = 61;
             this.cmbphieunhap.onItemSelected += new System.EventHandler(this.cmbphieunhap_onItemSelected);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(696, 256);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Màu:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(696, 310);
+            this.label2.Location = new System.Drawing.Point(783, 350);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 63;
@@ -834,7 +838,8 @@ namespace demo1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(696, 366);
+            this.label3.Location = new System.Drawing.Point(783, 426);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 64;
@@ -844,7 +849,8 @@ namespace demo1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(696, 420);
+            this.label4.Location = new System.Drawing.Point(783, 502);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 65;
@@ -877,9 +883,10 @@ namespace demo1
             this.txtmau.IconRight = null;
             this.txtmau.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmau.Lines = new string[0];
-            this.txtmau.Location = new System.Drawing.Point(1030, 256);
+            this.txtmau.Location = new System.Drawing.Point(1545, 354);
+            this.txtmau.Margin = new System.Windows.Forms.Padding(4);
             this.txtmau.MaxLength = 32767;
-            this.txtmau.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtmau.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtmau.Modified = false;
             this.txtmau.Multiline = false;
             this.txtmau.Name = "txtmau";
@@ -912,7 +919,7 @@ namespace demo1
             this.txtmau.SelectionLength = 0;
             this.txtmau.SelectionStart = 0;
             this.txtmau.ShortcutsEnabled = true;
-            this.txtmau.Size = new System.Drawing.Size(200, 35);
+            this.txtmau.Size = new System.Drawing.Size(300, 48);
             this.txtmau.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmau.TabIndex = 66;
             this.txtmau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -950,9 +957,10 @@ namespace demo1
             this.txtkichthuoc.IconRight = null;
             this.txtkichthuoc.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtkichthuoc.Lines = new string[0];
-            this.txtkichthuoc.Location = new System.Drawing.Point(1030, 310);
+            this.txtkichthuoc.Location = new System.Drawing.Point(1545, 429);
+            this.txtkichthuoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtkichthuoc.MaxLength = 32767;
-            this.txtkichthuoc.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtkichthuoc.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtkichthuoc.Modified = false;
             this.txtkichthuoc.Multiline = false;
             this.txtkichthuoc.Name = "txtkichthuoc";
@@ -985,7 +993,7 @@ namespace demo1
             this.txtkichthuoc.SelectionLength = 0;
             this.txtkichthuoc.SelectionStart = 0;
             this.txtkichthuoc.ShortcutsEnabled = true;
-            this.txtkichthuoc.Size = new System.Drawing.Size(200, 35);
+            this.txtkichthuoc.Size = new System.Drawing.Size(300, 48);
             this.txtkichthuoc.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtkichthuoc.TabIndex = 67;
             this.txtkichthuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1023,9 +1031,10 @@ namespace demo1
             this.txtcuahang.IconRight = null;
             this.txtcuahang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtcuahang.Lines = new string[0];
-            this.txtcuahang.Location = new System.Drawing.Point(1030, 366);
+            this.txtcuahang.Location = new System.Drawing.Point(1545, 507);
+            this.txtcuahang.Margin = new System.Windows.Forms.Padding(4);
             this.txtcuahang.MaxLength = 32767;
-            this.txtcuahang.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtcuahang.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtcuahang.Modified = false;
             this.txtcuahang.Multiline = false;
             this.txtcuahang.Name = "txtcuahang";
@@ -1058,7 +1067,7 @@ namespace demo1
             this.txtcuahang.SelectionLength = 0;
             this.txtcuahang.SelectionStart = 0;
             this.txtcuahang.ShortcutsEnabled = true;
-            this.txtcuahang.Size = new System.Drawing.Size(200, 35);
+            this.txtcuahang.Size = new System.Drawing.Size(300, 48);
             this.txtcuahang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtcuahang.TabIndex = 68;
             this.txtcuahang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1096,9 +1105,10 @@ namespace demo1
             this.txtngaynhap.IconRight = null;
             this.txtngaynhap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtngaynhap.Lines = new string[0];
-            this.txtngaynhap.Location = new System.Drawing.Point(1030, 420);
+            this.txtngaynhap.Location = new System.Drawing.Point(1545, 582);
+            this.txtngaynhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtngaynhap.MaxLength = 32767;
-            this.txtngaynhap.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtngaynhap.MinimumSize = new System.Drawing.Size(150, 48);
             this.txtngaynhap.Modified = false;
             this.txtngaynhap.Multiline = false;
             this.txtngaynhap.Name = "txtngaynhap";
@@ -1131,7 +1141,7 @@ namespace demo1
             this.txtngaynhap.SelectionLength = 0;
             this.txtngaynhap.SelectionStart = 0;
             this.txtngaynhap.ShortcutsEnabled = true;
-            this.txtngaynhap.Size = new System.Drawing.Size(200, 35);
+            this.txtngaynhap.Size = new System.Drawing.Size(300, 48);
             this.txtngaynhap.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtngaynhap.TabIndex = 69;
             this.txtngaynhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1146,17 +1156,30 @@ namespace demo1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(912, 89);
+            this.label5.Location = new System.Drawing.Point(1368, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 20);
             this.label5.TabIndex = 70;
             this.label5.Text = "Thành Tiền:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(784, 266);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 18);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Màu:";
+            // 
             // CTPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 543);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1187, 599);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtngaynhap);
             this.Controls.Add(this.txtcuahang);
@@ -1179,6 +1202,9 @@ namespace demo1
             this.Controls.Add(this.txtMaSP);
             this.Controls.Add(this.bunifuButton3);
             this.Controls.Add(this.Xóa);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CTPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CTPhieuNhap";
@@ -1203,7 +1229,6 @@ namespace demo1
         private Bunifu.Framework.UI.BunifuDropdown cmbsize;
         private Bunifu.Framework.UI.BunifuDropdown cmbcuahang;
         private Bunifu.Framework.UI.BunifuDropdown cmbphieunhap;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1221,5 +1246,6 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSize;
+        private System.Windows.Forms.Label label1;
     }
 }

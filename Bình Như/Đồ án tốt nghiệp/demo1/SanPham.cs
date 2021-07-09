@@ -263,5 +263,10 @@ namespace demo1
         {
             themctsampham();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
