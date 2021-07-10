@@ -65,9 +65,9 @@ namespace demo1
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(555, 112);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(409, 202);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
@@ -122,7 +122,7 @@ namespace demo1
             this.txtMaChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaChucVu.Lines = new string[0];
             this.txtMaChucVu.Location = new System.Drawing.Point(136, 44);
-            this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaChucVu.MaxLength = 32767;
             this.txtMaChucVu.MinimumSize = new System.Drawing.Size(133, 43);
             this.txtMaChucVu.Modified = false;
@@ -197,7 +197,7 @@ namespace demo1
             this.txtTenChucVu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenChucVu.Lines = new string[0];
             this.txtTenChucVu.Location = new System.Drawing.Point(136, 113);
-            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenChucVu.MaxLength = 32767;
             this.txtTenChucVu.MinimumSize = new System.Drawing.Size(133, 43);
             this.txtTenChucVu.Modified = false;
@@ -249,7 +249,7 @@ namespace demo1
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(870, 371);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(80, 79);
             this.button3.TabIndex = 26;
@@ -262,7 +262,7 @@ namespace demo1
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(768, 371);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 79);
             this.button2.TabIndex = 25;
@@ -275,7 +275,7 @@ namespace demo1
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(661, 371);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 79);
             this.button1.TabIndex = 24;
@@ -288,7 +288,7 @@ namespace demo1
             this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthem.Location = new System.Drawing.Point(555, 371);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(4);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(80, 79);
             this.btnthem.TabIndex = 17;
@@ -305,7 +305,7 @@ namespace demo1
             this.col_MaNV,
             this.TenNv});
             this.dtgv_ttkh.Location = new System.Drawing.Point(13, 112);
-            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
@@ -345,7 +345,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(981, 492);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_ttkh);
@@ -356,7 +356,7 @@ namespace demo1
             this.Controls.Add(this.btnthem);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChucVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChucVu";

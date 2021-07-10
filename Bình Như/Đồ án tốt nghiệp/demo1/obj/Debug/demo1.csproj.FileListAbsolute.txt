@@ -689,3 +689,6 @@ C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTSPBanHang.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.HoaDons.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.Doanhthu.resources
+C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTSPBanHang.resources
+C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.Doanhthu.resources
+C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.HoaDons.resources
