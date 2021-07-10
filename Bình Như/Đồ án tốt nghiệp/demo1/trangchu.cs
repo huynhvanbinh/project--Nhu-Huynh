@@ -34,8 +34,6 @@ namespace demo1
 
         public void trangchu_Load(object sender, EventArgs e)
         {
-            
-
             lay.Text = quyen;
             if (maquyen == "AD")
             {
@@ -90,10 +88,7 @@ namespace demo1
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HoaDon hd = new HoaDon();
-            hd.MdiParent = this;
-            hd.MaNV = manhanvien;
-            hd.Show();
+        
         }
 
         private void khuyếnMãiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,7 +121,7 @@ namespace demo1
 
         private void hóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            HoaDon hoadon = new HoaDon();
+            HoaDons hoadon = new HoaDons();
             hoadon.MdiParent = this;
             hoadon.Show();
         }
@@ -178,6 +173,27 @@ namespace demo1
             CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
             ctphieuxuat.MdiParent = this;
             ctphieuxuat.Show();
+        }
+
+        private void chamCongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChamCong chamcong = new ChamCong();
+            chamcong.MdiParent = this;
+            chamcong.Show();
+        }
+
+        private void luongNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LuongNhanVien luongnhanvien = new LuongNhanVien();
+            luongnhanvien.MdiParent = this;
+            luongnhanvien.Show();
+        }
+
+        private void danhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Doanhthu danhthu = new Doanhthu();
+            danhthu.MdiParent = this;
+            danhthu.Show();
         }
     }
 }

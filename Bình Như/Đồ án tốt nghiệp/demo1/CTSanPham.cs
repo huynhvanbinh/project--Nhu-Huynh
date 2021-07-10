@@ -57,8 +57,8 @@ namespace demo1
             CTSanPhamDTO NewSP = new CTSanPhamDTO();
             NewSP.MaCTSP = "SP" + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
-            NewSP.MaMau = string.IsNullOrEmpty(mamau.Text) ? "" : mamau.Text;
-            NewSP.KichThuoc = string.IsNullOrEmpty(kichthuoc.Text) ? "" : kichthuoc.Text;
+            NewSP.MaMau = string.IsNullOrEmpty(labmamau.Text) ? "" : labmamau.Text;
+            NewSP.KichThuoc = string.IsNullOrEmpty(labkichthuoc.Text) ? "" : labkichthuoc.Text;
             NewSP.SoLuong = string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
             NewSP.TrangThai = "1";
             return NewSP;
@@ -103,7 +103,7 @@ namespace demo1
             {
                 if (cmbmau.selectedValue.Equals(cv.TenMau))
                 {
-                    labmau.Text = cv.MaMau;
+                    labmamau.Text = cv.MaMau;
                 }
             }
         }
@@ -114,7 +114,7 @@ namespace demo1
             {
                 if (cmbkichthuoc.selectedValue.Equals(cv.TenSize))
                 {
-                    labkt.Text = cv.MaSize;
+                    labkichthuoc.Text = cv.MaSize;
                 }
             }
         }

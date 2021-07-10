@@ -626,7 +626,7 @@ namespace demo1
             this.txtmanv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmanv.TextMarginBottom = 0;
             this.txtmanv.TextMarginLeft = 5;
-            this.txtmanv.TextMarginTop = 0;
+
             this.txtmanv.TextPlaceholder = "Nhap ma nhan vien";
             this.txtmanv.UseSystemPasswordChar = false;
             this.txtmanv.WordWrap = true;

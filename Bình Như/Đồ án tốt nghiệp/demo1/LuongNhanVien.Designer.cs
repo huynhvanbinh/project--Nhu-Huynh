@@ -67,15 +67,6 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
-            this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhuCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LuongPartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoGioLam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuTextBox5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -107,6 +98,15 @@ namespace demo1
             this.label12 = new System.Windows.Forms.Label();
             this.txtthang = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhuCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongPartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoGioLam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,70 +133,6 @@ namespace demo1
             this.dtgv_ttkh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_ttkh.Size = new System.Drawing.Size(944, 510);
             this.dtgv_ttkh.TabIndex = 49;
-            // 
-            // col_MaNV
-            // 
-            this.col_MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaNV.DataPropertyName = "MaLuong";
-            this.col_MaNV.HeaderText = "Mã Lương";
-            this.col_MaNV.Name = "col_MaNV";
-            this.col_MaNV.ReadOnly = true;
-            // 
-            // TenNv
-            // 
-            this.TenNv.DataPropertyName = "MaNV";
-            this.TenNv.HeaderText = "Mã Nhân Viên";
-            this.TenNv.Name = "TenNv";
-            this.TenNv.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "LuongCoBan";
-            this.Column1.HeaderText = "Lương Cơ Bản";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "SoNgayLam";
-            this.Column2.HeaderText = "Số Ngày Làm";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TangCa";
-            this.Column3.HeaderText = "Tăng ca";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // PhuCap
-            // 
-            this.PhuCap.DataPropertyName = "PhuCap";
-            this.PhuCap.HeaderText = "Phụ Cấp";
-            this.PhuCap.Name = "PhuCap";
-            this.PhuCap.ReadOnly = true;
-            // 
-            // LuongPartTime
-            // 
-            this.LuongPartTime.DataPropertyName = "LuongPartTime";
-            this.LuongPartTime.HeaderText = "luongPartTime";
-            this.LuongPartTime.Name = "LuongPartTime";
-            this.LuongPartTime.ReadOnly = true;
-            // 
-            // SoGioLam
-            // 
-            this.SoGioLam.DataPropertyName = "SoGioLam";
-            this.SoGioLam.HeaderText = "Số Giờ Làm";
-            this.SoGioLam.Name = "SoGioLam";
-            this.SoGioLam.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "TienLanh";
-            this.Column7.HeaderText = "Tiền lãnh";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // label1
             // 
@@ -1012,7 +948,7 @@ namespace demo1
             this.txtnam.IconRight = null;
             this.txtnam.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtnam.Lines = new string[0];
-            this.txtnam.Location = new System.Drawing.Point(957, 7);
+            this.txtnam.Location = new System.Drawing.Point(1051, 9);
             this.txtnam.MaxLength = 32767;
             this.txtnam.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtnam.Modified = false;
@@ -1063,7 +999,7 @@ namespace demo1
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Yellow;
-            this.label12.Location = new System.Drawing.Point(911, 24);
+            this.label12.Location = new System.Drawing.Point(1006, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 20);
             this.label12.TabIndex = 78;
@@ -1155,12 +1091,76 @@ namespace demo1
             this.label10.TabIndex = 76;
             this.label10.Text = "Tháng:";
             // 
+            // col_MaNV
+            // 
+            this.col_MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaNV.DataPropertyName = "MaLuong";
+            this.col_MaNV.HeaderText = "Mã Lương";
+            this.col_MaNV.Name = "col_MaNV";
+            this.col_MaNV.ReadOnly = true;
+            // 
+            // TenNv
+            // 
+            this.TenNv.DataPropertyName = "MaNV";
+            this.TenNv.HeaderText = "Mã Nhân Viên";
+            this.TenNv.Name = "TenNv";
+            this.TenNv.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LuongCoBan";
+            this.Column1.HeaderText = "Lương Cơ Bản";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "SoNgayLam";
+            this.Column2.HeaderText = "Số Ngày Làm";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TangCa";
+            this.Column3.HeaderText = "Tăng ca";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // PhuCap
+            // 
+            this.PhuCap.DataPropertyName = "PhuCap";
+            this.PhuCap.HeaderText = "Phụ Cấp";
+            this.PhuCap.Name = "PhuCap";
+            this.PhuCap.ReadOnly = true;
+            // 
+            // LuongPartTime
+            // 
+            this.LuongPartTime.DataPropertyName = "LuongPartTime";
+            this.LuongPartTime.HeaderText = "luongPartTime";
+            this.LuongPartTime.Name = "LuongPartTime";
+            this.LuongPartTime.ReadOnly = true;
+            // 
+            // SoGioLam
+            // 
+            this.SoGioLam.DataPropertyName = "SoGiolam";
+            this.SoGioLam.HeaderText = "Số Giờ Làm";
+            this.SoGioLam.Name = "SoGioLam";
+            this.SoGioLam.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "TienLanh";
+            this.Column7.HeaderText = "Tiền lãnh";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // LuongNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(913, 541);
+            this.ClientSize = new System.Drawing.Size(1370, 541);
             this.Controls.Add(this.txtnam);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtthang);

@@ -106,12 +106,6 @@
     <Compile Include="ChucVu.Designer.cs">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="CTHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CTHoaDon.Designer.cs">
-      <DependentUpon>CTHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="CTKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +129,12 @@
     </Compile>
     <Compile Include="CTSanPham.Designer.cs">
       <DependentUpon>CTSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTSPBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTSPBanHang.Designer.cs">
+      <DependentUpon>CTSPBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="CuaHang.cs">
       <SubType>Form</SubType>
@@ -171,6 +171,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>demoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Doanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doanhthu.Designer.cs">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,11 +189,11 @@
     <Compile Include="DSNhanVien.Designer.cs">
       <DependentUpon>DSNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
+    <Compile Include="HoaDons.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <Compile Include="HoaDons.Designer.cs">
+      <DependentUpon>HoaDons.cs</DependentUpon>
     </Compile>
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
@@ -301,9 +307,6 @@
     <EmbeddedResource Include="ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CTHoaDon.resx">
-      <DependentUpon>CTHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CTKhuyenMai.resx">
       <DependentUpon>CTKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,11 +319,17 @@
     <EmbeddedResource Include="CTSanPham.resx">
       <DependentUpon>CTSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CTSPBanHang.resx">
+      <DependentUpon>CTSPBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CuaHang.resx">
       <DependentUpon>CuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dangnhap.resx">
       <DependentUpon>dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doanhthu.resx">
+      <DependentUpon>Doanhthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DSNhanVien.rdlc" />
     <EmbeddedResource Include="DSNhanVien.resx">
@@ -329,8 +338,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="HoaDons.resx">
+      <DependentUpon>HoaDons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InHoaDon.rdlc" />
     <EmbeddedResource Include="InHoaDon.resx">

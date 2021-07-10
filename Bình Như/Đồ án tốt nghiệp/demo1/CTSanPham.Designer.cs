@@ -48,8 +48,6 @@ namespace demo1
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kichthuoc = new System.Windows.Forms.Label();
-            this.mamau = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbkichthuoc = new Bunifu.Framework.UI.BunifuDropdown();
             this.label11 = new System.Windows.Forms.Label();
@@ -64,8 +62,8 @@ namespace demo1
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
-            this.labmau = new System.Windows.Forms.Label();
-            this.labkt = new System.Windows.Forms.Label();
+            this.labmamau = new System.Windows.Forms.Label();
+            this.labkichthuoc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,22 +120,6 @@ namespace demo1
             this.Column8.HeaderText = "Số lượng";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            // 
-            // kichthuoc
-            // 
-            this.kichthuoc.AutoSize = true;
-            this.kichthuoc.Location = new System.Drawing.Point(745, 212);
-            this.kichthuoc.Name = "kichthuoc";
-            this.kichthuoc.Size = new System.Drawing.Size(0, 13);
-            this.kichthuoc.TabIndex = 68;
-            // 
-            // mamau
-            // 
-            this.mamau.AutoSize = true;
-            this.mamau.Location = new System.Drawing.Point(745, 165);
-            this.mamau.Name = "mamau";
-            this.mamau.Size = new System.Drawing.Size(0, 13);
-            this.mamau.TabIndex = 67;
             // 
             // label12
             // 
@@ -485,23 +467,24 @@ namespace demo1
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
-            // labmau
+            // labmamau
             // 
-            this.labmau.AutoSize = true;
-            this.labmau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labmau.Location = new System.Drawing.Point(752, 141);
-            this.labmau.Name = "labmau";
-            this.labmau.Size = new System.Drawing.Size(0, 25);
-            this.labmau.TabIndex = 77;
+            this.labmamau.AutoSize = true;
+            this.labmamau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labmamau.Location = new System.Drawing.Point(752, 143);
+            this.labmamau.Name = "labmamau";
+            this.labmamau.Size = new System.Drawing.Size(0, 20);
+            this.labmamau.TabIndex = 77;
             // 
-            // labkt
+            // labkichthuoc
             // 
-            this.labkt.AutoSize = true;
-            this.labkt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labkt.Location = new System.Drawing.Point(752, 188);
-            this.labkt.Name = "labkt";
-            this.labkt.Size = new System.Drawing.Size(0, 25);
-            this.labkt.TabIndex = 78;
+            this.labkichthuoc.AutoSize = true;
+            this.labkichthuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labkichthuoc.Location = new System.Drawing.Point(752, 190);
+            this.labkichthuoc.Name = "labkichthuoc";
+            this.labkichthuoc.Size = new System.Drawing.Size(83, 20);
+            this.labkichthuoc.TabIndex = 78;
+            this.labkichthuoc.Text = "Kích thước";
             // 
             // CTSanPham
             // 
@@ -509,8 +492,8 @@ namespace demo1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(874, 450);
-            this.Controls.Add(this.labkt);
-            this.Controls.Add(this.labmau);
+            this.Controls.Add(this.labkichthuoc);
+            this.Controls.Add(this.labmamau);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -519,8 +502,6 @@ namespace demo1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaSP);
             this.Controls.Add(this.txtTenSP);
-            this.Controls.Add(this.kichthuoc);
-            this.Controls.Add(this.mamau);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbkichthuoc);
             this.Controls.Add(this.label11);
@@ -544,8 +525,6 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Label kichthuoc;
-        private System.Windows.Forms.Label mamau;
         private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuDropdown cmbkichthuoc;
         private System.Windows.Forms.Label label11;
@@ -560,7 +539,7 @@ namespace demo1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnthem;
-        private System.Windows.Forms.Label labmau;
-        private System.Windows.Forms.Label labkt;
+        private System.Windows.Forms.Label labmamau;
+        private System.Windows.Forms.Label labkichthuoc;
     }
 }

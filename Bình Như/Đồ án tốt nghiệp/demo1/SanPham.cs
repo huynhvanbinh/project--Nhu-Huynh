@@ -77,7 +77,7 @@ namespace demo1
                 txtGiaNhap.Text = dtgv_ttsp.Rows[i].Cells[4].Value.ToString();
                 txtMoTa.Text = dtgv_ttsp.Rows[i].Cells[6].Value.ToString();
                 txtloaisp.Text = dtgv_ttsp.Rows[i].Cells[3].Value.ToString();
-               
+              
             }    
         }
         private SanPhamDTO layTTSP_moi()

@@ -18,8 +18,12 @@ namespace demo1
             InitializeComponent();
             dtgv_ttsp.AutoGenerateColumns = false;
             cthd.AutoGenerateColumns = false;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Visible = false;
             Load_Form();
+            ThemHD();
         }
+
         HoaDonBUS customerHDBUS = new HoaDonBUS();
         BindingSource bshd = new BindingSource();
         List<HoaDonDTO> dshds = new List<HoaDonDTO>();
@@ -36,6 +40,10 @@ namespace demo1
         CTKhuyenMaiBUS customerKMBUS = new CTKhuyenMaiBUS();
         BindingSource bskm = new BindingSource();
         List<CTKhuyenMaiDTO> dskm = new List<CTKhuyenMaiDTO>();
+
+        CTSanPhamBUS customerCTSPBUS = new CTSanPhamBUS();
+        BindingSource bsctsp = new BindingSource();
+        List<CTSanPhamDTO> dsctsp = new List<CTSanPhamDTO>();
         private void Load_Form()
         {
             Load_DSSP();
@@ -224,14 +232,12 @@ namespace demo1
             HoaDonDTO khAdd = layHD_moi();
             if (khAdd.MaHD == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
             else
             {
                 bool kq = customerHDBUS.DKSP(khAdd);
                 txtmahoadon.Text = khAdd.MaHD;
-                MessageBox.Show("Thêm sản phẩm vào hóa đơn");
             }
         }
         private HoaDonDTO layHD_moi()
@@ -250,7 +256,7 @@ namespace demo1
             HoaDonDTO NewSP = new HoaDonDTO();
             NewSP.MaHD = txtmahoadon.Text;
             NewSP.TongTien = string.IsNullOrEmpty(txttongtiendamua.Text) ? "" : txttongtiendamua.Text;
-            NewSP.MaKH = string.IsNullOrEmpty(txtmakhachhang.Text) ? "" :txtmakhachhang.Text;
+            NewSP.MaKH = string.IsNullOrEmpty(txtmakhachhang.Text) ? "" : txtmakhachhang.Text;
             NewSP.TrangThai = "1";
             return NewSP;
         }
@@ -264,7 +270,7 @@ namespace demo1
                 txtSP.Text = dtgv_ttsp.Rows[i].Cells[0].Value.ToString();
                 txtTenSP.Text = dtgv_ttsp.Rows[i].Cells[1].Value.ToString();
                 txtDonGia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
-                txtsoluongton.Text = dtgv_ttsp.Rows[i].Cells[5].Value.ToString();
+
                 //tim khuyến mãi
                 foreach (CTKhuyenMaiDTO cv in dskm)
                 {
@@ -281,6 +287,11 @@ namespace demo1
                     txtkhuyenmai.Text = "Không có khuyến mãi nào!";
                     MessageBox.Show("sản phẩm không có chương trình khuyến mãi! hehe");
                 }
+                dataGridView1.Visible = true;
+                string masanpham = txtSP.Text;
+                dsctsp = customerCTSPBUS.LayDsmau(masanpham);
+                bsctsp.DataSource = dsctsp.ToList();
+                dataGridView1.DataSource = bsctsp;
             }
 
             //khoi tao ma chi tiết hóa đơn
@@ -390,15 +401,8 @@ namespace demo1
         public string maKH;
         public string tongtienhd;
         public string tongtienhoadon;
-        //lay du lieu form Hoa Don
-        private void chuyendatatoform(object sender, EventArgs e)
-        {
-            txtmahoadon.Text = mahoadon;
-            txtMaNV.Text = manhanvien;
-            txtmakhachhang.Text = makhachhang;
-            txttongtiendamua.Text = tongtienhoadon;
-            Load_DSSP();
-        }
+        public string mamau;
+        public string kichthuoc;
 
         //lay du lieu textbox
         private CTHoaDonDTO layTTSP_moi()
@@ -406,6 +410,8 @@ namespace demo1
             CTHoaDonDTO NewSP = new CTHoaDonDTO();
             NewSP.MaHD = string.IsNullOrEmpty(txtmahoadon.Text) ? "" : txtmahoadon.Text;
             NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
+            NewSP.MaMau = string.IsNullOrEmpty(txtmamau.Text) ? "" : txtmamau.Text;
+            NewSP.MaSize = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
             NewSP.GiaBan = string.IsNullOrEmpty(txtDonGia.Text) ? "" : txtDonGia.Text;
             NewSP.SoLuong = string.IsNullOrEmpty(txtsoluongmuasanpham.Text) ? "" : txtsoluongmuasanpham.Text;
             NewSP.MaCTHD = string.IsNullOrEmpty(txtmact.Text) ? "" : txtmact.Text;
@@ -424,19 +430,13 @@ namespace demo1
             txtTenSP.Text = "";
             txtkhuyenmai.Text = "";
             txtthanhtien.Text = "0 đồng";
-            txtsoluongton.Text = "";
             txtsoluongmuasanpham.Text = "1";
             txtmact.Text = "";
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            HoaDon hd = new HoaDon();
-            hd.tongtienhoadon = txttongtiendamua.Text;
-            hd.mahoadon = txtmahoadon.Text;
-            hd.MaNV = txtMaNV.Text;
-            hd.makhachhang = txtmakhachhang.Text;
-            hd.Show();
+          
         }
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
@@ -518,10 +518,15 @@ namespace demo1
             }
         }
 
-        private void load_2(object sender, EventArgs e)
+        public void load_2(object sender, EventArgs e)
+        {
+            loadlaiform();
+        }
+        public void loadlaiform()
         {
             txtMaNV.Text = manhanvien;
-            ThemHD();
+            txtmamau.Text = mamau;
+            txtkichthuoc.Text = kichthuoc;
         }
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
@@ -533,7 +538,7 @@ namespace demo1
                 {
                     txtTenSP.Text = sp.TenSP;
                     txtDonGia.Text = sp.DonGia;
-                    txtsoluongton.Text = sp.SoLuongTon;
+
                     foreach (CTKhuyenMaiDTO cv in dskm)
                     {
                         khuyenmaiss = 0;
@@ -626,7 +631,6 @@ namespace demo1
                     {
                         SanPhamDTO nv = layTTSP_sua();
                         bool kq = customerBUS.UpdateSL(nv);
-                        MessageBox.Show("đã update sản phẩm");
                     }
                     reset();
                     Load_Form();
@@ -683,13 +687,13 @@ namespace demo1
                 reset();
                 suahoadon();
                 Load_Form();
+
             }
         }
         private void suahoadon()
         {
             HoaDonDTO hd = layHD_update();
             bool kq = customerHDBUS.UpdateNV(hd);
-            MessageBox.Show("Tổng tiền nhận được là: " + txttongtiendamua.Text);
         }
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
@@ -710,6 +714,23 @@ namespace demo1
         private void bunifuCustomLabel4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void loadctsp(object sender, EventArgs e)
+        {
+            // txtMaNV.Text = manhanvien;
+            //txtmamau.Text = mamau;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int i;
+                i = dataGridView1.CurrentRow.Index;
+                txtmamau.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                txtkichthuoc.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            }
         }
     }
 }

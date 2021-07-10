@@ -136,21 +136,7 @@ namespace demo1
        
         private void Them_Click_1(object sender, EventArgs e)
         {
-            ChamCongDTO khAdd = layTTSP_moi();
-            if (khAdd.MaCC == "")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-            else
-            {
-                bool kq = customerBUS.DKSP(khAdd);
-                MessageBox.Show("Thêm sản phẩm");
-                CTHoaDon cthd = new CTHoaDon();
-
-                cthd.Show();
-                Load_Form();
-            }
+          
         }
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
