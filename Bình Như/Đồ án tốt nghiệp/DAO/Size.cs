@@ -14,18 +14,9 @@ namespace DAO
     
     public partial class Size
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Size()
-        {
-            this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
-        }
-    
         public string MaSize { get; set; }
         public string TenSize { get; set; }
         public string CanNang { get; set; }
         public string TrangThai { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
     }
 }

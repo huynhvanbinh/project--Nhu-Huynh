@@ -73,9 +73,9 @@ namespace demo1
             this.cTPhiếuNhậpDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTPhiếuXuấtDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamCongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zalo0327878264ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.danhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -139,7 +139,7 @@ namespace demo1
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Aqua;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.paldangchon);
             this.panel1.Controls.Add(this.labgio);
             this.panel1.Controls.Add(this.banhang);
@@ -498,6 +498,13 @@ namespace demo1
             this.chamCongToolStripMenuItem.Text = "Cham cong";
             this.chamCongToolStripMenuItem.Click += new System.EventHandler(this.chamCongToolStripMenuItem_Click);
             // 
+            // danhThuToolStripMenuItem
+            // 
+            this.danhThuToolStripMenuItem.Name = "danhThuToolStripMenuItem";
+            this.danhThuToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.danhThuToolStripMenuItem.Text = "Danh thu";
+            this.danhThuToolStripMenuItem.Click += new System.EventHandler(this.danhThuToolStripMenuItem_Click);
+            // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -511,15 +518,8 @@ namespace demo1
             this.zalo0327878264ToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
             this.zalo0327878264ToolStripMenuItem.Image = global::demo1.Properties.Resources.Account;
             this.zalo0327878264ToolStripMenuItem.Name = "zalo0327878264ToolStripMenuItem";
-            this.zalo0327878264ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zalo0327878264ToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.zalo0327878264ToolStripMenuItem.Text = "Zalo: 0327878264";
-            // 
-            // danhThuToolStripMenuItem
-            // 
-            this.danhThuToolStripMenuItem.Name = "danhThuToolStripMenuItem";
-            this.danhThuToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.danhThuToolStripMenuItem.Text = "Danh thu";
-            this.danhThuToolStripMenuItem.Click += new System.EventHandler(this.danhThuToolStripMenuItem_Click);
             // 
             // trangchu
             // 

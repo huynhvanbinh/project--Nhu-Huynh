@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class PhieuNhapDTO
+    public class PhieuXuatDTO
     {
-        public string MaPN { get; set; }
+        public string MaPX { get; set; }
         public string NgayLap { get; set; }
         public string ThanhToan { get; set; }
         public string MaNV { get; set; }

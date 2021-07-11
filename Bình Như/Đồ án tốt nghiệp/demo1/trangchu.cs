@@ -165,6 +165,7 @@ namespace demo1
         {
             PhieuXuat phieuxuat = new PhieuXuat();
             phieuxuat.MdiParent = this;
+            phieuxuat.manv = manhanvien;
             phieuxuat.Show();
         }
 

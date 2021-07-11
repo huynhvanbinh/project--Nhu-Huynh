@@ -6,65 +6,65 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAO
 {
-    public class PhieuNhapDAO
+    public class PhieuXuatDAO
     {
         demoEntities demos = new demoEntities();
         public void themSP()
         {
-            PhieuNhap pn = new PhieuNhap();
-            pn.MaPN = "";
+            PhieuXuat pn = new PhieuXuat();
+            pn.MaPX = "";
             pn.NgayLap = "";
             pn.ThanhToan = "";
             pn.MaNV = "";
             pn.MaCH = "";
             pn.TrangThai = "1";
-            demos.PhieuNhaps.Add(pn);
+            demos.PhieuXuats.Add(pn);
             demos.SaveChanges();
         }
 
-        public List<PhieuNhapDTO> layDSSP()
+        public List<PhieuXuatDTO> layDSSP()
         {
-            List<PhieuNhapDTO> Dssp = new List<PhieuNhapDTO>();
-            Dssp = demos.PhieuNhaps.Where(u => u.TrangThai == "1").Select(u => new PhieuNhapDTO
+            List<PhieuXuatDTO> Dssp = new List<PhieuXuatDTO>();
+            Dssp = demos.PhieuXuats.Where(u => u.TrangThai == "1").Select(u => new PhieuXuatDTO
             {
-                MaPN=u.MaPN,
-                NgayLap=u.NgayLap,
-                ThanhToan=u.ThanhToan,
-                MaNV=u.MaNV,
-                MaCH=u.MaCH,
+                MaPX = u.MaPX,
+                NgayLap = u.NgayLap,
+                ThanhToan = u.ThanhToan,
+                MaNV = u.MaNV,
+                MaCH = u.MaCH,
                 TrangThai = u.TrangThai,
             }).ToList();
             return Dssp;
         }
 
-        public PhieuNhapDTO laySP(string makh)
+        public PhieuXuatDTO laySP(string makh)
         {
-            PhieuNhapDTO sp = new PhieuNhapDTO();
-            sp = demos.PhieuNhaps.Where(u => u.TrangThai == "1").Select(u => new PhieuNhapDTO
+            PhieuXuatDTO sp = new PhieuXuatDTO();
+            sp = demos.PhieuXuats.Where(u => u.TrangThai == "1").Select(u => new PhieuXuatDTO
             {
-                MaPN=u.MaPN,
-                NgayLap=u.NgayLap,
-                ThanhToan=u.ThanhToan,
-                MaNV=u.MaNV,
-                MaCH=u.MaCH,
+                MaPX = u.MaPX,
+                NgayLap = u.NgayLap,
+                ThanhToan = u.ThanhToan,
+                MaNV = u.MaNV,
+                MaCH = u.MaCH,
                 TrangThai = u.TrangThai,
             }).SingleOrDefault();
             return sp;
         }
 
-        public bool DKSP(PhieuNhapDTO sp)
+        public bool DKSP(PhieuXuatDTO sp)
         {
-            PhieuNhap customer = new PhieuNhap();
+            PhieuXuat customer = new PhieuXuat();
 
             try
             {
-                customer.MaPN = sp.MaPN;
+                customer.MaPX = sp.MaPX;
                 customer.NgayLap = sp.NgayLap;
                 customer.ThanhToan = sp.ThanhToan;
                 customer.MaNV = sp.MaNV;
                 customer.MaCH = sp.MaCH;
                 customer.TrangThai = "1";
-                demos.PhieuNhaps.Add(customer);
+                demos.PhieuXuats.Add(customer);
                 demos.SaveChanges();
                 return true;
             }
@@ -73,18 +73,18 @@ namespace DAO
                 return false;
             }
         }
-        public bool UpdateHD(PhieuNhapDTO hd)
+        public bool UpdateHD(PhieuXuatDTO hd)
         {
             try
             {
-                PhieuNhap customer = demos.PhieuNhaps.Where(u => u.MaPN == hd.MaPN).SingleOrDefault();
-                customer.MaPN = hd.MaPN;
+                PhieuXuat customer = demos.PhieuXuats.Where(u => u.MaPX == hd.MaPX).SingleOrDefault();
+                customer.MaPX = hd.MaPX;
                 customer.NgayLap = hd.NgayLap;
                 customer.ThanhToan = hd.ThanhToan;
                 customer.MaNV = hd.MaNV;
                 customer.MaCH = hd.MaCH;
                 customer.TrangThai = "1";
-                demos.PhieuNhaps.Add(customer);
+                demos.PhieuXuats.Add(customer);
                 demos.SaveChanges();
                 return true;
             }
@@ -93,11 +93,11 @@ namespace DAO
                 return false;
             }
         }
-        public bool DELETEHD(PhieuNhapDTO hd)
+        public bool DELETEHD(PhieuXuatDTO hd)
         {
             try
             {
-                PhieuNhap customer = demos.PhieuNhaps.Where(u => u.MaPN == hd.MaPN).SingleOrDefault();
+                PhieuXuat customer = demos.PhieuXuats.Where(u => u.MaPX == hd.MaPX).SingleOrDefault();
                 customer.TrangThai = "0";
                 demos.SaveChanges();
                 return true;

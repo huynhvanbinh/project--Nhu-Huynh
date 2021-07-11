@@ -7,29 +7,32 @@ using DAO;
 using DTO;
 namespace BUS
 {
-   public class CTPhieuNhapBUS
+    public class CTPhieuXuatBUS
     {
-        CTPhieuNhapDAO demo = new CTPhieuNhapDAO();
-        public List<CTPhieuNhapDTO> LayDssp()
+        public CTPhieuXuatDAO demo = new CTPhieuXuatDAO();
+        public List<CTPhieuXuatDTO> LayDsspdk(string ma)
+        {
+            return demo.layDSSPDK(ma);
+        }
+        public List<CTPhieuXuatDTO> LayDssp()
         {
             return demo.layDSSP();
         }
 
-
-        public CTPhieuNhapDTO laySP(string masp)
+        public CTPhieuXuatDTO laySP(string masp)
         {
             return demo.laySP(masp);
         }
 
-        public bool DKSP(CTPhieuNhapDTO sp)
+        public bool DKSP(CTPhieuXuatDTO sp)
         {
             return demo.DKSP(sp);
         }
-        public bool UpdateNV(CTPhieuNhapDTO nv)
+        public bool UpdateNV(CTPhieuXuatDTO nv)
         {
             return demo.UpdateHD(nv);
         }
-        public bool DELETENV(CTPhieuNhapDTO nv)
+        public bool DELETENV(CTPhieuXuatDTO nv)
         {
             return demo.DELETEHD(nv);
         }

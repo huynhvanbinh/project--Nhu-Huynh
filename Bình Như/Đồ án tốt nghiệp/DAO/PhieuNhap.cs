@@ -14,21 +14,11 @@ namespace DAO
     
     public partial class PhieuNhap
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PhieuNhap()
-        {
-            this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
-        }
-    
-        public string MaPhieuNhap { get; set; }
-        public Nullable<System.DateTime> NgayLap { get; set; }
+        public string MaPN { get; set; }
+        public string NgayLap { get; set; }
         public string ThanhToan { get; set; }
-        public string MaNN { get; set; }
-        public string MaNCC { get; set; }
+        public string MaNV { get; set; }
+        public string MaCH { get; set; }
         public string TrangThai { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
-        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

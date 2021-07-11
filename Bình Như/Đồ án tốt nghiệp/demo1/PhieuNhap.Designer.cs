@@ -87,7 +87,7 @@ namespace demo1
             this.cmbloaisanpham.selectedIndex = -1;
             this.cmbloaisanpham.Size = new System.Drawing.Size(300, 48);
             this.cmbloaisanpham.TabIndex = 58;
-            this.cmbloaisanpham.onItemSelected += new System.EventHandler(this.cmbloaisanpham_onItemSelected);
+
             // 
             // dtgv_ttsp
             // 
@@ -107,7 +107,6 @@ namespace demo1
             this.dtgv_ttsp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_ttsp.Size = new System.Drawing.Size(684, 424);
             this.dtgv_ttsp.TabIndex = 47;
-            this.dtgv_ttsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttsp_CellContentClick);
             // 
             // Column5
             // 
@@ -419,7 +418,6 @@ namespace demo1
             this.Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Them.TextMarginLeft = 0;
             this.Them.UseDefaultRadiusAndThickness = true;
-            this.Them.Click += new System.EventHandler(this.Them_Click);
             // 
             // txtMaSP
             // 
@@ -494,7 +492,6 @@ namespace demo1
             this.txtMaSP.TextPlaceholder = "Nhập mã phiếu";
             this.txtMaSP.UseSystemPasswordChar = false;
             this.txtMaSP.WordWrap = true;
-            this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
             // 
             // bunifuButton3
             // 
@@ -654,7 +651,6 @@ namespace demo1
             this.Name = "PhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhieuNhap";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).EndInit();
             this.ResumeLayout(false);
 

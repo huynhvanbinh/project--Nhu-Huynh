@@ -12,13 +12,16 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class NhaCungCap
+    public partial class CTPhieuXuat
     {
-        public string MaNCC { get; set; }
-        public string TenNCC { get; set; }
-        public string SDT { get; set; }
-        public string Email { get; set; }
-        public string DiaChi { get; set; }
+        public string MaCTPX { get; set; }
+        public string MaPX { get; set; }
+        public string MaSP { get; set; }
+        public string MaSize { get; set; }
+        public string MaMau { get; set; }
+        public string SoLuong { get; set; }
+        public string GiaNhap { get; set; }
+        public string ChiecKhau { get; set; }
         public string TrangThai { get; set; }
     }
 }

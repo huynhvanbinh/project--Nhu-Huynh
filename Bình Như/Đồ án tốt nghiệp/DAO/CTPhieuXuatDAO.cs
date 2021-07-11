@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAO
 {
-    public class CTPhieuNhapDAO
+    public class CTPhieuXuatDAO
     {
         demoEntities demos = new demoEntities();
         public void themSP()
         {
-            CTPhieuNhap pn = new CTPhieuNhap();
-            pn.MaCTPN = "";
-            pn.MaPN = "";
+            CTPhieuXuat pn = new CTPhieuXuat();
+            pn.MaCTPX = "";
+            pn.MaPX = "";
             pn.MaSP = "";
             pn.MaSize = "";
             pn.MaMau = "";
@@ -21,35 +21,17 @@ namespace DAO
             pn.GiaNhap = "";
             pn.ChiecKhau = "";
             pn.TrangThai = "1";
-            demos.CTPhieuNhaps.Add(pn);
+            demos.CTPhieuXuats.Add(pn);
             demos.SaveChanges();
         }
 
-        public List<CTPhieuNhapDTO> layDSSPDK(string ma)
+        public List<CTPhieuXuatDTO> layDSSPDK(string ma)
         {
-            List<CTPhieuNhapDTO> Dssp = new List<CTPhieuNhapDTO>();
-            Dssp = demos.CTPhieuNhaps.Where(u => u.TrangThai == "1" && u.MaPN == ma).Select(u => new CTPhieuNhapDTO
+            List<CTPhieuXuatDTO> Dssp = new List<CTPhieuXuatDTO>();
+            Dssp = demos.CTPhieuXuats.Where(u => u.TrangThai == "1" && u.MaPX == ma).Select(u => new CTPhieuXuatDTO
             {
-              MaCTPN=u.MaCTPN,
-              MaPN=u.MaPN,
-              MaSP=u.MaSP,
-              MaMau=u.MaMau,
-              MaSize=u.MaSize,
-              SoLuong=u.SoLuong,
-              GiaNhap=u.GiaNhap,
-              ChiecKhau=u.ChiecKhau,
-              TrangThai = u.TrangThai,
-            }).ToList();
-            return Dssp;
-        }
-
-        public List<CTPhieuNhapDTO> layDSSP()
-        {
-            List<CTPhieuNhapDTO> Dssp = new List<CTPhieuNhapDTO>();
-            Dssp = demos.CTPhieuNhaps.Where(u => u.TrangThai == "1").Select(u => new CTPhieuNhapDTO
-            {
-                MaCTPN = u.MaCTPN,
-                MaPN = u.MaPN,
+                MaCTPX = u.MaCTPX,
+                MaPX = u.MaPX,
                 MaSP = u.MaSP,
                 MaMau = u.MaMau,
                 MaSize = u.MaSize,
@@ -60,13 +42,31 @@ namespace DAO
             }).ToList();
             return Dssp;
         }
-        public CTPhieuNhapDTO laySP(string makh)
+
+        public List<CTPhieuXuatDTO> layDSSP()
         {
-            CTPhieuNhapDTO sp = new CTPhieuNhapDTO();
-            sp = demos.CTPhieuNhaps.Where(u => u.TrangThai == "1").Select(u => new CTPhieuNhapDTO
+            List<CTPhieuXuatDTO> Dssp = new List<CTPhieuXuatDTO>();
+            Dssp = demos.CTPhieuXuats.Where(u => u.TrangThai == "1").Select(u => new CTPhieuXuatDTO
             {
-                MaCTPN = u.MaCTPN,
-                MaPN = u.MaPN,
+                MaCTPX = u.MaCTPX,
+                MaPX = u.MaPX,
+                MaSP = u.MaSP,
+                MaMau = u.MaMau,
+                MaSize = u.MaSize,
+                SoLuong = u.SoLuong,
+                GiaNhap = u.GiaNhap,
+                ChiecKhau = u.ChiecKhau,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dssp;
+        }
+        public CTPhieuXuatDTO laySP(string makh)
+        {
+            CTPhieuXuatDTO sp = new CTPhieuXuatDTO();
+            sp = demos.CTPhieuXuats.Where(u => u.TrangThai == "1").Select(u => new CTPhieuXuatDTO
+            {
+                MaCTPX = u.MaCTPX,
+                MaPX = u.MaPX,
                 MaSP = u.MaSP,
                 MaMau = u.MaMau,
                 MaSize = u.MaSize,
@@ -78,14 +78,14 @@ namespace DAO
             return sp;
         }
 
-        public bool DKSP(CTPhieuNhapDTO sp)
+        public bool DKSP(CTPhieuXuatDTO sp)
         {
-            CTPhieuNhap customer = new CTPhieuNhap();
+            CTPhieuXuat customer = new CTPhieuXuat();
 
             try
             {
-                customer.MaCTPN = sp.MaCTPN;
-                customer.MaPN = sp.MaPN;
+                customer.MaCTPX = sp.MaCTPX;
+                customer.MaPX = sp.MaPX;
                 customer.MaSP = sp.MaSP;
                 customer.MaMau = sp.MaMau;
                 customer.MaSize = sp.MaSize;
@@ -93,7 +93,7 @@ namespace DAO
                 customer.GiaNhap = sp.GiaNhap;
                 customer.ChiecKhau = sp.ChiecKhau;
                 customer.TrangThai = sp.TrangThai;
-                demos.CTPhieuNhaps.Add(customer);
+                demos.CTPhieuXuats.Add(customer);
                 demos.SaveChanges();
                 return true;
             }
@@ -102,13 +102,13 @@ namespace DAO
                 return false;
             }
         }
-        public bool UpdateHD(CTPhieuNhapDTO hd)
+        public bool UpdateHD(CTPhieuXuatDTO hd)
         {
             try
             {
-                CTPhieuNhap customer = demos.CTPhieuNhaps.Where(u => u.MaCTPN == hd.MaCTPN).SingleOrDefault();
-                customer.MaCTPN = hd.MaCTPN;
-                customer.MaPN = hd.MaPN;
+                CTPhieuXuat customer = demos.CTPhieuXuats.Where(u => u.MaCTPX == hd.MaCTPX).SingleOrDefault();
+                customer.MaCTPX = hd.MaCTPX;
+                customer.MaPX = hd.MaPX;
                 customer.MaSP = hd.MaSP;
                 customer.MaMau = hd.MaMau;
                 customer.MaSize = hd.MaSize;
@@ -123,11 +123,11 @@ namespace DAO
                 return false;
             }
         }
-        public bool DELETEHD(CTPhieuNhapDTO hd)
+        public bool DELETEHD(CTPhieuXuatDTO hd)
         {
             try
             {
-                CTPhieuNhap customer = demos.CTPhieuNhaps.Where(u => u.MaCTPN == hd.MaCTPN).SingleOrDefault();
+                CTPhieuXuat customer = demos.CTPhieuXuats.Where(u => u.MaCTPX == hd.MaCTPX).SingleOrDefault();
                 customer.TrangThai = "0";
                 demos.SaveChanges();
                 return true;

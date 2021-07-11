@@ -14,17 +14,8 @@ namespace DAO
     
     public partial class MauSac
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MauSac()
-        {
-            this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
-        }
-    
         public string MaMau { get; set; }
         public string TenMau { get; set; }
         public string TrangThai { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
     }
 }

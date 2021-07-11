@@ -15,19 +15,13 @@ namespace DAO
     public partial class CTPhieuNhap
     {
         public string MaCTPN { get; set; }
-        public string MaPhieuNhap { get; set; }
+        public string MaPN { get; set; }
         public string MaSP { get; set; }
-        public string MaCH { get; set; }
+        public string MaSize { get; set; }
+        public string MaMau { get; set; }
         public string SoLuong { get; set; }
         public string GiaNhap { get; set; }
-        public string TongTien { get; set; }
-        public string MaMau { get; set; }
-        public string MaSize { get; set; }
+        public string ChiecKhau { get; set; }
         public string TrangThai { get; set; }
-    
-        public virtual CuaHang CuaHang { get; set; }
-        public virtual MauSac MauSac { get; set; }
-        public virtual PhieuNhap PhieuNhap { get; set; }
-        public virtual Size Size { get; set; }
     }
 }

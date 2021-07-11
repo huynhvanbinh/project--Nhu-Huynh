@@ -123,7 +123,6 @@ namespace demo1
             this.cmbloaisanpham.selectedIndex = -1;
             this.cmbloaisanpham.Size = new System.Drawing.Size(300, 48);
             this.cmbloaisanpham.TabIndex = 58;
-            this.cmbloaisanpham.onItemSelected += new System.EventHandler(this.cmbloaisanpham_onItemSelected);
             // 
             // dtgv_ttsp
             // 
@@ -365,7 +364,7 @@ namespace demo1
             this.txtGiaNhap.TextPlaceholder = "Giá nhập";
             this.txtGiaNhap.UseSystemPasswordChar = false;
             this.txtGiaNhap.WordWrap = true;
-            this.txtGiaNhap.TextChange += new System.EventHandler(this.thanhtien);
+
             // 
             // txtSoLuong
             // 
@@ -568,7 +567,7 @@ namespace demo1
             this.Them.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Them.TextMarginLeft = 0;
             this.Them.UseDefaultRadiusAndThickness = true;
-            this.Them.Click += new System.EventHandler(this.Them_Click);
+
             // 
             // txtMaSP
             // 
@@ -787,7 +786,7 @@ namespace demo1
             this.cmbsize.selectedIndex = -1;
             this.cmbsize.Size = new System.Drawing.Size(300, 48);
             this.cmbsize.TabIndex = 59;
-            this.cmbsize.onItemSelected += new System.EventHandler(this.cmbsize_onItemSelected);
+
             // 
             // cmbcuahang
             // 
@@ -804,7 +803,7 @@ namespace demo1
             this.cmbcuahang.selectedIndex = -1;
             this.cmbcuahang.Size = new System.Drawing.Size(300, 48);
             this.cmbcuahang.TabIndex = 60;
-            this.cmbcuahang.onItemSelected += new System.EventHandler(this.cmbcuahang_onItemSelected);
+
             // 
             // cmbphieunhap
             // 
@@ -821,7 +820,7 @@ namespace demo1
             this.cmbphieunhap.selectedIndex = -1;
             this.cmbphieunhap.Size = new System.Drawing.Size(300, 48);
             this.cmbphieunhap.TabIndex = 61;
-            this.cmbphieunhap.onItemSelected += new System.EventHandler(this.cmbphieunhap_onItemSelected);
+
             // 
             // label2
             // 
@@ -1208,7 +1207,7 @@ namespace demo1
             this.Name = "CTPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CTPhieuNhap";
-            this.Load += new System.EventHandler(this.Form1_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

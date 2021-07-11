@@ -151,7 +151,7 @@ namespace demo1
             this.txttangca.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txttangca.Lines = new string[0];
             this.txttangca.Location = new System.Drawing.Point(146, 332);
-            this.txttangca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttangca.Margin = new System.Windows.Forms.Padding(4);
             this.txttangca.MaxLength = 32767;
             this.txttangca.MinimumSize = new System.Drawing.Size(116, 40);
             this.txttangca.Modified = false;
@@ -237,7 +237,7 @@ namespace demo1
             this.txtsogiolam.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsogiolam.Lines = new string[0];
             this.txtsogiolam.Location = new System.Drawing.Point(146, 389);
-            this.txtsogiolam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsogiolam.Margin = new System.Windows.Forms.Padding(4);
             this.txtsogiolam.MaxLength = 32767;
             this.txtsogiolam.MinimumSize = new System.Drawing.Size(116, 40);
             this.txtsogiolam.Modified = false;
@@ -313,7 +313,7 @@ namespace demo1
             this.txtchucvu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtchucvu.Lines = new string[0];
             this.txtchucvu.Location = new System.Drawing.Point(148, 272);
-            this.txtchucvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtchucvu.Margin = new System.Windows.Forms.Padding(4);
             this.txtchucvu.MaxLength = 32767;
             this.txtchucvu.MinimumSize = new System.Drawing.Size(116, 40);
             this.txtchucvu.Modified = false;
@@ -354,7 +354,6 @@ namespace demo1
             this.txtchucvu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtchucvu.TextMarginBottom = 0;
             this.txtchucvu.TextMarginLeft = 5;
-            this.txtchucvu.TextMarginTop = 0;
             this.txtchucvu.TextPlaceholder = "Nhập số diện thoại";
             this.txtchucvu.UseSystemPasswordChar = false;
             this.txtchucvu.WordWrap = true;
@@ -433,7 +432,7 @@ namespace demo1
             this.txtsdt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsdt.Lines = new string[0];
             this.txtsdt.Location = new System.Drawing.Point(148, 215);
-            this.txtsdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsdt.Margin = new System.Windows.Forms.Padding(4);
             this.txtsdt.MaxLength = 32767;
             this.txtsdt.MinimumSize = new System.Drawing.Size(116, 40);
             this.txtsdt.Modified = false;
@@ -468,7 +467,7 @@ namespace demo1
             this.txtsdt.SelectionLength = 0;
             this.txtsdt.SelectionStart = 0;
             this.txtsdt.ShortcutsEnabled = true;
-            this.txtsdt.Size = new System.Drawing.Size(234, 40);
+
             this.txtsdt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtsdt.TabIndex = 92;
             this.txtsdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -509,7 +508,7 @@ namespace demo1
             this.txttennv.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txttennv.Lines = new string[0];
             this.txttennv.Location = new System.Drawing.Point(148, 153);
-            this.txttennv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttennv.Margin = new System.Windows.Forms.Padding(4);
             this.txttennv.MaxLength = 32767;
             this.txttennv.MinimumSize = new System.Drawing.Size(116, 40);
             this.txttennv.Modified = false;
@@ -585,7 +584,7 @@ namespace demo1
             this.txtmanv.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmanv.Lines = new string[0];
             this.txtmanv.Location = new System.Drawing.Point(148, 95);
-            this.txtmanv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmanv.Margin = new System.Windows.Forms.Padding(4);
             this.txtmanv.MaxLength = 32767;
             this.txtmanv.MinimumSize = new System.Drawing.Size(116, 40);
             this.txtmanv.Modified = false;
@@ -626,7 +625,7 @@ namespace demo1
             this.txtmanv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmanv.TextMarginBottom = 0;
             this.txtmanv.TextMarginLeft = 5;
-
+            this.txtmanv.TextMarginTop = 0;
             this.txtmanv.TextPlaceholder = "Nhap ma nhan vien";
             this.txtmanv.UseSystemPasswordChar = false;
             this.txtmanv.WordWrap = true;
@@ -684,7 +683,7 @@ namespace demo1
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.nhanvien.Location = new System.Drawing.Point(6, 62);
-            this.nhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nhanvien.Margin = new System.Windows.Forms.Padding(4);
             this.nhanvien.Name = "nhanvien";
             this.nhanvien.ReadOnly = true;
             this.nhanvien.RowTemplate.Height = 24;
@@ -739,7 +738,7 @@ namespace demo1
             this.Them.IdleIconRightImage = null;
             this.Them.IndicateFocus = false;
             this.Them.Location = new System.Drawing.Point(638, 521);
-            this.Them.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Them.Margin = new System.Windows.Forms.Padding(4);
             this.Them.Name = "Them";
             stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties25.BorderRadius = 3;
@@ -777,7 +776,7 @@ namespace demo1
             this.Column3,
             this.Column4});
             this.dtgv_ttkh.Location = new System.Drawing.Point(6, 406);
-            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgv_ttkh.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
@@ -838,7 +837,7 @@ namespace demo1
             this.dtpngaychamcong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngaychamcong.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpngaychamcong.Location = new System.Drawing.Point(186, 368);
-            this.dtpngaychamcong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpngaychamcong.Margin = new System.Windows.Forms.Padding(4);
             this.dtpngaychamcong.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtpngaychamcong.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtpngaychamcong.Name = "dtpngaychamcong";
@@ -866,9 +865,9 @@ namespace demo1
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(626, 62);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(413, 440);
             this.groupBox1.TabIndex = 103;
             this.groupBox1.TabStop = false;
@@ -890,7 +889,7 @@ namespace demo1
             this.dtpngaycham.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngaycham.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpngaycham.Location = new System.Drawing.Point(148, 43);
-            this.dtpngaycham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpngaycham.Margin = new System.Windows.Forms.Padding(4);
             this.dtpngaycham.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtpngaycham.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtpngaycham.Name = "dtpngaycham";
@@ -937,7 +936,7 @@ namespace demo1
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
             this.bunifuButton1.Location = new System.Drawing.Point(787, 521);
-            this.bunifuButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties27.BorderRadius = 3;
@@ -1002,7 +1001,7 @@ namespace demo1
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
             this.bunifuButton2.Location = new System.Drawing.Point(960, 521);
-            this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties29.BorderRadius = 3;
@@ -1033,7 +1032,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1060, 702);
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.bunifuButton1);
@@ -1046,7 +1045,7 @@ namespace demo1
             this.Controls.Add(this.dtgv_ttkh);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChamCong";
             this.Text = "ChamCong";
             ((System.ComponentModel.ISupportInitialize)(this.nhanvien)).EndInit();

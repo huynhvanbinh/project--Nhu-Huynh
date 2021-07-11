@@ -14,18 +14,9 @@ namespace DAO
     
     public partial class CuaHang
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CuaHang()
-        {
-            this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
-        }
-    
         public string MaCH { get; set; }
         public string TenCH { get; set; }
         public string DiaChi { get; set; }
         public string TrangThai { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
     }
 }
