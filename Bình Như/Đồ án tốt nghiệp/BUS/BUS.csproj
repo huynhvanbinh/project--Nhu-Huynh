@@ -53,6 +53,7 @@
     <Compile Include="ChucVuBUS.cs" />
     <Compile Include="CTHoaDonBUS.cs" />
     <Compile Include="CTKhuyenMaiBUS.cs" />
+    <Compile Include="CTPhieuNhapBUS.cs" />
     <Compile Include="CTPhieuXuatBUS.cs" />
     <Compile Include="CTSanPhamBUS.cs" />
     <Compile Include="CuaHangBUS.cs" />

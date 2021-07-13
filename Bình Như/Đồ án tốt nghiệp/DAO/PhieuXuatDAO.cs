@@ -37,6 +37,17 @@ namespace DAO
             return Dssp;
         }
 
+        public List<PhieuXuatDTO> layDSSPkhongtrangthai()
+        {
+            List<PhieuXuatDTO> Dssp = new List<PhieuXuatDTO>();
+            Dssp = demos.PhieuXuats.Select(u => new PhieuXuatDTO
+            {
+                MaPX = u.MaPX,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dssp;
+        }
+
         public PhieuXuatDTO laySP(string makh)
         {
             PhieuXuatDTO sp = new PhieuXuatDTO();

@@ -151,6 +151,7 @@ namespace demo1
         {
             PhieuNhap phieunhap = new PhieuNhap();
             phieunhap.MdiParent = this;
+            phieunhap.manv = manhanvien;
             phieunhap.Show();
         }
 

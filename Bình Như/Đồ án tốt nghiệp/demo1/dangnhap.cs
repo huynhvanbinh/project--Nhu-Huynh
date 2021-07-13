@@ -108,7 +108,7 @@ namespace demo1
             }
             else
             {
-                MessageBox.Show("Sai tai khoan hoac mat khau");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
             }
         }
 

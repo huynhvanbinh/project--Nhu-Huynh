@@ -78,6 +78,7 @@ namespace demo1
                 {
                     labmacuahang.Visible = true;
                     labmacuahang.Text = khs.MaCH;
+                    txtMaPX.Text="PX_"+khs.MaCH+ "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
                 }    
             }
         }
@@ -96,13 +97,13 @@ namespace demo1
         {
             PhieuXuatDTO khAdd = layTTKH_moi();
             bool kq = customerBUS.DKSP(khAdd);
-            MessageBox.Show("Thêm chi tiết phiếu xuất");
             Load_Form();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
             them();
+            MessageBox.Show("Thêm chi tiết phiếu xuất");
             CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
             ctphieuxuat.maphieuxuat = txtMaPX.Text;
             ctphieuxuat.Show();
@@ -166,6 +167,7 @@ namespace demo1
             if (dtgv_ttkh.SelectedCells.Count > 0)
             {
                 int i;
+                labmacuahang.Visible = true;
                 i = dtgv_ttkh.CurrentRow.Index;
                 txtMaPX.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
                 dtpngay.Text = dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
@@ -173,6 +175,14 @@ namespace demo1
                 labmanv.Text = dtgv_ttkh.Rows[i].Cells[2].Value.ToString();
                 labmacuahang.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
             }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            //xem chi tiết
+            CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
+            ctphieuxuat.maphieuxuat = txtMaPX.Text;
+            ctphieuxuat.Show();
         }
     }
 }

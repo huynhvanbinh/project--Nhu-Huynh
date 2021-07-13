@@ -115,15 +115,64 @@ namespace demo1
         }
         void themsanphamPX()
         {
+            txtmactpx.Text = txtmaphieuxuat.Text + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
             CTPhieuXuatDTO khAdd = layTTKH_moi();
             bool kq = customerBUS.DKSP(khAdd);
             MessageBox.Show("Thêm thành công");
             Load_Form();
         }
-
         private void btnthem_Click(object sender, EventArgs e)
         {
+            
             themsanphamPX();
+        }
+        void sua()
+        {
+            CTPhieuXuatDTO khAdd = layTTKH_moi();
+            bool kq = customerBUS.UpdateNV(khAdd);
+            MessageBox.Show("bạn đã thay đổi thành công");
+            Load_Form();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sua();
+        }
+        private CTPhieuXuatDTO layTTKH_xoa()
+        {
+            CTPhieuXuatDTO NewKH = new CTPhieuXuatDTO();
+            NewKH.MaCTPX = string.IsNullOrEmpty(txtmactpx.Text) ? "" : txtmactpx.Text;
+            NewKH.TrangThai = "0";
+            return NewKH;
+        }
+        void xoa()
+        {
+            CTPhieuXuatDTO khAdd = layTTKH_xoa();
+            bool kq = customerBUS.DELETENV(khAdd);
+            MessageBox.Show("bạn đã thay đổi thành công");
+            Load_Form();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            xoa();
+        }
+
+        private void dtgv_ttkh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgv_ttkh.SelectedCells.Count > 0)
+            {
+                labmau.Visible = true;
+                labkichthuoc.Visible = true;
+                int i;
+                i = dtgv_ttkh.CurrentRow.Index;
+                txtmactpx.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
+                txtsp.Text = dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
+                labmau.Text = dtgv_ttkh.Rows[i].Cells[2].Value.ToString();
+                labkichthuoc.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
+                txtsoluong.Text = dtgv_ttkh.Rows[i].Cells[4].Value.ToString();
+                txtdongia.Text = dtgv_ttkh.Rows[i].Cells[5].Value.ToString();
+            }
         }
     }
 }
