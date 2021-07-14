@@ -94,3 +94,15 @@ C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp
 C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.dll
 C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.pdb
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.dll.config
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.dll
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\DTO.pdb
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.dll
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.SqlServer.dll
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.xml
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\bin\Debug\EntityFramework.SqlServer.xml
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.dll
+D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DTO\obj\Debug\DTO.pdb

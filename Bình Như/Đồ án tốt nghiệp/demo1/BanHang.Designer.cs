@@ -1000,7 +1000,6 @@ namespace demo1
             this.txtmahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmahoadon.TextMarginBottom = 0;
             this.txtmahoadon.TextMarginLeft = 5;
-            this.txtmahoadon.TextMarginTop = 0;
             this.txtmahoadon.TextPlaceholder = "Enter text";
             this.txtmahoadon.UseSystemPasswordChar = false;
             this.txtmahoadon.WordWrap = true;
@@ -1385,7 +1384,6 @@ namespace demo1
             this.txttongtiendamua.OnIdleState = stateProperties40;
             this.txttongtiendamua.PasswordChar = '\0';
             this.txttongtiendamua.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txttongtiendamua.PlaceholderText = "";
             this.txttongtiendamua.ReadOnly = false;
             this.txttongtiendamua.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txttongtiendamua.SelectedText = "";
