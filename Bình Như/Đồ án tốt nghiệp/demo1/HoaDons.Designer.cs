@@ -401,7 +401,6 @@ namespace demo1
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTongTien.TextMarginBottom = 0;
             this.txtTongTien.TextMarginLeft = 5;
-            this.txtTongTien.TextMarginTop = 0;
             this.txtTongTien.TextPlaceholder = "Enter text";
             this.txtTongTien.UseSystemPasswordChar = false;
             this.txtTongTien.WordWrap = true;

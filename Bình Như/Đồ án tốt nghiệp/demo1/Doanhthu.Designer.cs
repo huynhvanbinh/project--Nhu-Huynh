@@ -115,11 +115,9 @@ namespace demo1
             this.txtdanhthungay.SelectionLength = 0;
             this.txtdanhthungay.SelectionStart = 0;
             this.txtdanhthungay.ShortcutsEnabled = true;
-            this.txtdanhthungay.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtdanhthungay.TabIndex = 91;
             this.txtdanhthungay.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtdanhthungay.TextMarginBottom = 0;
-            this.txtdanhthungay.TextMarginLeft = 5;
             this.txtdanhthungay.TextMarginTop = 0;
             this.txtdanhthungay.TextPlaceholder = "Nhap ma nhan vien";
             this.txtdanhthungay.UseSystemPasswordChar = false;

@@ -14,7 +14,10 @@ namespace BUS
         {
             return demo.layDSSP(ngay);
         }
-
+        public List<HoaDonDTO> LayDsspall()
+        {
+            return demo.layDSSPall();
+        }
         public HoaDonDTO laySP(string masp)
         {
             return demo.laySP(masp);

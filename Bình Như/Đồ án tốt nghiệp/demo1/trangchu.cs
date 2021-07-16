@@ -197,5 +197,19 @@ namespace demo1
             danhthu.MdiParent = this;
             danhthu.Show();
         }
+
+        private void thángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoanhThuThang danhthuthang = new DoanhThuThang();
+            danhthuthang.MdiParent = this;
+            danhthuthang.Show();
+        }
+
+        private void hàngNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DanhThuHangNgay danhthungay = new DanhThuHangNgay();
+            danhthungay.MdiParent = this;
+            danhthungay.Show();
+        }
     }
 }
