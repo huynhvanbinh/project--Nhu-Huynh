@@ -117,7 +117,9 @@ namespace demo1
                 if(thang.Equals(thang1))
                 {
                     thunhapthang1 = thunhapthang1 + Int32.Parse(cv.TongTien);
-                    tongtn1 = thunhapthang1.ToString();
+                    if(thunhapthang1==0)
+                        tongtn1 = thunhapthang1.ToString();
+                           
                 }
                 if (thang.Equals(thang2))
                 {

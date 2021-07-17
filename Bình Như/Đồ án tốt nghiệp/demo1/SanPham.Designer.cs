@@ -617,7 +617,6 @@ namespace demo1
             this.txtloaisp.SelectionLength = 0;
             this.txtloaisp.SelectionStart = 0;
             this.txtloaisp.ShortcutsEnabled = true;
-            this.txtloaisp.Size = new System.Drawing.Size(300, 48);
             this.txtloaisp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtloaisp.TabIndex = 45;
             this.txtloaisp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

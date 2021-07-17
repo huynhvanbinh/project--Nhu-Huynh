@@ -26,9 +26,6 @@ namespace demo1
             int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
             this.Width = widthScreen;
             this.Height = heightScreen;
-            labngay.Text = DateTime.Now.ToString("dd/MM/yyyy: HH/m/s");
-            paldangchon.Height = home.Height;
-            paldangchon.Top = home.Top;
 
         }
 
@@ -56,22 +53,6 @@ namespace demo1
             labgio.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void home_Click(object sender, EventArgs e)
-        {
-            paldangchon.Height = home.Height;
-            paldangchon.Top = home.Top;
-        }
-
-        private void banhang_Click(object sender, EventArgs e)
-        {
-            paldangchon.Height = banhang.Height;
-            paldangchon.Top = banhang.Top;
-            BanHang banhangs = new BanHang();
-            banhangs.manhanvien = manhanvien;
-            banhangs.MdiParent = this;
-            banhangs.Show();
-        }
-
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 dn = new Form1();
@@ -95,6 +76,8 @@ namespace demo1
         {
             KhuyenMai km = new KhuyenMai();
             km.MdiParent = this;
+            km.FormBorderStyle = FormBorderStyle.None;
+            km.Dock=DockStyle.Fill;
             km.Show();
         }
 
@@ -210,6 +193,14 @@ namespace demo1
             DanhThuHangNgay danhthungay = new DanhThuHangNgay();
             danhthungay.MdiParent = this;
             danhthungay.Show();
+        }
+
+        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BanHang banhang = new BanHang();
+            banhang.MdiParent = this;
+            banhang.manhanvien = manhanvien;
+            banhang.Show();
         }
     }
 }

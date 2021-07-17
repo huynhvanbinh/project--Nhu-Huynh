@@ -31,22 +31,10 @@ namespace demo1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(trangchu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.lay = new System.Windows.Forms.Label();
             this.labngay = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labgio = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.paldangchon = new System.Windows.Forms.Panel();
-            this.banhang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.home = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chàoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,32 +62,36 @@ namespace demo1
             this.cTPhiếuXuấtDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamCongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zalo0327878264ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemDanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hàngNgàyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tuầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zalo0327878264ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labgio = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(914, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1159, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 49;
             this.label1.Text = "Xin Chào:";
             // 
             // lay
             // 
             this.lay.AutoSize = true;
+            this.lay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lay.ForeColor = System.Drawing.Color.Red;
-            this.lay.Location = new System.Drawing.Point(973, 0);
+            this.lay.Location = new System.Drawing.Point(1243, 2);
             this.lay.Name = "lay";
-            this.lay.Size = new System.Drawing.Size(35, 13);
+            this.lay.Size = new System.Drawing.Size(51, 20);
             this.lay.TabIndex = 50;
             this.lay.Text = "label2";
             // 
@@ -113,183 +105,11 @@ namespace demo1
             this.labngay.Size = new System.Drawing.Size(0, 20);
             this.labngay.TabIndex = 66;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(12, 588);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Giờ: ";
-            // 
-            // labgio
-            // 
-            this.labgio.AutoSize = true;
-            this.labgio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labgio.ForeColor = System.Drawing.Color.Red;
-            this.labgio.Location = new System.Drawing.Point(49, 588);
-            this.labgio.Name = "labgio";
-            this.labgio.Size = new System.Drawing.Size(66, 20);
-            this.labgio.TabIndex = 70;
-            this.labgio.Text = "Đônghồ";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.paldangchon);
-            this.panel1.Controls.Add(this.labgio);
-            this.panel1.Controls.Add(this.banhang);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.home);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 617);
-            this.panel1.TabIndex = 72;
-            // 
-            // paldangchon
-            // 
-            this.paldangchon.BackColor = System.Drawing.Color.Yellow;
-            this.paldangchon.Location = new System.Drawing.Point(179, 89);
-            this.paldangchon.Name = "paldangchon";
-            this.paldangchon.Size = new System.Drawing.Size(10, 45);
-            this.paldangchon.TabIndex = 4;
-            // 
-            // banhang
-            // 
-            this.banhang.AllowToggling = false;
-            this.banhang.AnimationSpeed = 200;
-            this.banhang.AutoGenerateColors = false;
-            this.banhang.BackColor = System.Drawing.Color.Transparent;
-            this.banhang.BackColor1 = System.Drawing.Color.Aqua;
-            this.banhang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("banhang.BackgroundImage")));
-            this.banhang.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.banhang.ButtonText = "Bán Hàng";
-            this.banhang.ButtonTextMarginLeft = 0;
-            this.banhang.ColorContrastOnClick = 45;
-            this.banhang.ColorContrastOnHover = 45;
-            this.banhang.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.banhang.CustomizableEdges = borderEdges3;
-            this.banhang.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.banhang.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.banhang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.banhang.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.banhang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.banhang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.banhang.ForeColor = System.Drawing.Color.White;
-            this.banhang.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.banhang.IconMarginLeft = 11;
-            this.banhang.IconPadding = 10;
-            this.banhang.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.banhang.IdleBorderColor = System.Drawing.Color.Aqua;
-            this.banhang.IdleBorderRadius = 3;
-            this.banhang.IdleBorderThickness = 1;
-            this.banhang.IdleFillColor = System.Drawing.Color.Aqua;
-            this.banhang.IdleIconLeftImage = null;
-            this.banhang.IdleIconRightImage = null;
-            this.banhang.IndicateFocus = false;
-            this.banhang.Location = new System.Drawing.Point(3, 169);
-            this.banhang.Name = "banhang";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.BorderRadius = 3;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.banhang.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.BorderRadius = 3;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.banhang.OnPressedState = stateProperties6;
-            this.banhang.Size = new System.Drawing.Size(186, 45);
-            this.banhang.TabIndex = 1;
-            this.banhang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.banhang.TextMarginLeft = 0;
-            this.banhang.UseDefaultRadiusAndThickness = true;
-            this.banhang.Click += new System.EventHandler(this.banhang_Click);
-            // 
-            // home
-            // 
-            this.home.AllowToggling = false;
-            this.home.AnimationSpeed = 200;
-            this.home.AutoGenerateColors = false;
-            this.home.BackColor = System.Drawing.Color.Transparent;
-            this.home.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("home.BackgroundImage")));
-            this.home.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.home.ButtonText = "Home";
-            this.home.ButtonTextMarginLeft = 0;
-            this.home.ColorContrastOnClick = 45;
-            this.home.ColorContrastOnHover = 45;
-            this.home.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.home.CustomizableEdges = borderEdges4;
-            this.home.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.home.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.home.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.home.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.home.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.home.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.home.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.home.IconMarginLeft = 11;
-            this.home.IconPadding = 10;
-            this.home.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.home.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.home.IdleBorderRadius = 3;
-            this.home.IdleBorderThickness = 1;
-            this.home.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.home.IdleIconLeftImage = null;
-            this.home.IdleIconRightImage = null;
-            this.home.IndicateFocus = false;
-            this.home.Location = new System.Drawing.Point(3, 89);
-            this.home.Name = "home";
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.BorderRadius = 3;
-            stateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties7.BorderThickness = 1;
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            stateProperties7.ForeColor = System.Drawing.Color.White;
-            stateProperties7.IconLeftImage = null;
-            stateProperties7.IconRightImage = null;
-            this.home.onHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties8.BorderRadius = 3;
-            stateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties8.BorderThickness = 1;
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties8.ForeColor = System.Drawing.Color.White;
-            stateProperties8.IconLeftImage = null;
-            stateProperties8.IconRightImage = null;
-            this.home.OnPressedState = stateProperties8;
-            this.home.Size = new System.Drawing.Size(186, 45);
-            this.home.TabIndex = 0;
-            this.home.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.home.TextMarginLeft = 0;
-            this.home.UseDefaultRadiusAndThickness = true;
-            this.home.Click += new System.EventHandler(this.home_Click);
             // 
             // menuStrip1
             // 
@@ -302,10 +122,11 @@ namespace demo1
             this.chamCongToolStripMenuItem,
             this.danhThuToolStripMenuItem,
             this.xemDanhThuToolStripMenuItem,
+            this.bánHàngToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1047, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1367, 24);
             this.menuStrip1.TabIndex = 74;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -510,6 +331,36 @@ namespace demo1
             this.danhThuToolStripMenuItem.Text = "Danh thu";
             this.danhThuToolStripMenuItem.Click += new System.EventHandler(this.danhThuToolStripMenuItem_Click);
             // 
+            // xemDanhThuToolStripMenuItem
+            // 
+            this.xemDanhThuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hàngNgàyToolStripMenuItem,
+            this.thángToolStripMenuItem,
+            this.tuầnToolStripMenuItem});
+            this.xemDanhThuToolStripMenuItem.Name = "xemDanhThuToolStripMenuItem";
+            this.xemDanhThuToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.xemDanhThuToolStripMenuItem.Text = "xem danh thu";
+            // 
+            // hàngNgàyToolStripMenuItem
+            // 
+            this.hàngNgàyToolStripMenuItem.Name = "hàngNgàyToolStripMenuItem";
+            this.hàngNgàyToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.hàngNgàyToolStripMenuItem.Text = "Hàng ngày";
+            this.hàngNgàyToolStripMenuItem.Click += new System.EventHandler(this.hàngNgàyToolStripMenuItem_Click);
+            // 
+            // thángToolStripMenuItem
+            // 
+            this.thángToolStripMenuItem.Name = "thángToolStripMenuItem";
+            this.thángToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.thángToolStripMenuItem.Text = "Tháng";
+            this.thángToolStripMenuItem.Click += new System.EventHandler(this.thángToolStripMenuItem_Click);
+            // 
+            // tuầnToolStripMenuItem
+            // 
+            this.tuầnToolStripMenuItem.Name = "tuầnToolStripMenuItem";
+            this.tuầnToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.tuầnToolStripMenuItem.Text = "Tuần";
+            // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -526,44 +377,44 @@ namespace demo1
             this.zalo0327878264ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.zalo0327878264ToolStripMenuItem.Text = "Zalo: 0327878264";
             // 
-            // xemDanhThuToolStripMenuItem
+            // labgio
             // 
-            this.xemDanhThuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hàngNgàyToolStripMenuItem,
-            this.thángToolStripMenuItem,
-            this.tuầnToolStripMenuItem});
-            this.xemDanhThuToolStripMenuItem.Name = "xemDanhThuToolStripMenuItem";
-            this.xemDanhThuToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.xemDanhThuToolStripMenuItem.Text = "xem danh thu";
+            this.labgio.AutoSize = true;
+            this.labgio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labgio.ForeColor = System.Drawing.Color.Red;
+            this.labgio.Location = new System.Drawing.Point(1289, 655);
+            this.labgio.Name = "labgio";
+            this.labgio.Size = new System.Drawing.Size(66, 20);
+            this.labgio.TabIndex = 70;
+            this.labgio.Text = "Đônghồ";
             // 
-            // hàngNgàyToolStripMenuItem
+            // label2
             // 
-            this.hàngNgàyToolStripMenuItem.Name = "hàngNgàyToolStripMenuItem";
-            this.hàngNgàyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.hàngNgàyToolStripMenuItem.Text = "Hàng ngày";
-            this.hàngNgàyToolStripMenuItem.Click += new System.EventHandler(this.hàngNgàyToolStripMenuItem_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(1252, 655);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Giờ: ";
             // 
-            // thángToolStripMenuItem
+            // bánHàngToolStripMenuItem
             // 
-            this.thángToolStripMenuItem.Name = "thángToolStripMenuItem";
-            this.thángToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thángToolStripMenuItem.Text = "Tháng";
-            this.thángToolStripMenuItem.Click += new System.EventHandler(this.thángToolStripMenuItem_Click);
-            // 
-            // tuầnToolStripMenuItem
-            // 
-            this.tuầnToolStripMenuItem.Name = "tuầnToolStripMenuItem";
-            this.tuầnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tuầnToolStripMenuItem.Text = "Tuần";
+            this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
+            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.bánHàngToolStripMenuItem.Text = "Bán Hàng";
+            this.bánHàngToolStripMenuItem.Click += new System.EventHandler(this.bánHàngToolStripMenuItem_Click);
             // 
             // trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1047, 641);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1367, 684);
+            this.Controls.Add(this.labgio);
             this.Controls.Add(this.labngay);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -572,8 +423,6 @@ namespace demo1
             this.Name = "trangchu";
             this.Text = "trangchu";
             this.Load += new System.EventHandler(this.trangchu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -585,13 +434,7 @@ namespace demo1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lay;
         private System.Windows.Forms.Label labngay;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labgio;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton banhang;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton home;
-        private System.Windows.Forms.Panel paldangchon;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chàoToolStripMenuItem;
@@ -625,5 +468,8 @@ namespace demo1
         private System.Windows.Forms.ToolStripMenuItem hàngNgàyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thángToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tuầnToolStripMenuItem;
+        private System.Windows.Forms.Label labgio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem bánHàngToolStripMenuItem;
     }
 }
