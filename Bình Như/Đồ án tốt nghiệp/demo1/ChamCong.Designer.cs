@@ -548,7 +548,6 @@ namespace demo1
             this.txttennv.TabIndex = 91;
             this.txttennv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txttennv.TextMarginBottom = 0;
-            this.txttennv.TextMarginLeft = 5;
             this.txttennv.TextMarginTop = 0;
             this.txttennv.TextPlaceholder = "Nhap Ten Nhan Vien";
             this.txttennv.UseSystemPasswordChar = false;

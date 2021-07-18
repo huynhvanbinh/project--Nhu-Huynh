@@ -972,7 +972,6 @@ namespace demo1
             this.txtmahoadon.TabIndex = 71;
             this.txtmahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmahoadon.TextMarginBottom = 0;
-            this.txtmahoadon.TextMarginLeft = 5;
             this.txtmahoadon.TextMarginTop = 0;
             this.txtmahoadon.TextPlaceholder = "Enter text";
             this.txtmahoadon.UseSystemPasswordChar = false;

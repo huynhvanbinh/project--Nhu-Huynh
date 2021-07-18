@@ -56,6 +56,8 @@ namespace demo1
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 dn = new Form1();
+            dn.FormBorderStyle = FormBorderStyle.None;
+            dn.Dock = DockStyle.Fill;
             dn.MdiParent = this;
             dn.Show();
         }
@@ -64,6 +66,8 @@ namespace demo1
         {
             SanPham sp = new SanPham();
             sp.MdiParent = this;
+            sp.FormBorderStyle = FormBorderStyle.None;
+            sp.Dock = DockStyle.Fill;
             sp.Show();
         }
 
@@ -85,12 +89,16 @@ namespace demo1
         {
             CuaHang ch = new CuaHang();
             ch.MdiParent = this;
+            ch.FormBorderStyle = FormBorderStyle.None;
+            ch.Dock = DockStyle.Fill;
             ch.Show();
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TaiKhoan taikhoan = new TaiKhoan();
+            taikhoan.FormBorderStyle = FormBorderStyle.None;
+            taikhoan.Dock = DockStyle.Fill;
             taikhoan.MdiParent = this;
             taikhoan.Show();
         }
@@ -98,6 +106,8 @@ namespace demo1
         private void loạiNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChucVu chucvu = new ChucVu();
+            chucvu.FormBorderStyle = FormBorderStyle.None;
+            chucvu.Dock = DockStyle.Fill;
             chucvu.MdiParent = this;
             chucvu.Show();
         }
@@ -105,6 +115,8 @@ namespace demo1
         private void hóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             HoaDons hoadon = new HoaDons();
+            hoadon.FormBorderStyle = FormBorderStyle.None;
+            hoadon.Dock = DockStyle.Fill;
             hoadon.MdiParent = this;
             hoadon.Show();
         }
@@ -112,6 +124,8 @@ namespace demo1
         private void loạiSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoaiSanPham loaisanpham = new LoaiSanPham();
+            loaisanpham.FormBorderStyle = FormBorderStyle.None;
+            loaisanpham.Dock = DockStyle.Fill;
             loaisanpham.MdiParent = this;
             loaisanpham.Show();
         }
@@ -119,6 +133,8 @@ namespace demo1
         private void màuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MauSac mau = new MauSac();
+            mau.FormBorderStyle = FormBorderStyle.None;
+            mau.Dock = DockStyle.Fill;
             mau.MdiParent = this;
             mau.Show();
         }
@@ -126,6 +142,8 @@ namespace demo1
         private void kíchThướcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Size kichthuoc = new Size();
+            kichthuoc.FormBorderStyle = FormBorderStyle.None;
+            kichthuoc.Dock = DockStyle.Fill;
             kichthuoc.MdiParent = this;
             kichthuoc.Show();
         }
@@ -133,6 +151,8 @@ namespace demo1
         private void phiếuNhậpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PhieuNhap phieunhap = new PhieuNhap();
+            phieunhap.FormBorderStyle = FormBorderStyle.None;
+            phieunhap.Dock = DockStyle.Fill;
             phieunhap.MdiParent = this;
             phieunhap.manv = manhanvien;
             phieunhap.Show();
@@ -141,6 +161,8 @@ namespace demo1
         private void cTPhiếuNhậpDemoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CTPhieuNhap ctpn = new CTPhieuNhap();
+            ctpn.FormBorderStyle = FormBorderStyle.None;
+            ctpn.Dock = DockStyle.Fill;
             ctpn.MdiParent = this;
             ctpn.Show();
         }
@@ -148,6 +170,8 @@ namespace demo1
         private void phiếuXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PhieuXuat phieuxuat = new PhieuXuat();
+            phieuxuat.FormBorderStyle = FormBorderStyle.None;
+            phieuxuat.Dock = DockStyle.Fill;
             phieuxuat.MdiParent = this;
             phieuxuat.manv = manhanvien;
             phieuxuat.Show();
@@ -156,6 +180,8 @@ namespace demo1
         private void cTPhiếuXuấtDemoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
+            ctphieuxuat.FormBorderStyle = FormBorderStyle.None;
+            ctphieuxuat.Dock = DockStyle.Fill;
             ctphieuxuat.MdiParent = this;
             ctphieuxuat.Show();
         }
@@ -163,6 +189,8 @@ namespace demo1
         private void chamCongToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChamCong chamcong = new ChamCong();
+            chamcong.FormBorderStyle = FormBorderStyle.None;
+            chamcong.Dock = DockStyle.Fill;
             chamcong.MdiParent = this;
             chamcong.Show();
         }
@@ -170,6 +198,8 @@ namespace demo1
         private void luongNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LuongNhanVien luongnhanvien = new LuongNhanVien();
+            luongnhanvien.FormBorderStyle = FormBorderStyle.None;
+            luongnhanvien.Dock = DockStyle.Fill;
             luongnhanvien.MdiParent = this;
             luongnhanvien.Show();
         }
@@ -177,6 +207,8 @@ namespace demo1
         private void danhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Doanhthu danhthu = new Doanhthu();
+            danhthu.FormBorderStyle = FormBorderStyle.None;
+            danhthu.Dock = DockStyle.Fill;
             danhthu.MdiParent = this;
             danhthu.Show();
         }
@@ -184,6 +216,8 @@ namespace demo1
         private void thángToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DoanhThuThang danhthuthang = new DoanhThuThang();
+            danhthuthang.FormBorderStyle = FormBorderStyle.None;
+            danhthuthang.Dock = DockStyle.Fill;
             danhthuthang.MdiParent = this;
             danhthuthang.Show();
         }
@@ -191,6 +225,8 @@ namespace demo1
         private void hàngNgàyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DanhThuHangNgay danhthungay = new DanhThuHangNgay();
+            danhthungay.FormBorderStyle = FormBorderStyle.None;
+            danhthungay.Dock = DockStyle.Fill;
             danhthungay.MdiParent = this;
             danhthungay.Show();
         }
@@ -198,6 +234,8 @@ namespace demo1
         private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BanHang banhang = new BanHang();
+            banhang.FormBorderStyle = FormBorderStyle.None;
+            banhang.Dock = DockStyle.Fill;
             banhang.MdiParent = this;
             banhang.manhanvien = manhanvien;
             banhang.Show();
