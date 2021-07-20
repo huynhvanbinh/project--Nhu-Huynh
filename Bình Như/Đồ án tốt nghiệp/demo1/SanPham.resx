@@ -172,12 +172,11 @@
   </data>
   <data name="txtloaisp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAASwAAAAwCAYAAACrHkchAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVHhe7dRBCQQxAATB+FeVJTJOxgm4JZDPOUhDFcxn
-        BPQASFlrfeacPzOzG7cbdXI1xj4AbrUbdXIlWMDdBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQ
-        LCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMEC
-        MgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIOMvWM/zfPdhZnbjdqNO
-        rgAKxngBdWJs6k19wJYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAwCAYAAABUmTXqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC4SURBVHhe7dPBCcMwAARB9V+VhcpIGSkgQdgQEsK6gRm4
+        z/13ADfWWo/jOF5mdm43ceUxxj6Aj93ElYdA4JdAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJA
+        IAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJA
+        IAgEgkAgCASCQCAIBMJXIHPO5z7M7Nxu4soD+G+MNzU2ZEkoaEEGAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -213,12 +212,12 @@
   </data>
   <data name="txtMoTa.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAASwAAAAwCAYAAACrHkchAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADbSURBVHhe7dRBCQQxAATB+FeVJTJOxgm4JZDPOUhDFcxn
-        BPQASFlrfeacPzOzG7cbdXI1xj4AbrUbdXIlWMDdBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQ
-        LCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMEC
-        MgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIOMvWM/zfPdhZnbjdqNO
-        rgAKxngBdWJs6k19wJYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAASQAAAAwCAYAAAC4yQfVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVHhe7dQxDQMxAARB80fll2EERgDkZclNEHiLGema
+        A7ADIGWt9Zlz/szMbmw36ORojH0A3LIbdHIkSMBdggRkCBKQIUhAhiABGYIEZAgSkCFIQIYgARmCBGQI
+        EpAhSECGIAEZggRkCBKQIUhAhiABGYIEZAgSkCFIQIYgARmCBGQIEpAhSECGIAEZggRkCBKQIUhAhiAB
+        GYIEZAgSkCFIQIYgARmCBGQIEpAhSECGIAEZggRkCBKQIUhAhiABGYIEZAgSkPEXpOd5vvswM7ux3aCT
+        I4CCMV5MGr4gQVk1ZQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="txtHinhAnh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

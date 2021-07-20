@@ -195,7 +195,7 @@ namespace demo1
             this.cmbloaisanpham.DisabledColor = System.Drawing.Color.Gray;
             this.cmbloaisanpham.ForeColor = System.Drawing.Color.White;
             this.cmbloaisanpham.items = new string[0];
-            this.cmbloaisanpham.Location = new System.Drawing.Point(98, 461);
+            this.cmbloaisanpham.Location = new System.Drawing.Point(98, 430);
             this.cmbloaisanpham.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.cmbloaisanpham.Name = "cmbloaisanpham";
             this.cmbloaisanpham.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -218,7 +218,7 @@ namespace demo1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 100);
+            this.label3.Location = new System.Drawing.Point(8, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 18);
@@ -228,7 +228,7 @@ namespace demo1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 156);
+            this.label4.Location = new System.Drawing.Point(8, 147);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 18);
@@ -238,7 +238,7 @@ namespace demo1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 213);
+            this.label5.Location = new System.Drawing.Point(7, 203);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 18);
@@ -248,7 +248,7 @@ namespace demo1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 276);
+            this.label7.Location = new System.Drawing.Point(16, 259);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 18);
@@ -258,7 +258,7 @@ namespace demo1
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 332);
+            this.label8.Location = new System.Drawing.Point(7, 315);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 18);
@@ -268,7 +268,7 @@ namespace demo1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 410);
+            this.label9.Location = new System.Drawing.Point(8, 371);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 18);
@@ -278,7 +278,7 @@ namespace demo1
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 461);
+            this.label10.Location = new System.Drawing.Point(8, 430);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 18);
@@ -313,7 +313,7 @@ namespace demo1
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(419, 576);
+            this.groupBox1.Size = new System.Drawing.Size(419, 549);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
@@ -356,7 +356,7 @@ namespace demo1
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(37, 520);
+            this.bunifuButton2.Location = new System.Drawing.Point(34, 489);
             this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -505,7 +505,7 @@ namespace demo1
             this.txtTenSP.IconRight = null;
             this.txtTenSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenSP.Lines = new string[0];
-            this.txtTenSP.Location = new System.Drawing.Point(98, 100);
+            this.txtTenSP.Location = new System.Drawing.Point(98, 91);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.MaxLength = 32767;
             this.txtTenSP.MinimumSize = new System.Drawing.Size(150, 48);
@@ -581,7 +581,7 @@ namespace demo1
             this.txtloaisp.IconRight = null;
             this.txtloaisp.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtloaisp.Lines = new string[0];
-            this.txtloaisp.Location = new System.Drawing.Point(98, 388);
+            this.txtloaisp.Location = new System.Drawing.Point(98, 371);
             this.txtloaisp.Margin = new System.Windows.Forms.Padding(4);
             this.txtloaisp.MaxLength = 32767;
             this.txtloaisp.MinimumSize = new System.Drawing.Size(150, 48);
@@ -617,6 +617,7 @@ namespace demo1
             this.txtloaisp.SelectionLength = 0;
             this.txtloaisp.SelectionStart = 0;
             this.txtloaisp.ShortcutsEnabled = true;
+            this.txtloaisp.Size = new System.Drawing.Size(200, 48);
             this.txtloaisp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtloaisp.TabIndex = 45;
             this.txtloaisp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -664,7 +665,7 @@ namespace demo1
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(251, 520);
+            this.bunifuButton1.Location = new System.Drawing.Point(240, 489);
             this.bunifuButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -720,7 +721,7 @@ namespace demo1
             this.txtDonGia.IconRight = null;
             this.txtDonGia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDonGia.Lines = new string[0];
-            this.txtDonGia.Location = new System.Drawing.Point(98, 156);
+            this.txtDonGia.Location = new System.Drawing.Point(98, 147);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.MaxLength = 32767;
             this.txtDonGia.MinimumSize = new System.Drawing.Size(150, 48);
@@ -795,7 +796,7 @@ namespace demo1
             this.txtGiaNhap.IconRight = null;
             this.txtGiaNhap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiaNhap.Lines = new string[0];
-            this.txtGiaNhap.Location = new System.Drawing.Point(98, 220);
+            this.txtGiaNhap.Location = new System.Drawing.Point(98, 203);
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaNhap.MaxLength = 32767;
             this.txtGiaNhap.MinimumSize = new System.Drawing.Size(150, 48);
@@ -870,7 +871,7 @@ namespace demo1
             this.txtMoTa.IconRight = null;
             this.txtMoTa.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMoTa.Lines = new string[0];
-            this.txtMoTa.Location = new System.Drawing.Point(98, 276);
+            this.txtMoTa.Location = new System.Drawing.Point(98, 259);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoTa.MaxLength = 32767;
             this.txtMoTa.MinimumSize = new System.Drawing.Size(150, 48);
@@ -906,7 +907,7 @@ namespace demo1
             this.txtMoTa.SelectionLength = 0;
             this.txtMoTa.SelectionStart = 0;
             this.txtMoTa.ShortcutsEnabled = true;
-            this.txtMoTa.Size = new System.Drawing.Size(300, 48);
+            this.txtMoTa.Size = new System.Drawing.Size(292, 48);
             this.txtMoTa.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMoTa.TabIndex = 38;
             this.txtMoTa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -945,7 +946,7 @@ namespace demo1
             this.txtHinhAnh.IconRight = null;
             this.txtHinhAnh.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtHinhAnh.Lines = new string[0];
-            this.txtHinhAnh.Location = new System.Drawing.Point(98, 332);
+            this.txtHinhAnh.Location = new System.Drawing.Point(98, 315);
             this.txtHinhAnh.Margin = new System.Windows.Forms.Padding(4);
             this.txtHinhAnh.MaxLength = 32767;
             this.txtHinhAnh.MinimumSize = new System.Drawing.Size(150, 48);
@@ -1010,10 +1011,10 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(870, 663);
+            this.button2.Location = new System.Drawing.Point(965, 623);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 89);
+            this.button2.Size = new System.Drawing.Size(74, 76);
             this.button2.TabIndex = 51;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1023,10 +1024,10 @@ namespace demo1
             this.button1.BackgroundImage = global::demo1.Properties.Resources.delete;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(740, 663);
+            this.button1.Location = new System.Drawing.Point(815, 623);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 89);
+            this.button1.Size = new System.Drawing.Size(74, 76);
             this.button1.TabIndex = 50;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -1036,10 +1037,10 @@ namespace demo1
             this.btnthem.BackgroundImage = global::demo1.Properties.Resources.add;
             this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(625, 663);
+            this.btnthem.Location = new System.Drawing.Point(651, 622);
             this.btnthem.Margin = new System.Windows.Forms.Padding(4);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(90, 89);
+            this.btnthem.Size = new System.Drawing.Size(81, 77);
             this.btnthem.TabIndex = 49;
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
@@ -1058,7 +1059,7 @@ namespace demo1
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1073, 749);
+            this.ClientSize = new System.Drawing.Size(1073, 724);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

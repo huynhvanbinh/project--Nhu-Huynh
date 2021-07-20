@@ -58,11 +58,6 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
-            this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbchucvu = new Bunifu.Framework.UI.BunifuDropdown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtchucvu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -80,6 +75,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpngayvaolam = new System.Windows.Forms.DateTimePicker();
+            this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,8 +91,7 @@
             this.col_MaNV,
             this.TenNv,
             this.SDT,
-            this.Column1,
-            this.Column2});
+            this.Column1});
             this.dtgv_ttkh.Location = new System.Drawing.Point(12, 29);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
@@ -102,41 +100,6 @@
             this.dtgv_ttkh.Size = new System.Drawing.Size(488, 392);
             this.dtgv_ttkh.TabIndex = 1;
             this.dtgv_ttkh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellClick);
-            // 
-            // col_MaNV
-            // 
-            this.col_MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaNV.DataPropertyName = "MaNV";
-            this.col_MaNV.HeaderText = "Mã Nhân Viên";
-            this.col_MaNV.Name = "col_MaNV";
-            this.col_MaNV.ReadOnly = true;
-            // 
-            // TenNv
-            // 
-            this.TenNv.DataPropertyName = "TenNV";
-            this.TenNv.HeaderText = "Tên Nhân Viên";
-            this.TenNv.Name = "TenNv";
-            this.TenNv.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số Điện Thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaCV";
-            this.Column1.HeaderText = "Chức Vụ";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ngày vào làm";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // cmbchucvu
             // 
@@ -228,6 +191,7 @@
             this.txtchucvu.SelectionLength = 0;
             this.txtchucvu.SelectionStart = 0;
             this.txtchucvu.ShortcutsEnabled = true;
+            this.txtchucvu.Size = new System.Drawing.Size(200, 35);
             this.txtchucvu.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtchucvu.TabIndex = 12;
             this.txtchucvu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -781,6 +745,35 @@
             this.dtpngayvaolam.Size = new System.Drawing.Size(200, 20);
             this.dtpngayvaolam.TabIndex = 60;
             // 
+            // col_MaNV
+            // 
+            this.col_MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaNV.DataPropertyName = "MaNV";
+            this.col_MaNV.HeaderText = "Mã Nhân Viên";
+            this.col_MaNV.Name = "col_MaNV";
+            this.col_MaNV.ReadOnly = true;
+            // 
+            // TenNv
+            // 
+            this.TenNv.DataPropertyName = "TenNV";
+            this.TenNv.HeaderText = "Tên Nhân Viên";
+            this.TenNv.Name = "TenNv";
+            this.TenNv.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaCV";
+            this.Column1.HeaderText = "Chức Vụ";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -839,7 +832,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNv;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
 
