@@ -193,6 +193,7 @@
     <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
     <Property Name="MaCV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ChucVu" Relationship="Self.FK_NhanVien_ChucVu" FromRole="NhanVien" ToRole="ChucVu" />
     <NavigationProperty Name="TaiKhoans" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="NhanVien" ToRole="TaiKhoan" />
   </EntityType>

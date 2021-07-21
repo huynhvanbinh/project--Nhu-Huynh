@@ -14,6 +14,10 @@ namespace BUS
         {
             return demo.layDSSP();
         }
+        public List<PhieuXuatDTO> LayDsspngay(string ngay)
+        {
+            return demo.layDSSPNgay(ngay);
+        }
         public List<PhieuXuatDTO> LayDsspkhongtrangthai()
         {
             return demo.layDSSPkhongtrangthai();

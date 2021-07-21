@@ -36,6 +36,20 @@ namespace DAO
             }).ToList();
             return Dssp;
         }
+        public List<PhieuXuatDTO> layDSSPNgay(string ngay)
+        {
+            List<PhieuXuatDTO> Dssp = new List<PhieuXuatDTO>();
+            Dssp = demos.PhieuXuats.Where(u => u.TrangThai == "1" && u.NgayLap==ngay).Select(u => new PhieuXuatDTO
+            {
+                MaPX = u.MaPX,
+                NgayLap = u.NgayLap,
+                ThanhToan = u.ThanhToan,
+                MaNV = u.MaNV,
+                MaCH = u.MaCH,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dssp;
+        }
 
         public List<PhieuXuatDTO> layDSSPkhongtrangthai()
         {
@@ -89,7 +103,6 @@ namespace DAO
             try
             {
                 PhieuXuat customer = demos.PhieuXuats.Where(u => u.MaPX == hd.MaPX).SingleOrDefault();
-                customer.MaPX = hd.MaPX;
                 customer.NgayLap = hd.NgayLap;
                 customer.ThanhToan = hd.ThanhToan;
                 customer.MaNV = hd.MaNV;

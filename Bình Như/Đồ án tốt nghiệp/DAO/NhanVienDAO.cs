@@ -16,7 +16,7 @@ namespace DAO
             kh.TenNV = "";
             kh.SDT = "";
             kh.MaCV = "";
-           
+            kh.MaCH = "";
             kh.TrangThai = "1";
             demos.NhanViens.Add(kh);
             demos.SaveChanges();
@@ -30,6 +30,7 @@ namespace DAO
                 MaNV = u.MaNV,
                 TenNV = u.TenNV,    
                 SDT = u.SDT,
+                MaCH=u.MaCH,
                 MaCV=u.MaCV,
                 TrangThai=u.TrangThai,
             }).ToList();
@@ -46,6 +47,7 @@ namespace DAO
                 MaNV = u.MaNV,
                 TenNV = u.TenNV,
                 SDT = u.SDT,
+                MaCH=u.MaCH,
                 MaCV = u.MaCV,
                 TrangThai = u.TrangThai,
             }).Where(u => u.TrangThai == "1" && u.MaNV != manhanvien && u.MaNV != manhanvien1 && u.MaNV != manhanvien2 && u.MaNV != manhanvien3
@@ -65,7 +67,7 @@ namespace DAO
                 TenNV = u.TenNV,
                 SDT = u.SDT,
                 MaCV=u.MaCV,
-               
+               MaCH=u.MaCH,
                 TrangThai =u.TrangThai,
             }).SingleOrDefault();
             return kh;
@@ -81,7 +83,7 @@ namespace DAO
                 customer.TenNV = kh.TenNV;
                 customer.SDT = kh.SDT;
                 customer.MaCV = kh.MaCV;
-            
+                customer.MaCH = kh.MaCH;
                 customer.TrangThai = kh.TrangThai;
                 demos.NhanViens.Add(customer);
                 demos.SaveChanges();
@@ -100,7 +102,7 @@ namespace DAO
                 customer.TenNV = hd.TenNV;
                 customer.SDT = hd.SDT;
                 customer.MaCV = hd.MaCV;
-               
+                customer.MaCH = hd.MaCH;
                 demos.SaveChanges();
                 return true;
             }

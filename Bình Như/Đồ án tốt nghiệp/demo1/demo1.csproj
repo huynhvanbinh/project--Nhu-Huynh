@@ -119,12 +119,6 @@
     <Compile Include="CTPhieuNhap.Designer.cs">
       <DependentUpon>CTPhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="CTPhieuXuat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CTPhieuXuat.Designer.cs">
-      <DependentUpon>CTPhieuXuat.cs</DependentUpon>
-    </Compile>
     <Compile Include="CTSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +306,12 @@
     <Compile Include="TrangChus.Designer.cs">
       <DependentUpon>TrangChus.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuatHangcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuatHangcs.Designer.cs">
+      <DependentUpon>XuatHangcs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,9 +326,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CTPhieuNhap.resx">
       <DependentUpon>CTPhieuNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CTPhieuXuat.resx">
-      <DependentUpon>CTPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CTSanPham.resx">
       <DependentUpon>CTSanPham.cs</DependentUpon>
@@ -420,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChus.resx">
       <DependentUpon>TrangChus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuatHangcs.resx">
+      <DependentUpon>XuatHangcs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="demoDataSet.xsc">
       <DependentUpon>demoDataSet.xsd</DependentUpon>

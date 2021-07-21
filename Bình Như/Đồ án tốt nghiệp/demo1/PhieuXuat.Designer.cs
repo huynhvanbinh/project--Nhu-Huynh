@@ -42,17 +42,14 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.cmbloaisanpham = new Bunifu.Framework.UI.BunifuDropdown();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,20 +63,21 @@ namespace demo1
             this.Xóa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labmanv = new System.Windows.Forms.Label();
             this.txtThanhToan = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.labmacuahang = new System.Windows.Forms.Label();
-            this.cmbcuahang = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtMaPX = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.labnhanvien = new System.Windows.Forms.Label();
             this.dtpngay = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnthem = new System.Windows.Forms.Button();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbloaisanpham
@@ -114,7 +112,7 @@ namespace demo1
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
             this.dtgv_ttkh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttkh.Size = new System.Drawing.Size(564, 386);
+            this.dtgv_ttkh.Size = new System.Drawing.Size(564, 184);
             this.dtgv_ttkh.TabIndex = 60;
             this.dtgv_ttkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellContentClick);
             // 
@@ -421,13 +419,8 @@ namespace demo1
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bunifuButton1);
-            this.groupBox1.Controls.Add(this.labmanv);
             this.groupBox1.Controls.Add(this.txtThanhToan);
-            this.groupBox1.Controls.Add(this.labmacuahang);
-            this.groupBox1.Controls.Add(this.cmbcuahang);
             this.groupBox1.Controls.Add(this.txtMaPX);
-            this.groupBox1.Controls.Add(this.labnhanvien);
             this.groupBox1.Controls.Add(this.dtpngay);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(593, 43);
@@ -436,15 +429,6 @@ namespace demo1
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            // 
-            // labmanv
-            // 
-            this.labmanv.AutoSize = true;
-            this.labmanv.Location = new System.Drawing.Point(150, 180);
-            this.labmanv.Name = "labmanv";
-            this.labmanv.Size = new System.Drawing.Size(79, 20);
-            this.labmanv.TabIndex = 69;
-            this.labmanv.Text = "Nhân viên";
             // 
             // txtThanhToan
             // 
@@ -479,26 +463,26 @@ namespace demo1
             this.txtThanhToan.Modified = false;
             this.txtThanhToan.Multiline = false;
             this.txtThanhToan.Name = "txtThanhToan";
-            stateProperties11.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtThanhToan.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.Empty;
+            stateProperties10.FillColor = System.Drawing.Color.White;
+            stateProperties10.ForeColor = System.Drawing.Color.Empty;
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtThanhToan.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.FillColor = System.Drawing.Color.Empty;
             stateProperties11.ForeColor = System.Drawing.Color.Empty;
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtThanhToan.OnActiveState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Empty;
+            this.txtThanhToan.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtThanhToan.OnDisabledState = stateProperties12;
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtThanhToan.OnHoverState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.Silver;
-            stateProperties14.FillColor = System.Drawing.Color.White;
-            stateProperties14.ForeColor = System.Drawing.Color.Empty;
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtThanhToan.OnIdleState = stateProperties14;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtThanhToan.OnIdleState = stateProperties12;
             this.txtThanhToan.PasswordChar = '\0';
             this.txtThanhToan.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtThanhToan.PlaceholderText = "Enter text";
@@ -518,32 +502,6 @@ namespace demo1
             this.txtThanhToan.TextPlaceholder = "Enter text";
             this.txtThanhToan.UseSystemPasswordChar = false;
             this.txtThanhToan.WordWrap = true;
-            // 
-            // labmacuahang
-            // 
-            this.labmacuahang.AutoSize = true;
-            this.labmacuahang.Location = new System.Drawing.Point(269, 238);
-            this.labmacuahang.Name = "labmacuahang";
-            this.labmacuahang.Size = new System.Drawing.Size(58, 20);
-            this.labmacuahang.TabIndex = 67;
-            this.labmacuahang.Text = "ma CH";
-            // 
-            // cmbcuahang
-            // 
-            this.cmbcuahang.BackColor = System.Drawing.Color.Transparent;
-            this.cmbcuahang.BorderRadius = 3;
-            this.cmbcuahang.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbcuahang.ForeColor = System.Drawing.Color.White;
-            this.cmbcuahang.items = new string[0];
-            this.cmbcuahang.Location = new System.Drawing.Point(24, 222);
-            this.cmbcuahang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbcuahang.Name = "cmbcuahang";
-            this.cmbcuahang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.cmbcuahang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.cmbcuahang.selectedIndex = -1;
-            this.cmbcuahang.Size = new System.Drawing.Size(238, 36);
-            this.cmbcuahang.TabIndex = 66;
-            this.cmbcuahang.onItemSelected += new System.EventHandler(this.cmbcuahang_onItemSelected);
             // 
             // txtMaPX
             // 
@@ -579,26 +537,26 @@ namespace demo1
             this.txtMaPX.Modified = false;
             this.txtMaPX.Multiline = false;
             this.txtMaPX.Name = "txtMaPX";
-            stateProperties15.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaPX.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.Empty;
+            stateProperties14.FillColor = System.Drawing.Color.White;
+            stateProperties14.ForeColor = System.Drawing.Color.Empty;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtMaPX.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties15.FillColor = System.Drawing.Color.Empty;
             stateProperties15.ForeColor = System.Drawing.Color.Empty;
             stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaPX.OnActiveState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Empty;
+            this.txtMaPX.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
             stateProperties16.FillColor = System.Drawing.Color.White;
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaPX.OnDisabledState = stateProperties16;
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaPX.OnHoverState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.Silver;
-            stateProperties18.FillColor = System.Drawing.Color.White;
-            stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaPX.OnIdleState = stateProperties18;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaPX.OnIdleState = stateProperties16;
             this.txtMaPX.PasswordChar = '\0';
             this.txtMaPX.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMaPX.PlaceholderText = "Mã phiếu xuất";
@@ -614,19 +572,9 @@ namespace demo1
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaPX.TextMarginBottom = 0;
             this.txtMaPX.TextMarginLeft = 5;
-            this.txtMaPX.TextMarginTop = 0;
             this.txtMaPX.TextPlaceholder = "Mã phiếu xuất";
             this.txtMaPX.UseSystemPasswordChar = false;
             this.txtMaPX.WordWrap = true;
-            // 
-            // labnhanvien
-            // 
-            this.labnhanvien.AutoSize = true;
-            this.labnhanvien.Location = new System.Drawing.Point(29, 180);
-            this.labnhanvien.Name = "labnhanvien";
-            this.labnhanvien.Size = new System.Drawing.Size(79, 20);
-            this.labnhanvien.TabIndex = 64;
-            this.labnhanvien.Text = "Nhân viên";
             // 
             // dtpngay
             // 
@@ -640,6 +588,7 @@ namespace demo1
             this.dtpngay.Size = new System.Drawing.Size(238, 27);
             this.dtpngay.TabIndex = 63;
             this.dtpngay.Value = new System.DateTime(2020, 7, 15, 0, 0, 0, 0);
+            this.dtpngay.ValueChanged += new System.EventHandler(this.dtpngay_ValueChanged);
             // 
             // button3
             // 
@@ -658,20 +607,19 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(820, 362);
+            this.button2.Location = new System.Drawing.Point(768, 362);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 67);
             this.button2.TabIndex = 72;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackgroundImage = global::demo1.Properties.Resources.delete;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(706, 362);
+            this.button1.Location = new System.Drawing.Point(593, 362);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 67);
@@ -679,94 +627,75 @@ namespace demo1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnthem
+            // dataGridView1
             // 
-            this.btnthem.BackgroundImage = global::demo1.Properties.Resources.add;
-            this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(594, 362);
-            this.btnthem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(67, 67);
-            this.btnthem.TabIndex = 70;
-            this.btnthem.UseVisualStyleBackColor = true;
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Column6,
+            this.MaSize,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.Location = new System.Drawing.Point(15, 239);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(569, 194);
+            this.dataGridView1.TabIndex = 74;
             // 
-            // bunifuButton1
+            // dataGridViewTextBoxColumn1
             // 
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "xem chi tiết";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges5;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IconMarginLeft = 11;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.IdleBorderRadius = 3;
-            this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(24, 266);
-            this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties9.BorderRadius = 3;
-            stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties9.BorderThickness = 1;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties9.ForeColor = System.Drawing.Color.White;
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties10.BorderRadius = 3;
-            stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties10.BorderThickness = 1;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties10.ForeColor = System.Drawing.Color.White;
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties10;
-            this.bunifuButton1.Size = new System.Drawing.Size(131, 27);
-            this.bunifuButton1.TabIndex = 70;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaSP";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "MaMau";
+            this.Column6.HeaderText = "Mã Màu";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // MaSize
+            // 
+            this.MaSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.MaSize.DataPropertyName = "MaSize";
+            this.MaSize.HeaderText = "Mã Size";
+            this.MaSize.Name = "MaSize";
+            this.MaSize.ReadOnly = true;
+            this.MaSize.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MaSize.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.MaSize.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SoLuong";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Số Lượng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GiaNhap";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Gia nhap";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // PhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1011, 483);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnthem);
             this.Controls.Add(this.cmbloaisanpham);
             this.Controls.Add(this.dtgv_ttkh);
             this.Controls.Add(this.bunifuButton2);
@@ -777,10 +706,9 @@ namespace demo1
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PhieuXuat";
             this.Text = "PhieuXuat";
-            this.Load += new System.EventHandler(this.PhieuXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,21 +725,21 @@ namespace demo1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtMaPX;
-        private System.Windows.Forms.Label labnhanvien;
         private System.Windows.Forms.DateTimePicker dtpngay;
-        private Bunifu.Framework.UI.BunifuDropdown cmbcuahang;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Label labmacuahang;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtThanhToan;
-        private System.Windows.Forms.Label labmanv;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="489dee7d3dd14d66ac9f58ea5d5de177" Name="Diagram1">
+      <Diagram DiagramId="14caafdd47d441b78e9322b20ee4b4e9" Name="Diagram1">
         <EntityTypeShape EntityType="demoModel.ChamCong" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="demoModel.ChucVu" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.ChucVu" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.CTHoaDon" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.CTKhuyenMai" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.CTPhieuNhap" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
@@ -27,7 +27,7 @@
         <EntityTypeShape EntityType="demoModel.SanPham" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.Size" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.sysdiagram" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="demoModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="demoModel.FK_NhanVien_ChucVu" ManuallyRouted="false" />
         <AssociationConnector Association="demoModel.FK_CTKhuyenMai_KhuyenMai" ManuallyRouted="false" />
         <AssociationConnector Association="demoModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />

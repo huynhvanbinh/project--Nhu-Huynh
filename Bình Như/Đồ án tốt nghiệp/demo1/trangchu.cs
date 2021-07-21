@@ -39,26 +39,27 @@ namespace demo1
             else if (maquyen == "NV")
             {
                 MessageBox.Show("Đăng nhập quyền Nhân Viên");
-                quanly.Enabled = false;
-               
+                quanly.Visible = false; 
             }
+            labcuahang.Text = macuahang;
         }
         public string quyen = "";
         public string maquyen = "";
         public string manhanvien = "";
-     
+        public string macuahang = "";
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             labgio.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-
+       
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 dn = new Form1();
             dn.FormBorderStyle = FormBorderStyle.None;
             dn.Dock = DockStyle.Fill;
             dn.MdiParent = this;
+ 
             dn.Show();
         }
 
@@ -173,17 +174,7 @@ namespace demo1
             phieuxuat.FormBorderStyle = FormBorderStyle.None;
             phieuxuat.Dock = DockStyle.Fill;
             phieuxuat.MdiParent = this;
-            phieuxuat.manv = manhanvien;
             phieuxuat.Show();
-        }
-
-        private void cTPhiếuXuấtDemoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CTPhieuXuat ctphieuxuat = new CTPhieuXuat();
-            ctphieuxuat.FormBorderStyle = FormBorderStyle.None;
-            ctphieuxuat.Dock = DockStyle.Fill;
-            ctphieuxuat.MdiParent = this;
-            ctphieuxuat.Show();
         }
 
         private void chamCongToolStripMenuItem_Click(object sender, EventArgs e)
@@ -239,6 +230,17 @@ namespace demo1
             banhang.MdiParent = this;
             banhang.manhanvien = manhanvien;
             banhang.Show();
+        }
+
+        private void xuấtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuatHangcs phieuxuat = new XuatHangcs();
+            phieuxuat.FormBorderStyle = FormBorderStyle.None;
+            phieuxuat.Dock = DockStyle.Fill;
+            phieuxuat.MdiParent = this;
+            phieuxuat.manv = manhanvien;
+            phieuxuat.macuahang = macuahang;
+            phieuxuat.Show();
         }
     }
 }

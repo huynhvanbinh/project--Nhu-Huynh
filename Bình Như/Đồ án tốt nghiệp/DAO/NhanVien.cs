@@ -25,6 +25,7 @@ namespace DAO
         public string SDT { get; set; }
         public string MaCV { get; set; }
         public string TrangThai { get; set; }
+        public string MaCH { get; set; }
     
         public virtual ChucVu ChucVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

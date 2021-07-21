@@ -882,7 +882,6 @@ namespace demo1
             this.txtMaNV.SelectionStart = 0;
             this.txtMaNV.ShortcutsEnabled = true;
             this.txtMaNV.Size = new System.Drawing.Size(200, 35);
-            this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaNV.TabIndex = 73;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaNV.TextMarginBottom = 0;

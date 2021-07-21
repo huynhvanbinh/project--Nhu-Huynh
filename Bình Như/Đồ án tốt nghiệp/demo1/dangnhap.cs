@@ -97,6 +97,7 @@ namespace demo1
                                         tc.quyen = nv.TenNV;
                                         tc.maquyen = cv.MaCV;
                                         tc.manhanvien = nv.MaNV;
+                                        tc.macuahang = nv.MaCH;
                                         this.Visible = false;
                                         tc.Show();
                                     }    

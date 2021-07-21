@@ -648,7 +648,6 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.exe
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.pdb
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTSanPham.resources
-C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTPhieuXuat.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.PhieuXuat.resources
 C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.csproj.AssemblyReference.cache
 C:\Users\HUYNHNHU\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.BanHang.resources
@@ -772,3 +771,4 @@ D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.pdb
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.DanhThuHangNgay.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.DoanhThuThang.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.XuatHangcs.resources
