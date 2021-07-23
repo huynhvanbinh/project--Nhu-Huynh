@@ -242,5 +242,15 @@ namespace demo1
             phieuxuat.macuahang = macuahang;
             phieuxuat.Show();
         }
+
+        private void báoCáoSảnPhầmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SPBanNhieuNhat spbannhieunhat = new SPBanNhieuNhat();
+            spbannhieunhat.FormBorderStyle = FormBorderStyle.None;
+            spbannhieunhat.Dock = DockStyle.Fill;
+            spbannhieunhat.MdiParent = this;
+           
+            spbannhieunhat.Show();
+        }
     }
 }

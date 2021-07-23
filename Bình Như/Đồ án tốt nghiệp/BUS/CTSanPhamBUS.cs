@@ -31,5 +31,9 @@ namespace BUS
         {
             return demo.UpdateHD(nv);
         }
+        public bool UpdateSL(CTSanPhamDTO nv)
+        {
+            return demo.UpdateSL(nv);
+        }
     }
 }

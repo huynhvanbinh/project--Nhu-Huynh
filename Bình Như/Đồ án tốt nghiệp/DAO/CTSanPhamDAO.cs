@@ -87,6 +87,20 @@ namespace DAO
                 return false;
             }
         }
+        public bool UpdateSL(CTSanPhamDTO sp)
+        {
+            try
+            {
+                CTSanPham customer = demos.CTSanPhams.Where(u => u.MaSP == sp.MaSP && u.MaMau==sp.MaMau && u.KichThuoc==sp.KichThuoc).SingleOrDefault();
+                customer.SoLuong = sp.SoLuong;
+                demos.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool UpdateHD(CTSanPhamDTO hd)
         {
             try

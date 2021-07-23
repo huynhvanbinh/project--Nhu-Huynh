@@ -14,6 +14,10 @@ namespace BUS
         {
             return demo.layDSSP();
         }
+        public List<SanPhamDTO> LayDsspbancham()
+        {
+            return demo.layDSSPbancham();
+        }
         public List<SanPhamDTO> LayDssphd(string masp, string masp1, string masp2, string masp3, string masp4, string masp5, string masp6,
             string masp7, string masp8, string masp9, string masp10, string masp11, string masp12, string masp13, string masp14, string masp15,
             string masp16, string masp17, string masp18, string masp19, string masp20)

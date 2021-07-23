@@ -40,5 +40,9 @@ namespace BUS
         {
             return demo.DELETEHD(nv);
         }
+        public bool UpdateSL(PhieuXuatDTO nv)
+        {
+            return demo.UpdateSL(nv);
+        }
     }
 }

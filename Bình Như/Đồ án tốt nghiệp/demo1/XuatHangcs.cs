@@ -236,9 +236,24 @@ namespace demo1
         }
         private PhieuXuatDTO layTTKH_moi()
         {
+            string tien="0";
+            string thanhtoan = txttongtien.Text;
+            foreach (PhieuXuatDTO px in dskhs)
+            {
+                
+                if (px.MaPX == txtMaPX.Text)
+                {
+                     tien = px.ThanhToan;                   
+                }
+            }
+              
+            float thanhtien = Int32.Parse(tien);
+            float thanhtoans= Int32.Parse(thanhtoan);
+            thanhtoans = thanhtoans + thanhtien;
+  
             PhieuXuatDTO NewKH = new PhieuXuatDTO();
             NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
-            NewKH.ThanhToan = string.IsNullOrEmpty(txttongtien.Text) ? "" : txttongtien.Text;
+            NewKH.ThanhToan = thanhtoans.ToString();
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             NewKH.MaCH = macuahang;
             NewKH.MaNV = manv;
@@ -313,13 +328,23 @@ namespace demo1
             CTPhieuXuatDTO khAdd = layCTPX_moi();
             bool kq = customerCTPXBUS.DKSP(khAdd);
             MessageBox.Show("Thêm thành công");
+
+            //update so luong sp
+            CTSanPhamDTO nv = layTTSP_sua();
+            bool kqs = customerCTSPBUS.UpdateSL(nv);
+           
+
+            //update tien phieu xuat
+            PhieuXuatDTO px = layTTKH_moi();
+            bool kqpx = customerBUS.UpdateSL(px);
+
             Load_Form();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
             themsanphamPX();
-            updatePX();
+            //updatePX();
         }
 
         private void txtsoluong_TextChanged(object sender, EventArgs e)
@@ -328,6 +353,33 @@ namespace demo1
             float soluong = Int32.Parse(txtsoluong.Text);
             float thanhtien = dongia * soluong;
             txttongtien.Text = thanhtien.ToString();
+        }
+        private CTSanPhamDTO layTTSP_sua()
+        {
+            //tinh so luong con lai
+            string soluongkho = null;
+            foreach (CTSanPhamDTO cv in dsctsp)
+            {
+                if (cv.MaSP == txtSP.Text && cv.MaMau==txtmau.Text && cv.KichThuoc==txtkichthuoc.Text)
+                {
+                    soluongkho = cv.SoLuong;
+                }
+            }
+            float slupdates = Int32.Parse(soluongkho);
+            float soluongss = Int32.Parse(txtsoluong.Text);
+            float slconlai = slupdates - soluongss;
+            //end
+            if (slconlai <= 0)
+            {
+                slconlai = 0;
+            }
+            CTSanPhamDTO NewSP = new CTSanPhamDTO();
+            NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
+            NewSP.MaMau= string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
+            NewSP.KichThuoc = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
+            NewSP.SoLuong = slconlai.ToString();
+            NewSP.TrangThai = "1";
+            return NewSP;
         }
     }
 }

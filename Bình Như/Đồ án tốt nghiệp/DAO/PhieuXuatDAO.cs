@@ -117,6 +117,20 @@ namespace DAO
                 return false;
             }
         }
+        public bool UpdateSL(PhieuXuatDTO sp)
+        {
+            try
+            {
+                PhieuXuat customer = demos.PhieuXuats.Where(u => u.MaPX == sp.MaPX ).SingleOrDefault();
+                customer.ThanhToan = sp.ThanhToan;
+                demos.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool DELETEHD(PhieuXuatDTO hd)
         {
             try

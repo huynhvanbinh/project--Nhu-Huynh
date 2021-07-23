@@ -42,6 +42,23 @@ namespace DAO
             }).ToList();
             return Dssp;
         }
+        public List<SanPhamDTO> layDSSPbancham()
+        {
+            List<SanPhamDTO> Dssp = new List<SanPhamDTO>();
+            Dssp = demos.SanPhams.Where(u => u.TrangThai == "1").OrderByDescending(u=>u.SoLuongTon ).Select(u => new SanPhamDTO
+            {
+                MaSP = u.MaSP,
+                TenSP = u.TenSP,
+                DonGia = u.DonGia,
+                MaLoai = u.MaLoai,
+                GiaNhap = u.GiaNhap,
+                SoLuongTon = u.SoLuongTon,
+                MoTa = u.MoTa,
+                HinhAnh = u.HinhAnh,
+                TrangThai = u.TrangThai,
+            }).Take(2).ToList();
+            return Dssp;
+        }
         public List<SanPhamDTO> layDSSPHD(string masp, string masp1, string masp2, string masp3, string masp4, string masp5, string masp6,
             string masp7, string masp8, string masp9, string masp10, string masp11, string masp12, string masp13, string masp14, string masp15,
             string masp16, string masp17, string masp18, string masp19, string masp20)

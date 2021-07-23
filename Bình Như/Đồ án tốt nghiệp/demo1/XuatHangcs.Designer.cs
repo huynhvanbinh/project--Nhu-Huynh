@@ -519,7 +519,7 @@ namespace demo1
             stateProperties13.ForeColor = System.Drawing.Color.Empty;
             stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtMaPX.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.Empty;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             stateProperties14.FillColor = System.Drawing.Color.White;
             stateProperties14.ForeColor = System.Drawing.Color.Empty;
             stateProperties14.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -533,6 +533,7 @@ namespace demo1
             stateProperties16.FillColor = System.Drawing.Color.White;
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaPX.OnIdleState = stateProperties16;
             this.txtMaPX.PasswordChar = '\0';
             this.txtMaPX.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMaPX.PlaceholderText = "Mã phiếu xuất";
@@ -542,7 +543,7 @@ namespace demo1
             this.txtMaPX.SelectionLength = 0;
             this.txtMaPX.SelectionStart = 0;
             this.txtMaPX.ShortcutsEnabled = true;
-            this.txtMaPX.Size = new System.Drawing.Size(305, 35);
+            this.txtMaPX.Size = new System.Drawing.Size(200, 35);
             this.txtMaPX.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaPX.TabIndex = 125;
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -908,7 +909,7 @@ namespace demo1
             this.txttongtien.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txttongtien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttongtien.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.txttongtien.DefaultText = "";
+            this.txttongtien.DefaultText = "0";
             this.txttongtien.FillColor = System.Drawing.Color.White;
             this.txttongtien.HideSelection = true;
             this.txttongtien.IconLeft = null;
@@ -916,7 +917,8 @@ namespace demo1
             this.txttongtien.IconPadding = 10;
             this.txttongtien.IconRight = null;
             this.txttongtien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttongtien.Lines = new string[0];
+            this.txttongtien.Lines = new string[] {
+        "0"};
             this.txttongtien.Location = new System.Drawing.Point(779, 367);
             this.txttongtien.MaxLength = 32767;
             this.txttongtien.MinimumSize = new System.Drawing.Size(100, 35);
@@ -945,12 +947,12 @@ namespace demo1
             this.txttongtien.OnIdleState = stateProperties32;
             this.txttongtien.PasswordChar = '\0';
             this.txttongtien.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txttongtien.PlaceholderText = "Tiền";
+            this.txttongtien.PlaceholderText = "";
             this.txttongtien.ReadOnly = false;
             this.txttongtien.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txttongtien.SelectedText = "";
             this.txttongtien.SelectionLength = 0;
-            this.txttongtien.SelectionStart = 0;
+            this.txttongtien.SelectionStart = 1;
             this.txttongtien.ShortcutsEnabled = true;
             this.txttongtien.Size = new System.Drawing.Size(200, 35);
             this.txttongtien.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
@@ -959,7 +961,7 @@ namespace demo1
             this.txttongtien.TextMarginBottom = 0;
             this.txttongtien.TextMarginLeft = 5;
             this.txttongtien.TextMarginTop = 0;
-            this.txttongtien.TextPlaceholder = "Tiền";
+            this.txttongtien.TextPlaceholder = "";
             this.txttongtien.UseSystemPasswordChar = false;
             this.txttongtien.WordWrap = true;
             // 
