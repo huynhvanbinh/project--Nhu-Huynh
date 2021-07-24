@@ -29,36 +29,16 @@ namespace demo1
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbloaisanpham = new Bunifu.Framework.UI.BunifuDropdown();
             this.dtgv_ttsp = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.col_MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbloaisanpham
-            // 
-            this.cmbloaisanpham.BackColor = System.Drawing.Color.Transparent;
-            this.cmbloaisanpham.BorderRadius = 3;
-            this.cmbloaisanpham.DisabledColor = System.Drawing.Color.Gray;
-            this.cmbloaisanpham.ForeColor = System.Drawing.Color.White;
-            this.cmbloaisanpham.items = new string[] {
-        "Bán nhiều nhất",
-        "Bán chậm nhất"};
-            this.cmbloaisanpham.Location = new System.Drawing.Point(352, 16);
-            this.cmbloaisanpham.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.cmbloaisanpham.Name = "cmbloaisanpham";
-            this.cmbloaisanpham.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.cmbloaisanpham.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.cmbloaisanpham.selectedIndex = -1;
-            this.cmbloaisanpham.Size = new System.Drawing.Size(262, 36);
-            this.cmbloaisanpham.TabIndex = 41;
-            this.cmbloaisanpham.onItemSelected += new System.EventHandler(this.cmbloaisanpham_onItemSelected);
             // 
             // dtgv_ttsp
             // 
@@ -70,16 +50,25 @@ namespace demo1
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dtgv_ttsp.Location = new System.Drawing.Point(13, 63);
+            this.Column4});
+            this.dtgv_ttsp.Location = new System.Drawing.Point(30, 69);
             this.dtgv_ttsp.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_ttsp.Name = "dtgv_ttsp";
             this.dtgv_ttsp.ReadOnly = true;
             this.dtgv_ttsp.RowTemplate.Height = 24;
             this.dtgv_ttsp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv_ttsp.Size = new System.Drawing.Size(914, 370);
+            this.dtgv_ttsp.Size = new System.Drawing.Size(706, 251);
             this.dtgv_ttsp.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(121, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 31);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Sản phẩm bán không ai mua";
             // 
             // col_MaNV
             // 
@@ -124,37 +113,29 @@ namespace demo1
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "MoTa";
-            this.Column5.HeaderText = "Mô tả";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // SPBanNhieuNhat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 450);
+            this.ClientSize = new System.Drawing.Size(763, 363);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_ttsp);
-            this.Controls.Add(this.cmbloaisanpham);
             this.Name = "SPBanNhieuNhat";
             this.Text = "SPBanNhieuNhat";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuDropdown cmbloaisanpham;
         private System.Windows.Forms.DataGridView dtgv_ttsp;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

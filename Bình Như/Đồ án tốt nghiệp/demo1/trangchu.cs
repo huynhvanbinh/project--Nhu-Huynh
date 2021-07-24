@@ -65,6 +65,10 @@ namespace demo1
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(this.ActiveMdiChild !=null)
+            {
+                this.ActiveMdiChild.Close();
+            }    
             SanPham sp = new SanPham();
             sp.MdiParent = this;
             sp.FormBorderStyle = FormBorderStyle.None;
@@ -79,6 +83,10 @@ namespace demo1
 
         private void khuyếnMãiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             KhuyenMai km = new KhuyenMai();
             km.MdiParent = this;
             km.FormBorderStyle = FormBorderStyle.None;

@@ -18,6 +18,10 @@ namespace BUS
         {
             return demo.layDSSPall();
         }
+        public List<HoaDonDTO> LayDssNam(string nam)
+        {
+            return demo.layDSSNam(nam);
+        }
         public HoaDonDTO laySP(string masp)
         {
             return demo.laySP(masp);

@@ -93,7 +93,6 @@ namespace demo1
                 ngay29 = tongtn29,
                 ngay30 = tongtn30,
                 ngay31 = tongtn31,
-     
             });
 
             return list;
@@ -180,9 +179,7 @@ namespace demo1
                 {
                     thunhapngay6 = thunhapngay6 + Int32.Parse(cv.TongTien);
                     tongtn6 = thunhapngay6.ToString();
-                }
-                
-                
+                }               
             }
         }
     }

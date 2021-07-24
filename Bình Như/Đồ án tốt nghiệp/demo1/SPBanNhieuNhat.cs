@@ -18,6 +18,7 @@ namespace demo1
             InitializeComponent();
             dtgv_ttsp.AutoGenerateColumns = false;
             Load_Form();
+            
         }
         SanPhamBUS customerBUS = new SanPhamBUS();
         BindingSource bs = new BindingSource();
@@ -47,7 +48,7 @@ namespace demo1
             dssp = customerBUS.LayDsspbancham();
             bs.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bs;
-            MessageBox.Show("San pham ton kho nhieu");
+            //MessageBox.Show("San pham ton kho nhieu");
             // khoi tao load du lieu bang chuc vu
             dssps = customerLSPBUS.LayDssp();
             bscv.DataSource = dssps.ToList();
@@ -63,22 +64,12 @@ namespace demo1
             //dsctsp = customerCTSPBUS.LayDsmau(ma);
             //bsctsp.DataSource = dsctsp.ToList();
 
+           
+                //MessageBox.Show("Sản phẩm bán chậm nhất");
+                //dssp = customerBUS.LayDsspbancham();
+                //bs.DataSource = dssp.ToList();
+                //dtgv_ttsp.DataSource = bs;
         }
 
-        private void cmbloaisanpham_onItemSelected(object sender, EventArgs e)
-        {
-            if(cmbloaisanpham.selectedValue == "Bán nhiều nhất")
-            {
-                MessageBox.Show("sản phẩm bán nhiều nhất");
-               
-            }    
-            else if(cmbloaisanpham.selectedValue== "Bán chậm nhất")
-            {
-                MessageBox.Show("Sản phẩm bán chậm nhất");
-                dssp = customerBUS.LayDsspbancham();
-                bs.DataSource = dssp.ToList();
-                dtgv_ttsp.DataSource = bs;
-            }    
-        }
     }
 }

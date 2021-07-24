@@ -50,7 +50,20 @@ namespace DAO
             }).ToList();
             return Dssp;
         }
-
+        public List<HoaDonDTO> layDSSNam(string nam)
+        {
+            List<HoaDonDTO> Dssp = new List<HoaDonDTO>();
+            Dssp = demos.HoaDons.Where(u => u.TrangThai == "1" && u.NgayLap==nam).Select(u => new HoaDonDTO
+            {
+                MaHD = u.MaHD,
+                NgayLap = u.NgayLap,
+                MaNV = u.MaNV,
+                MaKH = u.MaKH,
+                TongTien = u.TongTien,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dssp;
+        }
         public HoaDonDTO laySP(string masp)
         {
             HoaDonDTO sp = new HoaDonDTO();

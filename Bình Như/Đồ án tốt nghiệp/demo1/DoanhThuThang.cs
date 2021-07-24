@@ -97,6 +97,8 @@ namespace demo1
             string thang11 = "11";
             string thang12 = "12";
             string thang = "";
+            string nam = "";
+            string nams = "2021";
             dskhs = customerBUS.LayDsspall();
             bs.DataSource = dskhs.ToList();
             float thunhapthang1 = 0;
@@ -114,6 +116,7 @@ namespace demo1
             foreach (HoaDonDTO cv in dskhs)
             {
                 thang = cv.NgayLap.Substring(3, 2);
+                nam = cv.NgayLap.Substring(6, 4);
                 if(thang.Equals(thang1))
                 {
                     thunhapthang1 = thunhapthang1 + Int32.Parse(cv.TongTien);
@@ -178,7 +181,5 @@ namespace demo1
                 }
             }
         }
-
-        
     }
 }
