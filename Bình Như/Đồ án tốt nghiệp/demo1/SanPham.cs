@@ -43,9 +43,10 @@ namespace demo1
         {
             Load_DSSP();
         }
+        public string mach;
         private void Load_DSSP()
         {
-            dssp = customerBUS.LayDssp();
+            dssp = customerBUS.LayDsspcuahang(mach);
             bs.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bs;
             // khoi tao load du lieu bang chuc vu
@@ -90,7 +91,7 @@ namespace demo1
             NewSP.GiaNhap = string.IsNullOrEmpty(txtGiaNhap.Text) ? "" : txtGiaNhap.Text;
             NewSP.MoTa = string.IsNullOrEmpty(txtMoTa.Text) ? "" : txtMoTa.Text;
             NewSP.HinhAnh = string.IsNullOrEmpty(txtHinhAnh.Text) ? "" : txtHinhAnh.Text;
-
+            NewSP.MaCH = mach;
             NewSP.MaLoai = string.IsNullOrEmpty(txtloaisp.Text) ? "" : txtloaisp.Text;
 
             NewSP.TrangThai = "1";
@@ -103,6 +104,7 @@ namespace demo1
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
             NewSP.MaMau= string.IsNullOrEmpty(mamau.Text) ? "" : mamau.Text;
             NewSP.KichThuoc= string.IsNullOrEmpty(kichthuoc.Text) ? "" : kichthuoc.Text;
+           
             NewSP.TrangThai = "1";
             return NewSP;
         }
@@ -118,6 +120,7 @@ namespace demo1
             {
                 bool kq = customerBUS.DKSP(khAdd);
                 MessageBox.Show("Thêm thành công");
+                Load_Form();
             }      
         }
         private void themCTSP()
@@ -158,13 +161,16 @@ namespace demo1
             {
                 cmbloaisanpham.Items.Add(sps.MaLoai.ToString());
             }
+            dssp = customerBUS.LayDsspcuahang(mach);
+            bs.DataSource = dssp.ToList();
+            dtgv_ttsp.DataSource = bs;
         }
 
         private void cmbloaisanpham_onItemSelected(object sender, EventArgs e)
         {
             Load_DSSP();
             int intMaNV = dtgv_ttsp.Rows.Count;
-            txtMaSP.Text = "      " + "SP_HN" + "-0"+ intMaNV;
+            txtMaSP.Text = mach+ "_" + "SP_HN" + "-0"+ intMaNV;
             txtMaSP.Text = txtMaSP.Text.Trim();
             Regex trimmer = new Regex(@"\s\s+");
             txtMaSP.Text = trimmer.Replace(txtMaSP.Text, " ");
@@ -262,6 +268,7 @@ namespace demo1
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             themctsampham();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

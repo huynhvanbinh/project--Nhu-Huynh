@@ -39,7 +39,7 @@ namespace demo1
             else if (maquyen == "NV")
             {
                 MessageBox.Show("Đăng nhập quyền Nhân Viên");
-                quanly.Visible = false; 
+                //quanly.Visible = false; 
             }
             labcuahang.Text = macuahang;
         }
@@ -70,6 +70,7 @@ namespace demo1
                 this.ActiveMdiChild.Close();
             }    
             SanPham sp = new SanPham();
+            sp.mach = macuahang;
             sp.MdiParent = this;
             sp.FormBorderStyle = FormBorderStyle.None;
             sp.Dock = DockStyle.Fill;

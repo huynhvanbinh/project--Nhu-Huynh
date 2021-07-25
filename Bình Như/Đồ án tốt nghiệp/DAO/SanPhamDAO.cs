@@ -20,6 +20,7 @@ namespace DAO
             sp.SoLuongTon = "";
             sp.MoTa = "";
             sp.HinhAnh = "";
+            sp.MaCH = "";
             sp.TrangThai = "1";
             demos.SanPhams.Add(sp);
             demos.SaveChanges();
@@ -39,6 +40,25 @@ namespace DAO
                 MoTa=u.MoTa,
                 HinhAnh=u.HinhAnh,
                 TrangThai=u.TrangThai,
+                MaCH=u.MaCH,
+            }).ToList();
+            return Dssp;
+        }
+        public List<SanPhamDTO> layDSMaCH(string mach)
+        {
+            List<SanPhamDTO> Dssp = new List<SanPhamDTO>();
+            Dssp = demos.SanPhams.Where(u => u.TrangThai == "1" && u.MaCH==mach).Select(u => new SanPhamDTO
+            {
+                MaSP = u.MaSP,
+                TenSP = u.TenSP,
+                DonGia = u.DonGia,
+                MaLoai = u.MaLoai,
+                GiaNhap = u.GiaNhap,
+                SoLuongTon = u.SoLuongTon,
+                MoTa = u.MoTa,
+                HinhAnh = u.HinhAnh,
+                TrangThai = u.TrangThai,
+                MaCH = u.MaCH,
             }).ToList();
             return Dssp;
         }
@@ -56,6 +76,7 @@ namespace DAO
                 MoTa = u.MoTa,
                 HinhAnh = u.HinhAnh,
                 TrangThai = u.TrangThai,
+                MaCH=u.MaCH,
             }).Take(2).ToList();
             return Dssp;
         }
@@ -77,6 +98,7 @@ namespace DAO
                 SoLuongTon = u.SoLuongTon,
                 MoTa = u.MoTa,
                 HinhAnh = u.HinhAnh,
+                MaCH=u.MaCH,
                 TrangThai = u.TrangThai,
             }).ToList();
             return Dssp;
@@ -98,6 +120,7 @@ namespace DAO
                 GiaNhap = u.GiaNhap,
                 SoLuongTon = u.SoLuongTon,
                 MoTa = u.MoTa,
+                MaCH=u.MaCH,
                 HinhAnh = u.HinhAnh,
                 TrangThai = u.TrangThai,
             }).ToList();
@@ -116,6 +139,7 @@ namespace DAO
                 SoLuongTon = u.SoLuongTon,
                 MoTa = u.MoTa,
                 HinhAnh = u.HinhAnh,
+                MaCH=u.MaCH,
                 TrangThai=u.TrangThai,
             }).SingleOrDefault();
             return sp;
@@ -136,6 +160,7 @@ namespace DAO
                 customer.MoTa = sp.MoTa;
                 customer.HinhAnh = sp.HinhAnh;
                 customer.TrangThai = sp.TrangThai;
+                customer.MaCH = sp.MaCH;
                 demos.SanPhams.Add(customer);
                 demos.SaveChanges();
                 return true;
@@ -157,6 +182,7 @@ namespace DAO
                 customer.SoLuongTon = sp.SoLuongTon;
                 customer.MoTa = sp.MoTa;
                 customer.HinhAnh = sp.HinhAnh;
+                customer.MaCH = sp.MaCH;
                 demos.SaveChanges();
                 return true;
             }

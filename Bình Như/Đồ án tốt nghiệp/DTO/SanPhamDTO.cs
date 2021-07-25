@@ -18,5 +18,6 @@ namespace DTO
         public string MoTa { get; set; }
         public string HinhAnh { get; set; }
         public string TrangThai { get; set; }
+        public string MaCH { get; set; }
     }
 }

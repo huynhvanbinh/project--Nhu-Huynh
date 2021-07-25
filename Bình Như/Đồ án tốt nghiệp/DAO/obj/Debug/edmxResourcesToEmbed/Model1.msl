@@ -86,11 +86,12 @@
       <EntityTypeMapping TypeName="demoModel.CTSanPham">
         <MappingFragment StoreEntitySet="CTSanPham">
           <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
-          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="MaMau" ColumnName="MaMau" />
           <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
+          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -244,6 +245,7 @@
           <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />
           <ScalarProperty Name="MoTa" ColumnName="MoTa" />
           <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>

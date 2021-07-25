@@ -22,8 +22,7 @@ namespace DAO
         public string SoLuongTon { get; set; }
         public string MoTa { get; set; }
         public string HinhAnh { get; set; }
+        public string MaCH { get; set; }
         public string TrangThai { get; set; }
-    
-        public virtual LoaiSanPham LoaiSanPham { get; set; }
     }
 }

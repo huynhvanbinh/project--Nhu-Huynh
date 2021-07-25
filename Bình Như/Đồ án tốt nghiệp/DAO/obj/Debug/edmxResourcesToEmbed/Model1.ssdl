@@ -80,11 +80,12 @@
       <PropertyRef Name="MaCTSP" />
     </Key>
     <Property Name="MaCTSP" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="MaSP" Type="nvarchar" MaxLength="10" />
     <Property Name="MaMau" Type="nvarchar" MaxLength="10" />
     <Property Name="KichThuoc" Type="nvarchar" MaxLength="10" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
     <Property Name="SoLuong" Type="nvarchar" MaxLength="10" />
+    <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSP" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="CuaHang">
     <Key>
@@ -217,14 +218,15 @@
     <Key>
       <PropertyRef Name="MaSP" />
     </Key>
-    <Property Name="MaSP" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="TenSP" Type="nvarchar" MaxLength="30" />
-    <Property Name="DonGia" Type="nvarchar" MaxLength="10" />
-    <Property Name="MaLoai" Type="nvarchar" MaxLength="10" />
-    <Property Name="GiaNhap" Type="nvarchar" MaxLength="10" />
-    <Property Name="SoLuongTon" Type="nvarchar" MaxLength="10" />
+    <Property Name="MaSP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="DonGia" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaLoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaNhap" Type="nvarchar" MaxLength="50" />
+    <Property Name="SoLuongTon" Type="nvarchar" MaxLength="50" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-    <Property Name="HinhAnh" Type="text" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Size">
@@ -279,18 +281,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SanPham_LoaiSanPham">
-    <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LoaiSanPham">
-        <PropertyRef Name="MaLoai" />
-      </Principal>
-      <Dependent Role="SanPham">
-        <PropertyRef Name="MaLoai" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TaiKhoan_NhanVien">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
@@ -334,10 +324,6 @@
     <AssociationSet Name="FK_NhanVien_ChucVu" Association="Self.FK_NhanVien_ChucVu">
       <End Role="ChucVu" EntitySet="ChucVu" />
       <End Role="NhanVien" EntitySet="NhanVien" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SanPham_LoaiSanPham" Association="Self.FK_SanPham_LoaiSanPham">
-      <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
-      <End Role="SanPham" EntitySet="SanPham" />
     </AssociationSet>
     <AssociationSet Name="FK_TaiKhoan_NhanVien" Association="Self.FK_TaiKhoan_NhanVien">
       <End Role="NhanVien" EntitySet="NhanVien" />

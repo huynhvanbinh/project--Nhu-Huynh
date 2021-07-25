@@ -27,9 +27,14 @@ namespace demo1
         ChucVuBUS customerCVBUS = new ChucVuBUS();
         BindingSource bscv = new BindingSource();
         List<ChucVuDTO> dskhs = new List<ChucVuDTO>();
+
+        CuaHangBUS customerCHBUS = new CuaHangBUS();
+        BindingSource bsch = new BindingSource();
+        List<CuaHangDTO> dsch = new List<CuaHangDTO>();
         private void Load_Form()
         {
             Load_DSKH();
+            labmach.Visible = false;
         }
         private void Load_DSKH()
         {
@@ -39,7 +44,10 @@ namespace demo1
             // khoi tao load du lieu bang chuc vu
             dskhs = customerCVBUS.LayDskh();
             bscv.DataSource = dskhs.ToList();
-          
+            //cua hang
+            dsch = customerCHBUS.LayDsch();
+            bsch.DataSource = dsch.ToList();
+
         }
        
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -61,7 +69,7 @@ namespace demo1
             NewKH.TenNV = string.IsNullOrEmpty(txtTenNV.Text) ? "" : txtTenNV.Text;
             NewKH.SDT = string.IsNullOrEmpty(txtSoDienThoai.Text) ? "" : txtSoDienThoai.Text;
             NewKH.MaCV = string.IsNullOrEmpty(txtchucvu.Text) ? "" : txtchucvu.Text;
-            
+            NewKH.MaCH=string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
             NewKH.TrangThai = "1";
             return NewKH;
         }
@@ -101,26 +109,18 @@ namespace demo1
             {
                 cmbchucvu.Items.Add(khs.TenChucVu.ToString());
             }
+            //load cua hang
+            foreach (CuaHangDTO ch in dsch)
+            {
+                cmbcuahang.Items.Add(ch.TenCH.ToString());
+            }
         }
 
         private void cmbchucvu_onItemSelected(object sender, EventArgs e)
         {
             Load_DSKH();
             int intMaNV = dtgv_ttkh.Rows.Count;
-            //lay  gia tri combobox
-            //if (cmbchucvu.selectedValue == "Quản Lý")
-            //{
-            //    txtMaNV.Text = "QL-0" + intMaNV;
-            //}
-            //else
-            //{
-            //    txtMaNV.Text = "NV-0" + intMaNV;
-            //}
-           // txtMaNV.Text = "      "+ cmbchucvu.selectedValue +"-0"+"        " +intMaNV;
-           // txtchucvu.Text = cmbchucvu.selectedValue;
-            //txtMaNV.Text= txtMaNV.Text.Trim();
-            //Regex trimmer = new Regex(@"\s\s+");
-            //txtMaNV.Text= trimmer.Replace(txtMaNV.Text, " ");
+           
             foreach (ChucVuDTO sps in dskhs)
             {
                 if (cmbchucvu.selectedValue == sps.TenChucVu.ToString())
@@ -177,6 +177,18 @@ namespace demo1
                 MessageBox.Show("Đã xóa một nhân viên");
                 reset();
                 Load_Form();
+            }
+        }
+
+        private void cmbcuahang_onItemSelected(object sender, EventArgs e)
+        {
+            labmach.Visible = true;
+            foreach (CuaHangDTO ch in dsch)
+            {
+                if (cmbcuahang.selectedValue == ch.TenCH.ToString())
+                {
+                    labmach.Text = ch.MaCH.ToString();
+                }
             }
         }
     }

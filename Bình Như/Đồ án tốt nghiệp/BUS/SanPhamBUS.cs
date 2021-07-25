@@ -14,6 +14,10 @@ namespace BUS
         {
             return demo.layDSSP();
         }
+        public List<SanPhamDTO> LayDsspcuahang(string mach)
+        {
+            return demo.layDSMaCH(mach);
+        }
         public List<SanPhamDTO> LayDsspbancham()
         {
             return demo.layDSSPbancham();

@@ -57,6 +57,7 @@ namespace DAO
                 customer.TaiKhoan1 = kh.TaiKhoan;
                 customer.MatKhau = kh.MatKhau;
                 customer.MaNV = kh.MaNV;
+                customer.TrangThai = kh.TrangThai;
                 demos.TaiKhoans.Add(customer);
                 demos.SaveChanges();
                 return true;

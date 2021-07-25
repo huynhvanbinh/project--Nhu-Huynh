@@ -623,7 +623,6 @@ namespace demo1
             this.txtloaisp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtloaisp.TextMarginBottom = 0;
             this.txtloaisp.TextMarginLeft = 5;
-            this.txtloaisp.TextMarginTop = 0;
             this.txtloaisp.TextPlaceholder = "Mã Loại";
             this.txtloaisp.UseSystemPasswordChar = false;
             this.txtloaisp.WordWrap = true;

@@ -48,16 +48,7 @@ namespace demo1
         }
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (dtgv_ttkh.SelectedCells.Count > 0)
-            //{
-            //    foreach (TaiKhoanDTO kh in dskh)
-            //    {
-            //        txtTaiKhoan.Text = kh.TaiKhoan;
-            //        txtMatKhau.Text = kh.MatKhau;
-            //        txtmanhanvien.Text = kh.MaNV;
-            //        break;
-            //    }
-            //}
+          
             if (dtgv_ttkh.SelectedCells.Count > 0)
             {
                 int i;
@@ -74,6 +65,7 @@ namespace demo1
             NewKH.TaiKhoan = string.IsNullOrEmpty(txtTaiKhoan.Text) ? "" : txtTaiKhoan.Text;
             NewKH.MatKhau = string.IsNullOrEmpty(txtMatKhau.Text) ? "" : GetMD5 (txtMatKhau.Text);
             NewKH.MaNV = string.IsNullOrEmpty(txtmanhanvien.Text) ? "" : txtmanhanvien.Text;
+            NewKH.TrangThai = "1";
             return NewKH;
         }
         private void reset()

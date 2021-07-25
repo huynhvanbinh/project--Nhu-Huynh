@@ -82,11 +82,12 @@
       <PropertyRef Name="MaCTSP" />
     </Key>
     <Property Name="MaCTSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="MaMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="KichThuoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CuaHang">
     <Key>
@@ -143,7 +144,6 @@
     <Property Name="MaLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenLoai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSanPham" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="LuongNhanVien">
     <Key>
@@ -223,16 +223,16 @@
     <Key>
       <PropertyRef Name="MaSP" />
     </Key>
-    <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TenSP" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="DonGia" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="MaLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="GiaNhap" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="SoLuongTon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongTon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="HinhAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSanPham" />
   </EntityType>
   <EntityType Name="Size">
     <Key>
@@ -287,18 +287,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SanPham_LoaiSanPham">
-    <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LoaiSanPham">
-        <PropertyRef Name="MaLoai" />
-      </Principal>
-      <Dependent Role="SanPham">
-        <PropertyRef Name="MaLoai" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TaiKhoan_NhanVien">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
@@ -342,10 +330,6 @@
     <AssociationSet Name="FK_CTKhuyenMai_KhuyenMai" Association="Self.FK_CTKhuyenMai_KhuyenMai">
       <End Role="KhuyenMai" EntitySet="KhuyenMais" />
       <End Role="CTKhuyenMai" EntitySet="CTKhuyenMais" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SanPham_LoaiSanPham" Association="Self.FK_SanPham_LoaiSanPham">
-      <End Role="LoaiSanPham" EntitySet="LoaiSanPhams" />
-      <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
     <AssociationSet Name="FK_TaiKhoan_NhanVien" Association="Self.FK_TaiKhoan_NhanVien">
       <End Role="NhanVien" EntitySet="NhanViens" />
