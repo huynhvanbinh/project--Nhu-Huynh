@@ -48,6 +48,7 @@ namespace demo1
         {
             Load_DSSP();
         }
+        public string macuahang;
         private void Load_DSSP()
         {
 
@@ -78,6 +79,7 @@ namespace demo1
             string masp18 = "";
             string masp19 = "";
             string masp20 = "";
+           
             int kt = 0;
             foreach (CTHoaDonDTO cv in dscthd)
             {
@@ -219,7 +221,7 @@ namespace demo1
 
             }
             dssp = customerBUS.LayDssphd(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13
-                , masp14, masp15, masp16, masp17, masp18, masp19, masp20);
+                , masp14, masp15, masp16, masp17, masp18, masp19, masp20, mach);
             bs.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bs;
 
@@ -517,10 +519,12 @@ namespace demo1
                 }
             }
         }
-
+        public string mach;
         public void load_2(object sender, EventArgs e)
         {
             loadlaiform();
+            mach = macuahang;
+            Load_Form();
         }
         public void loadlaiform()
         {

@@ -237,7 +237,8 @@ namespace demo1
             banhang.FormBorderStyle = FormBorderStyle.None;
             banhang.Dock = DockStyle.Fill;
             banhang.MdiParent = this;
-            banhang.manhanvien = manhanvien;
+            banhang.macuahang = macuahang;
+            banhang.manhanvien = manhanvien;          
             banhang.Show();
         }
 
@@ -248,7 +249,6 @@ namespace demo1
             phieuxuat.Dock = DockStyle.Fill;
             phieuxuat.MdiParent = this;
             phieuxuat.manv = manhanvien;
-            phieuxuat.macuahang = macuahang;
             phieuxuat.Show();
         }
 

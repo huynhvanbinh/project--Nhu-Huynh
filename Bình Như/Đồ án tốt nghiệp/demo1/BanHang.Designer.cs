@@ -967,7 +967,6 @@ namespace demo1
             this.txtmahoadon.SelectionStart = 0;
             this.txtmahoadon.ShortcutsEnabled = true;
             this.txtmahoadon.Size = new System.Drawing.Size(200, 35);
-            this.txtmahoadon.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmahoadon.TabIndex = 71;
             this.txtmahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmahoadon.TextMarginBottom = 0;

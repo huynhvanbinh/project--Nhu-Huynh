@@ -24,10 +24,10 @@ namespace BUS
         }
         public List<SanPhamDTO> LayDssphd(string masp, string masp1, string masp2, string masp3, string masp4, string masp5, string masp6,
             string masp7, string masp8, string masp9, string masp10, string masp11, string masp12, string masp13, string masp14, string masp15,
-            string masp16, string masp17, string masp18, string masp19, string masp20)
+            string masp16, string masp17, string masp18, string masp19, string masp20, string macuahang)
         {
             return demo.layDSSPHD(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13,
-                masp14, masp15, masp16, masp17, masp18, masp19, masp20);
+                masp14, masp15, masp16, masp17, masp18, masp19, masp20, macuahang);
         }
         public List<SanPhamDTO> LayDsspkm(string masp, string masp1, string masp2, string masp3, string masp4, string masp5, string masp6,
             string masp7, string masp8, string masp9, string masp10, string masp11, string masp12, string masp13, string masp14, string masp15,

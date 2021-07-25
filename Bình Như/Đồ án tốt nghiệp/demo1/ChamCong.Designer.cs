@@ -468,7 +468,6 @@ namespace demo1
             this.txtsdt.SelectionStart = 0;
             this.txtsdt.ShortcutsEnabled = true;
 
-            this.txtsdt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtsdt.TabIndex = 92;
             this.txtsdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtsdt.TextMarginBottom = 0;

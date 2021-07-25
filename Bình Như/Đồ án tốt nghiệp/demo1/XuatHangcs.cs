@@ -24,7 +24,7 @@ namespace demo1
         }
         public string manv = "";
         public string tenNV;
-        public string macuahang;
+      
         PhieuXuatBUS customerBUS = new PhieuXuatBUS();
         BindingSource bs = new BindingSource();
         List<PhieuXuatDTO> dskhs = new List<PhieuXuatDTO>();
@@ -45,9 +45,14 @@ namespace demo1
         CTSanPhamBUS customerCTSPBUS = new CTSanPhamBUS();
         BindingSource bsctsp = new BindingSource();
         List<CTSanPhamDTO> dsctsp = new List<CTSanPhamDTO>();
+
+        CuaHangBUS customerCHBUS = new CuaHangBUS();
+        BindingSource bsch = new BindingSource();
+        List<CuaHangDTO> dsch = new List<CuaHangDTO>();
         private void Load_Form()
         {
             Load_DSKH();
+            labmach.Visible = false;
         }
         private void Load_DSKH()
         {
@@ -83,6 +88,7 @@ namespace demo1
             string masp18 = "";
             string masp19 = "";
             string masp20 = "";
+            string macuahang = "admin";
             int kt = 0;
             foreach (CTPhieuXuatDTO cv in dsctpx)
             {
@@ -224,15 +230,25 @@ namespace demo1
 
             }
             dssp = customerSPBUS.LayDssphd(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13
-                , masp14, masp15, masp16, masp17, masp18, masp19, masp20);
+                , masp14, masp15, masp16, masp17, masp18, masp19, masp20, macuahang);
             bssp.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bssp;
+
+            //cua hang
+            dsch = customerCHBUS.LayDsch();
+            bsch.DataSource = dsch.ToList();
         }
 
         private void XuatHangcs_Load(object sender, EventArgs e)
         {
-          txtMaPX.Text= "XH_" + macuahang + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
+          txtMaPX.Text= "XH_" + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
           them();
+
+            //load cua hang
+            foreach (CuaHangDTO ch in dsch)
+            {
+                cmbcuahang.Items.Add(ch.TenCH.ToString());
+            }
         }
         private PhieuXuatDTO layTTKH_moi()
         {
@@ -255,7 +271,7 @@ namespace demo1
             NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
             NewKH.ThanhToan = thanhtoans.ToString();
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
-            NewKH.MaCH = macuahang;
+            NewKH.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
             NewKH.MaNV = manv;
             NewKH.TrangThai = "1";
             return NewKH;
@@ -277,7 +293,6 @@ namespace demo1
                 txttensp.Text = dtgv_ttsp.Rows[i].Cells[1].Value.ToString();
                 txtdongia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
 
-                
                 string masanpham = txtSP.Text;
                 dsctsp = customerCTSPBUS.LayDsmau(masanpham);
                 bsctsp.DataSource = dsctsp.ToList();
@@ -317,6 +332,26 @@ namespace demo1
             Load_Form();
         }
         public string mactpx;
+        private SanPhamDTO layTTSP_moi()
+        {
+            SanPhamDTO NewSP = new SanPhamDTO();
+            NewSP.MaSP = string.IsNullOrEmpty(labmach.Text+txtSP.Text) ? "" : labmach.Text+txtSP.Text;
+            NewSP.TenSP = string.IsNullOrEmpty(txttensp.Text) ? "" : txttensp.Text;
+            NewSP.DonGia = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
+            NewSP.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
+            foreach (SanPhamDTO sps in dssp)
+            {
+                if(sps.MaSP==txtSP.Text)
+                {
+                    NewSP.MaLoai = sps.MaLoai;
+                    NewSP.GiaNhap = sps.GiaNhap;
+                    NewSP.MoTa = sps.MoTa;
+                    NewSP.HinhAnh = sps.HinhAnh;
+                }    
+            }
+            NewSP.TrangThai = "1";
+            return NewSP;
+        }
         void themsanphamPX()
         {
             int i = 1;
@@ -327,7 +362,7 @@ namespace demo1
             mactpx = txtMaPX.Text + "_SP-0"+i;
             CTPhieuXuatDTO khAdd = layCTPX_moi();
             bool kq = customerCTPXBUS.DKSP(khAdd);
-            MessageBox.Show("Thêm thành công");
+           
 
             //update so luong sp
             CTSanPhamDTO nv = layTTSP_sua();
@@ -338,6 +373,24 @@ namespace demo1
             PhieuXuatDTO px = layTTKH_moi();
             bool kqpx = customerBUS.UpdateSL(px);
 
+            //thêm sản phẩm vào cửa hàng
+            int kiemtrasp = 0;
+            foreach (SanPhamDTO ch in dssp)
+            {
+                if (labmach.Text + txtSP.Text == ch.MaSP.ToString())
+                {
+                    MessageBox.Show("SP đã tồn tại trong cửa hàng");
+                    kiemtrasp = 1;
+                }            
+            }
+           if(kiemtrasp==0)
+            {
+                SanPhamDTO spadd = layTTSP_moi();
+                bool sp = customerSPBUS.DKSP(spadd);
+                MessageBox.Show("Thêm thành công");
+            }    
+            //thong báo thành công
+            
             Load_Form();
         }
 
@@ -380,6 +433,18 @@ namespace demo1
             NewSP.SoLuong = slconlai.ToString();
             NewSP.TrangThai = "1";
             return NewSP;
+        }
+
+        private void cmbcuahang_onItemSelected(object sender, EventArgs e)
+        {
+            labmach.Visible = true;
+            foreach (CuaHangDTO ch in dsch)
+            {
+                if (cmbcuahang.selectedValue == ch.TenCH.ToString())
+                {
+                    labmach.Text = ch.MaCH.ToString();
+                }
+            }
         }
     }
 }

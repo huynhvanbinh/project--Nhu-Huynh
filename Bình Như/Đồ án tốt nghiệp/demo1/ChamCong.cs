@@ -64,7 +64,6 @@ namespace demo1
         }
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (dtgv_ttkh.SelectedCells.Count > 0)
             {
                 txtsogiolam.Visible = false;
@@ -127,13 +126,6 @@ namespace demo1
             NewSP.TrangThai = "1";
             return NewSP;
         }
-        //private HoaDonDTO layTTSP_sua()
-        //{
-        //    HoaDonDTO NewSP = new HoaDonDTO();
-        //    NewSP.TongTien = string.IsNullOrEmpty(txtTongTien.Text) ? "" : txtTongTien.Text;
-        //    return NewSP;
-        //}
-       
         private void Them_Click_1(object sender, EventArgs e)
         {
           
