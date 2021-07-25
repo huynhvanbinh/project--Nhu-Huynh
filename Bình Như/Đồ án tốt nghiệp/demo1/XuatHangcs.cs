@@ -242,8 +242,8 @@ namespace demo1
         private void XuatHangcs_Load(object sender, EventArgs e)
         {
           txtMaPX.Text= "XH_" + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
-          them();
-
+         
+            //them PX
             //load cua hang
             foreach (CuaHangDTO ch in dsch)
             {
@@ -273,9 +273,11 @@ namespace demo1
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             NewKH.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
             NewKH.MaNV = manv;
+            NewKH.TringTrang = "Chờ nhận hàng";
             NewKH.TrangThai = "1";
             return NewKH;
         }
+       
         void them()
         {
             PhieuXuatDTO khAdd = layTTKH_moi();
@@ -332,26 +334,8 @@ namespace demo1
             Load_Form();
         }
         public string mactpx;
-        private SanPhamDTO layTTSP_moi()
-        {
-            SanPhamDTO NewSP = new SanPhamDTO();
-            NewSP.MaSP = string.IsNullOrEmpty(labmach.Text+txtSP.Text) ? "" : labmach.Text+txtSP.Text;
-            NewSP.TenSP = string.IsNullOrEmpty(txttensp.Text) ? "" : txttensp.Text;
-            NewSP.DonGia = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
-            NewSP.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
-            foreach (SanPhamDTO sps in dssp)
-            {
-                if(sps.MaSP==txtSP.Text)
-                {
-                    NewSP.MaLoai = sps.MaLoai;
-                    NewSP.GiaNhap = sps.GiaNhap;
-                    NewSP.MoTa = sps.MoTa;
-                    NewSP.HinhAnh = sps.HinhAnh;
-                }    
-            }
-            NewSP.TrangThai = "1";
-            return NewSP;
-        }
+       
+
         void themsanphamPX()
         {
             int i = 1;
@@ -364,7 +348,7 @@ namespace demo1
             bool kq = customerCTPXBUS.DKSP(khAdd);
            
 
-            //update so luong sp
+            //update so luong chi tiết sp
             CTSanPhamDTO nv = layTTSP_sua();
             bool kqs = customerCTSPBUS.UpdateSL(nv);
            
@@ -373,29 +357,16 @@ namespace demo1
             PhieuXuatDTO px = layTTKH_moi();
             bool kqpx = customerBUS.UpdateSL(px);
 
-            //thêm sản phẩm vào cửa hàng
-            int kiemtrasp = 0;
-            foreach (SanPhamDTO ch in dssp)
-            {
-                if (labmach.Text + txtSP.Text == ch.MaSP.ToString())
-                {
-                    MessageBox.Show("SP đã tồn tại trong cửa hàng");
-                    kiemtrasp = 1;
-                }            
-            }
-           if(kiemtrasp==0)
-            {
-                SanPhamDTO spadd = layTTSP_moi();
-                bool sp = customerSPBUS.DKSP(spadd);
-                MessageBox.Show("Thêm thành công");
-            }    
-            //thong báo thành công
             
+            MessageBox.Show("Thêm thành công");
+            //thong báo thành công
+
             Load_Form();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
+            them();
             themsanphamPX();
             //updatePX();
         }

@@ -20,5 +20,6 @@ namespace DAO
         public string MaNV { get; set; }
         public string MaCH { get; set; }
         public string TrangThai { get; set; }
+        public string TringTrang { get; set; }
     }
 }

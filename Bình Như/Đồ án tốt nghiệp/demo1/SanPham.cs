@@ -170,7 +170,15 @@ namespace demo1
         {
             Load_DSSP();
             int intMaNV = dtgv_ttsp.Rows.Count;
-            txtMaSP.Text = mach+ "_" + "SP_HN" + "-0"+ intMaNV;
+            if(mach=="admin")
+            {
+                txtMaSP.Text ="SP_HN" + "-0" + intMaNV;
+            }
+            if(mach!="admin")
+            {
+                txtMaSP.Text = mach + "_" + "SP_HN" + "-0" + intMaNV;
+            }
+           
             txtMaSP.Text = txtMaSP.Text.Trim();
             Regex trimmer = new Regex(@"\s\s+");
             txtMaSP.Text = trimmer.Replace(txtMaSP.Text, " ");

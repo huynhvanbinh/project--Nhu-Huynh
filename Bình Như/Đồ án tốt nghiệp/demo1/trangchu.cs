@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using DTO;
 namespace demo1
 {
     public partial class trangchu : Form
     {
+        PhieuXuatBUS customerBUS = new PhieuXuatBUS();
+        BindingSource bs = new BindingSource();
+        List<PhieuXuatDTO> dskhs = new List<PhieuXuatDTO>();
+
         public string taikhoan;
         public trangchu()
         {
@@ -26,11 +31,13 @@ namespace demo1
             int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
             this.Width = widthScreen;
             this.Height = heightScreen;
-
+           
         }
 
         public void trangchu_Load(object sender, EventArgs e)
         {
+            dskhs = customerBUS.LayDssp();
+            bs.DataSource = dskhs.ToList();
             lay.Text = quyen;
             if (maquyen == "AD")
             {
@@ -42,6 +49,19 @@ namespace demo1
                 //quanly.Visible = false; 
             }
             labcuahang.Text = macuahang;
+            foreach (PhieuXuatDTO sps in dskhs)
+            {
+                if (sps.MaCH == labcuahang.Text && sps.TrangThai=="1" && sps.TringTrang== "Chờ nhận hàng")
+                {
+                    HangDaVe dn = new HangDaVe();
+                    dn.maphieuxuat = sps.MaPX;
+                    dn.macuahang = labcuahang.Text;
+                    dn.FormBorderStyle = FormBorderStyle.None;
+                    dn.Dock = DockStyle.Fill;
+                    dn.MdiParent = this;
+                    dn.Show();
+                }
+            } 
         }
         public string quyen = "";
         public string maquyen = "";

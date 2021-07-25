@@ -218,6 +218,7 @@
     <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TringTrang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>

@@ -17,6 +17,7 @@ namespace DAO
             pn.ThanhToan = "";
             pn.MaNV = "";
             pn.MaCH = "";
+            pn.TringTrang = "";
             pn.TrangThai = "1";
             demos.PhieuXuats.Add(pn);
             demos.SaveChanges();
@@ -32,6 +33,7 @@ namespace DAO
                 ThanhToan = u.ThanhToan,
                 MaNV = u.MaNV,
                 MaCH = u.MaCH,
+                TringTrang=u.TringTrang,
                 TrangThai = u.TrangThai,
             }).ToList();
             return Dssp;
@@ -46,6 +48,7 @@ namespace DAO
                 ThanhToan = u.ThanhToan,
                 MaNV = u.MaNV,
                 MaCH = u.MaCH,
+                TringTrang=u.TringTrang,
                 TrangThai = u.TrangThai,
             }).ToList();
             return Dssp;
@@ -72,6 +75,7 @@ namespace DAO
                 ThanhToan = u.ThanhToan,
                 MaNV = u.MaNV,
                 MaCH = u.MaCH,
+                TringTrang=u.TringTrang,
                 TrangThai = u.TrangThai,
             }).SingleOrDefault();
             return sp;
@@ -88,6 +92,7 @@ namespace DAO
                 customer.ThanhToan = sp.ThanhToan;
                 customer.MaNV = sp.MaNV;
                 customer.MaCH = sp.MaCH;
+                customer.TringTrang = sp.TringTrang;
                 customer.TrangThai = "1";
                 demos.PhieuXuats.Add(customer);
                 demos.SaveChanges();
@@ -103,12 +108,10 @@ namespace DAO
             try
             {
                 PhieuXuat customer = demos.PhieuXuats.Where(u => u.MaPX == hd.MaPX).SingleOrDefault();
-                customer.NgayLap = hd.NgayLap;
-                customer.ThanhToan = hd.ThanhToan;
-                customer.MaNV = hd.MaNV;
-                customer.MaCH = hd.MaCH;
-                customer.TrangThai = "1";
-                demos.PhieuXuats.Add(customer);
+                customer.MaPX = hd.MaPX;
+                customer.TringTrang = hd.TringTrang;
+              
+              
                 demos.SaveChanges();
                 return true;
             }

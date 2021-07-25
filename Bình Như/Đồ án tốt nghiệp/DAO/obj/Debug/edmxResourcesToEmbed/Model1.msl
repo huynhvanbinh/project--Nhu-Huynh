@@ -231,6 +231,7 @@
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TringTrang" ColumnName="TringTrang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

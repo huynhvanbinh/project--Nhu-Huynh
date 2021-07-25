@@ -198,6 +198,12 @@
     <Compile Include="DSNhanVien.Designer.cs">
       <DependentUpon>DSNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="HangDaVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HangDaVe.Designer.cs">
+      <DependentUpon>HangDaVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoaDons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HangDaVe.resx">
+      <DependentUpon>HangDaVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDons.resx">
       <DependentUpon>HoaDons.cs</DependentUpon>
