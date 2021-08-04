@@ -369,6 +369,10 @@ namespace demo1
             them();
             themsanphamPX();
             //updatePX();
+            string masanpham = null;
+            dsctsp = customerCTSPBUS.LayDsmau(masanpham);
+            bsctsp.DataSource = dsctsp.ToList();
+            dataGridView1.DataSource = bsctsp;
         }
 
         private void txtsoluong_TextChanged(object sender, EventArgs e)
