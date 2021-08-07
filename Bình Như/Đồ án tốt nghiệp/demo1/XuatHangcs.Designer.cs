@@ -550,7 +550,6 @@ namespace demo1
             this.txtMaPX.TabIndex = 125;
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaPX.TextMarginBottom = 0;
-            this.txtMaPX.TextMarginLeft = 5;
             this.txtMaPX.TextMarginTop = 0;
             this.txtMaPX.TextPlaceholder = "Mã phiếu xuất";
             this.txtMaPX.UseSystemPasswordChar = false;
