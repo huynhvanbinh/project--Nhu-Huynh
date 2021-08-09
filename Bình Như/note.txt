@@ -7,3 +7,4 @@ van binh 18/07/2021
 van binh 23/07/2021
 demo thầy xong 24/07/2021
 Văn Bình 04/08/2021
+chuooix keets noi mays nhuw:     <add name="demoEntities" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=DESKTOP-C8E6B6A;initial catalog=demo;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
