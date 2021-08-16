@@ -230,7 +230,6 @@
             this.txtchucvu.TextMarginBottom = 0;
             this.txtchucvu.TextMarginLeft = 5;
             this.txtchucvu.TextMarginTop = 0;
-            this.txtchucvu.TextPlaceholder = "Nhập chức vụ";
             this.txtchucvu.UseSystemPasswordChar = false;
             this.txtchucvu.WordWrap = true;
             // 

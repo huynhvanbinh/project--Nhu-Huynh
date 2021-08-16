@@ -389,7 +389,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1335,7 +1334,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8ee89056-9a4a-4df6-8ac5-64f6e31a89dd</rd:DataSourceID>
+      <rd:DataSourceID>08b5a656-4d8a-490f-896d-b324b1eed41c</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1388,7 +1387,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>demoDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
         <rd:TableName>CTHoaDon</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1428,7 +1427,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>demoDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
         <rd:TableName>HoaDon</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -1469,18 +1468,18 @@
           <DataField>MoTa</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="HinhAnh">
-          <DataField>HinhAnh</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="TrangThai">
           <DataField>TrangThai</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HinhAnh">
+          <DataField>HinhAnh</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>demoDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\binh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\demoDataSet.xsd</rd:SchemaPath>
         <rd:TableName>SanPham</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

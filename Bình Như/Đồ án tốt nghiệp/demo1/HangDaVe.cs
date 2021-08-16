@@ -85,7 +85,6 @@ namespace demo1
                             NewKH.GiaNhap = cvngay.GiaNhap;
                         }
                     }
-                    NewKH.MaCH = labmacuahang.Text;
                     NewKH.TrangThai = "1";                  
                     return NewKH;
                 }

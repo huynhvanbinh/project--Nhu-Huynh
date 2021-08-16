@@ -231,9 +231,8 @@
           <Property Name="GiaNhap" Type="nvarchar" MaxLength="50" />
           <Property Name="SoLuongTon" Type="nvarchar" MaxLength="50" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-          <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
-          <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
+          <Property Name="HinhAnh" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Size">
           <Key>
@@ -572,9 +571,8 @@
           <Property Name="GiaNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SoLuongTon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MoTa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Size">
           <Key>
@@ -928,9 +926,8 @@
                 <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
                 <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />
                 <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-                <ScalarProperty Name="MaCH" ColumnName="MaCH" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -41,12 +41,13 @@ namespace demo1
         List<CTSanPhamDTO> dsctsp = new List<CTSanPhamDTO>();
         private void Load_Form()
         {
+            pictureBox2.Visible = false;
             Load_DSSP();
         }
         public string mach;
         private void Load_DSSP()
         {
-            dssp = customerBUS.LayDsspcuahang(mach);
+            dssp = customerBUS.LayDssp();
             bs.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bs;
             // khoi tao load du lieu bang chuc vu
@@ -76,9 +77,8 @@ namespace demo1
                 txtTenSP.Text = dtgv_ttsp.Rows[i].Cells[1].Value.ToString();
                 txtDonGia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
                 txtGiaNhap.Text = dtgv_ttsp.Rows[i].Cells[4].Value.ToString();
-                txtMoTa.Text = dtgv_ttsp.Rows[i].Cells[6].Value.ToString();
+                txtMoTa.Text = dtgv_ttsp.Rows[i].Cells[5].Value.ToString();
                 txtloaisp.Text = dtgv_ttsp.Rows[i].Cells[3].Value.ToString();
-              
             }    
         }
         private SanPhamDTO layTTSP_moi()
@@ -91,7 +91,7 @@ namespace demo1
             NewSP.GiaNhap = string.IsNullOrEmpty(txtGiaNhap.Text) ? "" : txtGiaNhap.Text;
             NewSP.MoTa = string.IsNullOrEmpty(txtMoTa.Text) ? "" : txtMoTa.Text;
             NewSP.HinhAnh = string.IsNullOrEmpty(txtHinhAnh.Text) ? "" : txtHinhAnh.Text;
-            NewSP.MaCH = mach;
+           // NewSP.MaCH = mach;
             NewSP.MaLoai = string.IsNullOrEmpty(txtloaisp.Text) ? "" : txtloaisp.Text;
 
             NewSP.TrangThai = "1";
@@ -161,7 +161,7 @@ namespace demo1
             {
                 cmbloaisanpham.Items.Add(sps.MaLoai.ToString());
             }
-            dssp = customerBUS.LayDsspcuahang(mach);
+            dssp = customerBUS.LayDssp();
             bs.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bs;
         }
@@ -170,15 +170,26 @@ namespace demo1
         {
             Load_DSSP();
             int intMaNV = dtgv_ttsp.Rows.Count;
-            if(mach=="admin")
+            if(intMaNV<10)
             {
-                txtMaSP.Text ="SP_HN" + "-0" + intMaNV;
+                txtMaSP.Text = "SP" + "-00000" + intMaNV;
             }
-            if(mach!="admin")
+            if (intMaNV < 100)
             {
-                txtMaSP.Text = mach + "_" + "SP_HN" + "-0" + intMaNV;
+                txtMaSP.Text = "SP" + "-0000" + intMaNV;
             }
-           
+            if (intMaNV < 1000)
+            {
+                txtMaSP.Text = "SP" + "-000" + intMaNV;
+            }
+            if (intMaNV < 10000)
+            {
+                txtMaSP.Text = "SP" + "-00" + intMaNV;
+            }
+            if (intMaNV < 100000)
+            {
+                txtMaSP.Text = "SP" + "-0" + intMaNV;
+            }
             txtMaSP.Text = txtMaSP.Text.Trim();
             Regex trimmer = new Regex(@"\s\s+");
             txtMaSP.Text = trimmer.Replace(txtMaSP.Text, " ");
@@ -188,13 +199,14 @@ namespace demo1
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            pictureBox2.Visible = true;
             OpenFileDialog openfileDlg = new OpenFileDialog();
             openfileDlg.Filter = openfileDlg.Filter = "JPG files (*.jpg)|*.jpg|All files (*.*)|*.*";
             openfileDlg.FilterIndex = 1;
             openfileDlg.RestoreDirectory = true;
             if(openfileDlg.ShowDialog()==DialogResult.OK)
             {
-                pictureBox1.ImageLocation = openfileDlg.FileName;
+                pictureBox2.ImageLocation = openfileDlg.FileName;
                 txtHinhAnh.Text= openfileDlg.FileName;
             }    
         }
@@ -204,7 +216,6 @@ namespace demo1
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
             NewSP.TenSP = string.IsNullOrEmpty(txtTenSP.Text) ? "" : txtTenSP.Text;
             NewSP.DonGia = string.IsNullOrEmpty(txtDonGia.Text) ? "" : txtDonGia.Text;
-
             NewSP.GiaNhap = string.IsNullOrEmpty(txtGiaNhap.Text) ? "" : txtGiaNhap.Text;
             NewSP.TrangThai = "0";
             return NewSP;
@@ -271,6 +282,7 @@ namespace demo1
             CTSanPham ctsanpham = new CTSanPham();
             ctsanpham.masp = txtMaSP.Text;
             ctsanpham.tensp = txtTenSP.Text;
+            ctsanpham.macuahang = mach;
             ctsanpham.ShowDialog();
         }
         private void bunifuButton2_Click(object sender, EventArgs e)

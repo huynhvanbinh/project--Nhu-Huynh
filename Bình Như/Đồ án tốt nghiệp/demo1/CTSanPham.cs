@@ -36,6 +36,7 @@ namespace demo1
         {
             Load_DSSP();
         }
+        public string macuahang;
         private void Load_DSSP()
         {
             //mau
@@ -47,7 +48,8 @@ namespace demo1
 
             //chi tiet san pham
             string ma = txtMaSP.Text;
-            dsctsp = customerCTSPBUS.LayDsmau(ma);
+            string cuahang = macuahang;
+            dsctsp = customerCTSPBUS.LayDsctspch(ma,cuahang);
             bsctsp.DataSource = dsctsp.ToList();
             dataGridView1.DataSource = bsctsp;
 
@@ -55,12 +57,14 @@ namespace demo1
         private CTSanPhamDTO layCTSP_moi()
         {
             CTSanPhamDTO NewSP = new CTSanPhamDTO();
-            NewSP.MaCTSP = "SP" + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
+            NewSP.MaCTSP = masp + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
             NewSP.MaMau = string.IsNullOrEmpty(labmamau.Text) ? "" : labmamau.Text;
             NewSP.KichThuoc = string.IsNullOrEmpty(labkichthuoc.Text) ? "" : labkichthuoc.Text;
             NewSP.SoLuong = string.IsNullOrEmpty(txtSoLuong.Text) ? "" : txtSoLuong.Text;
             NewSP.TrangThai = "1";
+            //them chi tiet san pham theo cua hang
+            NewSP.MaCH = macuahang;
             return NewSP;
         }
         private void themCTSP()
@@ -92,7 +96,8 @@ namespace demo1
             txtMaSP.Text = masp;
             txtTenSP.Text = tensp;
             string ma = txtMaSP.Text;
-            dsctsp = customerCTSPBUS.LayDsmau(ma);
+            string cuahang = macuahang;
+            dsctsp = customerCTSPBUS.LayDsctspch(ma, cuahang);
             bsctsp.DataSource = dsctsp.ToList();
             dataGridView1.DataSource = bsctsp;
         }

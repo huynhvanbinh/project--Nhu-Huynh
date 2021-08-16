@@ -226,9 +226,8 @@
     <Property Name="GiaNhap" Type="nvarchar" MaxLength="50" />
     <Property Name="SoLuongTon" Type="nvarchar" MaxLength="50" />
     <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
-    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
-    <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="Size">
     <Key>

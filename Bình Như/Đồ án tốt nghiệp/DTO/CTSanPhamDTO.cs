@@ -14,5 +14,6 @@ namespace DTO
         public string KichThuoc { get; set; }
         public string SoLuong { get; set; }
         public string TrangThai { get; set; }
+        public string MaCH { get; set; }
     }
 }

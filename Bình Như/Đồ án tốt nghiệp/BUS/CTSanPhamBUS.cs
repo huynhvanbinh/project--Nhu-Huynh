@@ -14,6 +14,10 @@ namespace BUS
         {
             return demo.layDSMau(ma);
         }
+        public List<CTSanPhamDTO> LayDsctspch(string ma, string cuahang)
+        {
+            return demo.layDSctspch(ma,cuahang);
+        }
         public List<CTSanPhamDTO> LayDsCTSP()
         {
             return demo.layDSCTSP();

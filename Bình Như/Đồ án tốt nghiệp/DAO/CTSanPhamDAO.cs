@@ -17,6 +17,7 @@ namespace DAO
             mausac.KichThuoc = "";
             mausac.SoLuong = "";
             mausac.MaSP = "";
+            mausac.MaCH = "";
             mausac.TrangThai = "1";
             demos.CTSanPhams.Add(mausac);
             demos.SaveChanges();
@@ -32,7 +33,23 @@ namespace DAO
                KichThuoc=u.KichThuoc,
                SoLuong=u.SoLuong,
                MaSP=u.MaSP,
+               MaCH=u.MaCH,
                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dsmau;
+        }
+        public List<CTSanPhamDTO> layDSctspch(string ma, string cuahang)
+        {
+            List<CTSanPhamDTO> Dsmau = new List<CTSanPhamDTO>();
+            Dsmau = demos.CTSanPhams.Where(u => u.TrangThai == "1" && u.MaSP == ma && u.MaCH==cuahang).Select(u => new CTSanPhamDTO
+            {
+                MaCTSP = u.MaCTSP,
+                MaMau = u.MaMau,
+                KichThuoc = u.KichThuoc,
+                SoLuong = u.SoLuong,
+                MaSP = u.MaSP,
+                MaCH=u.MaCH,
+                TrangThai = u.TrangThai,
             }).ToList();
             return Dsmau;
         }
@@ -46,6 +63,7 @@ namespace DAO
                 KichThuoc = u.KichThuoc,
                 SoLuong = u.SoLuong,
                 MaSP = u.MaSP,
+                MaCH=u.MaCH,
                 TrangThai = u.TrangThai,
             }).ToList();
             return Dsmau;
@@ -61,6 +79,7 @@ namespace DAO
                 KichThuoc = u.KichThuoc,
                 MaSP=u.MaSP,
                 SoLuong = u.SoLuong,
+                MaCH=u.MaCH,
                 TrangThai = u.TrangThai,
             }).SingleOrDefault();
             return mau;
@@ -78,6 +97,7 @@ namespace DAO
                 customer.KichThuoc = mau.KichThuoc;
                 customer.SoLuong = mau.SoLuong;
                 customer.TrangThai = mau.TrangThai;
+                customer.MaCH = mau.MaCH;
                 demos.CTSanPhams.Add(customer);
                 demos.SaveChanges();
                 return true;

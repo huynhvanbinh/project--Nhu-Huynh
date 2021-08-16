@@ -21,7 +21,7 @@ namespace demo1
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Visible = false;
             Load_Form();
-            ThemHD();
+           // ThemHD();
         }
 
         HoaDonBUS customerHDBUS = new HoaDonBUS();
@@ -47,6 +47,7 @@ namespace demo1
         private void Load_Form()
         {
             Load_DSSP();
+            ThemHD();
         }
         public string macuahang;
         private void Load_DSSP()
@@ -291,7 +292,7 @@ namespace demo1
                 }
                 dataGridView1.Visible = true;
                 string masanpham = txtSP.Text;
-                dsctsp = customerCTSPBUS.LayDsmau(masanpham);
+                dsctsp = customerCTSPBUS.LayDsctspch(masanpham,macuahang);
                 bsctsp.DataSource = dsctsp.ToList();
                 dataGridView1.DataSource = bsctsp;
             }
@@ -356,7 +357,7 @@ namespace demo1
             else
             {
                 int ktnhap = Int32.Parse(txtsoluongmuasanpham.Text);
-                if (ktnhap <= 0)
+                if (ktnhap <= 0 || ktnhap==0)
                 {
                     MessageBox.Show("Vui lòng nhập số lớn hơn 0");
                     txtsoluongmuasanpham.Text = "1";
@@ -389,9 +390,9 @@ namespace demo1
                     float thanhtien = (dongia * soluong - (dongia * soluong * (kuyenmai / 100)));
                     txtthanhtien.Text = thanhtien.ToString();
                     //tinh tiền sản phẩm
-                    //float tongtien = Int32.Parse(txttongtiendamua.Text);
-                    // tongtien = tongtien + thanhtien;
-                    //txttongtiendamua.Text = tongtien.ToString();
+                    float tongtien = Int32.Parse(txttongtiendamua.Text);
+                    tongtien = tongtien + thanhtien;
+                    txttongtiendamua.Text = tongtien.ToString();
 
                 }
             }
@@ -480,10 +481,6 @@ namespace demo1
             float soluongss = Int32.Parse(txtsoluongmuasanpham.Text);
             float slconlai = slupdates - soluongss;
             //end
-            if (slconlai <= 0)
-            {
-                slconlai = 0;
-            }
             SanPhamDTO NewSP = new SanPhamDTO();
             NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
             NewSP.SoLuongTon = slconlai.ToString();
@@ -570,6 +567,7 @@ namespace demo1
 
         private void Them_Click(object sender, EventArgs e)
         {
+            
             CTHoaDonDTO khAdd = layTTSP_moi();
             if (khAdd.MaHD == "")
             {
@@ -577,117 +575,37 @@ namespace demo1
                 return;
             }
             //kiem tra so luing du ban hay khong
-            string soluongkho = null;
+            string soluongkho=null;
             foreach (SanPhamDTO cv in dssp)
             {
                 if (cv.MaSP == txtSP.Text)
                 {
-                    soluongkho = cv.SoLuongTon;
+                    foreach (CTSanPhamDTO ctssp in dsctsp)
+                    {
+                        if(ctssp.MaMau==txtmamau.Text&& txtkichthuoc.Text==ctssp.KichThuoc && ctssp.MaSP==txtSP.Text)
+                        {
+                            soluongkho = ctssp.SoLuong;
+                        }       
+                    }                       
                 }
             }
+           
             float slupdates = Int32.Parse(soluongkho);
             float soluongss = Int32.Parse(txtsoluongmuasanpham.Text);
             float slconlai = slupdates - soluongss;
             if (slconlai < 0)
             {
                 MessageBox.Show("Hiện tại không đủ số lượng bán, vui lòng kiểm tra lại");
-                DialogResult ktsl = MessageBox.Show
-                ("Số lượng tại cửa hàng đủ bán", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (ktsl == DialogResult.Yes)
-                {
-                    //kiem tra san pham da ton tai hay chua
-                    int ktsp = 0;
-                    foreach (CTHoaDonDTO cv in dscthd)
-                    {
-                        if (txtSP.Text.Equals(cv.MaSP))
-                        {
-                            ktsp = 1;
-                        }
-                    }
-                    if (ktsp == 1)
-                    {
-                        DialogResult h = MessageBox.Show
-                         ("sản phẩm đã tồn tại trong hóa đơn. Bạn có muốn thêm số lượng" + txtsoluongmuasanpham.Text,
-                         "Thông báo",
-                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (h == DialogResult.Yes)
-                        {
-                            sua();
-                            //reset;
-                        }
-                    }
-                    else
-                    {
-                        bool kq = customerCTHDBUS.DKSP(khAdd);
-                        MessageBox.Show("Thêm Thành công");
-                    }
-                    float tongtien = Int32.Parse(txttongtiendamua.Text);
-                    float thanhtien = Int32.Parse(txtthanhtien.Text);
-                    tongtien = tongtien + thanhtien;
-                    txttongtiendamua.Text = tongtien.ToString();
-                    SanPhamDTO khAdds = layTTSP_sua();
-                    if (khAdds.SoLuongTon == "")
-                    {
-                        MessageBox.Show("Vui lòng chọn sản phảm!!");
-                        return;
-                    }
-                    else
-                    {
-                        SanPhamDTO nv = layTTSP_sua();
-                        bool kq = customerBUS.UpdateSL(nv);
-                    }
-                    reset();
-                    Load_Form();
-                }
-                if (ktsl == DialogResult.No)
-                {
-                    MessageBox.Show("số lượng không đủ bán, vui long nhập lạp số lượng");
-                }
             }
             else
             {
-                int kt1 = 0;
-                foreach (CTHoaDonDTO cv in dscthd)
-                {
-                    if (txtSP.Text.Equals(cv.MaSP))
-                    {
-                        kt1 = 1;
-                    }
-                }
-                if (kt1 == 1)
-                {
-                    DialogResult h = MessageBox.Show
-                     ("sản phẩm đã tồn tại trong hóa đơn. Bạn có muốn thêm số lượng" + txtsoluongmuasanpham.Text,
-                     "Thông báo",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (h == DialogResult.Yes)
-                    {
-                        sua();
-                        //reset;
-                    }
-                }
-                else
-                {
-                    bool kq = customerCTHDBUS.DKSP(khAdd);
-                    MessageBox.Show("Thêm Thành công");
-                }
+                bool kq = customerCTHDBUS.DKSP(khAdd);
+                MessageBox.Show("Thêm Thành công");             
                 float tongtien = Int32.Parse(txttongtiendamua.Text);
                 float thanhtien = Int32.Parse(txtthanhtien.Text);
                 tongtien = tongtien + thanhtien;
                 txttongtiendamua.Text = tongtien.ToString();
-                // update so luong san pham
-                SanPhamDTO khAdds = layTTSP_sua();
-                if (khAdds.SoLuongTon == "")
-                {
-                    MessageBox.Show("Vui lòng chọn sản phảm!!");
-                    return;
-                }
-                else
-                {
-                    SanPhamDTO nv = layTTSP_sua();
-                    bool kq = customerBUS.UpdateSL(nv);
-                    MessageBox.Show("đã update sản phẩm");
-                }
+               // update so luong san pham
                 reset();
                 suahoadon();
                 Load_Form();
