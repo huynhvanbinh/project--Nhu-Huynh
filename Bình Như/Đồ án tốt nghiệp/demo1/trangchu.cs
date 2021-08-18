@@ -381,6 +381,7 @@ namespace demo1
             phieuxuat.Dock = DockStyle.Fill;
             phieuxuat.MdiParent = this;
             phieuxuat.manv = manhanvien;
+            phieuxuat.macuahang = macuahang;
             phieuxuat.Show();
         }
 

@@ -141,5 +141,10 @@ namespace demo1
         {
             reset();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

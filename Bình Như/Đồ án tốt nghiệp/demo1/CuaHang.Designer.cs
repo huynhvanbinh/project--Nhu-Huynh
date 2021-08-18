@@ -345,6 +345,7 @@ namespace demo1
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cửa hàng";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // bunifuCustomLabel3
             // 

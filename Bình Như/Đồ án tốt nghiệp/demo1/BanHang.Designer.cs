@@ -51,6 +51,10 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -91,10 +95,6 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties58 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties59 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties60 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -124,6 +124,8 @@ namespace demo1
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtmamau = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtMaNV = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtmahoadon = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -135,7 +137,7 @@ namespace demo1
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtSP = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txtmasp = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtkhuyenmai = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtmakhachhang = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txttongtiendamua = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -145,8 +147,6 @@ namespace demo1
             this.txtmact = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtthanhtien = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtMaNV = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).BeginInit();
@@ -350,7 +350,7 @@ namespace demo1
             this.groupBox3.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel2);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel1);
-            this.groupBox3.Controls.Add(this.txtSP);
+            this.groupBox3.Controls.Add(this.txtmasp);
             this.groupBox3.Controls.Add(this.txtkhuyenmai);
             this.groupBox3.Controls.Add(this.txtmakhachhang);
             this.groupBox3.Controls.Add(this.txttongtiendamua);
@@ -760,7 +760,7 @@ namespace demo1
             this.txtmamau.IconRight = null;
             this.txtmamau.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmamau.Lines = new string[0];
-            this.txtmamau.Location = new System.Drawing.Point(451, 155);
+            this.txtmamau.Location = new System.Drawing.Point(464, 155);
             this.txtmamau.MaxLength = 32767;
             this.txtmamau.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtmamau.Modified = false;
@@ -788,7 +788,7 @@ namespace demo1
             this.txtmamau.OnIdleState = stateProperties16;
             this.txtmamau.PasswordChar = '\0';
             this.txtmamau.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtmamau.PlaceholderText = "Tên sản phẩm";
+            this.txtmamau.PlaceholderText = "";
             this.txtmamau.ReadOnly = false;
             this.txtmamau.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtmamau.SelectedText = "";
@@ -802,9 +802,94 @@ namespace demo1
             this.txtmamau.TextMarginBottom = 0;
             this.txtmamau.TextMarginLeft = 5;
             this.txtmamau.TextMarginTop = 0;
-            this.txtmamau.TextPlaceholder = "Tên sản phẩm";
+            this.txtmamau.TextPlaceholder = "";
             this.txtmamau.UseSystemPasswordChar = false;
             this.txtmamau.WordWrap = true;
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.AutoSize = true;
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(6, 83);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(76, 18);
+            this.bunifuCustomLabel11.TabIndex = 74;
+            this.bunifuCustomLabel11.Text = "Mã N.Viên";
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.AcceptsReturn = false;
+            this.txtMaNV.AcceptsTab = false;
+            this.txtMaNV.AnimationSpeed = 200;
+            this.txtMaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtMaNV.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaNV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtMaNV.BackgroundImage")));
+            this.txtMaNV.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtMaNV.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtMaNV.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtMaNV.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtMaNV.BorderRadius = 1;
+            this.txtMaNV.BorderThickness = 1;
+            this.txtMaNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.txtMaNV.DefaultText = "";
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.FillColor = System.Drawing.Color.White;
+            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNV.HideSelection = true;
+            this.txtMaNV.IconLeft = null;
+            this.txtMaNV.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.IconPadding = 10;
+            this.txtMaNV.IconRight = null;
+            this.txtMaNV.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.Lines = new string[0];
+            this.txtMaNV.Location = new System.Drawing.Point(125, 66);
+            this.txtMaNV.MaxLength = 32767;
+            this.txtMaNV.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtMaNV.Modified = false;
+            this.txtMaNV.Multiline = false;
+            this.txtMaNV.Name = "txtMaNV";
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaNV.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.Empty;
+            stateProperties18.FillColor = System.Drawing.Color.White;
+            stateProperties18.ForeColor = System.Drawing.Color.Empty;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtMaNV.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaNV.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Black;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaNV.OnIdleState = stateProperties20;
+            this.txtMaNV.PasswordChar = '\0';
+            this.txtMaNV.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtMaNV.PlaceholderText = "Max Nhaan Vieen";
+            this.txtMaNV.ReadOnly = false;
+            this.txtMaNV.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMaNV.SelectedText = "";
+            this.txtMaNV.SelectionLength = 0;
+            this.txtMaNV.SelectionStart = 0;
+            this.txtMaNV.ShortcutsEnabled = true;
+            this.txtMaNV.Size = new System.Drawing.Size(200, 35);
+            this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtMaNV.TabIndex = 73;
+            this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaNV.TextMarginBottom = 0;
+            this.txtMaNV.TextMarginLeft = 5;
+            this.txtMaNV.TextPlaceholder = "Max Nhaan Vieen";
+            this.txtMaNV.UseSystemPasswordChar = false;
+            this.txtMaNV.WordWrap = true;
             // 
             // bunifuCustomLabel13
             // 
@@ -871,6 +956,7 @@ namespace demo1
             stateProperties24.FillColor = System.Drawing.Color.White;
             stateProperties24.ForeColor = System.Drawing.Color.Black;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtmahoadon.OnIdleState = stateProperties24;
             this.txtmahoadon.PasswordChar = '\0';
             this.txtmahoadon.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtmahoadon.PlaceholderText = "Enter text";
@@ -990,79 +1076,79 @@ namespace demo1
             this.bunifuCustomLabel1.TabIndex = 51;
             this.bunifuCustomLabel1.Text = "Mã Sản Phẩm:";
             // 
-            // txtSP
+            // txtmasp
             // 
-            this.txtSP.AcceptsReturn = false;
-            this.txtSP.AcceptsTab = false;
-            this.txtSP.AnimationSpeed = 200;
-            this.txtSP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtSP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtSP.BackColor = System.Drawing.Color.Transparent;
-            this.txtSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSP.BackgroundImage")));
-            this.txtSP.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtSP.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtSP.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtSP.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtSP.BorderRadius = 1;
-            this.txtSP.BorderThickness = 1;
-            this.txtSP.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSP.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.txtSP.DefaultText = "";
-            this.txtSP.FillColor = System.Drawing.Color.White;
-            this.txtSP.ForeColor = System.Drawing.Color.Black;
-            this.txtSP.HideSelection = true;
-            this.txtSP.IconLeft = null;
-            this.txtSP.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSP.IconPadding = 10;
-            this.txtSP.IconRight = null;
-            this.txtSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSP.Lines = new string[0];
-            this.txtSP.Location = new System.Drawing.Point(125, 155);
-            this.txtSP.MaxLength = 32767;
-            this.txtSP.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtSP.Modified = false;
-            this.txtSP.Multiline = false;
-            this.txtSP.Name = "txtSP";
+            this.txtmasp.AcceptsReturn = false;
+            this.txtmasp.AcceptsTab = false;
+            this.txtmasp.AnimationSpeed = 200;
+            this.txtmasp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtmasp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtmasp.BackColor = System.Drawing.Color.Transparent;
+            this.txtmasp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtmasp.BackgroundImage")));
+            this.txtmasp.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtmasp.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtmasp.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtmasp.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtmasp.BorderRadius = 1;
+            this.txtmasp.BorderThickness = 1;
+            this.txtmasp.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtmasp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmasp.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.txtmasp.DefaultText = "";
+            this.txtmasp.FillColor = System.Drawing.Color.White;
+            this.txtmasp.ForeColor = System.Drawing.Color.Black;
+            this.txtmasp.HideSelection = true;
+            this.txtmasp.IconLeft = null;
+            this.txtmasp.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmasp.IconPadding = 10;
+            this.txtmasp.IconRight = null;
+            this.txtmasp.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmasp.Lines = new string[0];
+            this.txtmasp.Location = new System.Drawing.Point(125, 155);
+            this.txtmasp.MaxLength = 32767;
+            this.txtmasp.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtmasp.Modified = false;
+            this.txtmasp.Multiline = false;
+            this.txtmasp.Name = "txtmasp";
             stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties25.FillColor = System.Drawing.Color.Empty;
             stateProperties25.ForeColor = System.Drawing.Color.Empty;
             stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSP.OnActiveState = stateProperties25;
+            this.txtmasp.OnActiveState = stateProperties25;
             stateProperties26.BorderColor = System.Drawing.Color.Empty;
             stateProperties26.FillColor = System.Drawing.Color.White;
             stateProperties26.ForeColor = System.Drawing.Color.Empty;
             stateProperties26.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSP.OnDisabledState = stateProperties26;
+            this.txtmasp.OnDisabledState = stateProperties26;
             stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties27.FillColor = System.Drawing.Color.Empty;
             stateProperties27.ForeColor = System.Drawing.Color.Empty;
             stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSP.OnHoverState = stateProperties27;
+            this.txtmasp.OnHoverState = stateProperties27;
             stateProperties28.BorderColor = System.Drawing.Color.Silver;
             stateProperties28.FillColor = System.Drawing.Color.White;
             stateProperties28.ForeColor = System.Drawing.Color.Black;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtSP.OnIdleState = stateProperties28;
-            this.txtSP.PasswordChar = '\0';
-            this.txtSP.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtSP.PlaceholderText = "Enter text";
-            this.txtSP.ReadOnly = false;
-            this.txtSP.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSP.SelectedText = "";
-            this.txtSP.SelectionLength = 0;
-            this.txtSP.SelectionStart = 0;
-            this.txtSP.ShortcutsEnabled = true;
-            this.txtSP.Size = new System.Drawing.Size(200, 35);
-            this.txtSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtSP.TabIndex = 38;
-            this.txtSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSP.TextMarginBottom = 0;
-            this.txtSP.TextMarginLeft = 5;
-            this.txtSP.TextMarginTop = 0;
-            this.txtSP.TextPlaceholder = "Enter text";
-            this.txtSP.UseSystemPasswordChar = false;
-            this.txtSP.WordWrap = true;
+            this.txtmasp.OnIdleState = stateProperties28;
+            this.txtmasp.PasswordChar = '\0';
+            this.txtmasp.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtmasp.PlaceholderText = "Enter text";
+            this.txtmasp.ReadOnly = false;
+            this.txtmasp.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtmasp.SelectedText = "";
+            this.txtmasp.SelectionLength = 0;
+            this.txtmasp.SelectionStart = 0;
+            this.txtmasp.ShortcutsEnabled = true;
+            this.txtmasp.Size = new System.Drawing.Size(200, 35);
+            this.txtmasp.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtmasp.TabIndex = 38;
+            this.txtmasp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtmasp.TextMarginBottom = 0;
+            this.txtmasp.TextMarginLeft = 5;
+            this.txtmasp.TextMarginTop = 0;
+            this.txtmasp.TextPlaceholder = "Enter text";
+            this.txtmasp.UseSystemPasswordChar = false;
+            this.txtmasp.WordWrap = true;
             // 
             // txtkhuyenmai
             // 
@@ -1118,6 +1204,7 @@ namespace demo1
             stateProperties32.FillColor = System.Drawing.Color.White;
             stateProperties32.ForeColor = System.Drawing.Color.Black;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtkhuyenmai.OnIdleState = stateProperties32;
             this.txtkhuyenmai.PasswordChar = '\0';
             this.txtkhuyenmai.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtkhuyenmai.PlaceholderText = "";
@@ -1356,7 +1443,6 @@ namespace demo1
             this.txtTenSP.TabIndex = 45;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenSP.TextMarginBottom = 0;
-            this.txtTenSP.TextMarginLeft = 5;
             this.txtTenSP.TextMarginTop = 0;
             this.txtTenSP.TextPlaceholder = "Tên sản phẩm";
             this.txtTenSP.UseSystemPasswordChar = false;
@@ -1427,7 +1513,6 @@ namespace demo1
             this.txtDonGia.SelectionStart = 0;
             this.txtDonGia.ShortcutsEnabled = true;
             this.txtDonGia.Size = new System.Drawing.Size(200, 35);
-            this.txtDonGia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtDonGia.TabIndex = 48;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDonGia.TextMarginBottom = 0;
@@ -1510,6 +1595,7 @@ namespace demo1
             this.txtsoluongmuasanpham.TextPlaceholder = "Số lượng mua vào";
             this.txtsoluongmuasanpham.UseSystemPasswordChar = false;
             this.txtsoluongmuasanpham.WordWrap = true;
+            this.txtsoluongmuasanpham.TextChanged += new System.EventHandler(this.txtsoluongmuasanpham_TextChanged);
             // 
             // txtmact
             // 
@@ -1666,92 +1752,6 @@ namespace demo1
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.loadctsp);
             // 
-            // txtMaNV
-            // 
-            this.txtMaNV.AcceptsReturn = false;
-            this.txtMaNV.AcceptsTab = false;
-            this.txtMaNV.AnimationSpeed = 200;
-            this.txtMaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtMaNV.BackColor = System.Drawing.Color.Transparent;
-            this.txtMaNV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtMaNV.BackgroundImage")));
-            this.txtMaNV.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtMaNV.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtMaNV.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtMaNV.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtMaNV.BorderRadius = 1;
-            this.txtMaNV.BorderThickness = 1;
-            this.txtMaNV.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.txtMaNV.DefaultText = "";
-            this.txtMaNV.Enabled = false;
-            this.txtMaNV.FillColor = System.Drawing.Color.White;
-            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
-            this.txtMaNV.HideSelection = true;
-            this.txtMaNV.IconLeft = null;
-            this.txtMaNV.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.IconPadding = 10;
-            this.txtMaNV.IconRight = null;
-            this.txtMaNV.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.Lines = new string[0];
-            this.txtMaNV.Location = new System.Drawing.Point(125, 66);
-            this.txtMaNV.MaxLength = 32767;
-            this.txtMaNV.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtMaNV.Modified = false;
-            this.txtMaNV.Multiline = false;
-            this.txtMaNV.Name = "txtMaNV";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaNV.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.Empty;
-            stateProperties18.FillColor = System.Drawing.Color.White;
-            stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaNV.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaNV.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Black;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtMaNV.OnIdleState = stateProperties20;
-            this.txtMaNV.PasswordChar = '\0';
-            this.txtMaNV.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaNV.PlaceholderText = "Max Nhaan Vieen";
-            this.txtMaNV.ReadOnly = false;
-            this.txtMaNV.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMaNV.SelectedText = "";
-            this.txtMaNV.SelectionLength = 0;
-            this.txtMaNV.SelectionStart = 0;
-            this.txtMaNV.ShortcutsEnabled = true;
-            this.txtMaNV.Size = new System.Drawing.Size(200, 35);
-            this.txtMaNV.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtMaNV.TabIndex = 73;
-            this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtMaNV.TextMarginBottom = 0;
-            this.txtMaNV.TextMarginLeft = 5;
-            this.txtMaNV.TextMarginTop = 0;
-            this.txtMaNV.TextPlaceholder = "Max Nhaan Vieen";
-            this.txtMaNV.UseSystemPasswordChar = false;
-            this.txtMaNV.WordWrap = true;
-            // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(6, 83);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(76, 18);
-            this.bunifuCustomLabel11.TabIndex = 74;
-            this.bunifuCustomLabel11.Text = "Mã N.Viên";
-            // 
             // BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1801,7 +1801,7 @@ namespace demo1
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtSP;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtmasp;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtkhuyenmai;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtmakhachhang;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txttongtiendamua;

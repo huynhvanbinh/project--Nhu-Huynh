@@ -90,7 +90,7 @@ namespace demo1
                 i = dtgv_ttkh.CurrentRow.Index;
                 txtMaPX.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
                 dtpngay.Text = dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
-                txtThanhToan.Text= dtgv_ttkh.Rows[i].Cells[4].Value.ToString();
+    
             }
             string ma = txtMaPX.Text;
             dsctpx = customerCTPXBUS.LayDsspdk(ma);
@@ -110,5 +110,7 @@ namespace demo1
             bsctpx.DataSource = dsctpx.ToList();
             dataGridView1.DataSource = bsctpx;
         }
+
+        
     }
 }

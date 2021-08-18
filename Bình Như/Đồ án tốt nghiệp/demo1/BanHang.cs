@@ -21,7 +21,8 @@ namespace demo1
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Visible = false;
             Load_Form();
-           // ThemHD();
+            ThemHD();
+            // ThemHD();
         }
 
         HoaDonBUS customerHDBUS = new HoaDonBUS();
@@ -47,7 +48,7 @@ namespace demo1
         private void Load_Form()
         {
             Load_DSSP();
-            ThemHD();
+            
         }
         public string macuahang;
         private void Load_DSSP()
@@ -260,7 +261,30 @@ namespace demo1
             NewSP.MaHD = txtmahoadon.Text;
             NewSP.TongTien = string.IsNullOrEmpty(txttongtiendamua.Text) ? "" : txttongtiendamua.Text;
             NewSP.MaKH = string.IsNullOrEmpty(txtmakhachhang.Text) ? "" : txtmakhachhang.Text;
+
             NewSP.TrangThai = "1";
+            return NewSP;
+        }
+        private CTSanPhamDTO UpdateCTSP()
+        {
+            string soluongsanpham = null;
+            CTSanPhamDTO NewSP = new CTSanPhamDTO();
+            NewSP.MaSP = string.IsNullOrEmpty(txtmasp.Text) ? "" : txtmasp.Text;
+            NewSP.MaMau = string.IsNullOrEmpty(txtmamau.Text) ? "" : txtmamau.Text;
+            NewSP.KichThuoc = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
+            
+            foreach (CTSanPhamDTO cv in dsctsp)
+            {
+                if (cv.MaSP==txtmasp.Text && txtmamau.Text==cv.MaMau && txtkichthuoc.Text==cv.KichThuoc)
+                {
+                    NewSP.MaCTSP = cv.MaCTSP;
+                    soluongsanpham = cv.SoLuong;
+                }
+            }
+            float soluongsp = Int32.Parse(soluongsanpham);
+            float soluongmua = Int32.Parse(txtsoluongmuasanpham.Text);
+            float soluongupdate = soluongsp - soluongmua;
+            NewSP.SoLuong = soluongupdate.ToString();
             return NewSP;
         }
         int khuyenmaiss = 0;
@@ -270,7 +294,7 @@ namespace demo1
             {
                 int i;
                 i = dtgv_ttsp.CurrentRow.Index;
-                txtSP.Text = dtgv_ttsp.Rows[i].Cells[0].Value.ToString();
+                txtmasp.Text = dtgv_ttsp.Rows[i].Cells[0].Value.ToString();
                 txtTenSP.Text = dtgv_ttsp.Rows[i].Cells[1].Value.ToString();
                 txtDonGia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
 
@@ -278,7 +302,7 @@ namespace demo1
                 foreach (CTKhuyenMaiDTO cv in dskm)
                 {
                     khuyenmaiss = 0;
-                    if (txtSP.Text.Equals(cv.MaSP))
+                    if (txtmasp.Text.Equals(cv.MaSP))
                     {
                         MessageBox.Show("sản phẩm có chương trình khuyến mãi " + cv.GiamGia);
                         txtkhuyenmai.Text = cv.GiamGia;
@@ -291,7 +315,7 @@ namespace demo1
                     MessageBox.Show("sản phẩm không có chương trình khuyến mãi! hehe");
                 }
                 dataGridView1.Visible = true;
-                string masanpham = txtSP.Text;
+                string masanpham = txtmasp.Text;
                 dsctsp = customerCTSPBUS.LayDsctspch(masanpham,macuahang);
                 bsctsp.DataSource = dsctsp.ToList();
                 dataGridView1.DataSource = bsctsp;
@@ -412,7 +436,7 @@ namespace demo1
         {
             CTHoaDonDTO NewSP = new CTHoaDonDTO();
             NewSP.MaHD = string.IsNullOrEmpty(txtmahoadon.Text) ? "" : txtmahoadon.Text;
-            NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
+            NewSP.MaSP = string.IsNullOrEmpty(txtmasp.Text) ? "" : txtmasp.Text;
             NewSP.MaMau = string.IsNullOrEmpty(txtmamau.Text) ? "" : txtmamau.Text;
             NewSP.MaSize = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
             NewSP.GiaBan = string.IsNullOrEmpty(txtDonGia.Text) ? "" : txtDonGia.Text;
@@ -429,12 +453,12 @@ namespace demo1
         //reset
         private void reset()
         {
-            txtSP.Text = "";
+            txtmasp.Text = "";
             txtTenSP.Text = "";
             txtkhuyenmai.Text = "";
             txtthanhtien.Text = "0 đồng";
             txtsoluongmuasanpham.Text = "1";
-            txtmact.Text = "";
+           
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -472,7 +496,7 @@ namespace demo1
             string soluongkho = null;
             foreach (SanPhamDTO cv in dssp)
             {
-                if (cv.MaSP == txtSP.Text)
+                if (cv.MaSP == txtmasp.Text)
                 {
                     soluongkho = cv.SoLuongTon;
                 }
@@ -482,7 +506,7 @@ namespace demo1
             float slconlai = slupdates - soluongss;
             //end
             SanPhamDTO NewSP = new SanPhamDTO();
-            NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
+            NewSP.MaSP = string.IsNullOrEmpty(txtmasp.Text) ? "" : txtmasp.Text;
             NewSP.SoLuongTon = slconlai.ToString();
             NewSP.TrangThai = "1";
             return NewSP;
@@ -494,13 +518,13 @@ namespace demo1
             {
                 int i;
                 i = cthd.CurrentRow.Index;
-                txtSP.Text = cthd.Rows[i].Cells[0].Value.ToString();
+                txtmasp.Text = cthd.Rows[i].Cells[0].Value.ToString();
 
                 //khoi tao san pham khong truyen ma hóa đơn
                 dssps = customerBUS.LayDssp();
                 foreach (SanPhamDTO cv in dssps)
                 {
-                    if (cv.MaSP.Equals(txtSP.Text))
+                    if (cv.MaSP.Equals(txtmasp.Text))
                     {
                         txtTenSP.Text = cv.TenSP;
                         txtDonGia.Text = cv.DonGia;
@@ -508,7 +532,7 @@ namespace demo1
                 }
                 foreach (CTKhuyenMaiDTO km in dskm)
                 {
-                    if (txtSP.Text.Equals(km.MaSP))
+                    if (txtmasp.Text.Equals(km.MaSP))
                     {
                         MessageBox.Show("sản phẩm khuyến mãi " + km.GiamGia);
                         txtkhuyenmai.Text = km.GiamGia;
@@ -535,7 +559,7 @@ namespace demo1
             //tim kiem san pham
             foreach (SanPhamDTO sp in dssp)
             {
-                if (sp.MaSP.Equals(txtSP.Text))
+                if (sp.MaSP.Equals(txtmasp.Text))
                 {
                     txtTenSP.Text = sp.TenSP;
                     txtDonGia.Text = sp.DonGia;
@@ -543,7 +567,7 @@ namespace demo1
                     foreach (CTKhuyenMaiDTO cv in dskm)
                     {
                         khuyenmaiss = 0;
-                        if (txtSP.Text.Equals(cv.MaSP))
+                        if (txtmasp.Text.Equals(cv.MaSP))
                         {
                             MessageBox.Show("sản phẩm có chương trình khuyến mãi " + cv.GiamGia);
                             txtkhuyenmai.Text = cv.GiamGia;
@@ -555,6 +579,11 @@ namespace demo1
                         txtkhuyenmai.Text = "Không có khuyến mãi nào!";
                         MessageBox.Show("sản phẩm không có chương trình khuyến mãi! hehe");
                     }
+                    dataGridView1.Visible = true;
+                    string masanpham = txtmasp.Text;
+                    dsctsp = customerCTSPBUS.LayDsctspch(masanpham, macuahang);
+                    bsctsp.DataSource = dsctsp.ToList();
+                    dataGridView1.DataSource = bsctsp;
                 }
             }
         }
@@ -567,50 +596,62 @@ namespace demo1
 
         private void Them_Click(object sender, EventArgs e)
         {
-            
-            CTHoaDonDTO khAdd = layTTSP_moi();
-            if (khAdd.MaHD == "")
+            if(txtmamau.Text=="")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-            //kiem tra so luing du ban hay khong
-            string soluongkho=null;
-            foreach (SanPhamDTO cv in dssp)
-            {
-                if (cv.MaSP == txtSP.Text)
-                {
-                    foreach (CTSanPhamDTO ctssp in dsctsp)
-                    {
-                        if(ctssp.MaMau==txtmamau.Text&& txtkichthuoc.Text==ctssp.KichThuoc && ctssp.MaSP==txtSP.Text)
-                        {
-                            soluongkho = ctssp.SoLuong;
-                        }       
-                    }                       
-                }
-            }
-           
-            float slupdates = Int32.Parse(soluongkho);
-            float soluongss = Int32.Parse(txtsoluongmuasanpham.Text);
-            float slconlai = slupdates - soluongss;
-            if (slconlai < 0)
-            {
-                MessageBox.Show("Hiện tại không đủ số lượng bán, vui lòng kiểm tra lại");
-            }
+                MessageBox.Show("vui lòng chọn sản phẩm");
+            }    
             else
             {
-                bool kq = customerCTHDBUS.DKSP(khAdd);
-                MessageBox.Show("Thêm Thành công");             
-                float tongtien = Int32.Parse(txttongtiendamua.Text);
-                float thanhtien = Int32.Parse(txtthanhtien.Text);
-                tongtien = tongtien + thanhtien;
-                txttongtiendamua.Text = tongtien.ToString();
-               // update so luong san pham
-                reset();
-                suahoadon();
-                Load_Form();
-
-            }
+                CTHoaDonDTO khAdd = layTTSP_moi();
+                if (khAdd.MaHD == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                    return;
+                }
+                string soluongkho = null;
+                foreach (SanPhamDTO cv in dssp)
+                {
+                    if (cv.MaSP == txtmasp.Text)
+                    {
+                        foreach (CTSanPhamDTO ctssp in dsctsp)
+                        {
+                            if (ctssp.MaMau == txtmamau.Text && txtkichthuoc.Text == ctssp.KichThuoc && ctssp.MaSP == txtmasp.Text)
+                            {
+                                soluongkho = ctssp.SoLuong;
+                            }
+                        }
+                    }
+                }
+                float slupdates = Int32.Parse(soluongkho);
+                float soluongss = Int32.Parse(txtsoluongmuasanpham.Text);
+                float slconlai = slupdates - soluongss;
+                if (slconlai < 0)
+                {
+                    MessageBox.Show("Hiện tại không đủ số lượng bán, vui lòng kiểm tra lại");
+                }
+                else
+                {
+                    bool kq = customerCTHDBUS.DKSP(khAdd);
+                    MessageBox.Show("Thêm Thành công");
+                    float tongtien = Int32.Parse(txttongtiendamua.Text);
+                    float thanhtien = Int32.Parse(txtthanhtien.Text);
+                    tongtien = tongtien + thanhtien;
+                    txttongtiendamua.Text = tongtien.ToString();
+                    // update so luong san pham                
+                    suahoadon();
+                    updateCTSP();
+                    reset();
+                    // kiểm tra lại cách load form
+                    Load_Form();
+                    dataGridView1.Visible = false;
+                }
+            }        
+        }
+        //update CT Số lượng Sản phẩm
+        private void updateCTSP()
+        {
+            CTSanPhamDTO ct = UpdateCTSP();
+            bool kq = customerCTSPBUS.UpdateSL(ct);
         }
         private void suahoadon()
         {
@@ -619,7 +660,7 @@ namespace demo1
         }
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            suahoadon();
+           // suahoadon(); loi update Hoa Don
             InHoaDon mayin = new InHoaDon();
             mayin.mahd = txtmahoadon.Text;
             mayin.Show();
@@ -653,6 +694,23 @@ namespace demo1
                 txtmamau.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
                 txtkichthuoc.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             }
+        }
+
+        private void txtsoluongmuasanpham_TextChanged(object sender, EventArgs e)
+        {
+            string slmua = txtsoluongmuasanpham.Text;
+            float sluongmua = Int32.Parse(slmua);
+            if(sluongmua<=0)
+            {
+                MessageBox.Show("Số lượng mua phải lớn hơn 0");
+            }    
+            else
+            {
+                string dongia = txtDonGia.Text;
+                float giamuavao = Int32.Parse(dongia);
+                float thanhtien = sluongmua * giamuavao;
+                txtthanhtien.Text = thanhtien.ToString();
+            }              
         }
     }
 }

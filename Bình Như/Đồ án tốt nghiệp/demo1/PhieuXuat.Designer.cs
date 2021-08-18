@@ -52,6 +52,12 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.cmbloaisanpham = new Bunifu.Framework.UI.BunifuDropdown();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -70,12 +76,6 @@ namespace demo1
             this.MaSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -117,6 +117,48 @@ namespace demo1
             this.dtgv_ttkh.Size = new System.Drawing.Size(564, 184);
             this.dtgv_ttkh.TabIndex = 60;
             this.dtgv_ttkh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_ttkh_CellContentClick);
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "MaPX";
+            this.Column5.HeaderText = "Mã Phiếu";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "NgayLap";
+            this.Column1.HeaderText = "Ngày Lập";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "MaNV";
+            this.Column3.HeaderText = "Mã Nhân Viên";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "MaCH";
+            this.Column4.HeaderText = "Mã nhà cung cấp";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ThanhToan";
+            this.Column2.HeaderText = "Thanh Toán";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "TringTrang";
+            this.Column7.HeaderText = "Trình Trạng";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // bunifuButton2
             // 
@@ -424,7 +466,7 @@ namespace demo1
             this.txtThanhToan.IconRight = null;
             this.txtThanhToan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThanhToan.Lines = new string[0];
-            this.txtThanhToan.Location = new System.Drawing.Point(24, 126);
+            this.txtThanhToan.Location = new System.Drawing.Point(24, 134);
             this.txtThanhToan.MaxLength = 32767;
             this.txtThanhToan.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtThanhToan.Modified = false;
@@ -452,21 +494,21 @@ namespace demo1
             this.txtThanhToan.OnIdleState = stateProperties12;
             this.txtThanhToan.PasswordChar = '\0';
             this.txtThanhToan.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtThanhToan.PlaceholderText = "Enter text";
+            this.txtThanhToan.PlaceholderText = "thanh toans";
             this.txtThanhToan.ReadOnly = false;
             this.txtThanhToan.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtThanhToan.SelectedText = "";
             this.txtThanhToan.SelectionLength = 0;
             this.txtThanhToan.SelectionStart = 0;
             this.txtThanhToan.ShortcutsEnabled = true;
-            this.txtThanhToan.Size = new System.Drawing.Size(238, 35);
+            this.txtThanhToan.Size = new System.Drawing.Size(200, 35);
             this.txtThanhToan.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtThanhToan.TabIndex = 68;
+            this.txtThanhToan.TabIndex = 67;
             this.txtThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtThanhToan.TextMarginBottom = 0;
             this.txtThanhToan.TextMarginLeft = 5;
             this.txtThanhToan.TextMarginTop = 0;
-            this.txtThanhToan.TextPlaceholder = "Enter text";
+            this.txtThanhToan.TextPlaceholder = "thanh toans";
             this.txtThanhToan.UseSystemPasswordChar = false;
             this.txtThanhToan.WordWrap = true;
             // 
@@ -489,7 +531,6 @@ namespace demo1
             this.txtMaPX.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPX.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.txtMaPX.DefaultText = "";
-            this.txtMaPX.Enabled = false;
             this.txtMaPX.FillColor = System.Drawing.Color.White;
             this.txtMaPX.HideSelection = true;
             this.txtMaPX.IconLeft = null;
@@ -508,6 +549,7 @@ namespace demo1
             stateProperties13.FillColor = System.Drawing.Color.Empty;
             stateProperties13.ForeColor = System.Drawing.Color.Empty;
             stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtMaPX.OnActiveState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.Empty;
             stateProperties14.FillColor = System.Drawing.Color.White;
             stateProperties14.ForeColor = System.Drawing.Color.Empty;
@@ -652,48 +694,6 @@ namespace demo1
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "MaPX";
-            this.Column5.HeaderText = "Mã Phiếu";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "NgayLap";
-            this.Column1.HeaderText = "Ngày Lập";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "MaNV";
-            this.Column3.HeaderText = "Mã Nhân Viên";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "MaCH";
-            this.Column4.HeaderText = "Mã nhà cung cấp";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "ThanhToan";
-            this.Column2.HeaderText = "Thanh Toán";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "TringTrang";
-            this.Column7.HeaderText = "Trình Trạng";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
             // PhieuXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -738,7 +738,6 @@ namespace demo1
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtThanhToan;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -751,5 +750,6 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtThanhToan;
     }
 }

@@ -111,7 +111,7 @@ namespace DAO
         {
             try
             {
-                CTSanPham customer = demos.CTSanPhams.Where(u => u.MaSP == sp.MaSP && u.MaMau==sp.MaMau && u.KichThuoc==sp.KichThuoc).SingleOrDefault();
+                CTSanPham customer = demos.CTSanPhams.Where(u => u.MaSP == sp.MaSP && u.MaCTSP == sp.MaCTSP && u.MaMau==sp.MaMau && u.KichThuoc==sp.KichThuoc).SingleOrDefault();
                 customer.SoLuong = sp.SoLuong;
                 demos.SaveChanges();
                 return true;

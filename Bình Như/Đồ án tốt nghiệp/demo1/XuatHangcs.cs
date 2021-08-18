@@ -52,7 +52,8 @@ namespace demo1
         private void Load_Form()
         {
             Load_DSKH();
-            labmach.Visible = false;
+         
+            choncuahang();
         }
         private void Load_DSKH()
         {
@@ -237,18 +238,65 @@ namespace demo1
             //cua hang
             dsch = customerCHBUS.LayDsch();
             bsch.DataSource = dsch.ToList();
+            dataGridView2.DataSource = bsch;
         }
-
+        private void choncuahang()
+        {
+            groupBox2.Visible = false;
+            dtgv_ttkh.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            txtMaPX.Visible = false;
+            txtSP.Visible = false;
+            txttensp.Visible = false;
+            txtdongia.Visible = false;
+            txtmau.Visible = false;
+            txtkichthuoc.Visible = false;
+            txtsoluong.Visible = false;
+            txttongtien.Visible = false;
+            btnthem.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+        }
+        private void dachoncuahang()
+        {
+            groupBox2.Visible = true;
+            dtgv_ttkh.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+            txtMaPX.Visible = true;
+            txtSP.Visible = true;
+            txttensp.Visible = true;
+            txtdongia.Visible = true;
+            txtmau.Visible = true;
+            txtkichthuoc.Visible = true;
+            txtsoluong.Visible = true;
+            txttongtien.Visible = true;
+            btnthem.Visible = true;
+            button1.Visible = true;
+            button2.Visible = true;
+            button3.Visible = true;
+        }
         private void XuatHangcs_Load(object sender, EventArgs e)
         {
           txtMaPX.Text= "XH_" + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
          
             //them PX
             //load cua hang
-            foreach (CuaHangDTO ch in dsch)
-            {
-                cmbcuahang.Items.Add(ch.TenCH.ToString());
-            }
+           
         }
         private PhieuXuatDTO layTTKH_moi()
         {
@@ -271,7 +319,7 @@ namespace demo1
             NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
             NewKH.ThanhToan = thanhtoans.ToString();
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
-            NewKH.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
+        
             NewKH.MaNV = manv;
             NewKH.TringTrang = "Chờ nhận hàng";
             NewKH.TrangThai = "1";
@@ -284,7 +332,7 @@ namespace demo1
             bool kq = customerBUS.DKSP(khAdd);
             Load_Form();
         }
-
+        public string macuahang;
         private void dtgv_ttsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgv_ttsp.SelectedCells.Count > 0)
@@ -296,7 +344,8 @@ namespace demo1
                 txtdongia.Text = dtgv_ttsp.Rows[i].Cells[2].Value.ToString();
 
                 string masanpham = txtSP.Text;
-                dsctsp = customerCTSPBUS.LayDsmau(masanpham);
+                string cuahang = macuahang;
+                dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
                 bsctsp.DataSource = dsctsp.ToList();
                 dataGridView1.DataSource = bsctsp;
             }
@@ -368,7 +417,7 @@ namespace demo1
         {
             them();
             themsanphamPX();
-            //updatePX();
+            updatePX();
             string masanpham = null;
             dsctsp = customerCTSPBUS.LayDsmau(masanpham);
             bsctsp.DataSource = dsctsp.ToList();
@@ -386,11 +435,13 @@ namespace demo1
         {
             //tinh so luong con lai
             string soluongkho = null;
+            string mactsp = null;
             foreach (CTSanPhamDTO cv in dsctsp)
             {
                 if (cv.MaSP == txtSP.Text && cv.MaMau==txtmau.Text && cv.KichThuoc==txtkichthuoc.Text)
                 {
                     soluongkho = cv.SoLuong;
+                    mactsp = cv.MaCTSP;
                 }
             }
             float slupdates = Int32.Parse(soluongkho);
@@ -406,20 +457,31 @@ namespace demo1
             NewSP.MaMau= string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
             NewSP.KichThuoc = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
             NewSP.SoLuong = slconlai.ToString();
+            NewSP.MaCTSP = mactsp;
             NewSP.TrangThai = "1";
             return NewSP;
         }
 
-        private void cmbcuahang_onItemSelected(object sender, EventArgs e)
+        
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            labmach.Visible = true;
-            foreach (CuaHangDTO ch in dsch)
+            if (dataGridView2.SelectedCells.Count > 0)
             {
-                if (cmbcuahang.selectedValue == ch.TenCH.ToString())
-                {
-                    labmach.Text = ch.MaCH.ToString();
-                }
+                int i;
+                i = dataGridView2.CurrentRow.Index;
+                txtMaChucVu.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                txtTenChucVu.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
+                txtdiachi.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
             }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = false;
+            bunifuButton1.Visible = false;
+            groupBox1.Visible = false;
+            dachoncuahang();
         }
     }
 }
