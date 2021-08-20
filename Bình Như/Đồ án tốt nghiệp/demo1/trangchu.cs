@@ -487,5 +487,19 @@ namespace demo1
                 label3.Visible = false;
             }
         }
+
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            NhapHang nhaphang = new NhapHang();
+            nhaphang.FormBorderStyle = FormBorderStyle.None;
+            nhaphang.Dock = DockStyle.Fill;
+            nhaphang.MdiParent = this;
+            nhaphang.manhanvien = manhanvien;
+            nhaphang.Show();
+        }
     }
 }

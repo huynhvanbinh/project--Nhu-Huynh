@@ -62,6 +62,10 @@ namespace demo1
             string mach = "admin";
             dssp = customerSPBUS.LayDsspcuahang(mach);
             bssp.DataSource = dssp.ToList();
+
+            //load CTSP
+            dsctsp = customerCTSPBUS.LayDsCTSP();
+            bsctsp.DataSource = dsctsp.ToList();
         }
         private void aotu()
         {
@@ -70,43 +74,46 @@ namespace demo1
             {
                 SanPhamDTO NewKH = new SanPhamDTO();
                 CTSanPhamDTO NewCT = new CTSanPhamDTO();
-                SanPhamDTO layTTKH_moi()
+                foreach (CTSanPhamDTO ct in dsctsp)
                 {
-                    NewKH.MaSP = labmacuahang.Text+"_"+cv.MaSP;                   
-                    foreach (SanPhamDTO cvngay in dssp)
+                    if (cv.MaSP == ct.MaSP && cv.MaMau==ct.MaMau && cv.MaSize==ct.KichThuoc
+                        && ct.MaCH==macuahang)
                     {
-                        if (cvngay.MaSP.Equals(cv.MaSP))
+                        CTSanPhamDTO layCTSPupdate()
                         {
-                            NewKH.TenSP = cvngay.TenSP;
-                            NewKH.DonGia = cvngay.DonGia;
-                            NewKH.MaLoai = cvngay.MaLoai;
-                            NewKH.MoTa = cvngay.MoTa;
-                            NewKH.HinhAnh = cvngay.HinhAnh;
-                            NewKH.GiaNhap = cvngay.GiaNhap;
+                            string slcuakho = ct.SoLuong;
+                            string slnhapvaomoi = cv.SoLuong;
+                            float slcuakhoint = Int32.Parse(slcuakho);
+                            float slnhapvaomoiint = Int32.Parse(slnhapvaomoi);
+                            float tongslhang = slcuakhoint + slnhapvaomoiint;
+                            NewCT.MaCTSP = ct.MaCTSP;
+                            NewCT.SoLuong = tongslhang.ToString();
+                            return NewCT;
                         }
+                        kt = "009";
+                        CTSanPhamDTO CTSPUD = layCTSPupdate();
+                        bool kqctsp = customerCTSPBUS.UpdateNV(CTSPUD);
                     }
-                    NewKH.TrangThai = "1";                  
-                    return NewKH;
                 }
                 CTSanPhamDTO layCTSP_moi()
                 {
-                    NewCT.MaCTSP = cv.MaSP+ "_"  + DateTime.Now.ToString("HHmmss");
-                    NewCT.MaSP = labmacuahang.Text + "_" + cv.MaSP;
+                    NewCT.MaCTSP = cv.MaSP  + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
+                    NewCT.MaSP =  cv.MaSP;
                     NewCT.MaMau = cv.MaMau;
                     NewCT.KichThuoc = cv.MaSize;
                     NewCT.SoLuong = cv.SoLuong;
-                    NewCT.TrangThai = "1";
+                    NewCT.MaCH = macuahang;
+                    NewCT.TrangThai = "1";                 
                     return NewCT;
                 }
-                if (cv.MaSP != kt)
+                  
+                if (cv.MaSP != kt && kt!="009")
                 {
-                    SanPhamDTO khAdd = layTTKH_moi();
-                    bool kq = customerSPBUS.DKSP(khAdd);
                     //them chi tiet san pham
                     CTSanPhamDTO CT = layCTSP_moi();
                     bool kqctsp = customerCTSPBUS.DKKH(CT);
                 }
-               
+              
             }
         }
         private void HangDaVe_Load(object sender, EventArgs e)

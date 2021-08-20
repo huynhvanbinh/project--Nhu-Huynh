@@ -796,7 +796,6 @@ namespace demo1
             this.txtmamau.SelectionStart = 0;
             this.txtmamau.ShortcutsEnabled = true;
             this.txtmamau.Size = new System.Drawing.Size(200, 35);
-            this.txtmamau.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmamau.TabIndex = 77;
             this.txtmamau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmamau.TextMarginBottom = 0;

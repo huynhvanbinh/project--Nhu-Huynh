@@ -20,6 +20,10 @@ namespace BUS
         {
             return demo.laySP(masp);
         }
+        public List<PhieuNhapDTO> LayDsspngay(string ngay)
+        {
+            return demo.layDSSPNgay(ngay);
+        }
 
         public bool DKSP(PhieuNhapDTO sp)
         {
@@ -32,6 +36,10 @@ namespace BUS
         public bool DELETENV(PhieuNhapDTO nv)
         {
             return demo.DELETEHD(nv);
+        }
+        public bool UpdateSL(PhieuNhapDTO nv)
+        {
+            return demo.UpdateSL(nv);
         }
     }
 }

@@ -64,6 +64,9 @@ namespace demo1
             this.Xóa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtThanhToan = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtMaPX = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.dtpngay = new System.Windows.Forms.DateTimePicker();
@@ -142,7 +145,7 @@ namespace demo1
             // Column4
             // 
             this.Column4.DataPropertyName = "MaCH";
-            this.Column4.HeaderText = "Mã nhà cung cấp";
+            this.Column4.HeaderText = "Cửa hàng Nhận";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -428,16 +431,46 @@ namespace demo1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtThanhToan);
             this.groupBox1.Controls.Add(this.txtMaPX);
             this.groupBox1.Controls.Add(this.dtpngay);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox1.Location = new System.Drawing.Point(593, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 299);
+            this.groupBox1.Size = new System.Drawing.Size(366, 299);
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "Thanh toán:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Ngày:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Mã phiếu xuất:";
             // 
             // txtThanhToan
             // 
@@ -466,7 +499,7 @@ namespace demo1
             this.txtThanhToan.IconRight = null;
             this.txtThanhToan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThanhToan.Lines = new string[0];
-            this.txtThanhToan.Location = new System.Drawing.Point(24, 134);
+            this.txtThanhToan.Location = new System.Drawing.Point(146, 180);
             this.txtThanhToan.MaxLength = 32767;
             this.txtThanhToan.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtThanhToan.Modified = false;
@@ -539,7 +572,7 @@ namespace demo1
             this.txtMaPX.IconRight = null;
             this.txtMaPX.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaPX.Lines = new string[0];
-            this.txtMaPX.Location = new System.Drawing.Point(24, 26);
+            this.txtMaPX.Location = new System.Drawing.Point(140, 40);
             this.txtMaPX.MaxLength = 32767;
             this.txtMaPX.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtMaPX.Modified = false;
@@ -589,12 +622,12 @@ namespace demo1
             // 
             this.dtpngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpngay.Location = new System.Drawing.Point(24, 82);
+            this.dtpngay.Location = new System.Drawing.Point(140, 113);
             this.dtpngay.Margin = new System.Windows.Forms.Padding(4);
             this.dtpngay.MaxDate = new System.DateTime(2024, 7, 16, 0, 0, 0, 0);
             this.dtpngay.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtpngay.Name = "dtpngay";
-            this.dtpngay.Size = new System.Drawing.Size(238, 27);
+            this.dtpngay.Size = new System.Drawing.Size(199, 27);
             this.dtpngay.TabIndex = 63;
             this.dtpngay.Value = new System.DateTime(2020, 7, 15, 0, 0, 0, 0);
             this.dtpngay.ValueChanged += new System.EventHandler(this.dtpngay_ValueChanged);
@@ -604,7 +637,7 @@ namespace demo1
             this.button3.BackgroundImage = global::demo1.Properties.Resources.tải_xuống;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(932, 362);
+            this.button3.Location = new System.Drawing.Point(892, 362);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(67, 67);
@@ -616,7 +649,7 @@ namespace demo1
             this.button2.BackgroundImage = global::demo1.Properties.Resources.note_edit;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(768, 362);
+            this.button2.Location = new System.Drawing.Point(733, 362);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 67);
@@ -698,7 +731,7 @@ namespace demo1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 483);
+            this.ClientSize = new System.Drawing.Size(999, 483);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
@@ -717,6 +750,7 @@ namespace demo1
             this.Text = "PhieuXuat";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -744,12 +778,15 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtThanhToan;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

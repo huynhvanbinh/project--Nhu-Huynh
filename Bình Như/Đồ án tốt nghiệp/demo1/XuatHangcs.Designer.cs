@@ -86,7 +86,6 @@ namespace demo1
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -125,6 +124,8 @@ namespace demo1
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labcuahang = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttsp)).BeginInit();
@@ -222,17 +223,6 @@ namespace demo1
             this.dataGridViewTextBoxColumn5.HeaderText = "Đơn Giá";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::demo1.Properties.Resources.kteatime;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1068, 474);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 74);
-            this.button4.TabIndex = 118;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -1361,7 +1351,7 @@ namespace demo1
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(783, 408);
+            this.bunifuButton1.Location = new System.Drawing.Point(779, 408);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties45.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties45.BorderRadius = 3;
@@ -1388,12 +1378,36 @@ namespace demo1
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(672, 429);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(148, 20);
+            this.label9.TabIndex = 144;
+            this.label9.Text = "Xuất đến cửa hàng:";
+            // 
+            // labcuahang
+            // 
+            this.labcuahang.AutoSize = true;
+            this.labcuahang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labcuahang.ForeColor = System.Drawing.Color.Red;
+            this.labcuahang.Location = new System.Drawing.Point(826, 424);
+            this.labcuahang.Name = "labcuahang";
+            this.labcuahang.Size = new System.Drawing.Size(183, 25);
+            this.labcuahang.TabIndex = 145;
+            this.labcuahang.Text = "Xuất đến cửa hàng:";
+            // 
             // XuatHangcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 560);
+            this.Controls.Add(this.labcuahang);
             this.Controls.Add(this.bunifuButton1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label8);
@@ -1413,7 +1427,6 @@ namespace demo1
             this.Controls.Add(this.txtdongia);
             this.Controls.Add(this.txtSP);
             this.Controls.Add(this.txtsoluong);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -1445,7 +1458,6 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -1484,5 +1496,7 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labcuahang;
     }
 }

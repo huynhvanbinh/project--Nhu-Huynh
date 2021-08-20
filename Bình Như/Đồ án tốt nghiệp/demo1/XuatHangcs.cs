@@ -19,8 +19,9 @@ namespace demo1
             dtgv_ttsp.AutoGenerateColumns = false;
             dataGridView1.AutoGenerateColumns = false;
             dtgv_ttkh.AutoGenerateColumns = false;
+
             Load_Form();
-           
+            choncuahang();
         }
         public string manv = "";
         public string tenNV;
@@ -53,7 +54,7 @@ namespace demo1
         {
             Load_DSKH();
          
-            choncuahang();
+            
         }
         private void Load_DSKH()
         {
@@ -240,6 +241,16 @@ namespace demo1
             bsch.DataSource = dsch.ToList();
             dataGridView2.DataSource = bsch;
         }
+        private void reset()
+        {
+            txtSP.Text = "";
+            txttensp.Text = "";
+            txtdongia.Text = "";
+            txtmau.Text = "";
+            txtkichthuoc.Text = "";
+            txtsoluong.Text = "";
+            txttongtien.Text = "";
+        }
         private void choncuahang()
         {
             groupBox2.Visible = false;
@@ -264,6 +275,8 @@ namespace demo1
             button1.Visible = false;
             button2.Visible = false;
             button3.Visible = false;
+            label9.Visible = false;
+            labcuahang.Visible = false;
         }
         private void dachoncuahang()
         {
@@ -289,6 +302,8 @@ namespace demo1
             button1.Visible = true;
             button2.Visible = true;
             button3.Visible = true;
+            label9.Visible = true;
+            labcuahang.Visible = true;
         }
         private void XuatHangcs_Load(object sender, EventArgs e)
         {
@@ -319,7 +334,7 @@ namespace demo1
             NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
             NewKH.ThanhToan = thanhtoans.ToString();
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
-        
+            NewKH.MaCH = manguoinhan;
             NewKH.MaNV = manv;
             NewKH.TringTrang = "Chờ nhận hàng";
             NewKH.TrangThai = "1";
@@ -422,14 +437,18 @@ namespace demo1
             dsctsp = customerCTSPBUS.LayDsmau(masanpham);
             bsctsp.DataSource = dsctsp.ToList();
             dataGridView1.DataSource = bsctsp;
+            reset();
         }
 
         private void txtsoluong_TextChanged(object sender, EventArgs e)
         {
-            float dongia = Int32.Parse(txtdongia.Text);
-            float soluong = Int32.Parse(txtsoluong.Text);
-            float thanhtien = dongia * soluong;
-            txttongtien.Text = thanhtien.ToString();
+            if(txtsoluong.Text!="" && txtdongia.Text!="")
+            {
+                float dongia = Int32.Parse(txtdongia.Text);
+                float soluong = Int32.Parse(txtsoluong.Text);
+                float thanhtien = dongia * soluong;
+                txttongtien.Text = thanhtien.ToString();
+            }              
         }
         private CTSanPhamDTO layTTSP_sua()
         {
@@ -473,14 +492,16 @@ namespace demo1
                 txtMaChucVu.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
                 txtTenChucVu.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();
                 txtdiachi.Text = dataGridView2.Rows[i].Cells[2].Value.ToString();
+                labcuahang.Text= dataGridView2.Rows[i].Cells[1].Value.ToString();
             }
         }
-
+        public string manguoinhan;
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             dataGridView2.Visible = false;
             bunifuButton1.Visible = false;
             groupBox1.Visible = false;
+            manguoinhan = txtMaChucVu.Text;
             dachoncuahang();
         }
     }
