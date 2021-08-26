@@ -172,7 +172,8 @@ namespace demo1
             kiemtrathemctpn();
             if (ktthemvao==0)
             {
-                themchitietphieunhap();
+                //themchitietphieunhap();
+                aotuthemchitietpn();
                 updatePN();
                 aotu();
                 //bien mat mã màu sze
@@ -281,6 +282,54 @@ namespace demo1
             float soluong = Int32.Parse(txtsoluong.Text);
             float thanhtien = dongia*soluong;
             txtTongTien.Text = thanhtien.ToString();
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhập sản phẩm vào kho thành công");
+        }
+        private void aotuthemchitietpn()
+        {
+            string kt = "";
+            CTPhieuNhapDTO NewCT = new CTPhieuNhapDTO();
+            foreach (CTPhieuNhapDTO ct in dsctpn)
+            {
+                if (txtsp.Text == ct.MaSP && labmau.Text == ct.MaMau && labkichthuoc.Text == ct.MaSize
+                    && ct.MaPN == maphieunhap)
+                {
+                    CTPhieuNhapDTO layCTPXupdate()
+                    {
+                        string slcuakho = ct.SoLuong;
+                        string slnhapvaomoi = txtsoluong.Text;
+                        float slcuakhoint = Int32.Parse(slcuakho);
+                        float slnhapvaomoiint = Int32.Parse(slnhapvaomoi);
+                        float tongslhang = slcuakhoint + slnhapvaomoiint;
+                        NewCT.MaCTPN = ct.MaCTPN;
+                        NewCT.MaPN = maphieunhap;
+                        NewCT.MaSP = string.IsNullOrEmpty(txtsp.Text) ? "" : txtsp.Text;
+                        NewCT.GiaNhap = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
+                        NewCT.MaMau = string.IsNullOrEmpty(labmau.Text) ? "" : labmau.Text;
+                        NewCT.MaSize = string.IsNullOrEmpty(labkichthuoc.Text) ? "" : labkichthuoc.Text;
+                        NewCT.ChiecKhau = "No ";
+                        NewCT.TrangThai = "1";
+                        NewCT.SoLuong = tongslhang.ToString();
+                        return NewCT;
+                    }
+                    kt = "009";
+                    CTPhieuNhapDTO CTPXUD = layCTPXupdate();
+                    bool kqctsp = customerCTPNBUS.UpdateNV(CTPXUD);
+                    //update so luong chi tiết sp
+                    aotu();
+                    MessageBox.Show("bạn vừa thay đổi số lượng sản phẩm");
+                    //thong báo thành công
+                }
+            }
+            if (kt != "009")
+            {
+                //them chi tiet phieeus xuaats
+                themchitietphieunhap();
+            }
+
         }
     }
 }

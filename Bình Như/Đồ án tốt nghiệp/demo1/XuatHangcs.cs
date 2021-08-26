@@ -67,172 +67,175 @@ namespace demo1
             dskhs = customerBUS.LayDssp();
             bs.DataSource = dskhs.ToList();
             //nhanvien
-            dsnv = customerNVBUS.LayDskh();
-            bsnv.DataSource = dsnv.ToList();
-            string masp = "";
-            string masp1 = "";
-            string masp2 = "";
-            string masp3 = "";
-            string masp4 = "";
-            string masp5 = "";
-            string masp6 = "";
-            string masp7 = "";
-            string masp8 = "";
-            string masp9 = "";
-            string masp10 = "";
-            string masp11 = "";
-            string masp12 = "";
-            string masp13 = "";
-            string masp14 = "";
-            string masp15 = "";
-            string masp16 = "";
-            string masp17 = "";
-            string masp18 = "";
-            string masp19 = "";
-            string masp20 = "";
-            string macuahang = "admin";
-            int kt = 0;
-            foreach (CTPhieuXuatDTO cv in dsctpx)
-            {
-                if (kt == 0)
-                {
-                    masp = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 1 && masp != cv.MaSP)
-                {
-                    masp1 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 2 && masp != cv.MaSP && masp1 != cv.MaSP)
-                {
-                    masp2 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 3 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP)
-                {
-                    masp3 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 4 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP)
-                {
-                    masp4 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 5 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                   masp4 != cv.MaSP)
-                {
-                    masp5 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 6 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP)
-                {
-                    masp6 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 7 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP)
-                {
-                    masp7 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 8 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP)
-                {
-                    masp8 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 9 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP)
-                {
-                    masp9 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 10 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-                    masp9 != cv.MaSP
-            )
-                {
-                    masp10 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 11 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-                    masp9 != cv.MaSP && masp10 != cv.MaSP
-            )
-                {
-                    masp11 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 12 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-                    masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-                    masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            )
-                {
-                    masp12 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 13 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-             && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-             && masp12 != cv.MaSP)
-                {
-                    masp13 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 14 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-              && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-              && masp12 != cv.MaSP && masp13 != cv.MaSP)
-                {
-                    masp14 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 15 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-               && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-               && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP)
-                {
-                    masp15 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 16 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-                && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-                && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP)
-                {
-                    masp16 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 17 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-                 && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-                 && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP)
-                {
-                    masp17 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 18 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-                   && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-                   && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP)
-                {
-                    masp18 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 19 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-                    && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-                    && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP)
-                {
-                    masp19 = cv.MaSP;
-                    kt++;
-                }
-                if (kt == 20 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-                    && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-                    && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP && masp19 != cv.MaSP)
-                {
-                    masp20 = cv.MaSP;
-                    kt++;
-                }
+            //dsnv = customerNVBUS.LayDskh();
+            //bsnv.DataSource = dsnv.ToList();
+            //string masp = "";
+            //string masp1 = "";
+            //string masp2 = "";
+            //string masp3 = "";
+            //string masp4 = "";
+            //string masp5 = "";
+            //string masp6 = "";
+            //string masp7 = "";
+            //string masp8 = "";
+            //string masp9 = "";
+            //string masp10 = "";
+            //string masp11 = "";
+            //string masp12 = "";
+            //string masp13 = "";
+            //string masp14 = "";
+            //string masp15 = "";
+            //string masp16 = "";
+            //string masp17 = "";
+            //string masp18 = "";
+            //string masp19 = "";
+            //string masp20 = "";
+            //string macuahang = "admin";
+            //int kt = 0;
+            //foreach (CTPhieuXuatDTO cv in dsctpx)
+            //{
+            //    if (kt == 0)
+            //    {
+            //        masp = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 1 && masp != cv.MaSP)
+            //    {
+            //        masp1 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 2 && masp != cv.MaSP && masp1 != cv.MaSP)
+            //    {
+            //        masp2 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 3 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP)
+            //    {
+            //        masp3 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 4 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP)
+            //    {
+            //        masp4 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 5 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //       masp4 != cv.MaSP)
+            //    {
+            //        masp5 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 6 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP)
+            //    {
+            //        masp6 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 7 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP)
+            //    {
+            //        masp7 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 8 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP)
+            //    {
+            //        masp8 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 9 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP)
+            //    {
+            //        masp9 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 10 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
+            //        masp9 != cv.MaSP
+            //)
+            //    {
+            //        masp10 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 11 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
+            //        masp9 != cv.MaSP && masp10 != cv.MaSP
+            //)
+            //    {
+            //        masp11 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 12 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
+            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
+            //        masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //)
+            //    {
+            //        masp12 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 13 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            // && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            // && masp12 != cv.MaSP)
+            //    {
+            //        masp13 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 14 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //  && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //  && masp12 != cv.MaSP && masp13 != cv.MaSP)
+            //    {
+            //        masp14 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 15 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //   && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //   && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP)
+            //    {
+            //        masp15 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 16 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //    && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //    && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP)
+            //    {
+            //        masp16 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 17 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //     && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //     && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP)
+            //    {
+            //        masp17 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 18 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //       && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //       && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP)
+            //    {
+            //        masp18 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 19 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //        && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //        && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP)
+            //    {
+            //        masp19 = cv.MaSP;
+            //        kt++;
+            //    }
+            //    if (kt == 20 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
+            //        && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
+            //        && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP && masp19 != cv.MaSP)
+            //    {
+            //        masp20 = cv.MaSP;
+            //        kt++;
+            //    }
 
-            }
-            dssp = customerSPBUS.LayDssphd(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13
-                , masp14, masp15, masp16, masp17, masp18, masp19, masp20, macuahang);
+            //}
+            //dssp = customerSPBUS.LayDssphd(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13
+            //    , masp14, masp15, masp16, masp17, masp18, masp19, masp20, macuahang);
+            //bssp.DataSource = dssp.ToList();
+
+            dssp = customerSPBUS.LayDssp();
             bssp.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bssp;
 
@@ -274,7 +277,7 @@ namespace demo1
             btnthem.Visible = false;
             button1.Visible = false;
             button2.Visible = false;
-            button3.Visible = false;
+            bunifuButton2.Visible = false;
             label9.Visible = false;
             labcuahang.Visible = false;
         }
@@ -301,7 +304,7 @@ namespace demo1
             btnthem.Visible = true;
             button1.Visible = true;
             button2.Visible = true;
-            button3.Visible = true;
+            bunifuButton2.Visible = true;
             label9.Visible = true;
             labcuahang.Visible = true;
         }
@@ -364,6 +367,10 @@ namespace demo1
                 bsctsp.DataSource = dsctsp.ToList();
                 dataGridView1.DataSource = bsctsp;
             }
+            txtmau.Text = "";
+            txtkichthuoc.Text = "";
+            txtsoluong.Text = "";
+            txttongtien.Text = "";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -375,6 +382,8 @@ namespace demo1
                 txtmau.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
                 txtkichthuoc.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             }
+            txtsoluong.Text = "";
+            txttongtien.Text = "";
         }
         private CTPhieuXuatDTO layCTPX_moi()
         {
@@ -431,13 +440,17 @@ namespace demo1
         private void btnthem_Click(object sender, EventArgs e)
         {
             them();
-            themsanphamPX();
+            //themsanphamPX();
+            
+            //neeus sanr phaam ton tai ypdate lai san pham phieu xuat
+            aotu();
             updatePX();
-            string masanpham = null;
-            dsctsp = customerCTSPBUS.LayDsmau(masanpham);
+            string masanpham = txtSP.Text;
+            string cuahang = macuahang;
+            dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
             bsctsp.DataSource = dsctsp.ToList();
             dataGridView1.DataSource = bsctsp;
-            reset();
+           // reset();
         }
 
         private void txtsoluong_TextChanged(object sender, EventArgs e)
@@ -503,6 +516,80 @@ namespace demo1
             groupBox1.Visible = false;
             manguoinhan = txtMaChucVu.Text;
             dachoncuahang();
+        }
+
+        //xuất hàng nhưng chọn đc nhiều CTSP
+        private void aotu()
+        {
+            string kt = "";
+            CTPhieuXuatDTO NewCT = new CTPhieuXuatDTO();
+            foreach (CTPhieuXuatDTO ct in dsctpx)
+            {
+                if (txtSP.Text == ct.MaSP && txtmau.Text == ct.MaMau && txtkichthuoc.Text == ct.MaSize
+                    && ct.MaPX == txtMaPX.Text)
+                {
+                    CTPhieuXuatDTO layCTPXupdate()
+                    {
+                        string slcuakho = ct.SoLuong;
+                        string slnhapvaomoi = txtsoluong.Text;
+                        float slcuakhoint = Int32.Parse(slcuakho);
+                        float slnhapvaomoiint = Int32.Parse(slnhapvaomoi);
+                        float tongslhang = slcuakhoint + slnhapvaomoiint;
+                        NewCT.MaCTPX = ct.MaCTPX;
+                        NewCT.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
+                        NewCT.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
+                        NewCT.GiaNhap = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
+                        NewCT.MaMau = string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
+                        NewCT.MaSize = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
+                        NewCT.ChiecKhau = "No ";
+                        NewCT.TrangThai = "1";
+                        NewCT.SoLuong = tongslhang.ToString();
+                        return NewCT;
+                    }
+                    kt = "009";
+                    CTPhieuXuatDTO CTPXUD = layCTPXupdate();
+                    bool kqctsp = customerCTPXBUS.UpdateNV(CTPXUD);
+                    //update so luong chi tiết sp
+                    CTSanPhamDTO nv = layTTSP_sua();
+                    bool kqs = customerCTSPBUS.UpdateSL(nv);
+
+
+                    //update tien phieu xuat
+                    PhieuXuatDTO px = layTTKH_moi();
+                    bool kqpx = customerBUS.UpdateSL(px);
+
+
+                    MessageBox.Show("bạn vừa thay đổi số lượng sản phẩm");
+                    //thong báo thành công
+                }
+            }
+            if (kt != "009")
+            {
+                //them chi tiet phieeus xuaats
+                themsanphamPX();
+            }
+
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            int kt = 0;
+            foreach (CTPhieuXuatDTO ct in dsctpx)
+            {
+                if(ct.MaPX==txtMaPX.Text)
+                {
+                    kt = 1;
+                }    
+            }  
+            if(kt==1)
+            {
+                MessageBox.Show("đã xuất sản phẩm đến cửa hàng: "+ txtTenChucVu.Text);
+                reset();
+            }    
+           if(kt==0)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm xuất đến cửa hàng: " + txtTenChucVu.Text);
+            }
         }
     }
 }
