@@ -426,7 +426,6 @@ namespace demo1
                 txtthanhtien.Text = thanhtien.ToString();
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             listsanphamban[index].MaSP = txtmasp.Text;

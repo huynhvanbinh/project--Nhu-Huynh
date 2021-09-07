@@ -31,11 +31,11 @@ namespace demo1
             Load_DSKH();
             dtpngay.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
-        
+        public string macuahang;
         private void Load_DSKH()
         {
             string ngay = dtpngay.Value.ToString("dd/MM/yyyy");
-            dskhs = customerBUS.LayDssp(ngay);
+            dskhs = customerBUS.LayDssp(ngay,macuahang);
             bs.DataSource = dskhs.ToList();
             float thunhapngay = 0;
             foreach (HoaDonDTO cv in dskhs)
@@ -67,7 +67,7 @@ namespace demo1
             float thunhapngay = 0;
             int kt = 0;
             string ngay = dtpngay.Value.ToString("dd/MM/yyyy");
-            dskhs = customerBUS.LayDssp(ngay);
+            dskhs = customerBUS.LayDssp(ngay,macuahang);
             bs.DataSource = dskhs.ToList();
             foreach (HoaDonDTO cv in dskhs)
             {

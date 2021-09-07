@@ -61,44 +61,7 @@ namespace demo1
             txtMaChucVu.Text = "";
             txtTenChucVu.Text = "";
         }
-        private void Them_Click_1()
-        {
-            KhuyenMaiDTO khAdd = layTTKH_moi();
-            if (khAdd.MaKM == "" || khAdd.TenKM=="")
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-            else
-            {
-                int kt = 0;
-                foreach (KhuyenMaiDTO km in dskhs)
-                {
-                    if (km.NgayKetThuc == dtpngayketthuc.Value.ToString("dd/MM/yyyy"))
-                    {
-                        kt = 1;
-                    }
-                    if(km.MaKM==txtMaChucVu.Text)
-                    {
-                        kt = 0;
-                    }    
-                }
-                if(kt==0)
-                {
-                    bool kq = customerBUS.DKSP(khAdd);
-                    MessageBox.Show("Thêm sản phẩm khuyến mãi");
-                    CTKhuyenMai ctkm = new CTKhuyenMai();
-                    ctkm.MaMai = txtMaChucVu.Text;
-                    reset();
-                    Load_Form();
-                    ctkm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Thời gian đang diễn ra chương trình khuyến mãi khác!");
-                }    
-            }  
-        }
+        
         private void bunifuButton3_Click_1(object sender, EventArgs e)
         {
             reset();
@@ -113,8 +76,49 @@ namespace demo1
             NewKH.TrangThai = "0";
             return NewKH;
         }
+      
+        // khởi tạo truyền mã mã
+        public string MaKhuyenMai="";
 
-        private void bunifuButton2_Click()
+        private void KhuyenMai_Load(object sender, EventArgs e)
+        {
+            txtMaChucVu.Text = MaKhuyenMai;
+        }
+
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            if(CheckControl())
+            {
+                KhuyenMaiDTO khAdd = layTTKH_moi();
+                bool kq = customerBUS.DKSP(khAdd);
+                MessageBox.Show("Thêm sản phẩm khuyến mãi");
+                CTKhuyenMai ctkm = new CTKhuyenMai();
+                ctkm.MaMai = txtMaChucVu.Text;
+                reset();
+                Load_Form();
+                ctkm.Show();
+            }    
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KhuyenMaiDTO khAdd = layTTKH_moi();
+            if (khAdd.MaKM == "" || khAdd.TenKM == "")
+            {
+                MessageBox.Show("Vui lòng chọn khuyến mãi xóa!!");
+                return;
+            }
+            else
+            {
+                KhuyenMaiDTO nv = layTTSP_sua();
+                bool kq = customerBUS.DELETENV(nv);
+                MessageBox.Show("Đã xóa " + txtTenChucVu.Text);
+                reset();
+                Load_Form();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             KhuyenMaiDTO khAdd = layTTKH_moi();
             if (khAdd.MaKM == "" || khAdd.TenKM == "")
@@ -130,45 +134,48 @@ namespace demo1
                 Load_Form();
             }
         }
-
-        private void Xóa_Click()
-        {
-            KhuyenMaiDTO khAdd = layTTKH_moi();
-            if (khAdd.MaKM == "" || khAdd.TenKM == "")
+        public bool CheckControl()
+        { 
+            if (string.IsNullOrWhiteSpace(txtMaChucVu.Text))
             {
-                MessageBox.Show("Vui lòng chọn khuyến mãi xóa!!");
-                return;
+                MessageBox.Show("Vui long nhap ma khuyen mai", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMaChucVu.Focus();
+                return false;
             }
-            else
+            if (string.IsNullOrWhiteSpace(txtTenChucVu.Text))
             {
-                KhuyenMaiDTO nv = layTTSP_sua();
-                bool kq = customerBUS.DELETENV(nv);
-                MessageBox.Show("Đã xóa " +txtTenChucVu.Text);
-                reset();
-                Load_Form();
+                MessageBox.Show("Vui long nhap tên khuyến mãi", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenChucVu.Focus();
+                return false;
             }
-        }
-        // khởi tạo truyền mã mã
-        public string MaKhuyenMai="";
-
-        private void KhuyenMai_Load(object sender, EventArgs e)
-        {
-            txtMaChucVu.Text = MaKhuyenMai;
-        }
-
-        private void btnthem_Click(object sender, EventArgs e)
-        {
-            Them_Click_1();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Xóa_Click();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bunifuButton2_Click();
+            int ngayhople = 16062000;
+            DateTime daes1 = Convert.ToDateTime(dtpngay.Text);
+            DateTime daes3 = Convert.ToDateTime(dtpngayketthuc.Text);
+            TimeSpan times = daes3.Subtract(daes1);
+            int dayss = times.Days;  
+            foreach (KhuyenMaiDTO cv in dskhs)
+            {
+                DateTime daes2 = Convert.ToDateTime(cv.NgayKetThuc);
+                TimeSpan time = daes1.Subtract(daes2);
+                int days = time.Days;
+                if(days<=0)
+                {
+                    ngayhople = 14071999;
+                }    
+            }
+            if(ngayhople== 14071999)
+            {
+                MessageBox.Show("đang trong thời gian diễn ra chương trình khuyến mãi khác", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtpngay.Focus();
+                return false;
+            }
+            if (dayss < 0)
+            {
+                MessageBox.Show("ngày kết thúc không hợp lệ ", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtpngayketthuc.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }

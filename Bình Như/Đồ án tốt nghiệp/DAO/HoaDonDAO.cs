@@ -23,10 +23,10 @@ namespace DAO
             demos.SaveChanges();
         }
 
-        public List<HoaDonDTO> layDSSP(string ngay)
+        public List<HoaDonDTO> layDSSP(string ngay, string macuahang)
         {
             List<HoaDonDTO> Dssp = new List<HoaDonDTO>();
-            Dssp = demos.HoaDons.Where(u => u.TrangThai == "1" && u.NgayLap==ngay).Select(u => new HoaDonDTO
+            Dssp = demos.HoaDons.Where(u => u.TrangThai == "1" && u.NgayLap==ngay&&u.MaCH==macuahang).Select(u => new HoaDonDTO
             {
                 MaHD=u.MaHD,
                 NgayLap= u.NgayLap,

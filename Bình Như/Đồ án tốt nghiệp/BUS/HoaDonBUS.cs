@@ -10,9 +10,9 @@ namespace BUS
     public class HoaDonBUS
     {
         HoaDonDAO demo = new HoaDonDAO();
-        public List<HoaDonDTO> LayDssp(string ngay)
+        public List<HoaDonDTO> LayDssp(string ngay, string macuahang)
         {
-            return demo.layDSSP(ngay);
+            return demo.layDSSP(ngay,macuahang);
         }
         public List<HoaDonDTO> LayDsspall()
         {

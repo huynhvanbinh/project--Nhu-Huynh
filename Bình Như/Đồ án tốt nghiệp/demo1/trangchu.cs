@@ -208,6 +208,7 @@ namespace demo1
             hoadon.FormBorderStyle = FormBorderStyle.None;
             hoadon.Dock = DockStyle.Fill;
             hoadon.MdiParent = this;
+            hoadon.macuahang = macuahang;
             hoadon.Show();
         }
 

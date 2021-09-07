@@ -28,16 +28,21 @@ namespace demo1
         CTHoaDonBUS customerCTHDBUS = new CTHoaDonBUS();
         BindingSource bscthd = new BindingSource();
         List<CTHoaDonDTO> dscthd = new List<CTHoaDonDTO>();
+        //
+        NhanVienBUS customerNVBUS = new NhanVienBUS();
+        BindingSource bsnv = new BindingSource();
+        List<NhanVienDTO> dsnv = new List<NhanVienDTO>();
         private void Load_Form()
         {
             Load_DSKH();
 
         }
+        public string macuahang;
         private void Load_DSKH()
         {
             dtpngay.Text = DateTime.Now.ToString("dd/MM/yyyy");
             string ngay = dtpngay.Value.ToString("dd/MM/yyyy");
-            dskhs = customerBUS.LayDssp(ngay);
+            dskhs = customerBUS.LayDssp(ngay,macuahang);
             bs.DataSource = dskhs.ToList();
             dtgv_ttkh.DataSource = bs;
 
@@ -45,14 +50,32 @@ namespace demo1
             dscthd = customerCTHDBUS.LayDssp(ma);
             bscthd.DataSource = dscthd.ToList();
             cthd.DataSource = bscthd;
-        }
 
+            dsnv = customerNVBUS.LayDskh();
+            bsnv.DataSource = dsnv.ToList();
+
+            labtennv.Visible = false;
+        }
+        void reset()
+        {
+            txtMaHD.Text = "";
+            txtMaKH.Text = "";
+            txtTongTien.Text = "";
+        }
         private void dtpngay_ValueChanged(object sender, EventArgs e)
         {
+            reset();
             string ngay = dtpngay.Value.ToString("dd/MM/yyyy");
-            dskhs = customerBUS.LayDssp(ngay);
+            dskhs = customerBUS.LayDssp(ngay,macuahang);
             bs.DataSource = dskhs.ToList();
             dtgv_ttkh.DataSource = bs;
+
+            string ma = txtMaHD.Text;
+            dscthd = customerCTHDBUS.LayDssp(ma);
+            bscthd.DataSource = dscthd.ToList();
+            cthd.DataSource = bscthd;
+
+            labtennv.Visible = false;
         }
 
         private void dtgv_ttkh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -64,12 +87,26 @@ namespace demo1
                 txtMaHD.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
                 txtMaKH.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
                 txtTongTien.Text = dtgv_ttkh.Rows[i].Cells[4].Value.ToString();
-               
+                
+                foreach (NhanVienDTO sps in dsnv)
+                {
+                    if (dtgv_ttkh.Rows[i].Cells[1].Value.ToString() == sps.MaNV)
+                    {
+                        labtennv.Text = sps.TenNV;
+                    }
+                }
                 string ma = txtMaHD.Text;
                 dscthd = customerCTHDBUS.LayDssp(ma);
                 bscthd.DataSource = dscthd.ToList();
                 cthd.DataSource = bscthd;
+
+                labtennv.Visible = true;
             }
+        }
+
+        private void HoaDons_Load(object sender, EventArgs e)
+        {
+            Load_DSKH();
         }
     }
     }
