@@ -13,15 +13,16 @@ namespace demo1
 {
     public partial class XuatHangcs : Form
     {
+        List<dssanpham> listsanpham;
         public XuatHangcs()
         {
             InitializeComponent();
             dtgv_ttsp.AutoGenerateColumns = false;
             dataGridView1.AutoGenerateColumns = false;
             dtgv_ttkh.AutoGenerateColumns = false;
-
             Load_Form();
             choncuahang();
+            listsanpham = new List<dssanpham>();
         }
         public string manv = "";
         public string tenNV;
@@ -46,15 +47,14 @@ namespace demo1
         CTSanPhamBUS customerCTSPBUS = new CTSanPhamBUS();
         BindingSource bsctsp = new BindingSource();
         List<CTSanPhamDTO> dsctsp = new List<CTSanPhamDTO>();
+        List<CTSanPhamDTO> dsctsps = new List<CTSanPhamDTO>();
 
         CuaHangBUS customerCHBUS = new CuaHangBUS();
         BindingSource bsch = new BindingSource();
         List<CuaHangDTO> dsch = new List<CuaHangDTO>();
         private void Load_Form()
         {
-            Load_DSKH();
-         
-            
+            Load_DSKH();  
         }
         private void Load_DSKH()
         {
@@ -66,183 +66,15 @@ namespace demo1
 
             dskhs = customerBUS.LayDssp();
             bs.DataSource = dskhs.ToList();
-            //nhanvien
-            //dsnv = customerNVBUS.LayDskh();
-            //bsnv.DataSource = dsnv.ToList();
-            //string masp = "";
-            //string masp1 = "";
-            //string masp2 = "";
-            //string masp3 = "";
-            //string masp4 = "";
-            //string masp5 = "";
-            //string masp6 = "";
-            //string masp7 = "";
-            //string masp8 = "";
-            //string masp9 = "";
-            //string masp10 = "";
-            //string masp11 = "";
-            //string masp12 = "";
-            //string masp13 = "";
-            //string masp14 = "";
-            //string masp15 = "";
-            //string masp16 = "";
-            //string masp17 = "";
-            //string masp18 = "";
-            //string masp19 = "";
-            //string masp20 = "";
-            //string macuahang = "admin";
-            //int kt = 0;
-            //foreach (CTPhieuXuatDTO cv in dsctpx)
-            //{
-            //    if (kt == 0)
-            //    {
-            //        masp = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 1 && masp != cv.MaSP)
-            //    {
-            //        masp1 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 2 && masp != cv.MaSP && masp1 != cv.MaSP)
-            //    {
-            //        masp2 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 3 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP)
-            //    {
-            //        masp3 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 4 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP)
-            //    {
-            //        masp4 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 5 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //       masp4 != cv.MaSP)
-            //    {
-            //        masp5 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 6 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP)
-            //    {
-            //        masp6 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 7 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP)
-            //    {
-            //        masp7 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 8 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP)
-            //    {
-            //        masp8 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 9 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP)
-            //    {
-            //        masp9 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 10 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-            //        masp9 != cv.MaSP
-            //)
-            //    {
-            //        masp10 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 11 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-            //        masp9 != cv.MaSP && masp10 != cv.MaSP
-            //)
-            //    {
-            //        masp11 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 12 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP &&
-            //        masp4 != cv.MaSP && masp5 != cv.MaSP && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP &&
-            //        masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //)
-            //    {
-            //        masp12 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 13 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            // && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            // && masp12 != cv.MaSP)
-            //    {
-            //        masp13 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 14 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //  && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //  && masp12 != cv.MaSP && masp13 != cv.MaSP)
-            //    {
-            //        masp14 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 15 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //   && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //   && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP)
-            //    {
-            //        masp15 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 16 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //    && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //    && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP)
-            //    {
-            //        masp16 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 17 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //     && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //     && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP)
-            //    {
-            //        masp17 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 18 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //       && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //       && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP)
-            //    {
-            //        masp18 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 19 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //        && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //        && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP)
-            //    {
-            //        masp19 = cv.MaSP;
-            //        kt++;
-            //    }
-            //    if (kt == 20 && masp != cv.MaSP && masp1 != cv.MaSP && masp2 != cv.MaSP && masp3 != cv.MaSP && masp4 != cv.MaSP && masp5 != cv.MaSP
-            //        && masp6 != cv.MaSP && masp7 != cv.MaSP && masp8 != cv.MaSP && masp9 != cv.MaSP && masp10 != cv.MaSP && masp11 != cv.MaSP
-            //        && masp12 != cv.MaSP && masp13 != cv.MaSP && masp14 != cv.MaSP && masp15 != cv.MaSP && masp16 != cv.MaSP && masp17 != cv.MaSP && masp18 != cv.MaSP && masp19 != cv.MaSP)
-            //    {
-            //        masp20 = cv.MaSP;
-            //        kt++;
-            //    }
-
-            //}
-            //dssp = customerSPBUS.LayDssphd(masp, masp1, masp2, masp3, masp4, masp5, masp6, masp7, masp8, masp9, masp10, masp11, masp12, masp13
-            //    , masp14, masp15, masp16, masp17, masp18, masp19, masp20, macuahang);
-            //bssp.DataSource = dssp.ToList();
 
             dssp = customerSPBUS.LayDssp();
             bssp.DataSource = dssp.ToList();
             dtgv_ttsp.DataSource = bssp;
-
             //cua hang
             dsch = customerCHBUS.LayDsch();
             bsch.DataSource = dsch.ToList();
             dataGridView2.DataSource = bsch;
+           
         }
         private void reset()
         {
@@ -256,6 +88,8 @@ namespace demo1
         }
         private void choncuahang()
         {
+            labtrangthai.Visible = false;
+            btnquanlypx.Visible = false;
             groupBox2.Visible = false;
             dtgv_ttkh.Visible = false;
             label1.Visible = false;
@@ -280,9 +114,11 @@ namespace demo1
             bunifuButton2.Visible = false;
             label9.Visible = false;
             labcuahang.Visible = false;
+            bunifuButton3.Visible = false;
         }
         private void dachoncuahang()
         {
+            bunifuButton3.Visible = true;
             groupBox2.Visible = true;
             dtgv_ttkh.Visible = true;
             label1.Visible = true;
@@ -311,44 +147,30 @@ namespace demo1
         private void XuatHangcs_Load(object sender, EventArgs e)
         {
           txtMaPX.Text= "XH_" + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
-         
-            //them PX
-            //load cua hang
-           
         }
         private PhieuXuatDTO layTTKH_moi()
         {
-            string tien="0";
-            string thanhtoan = txttongtien.Text;
-            foreach (PhieuXuatDTO px in dskhs)
+            int thanhtoan = 0;
+            foreach (dssanpham listsp in listsanpham)
             {
-                
-                if (px.MaPX == txtMaPX.Text)
-                {
-                     tien = px.ThanhToan;                   
-                }
+                int dongia = Int32.Parse(listsp.GiaNhap);
+                int soluong = Int32.Parse(listsp.SoLuong);
+                thanhtoan = thanhtoan + dongia * soluong;
             }
-              
-            float thanhtien = Int32.Parse(tien);
-            float thanhtoans= Int32.Parse(thanhtoan);
-            thanhtoans = thanhtoans + thanhtien;
-  
             PhieuXuatDTO NewKH = new PhieuXuatDTO();
             NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
-            NewKH.ThanhToan = thanhtoans.ToString();
+            NewKH.ThanhToan = thanhtoan.ToString();
             NewKH.NgayLap = DateTime.Now.ToString("dd/MM/yyyy");
             NewKH.MaCH = manguoinhan;
             NewKH.MaNV = manv;
             NewKH.TringTrang = "Chờ nhận hàng";
             NewKH.TrangThai = "1";
             return NewKH;
-        }
-       
-        void them()
+        }       
+        void taophieuxuat()
         {
             PhieuXuatDTO khAdd = layTTKH_moi();
             bool kq = customerBUS.DKSP(khAdd);
-            Load_Form();
         }
         public string macuahang;
         private void dtgv_ttsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -385,72 +207,50 @@ namespace demo1
             txtsoluong.Text = "";
             txttongtien.Text = "";
         }
-        private CTPhieuXuatDTO layCTPX_moi()
+        public string mactpx;        
+        public bool CheckControl()
         {
-            CTPhieuXuatDTO NewKH = new CTPhieuXuatDTO();
-            NewKH.MaCTPX = mactpx;
-            NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
-            NewKH.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
-            NewKH.SoLuong = string.IsNullOrEmpty(txtsoluong.Text) ? "" : txtsoluong.Text;
-            NewKH.GiaNhap = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
-            NewKH.MaMau = string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
-            NewKH.MaSize = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
-            NewKH.ChiecKhau = "No ";
-            NewKH.TrangThai = "1";
-            return NewKH;
-        }
-       
-        void updatePX()
-        {
-            PhieuXuatDTO khAdd = layTTKH_moi();
-            bool kq = customerBUS.UpdateNV(khAdd);
-            Load_Form();
-        }
-        public string mactpx;
-       
-
-        void themsanphamPX()
-        {
-            int i = 1;
-            foreach (CTPhieuXuatDTO sps in dsctpx)
+            if (string.IsNullOrWhiteSpace(txtSP.Text) || string.IsNullOrWhiteSpace(txtmau.Text))
             {
-                i++;
+                MessageBox.Show("Vui long chon san pham", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            mactpx = txtMaPX.Text + "_SP-0"+i;
-            CTPhieuXuatDTO khAdd = layCTPX_moi();
-            bool kq = customerCTPXBUS.DKSP(khAdd);
-           
-
-            //update so luong chi tiết sp
-            CTSanPhamDTO nv = layTTSP_sua();
-            bool kqs = customerCTSPBUS.UpdateSL(nv);
-           
-
-            //update tien phieu xuat
-            PhieuXuatDTO px = layTTKH_moi();
-            bool kqpx = customerBUS.UpdateSL(px);
-
-            
-            MessageBox.Show("Thêm thành công");
-            //thong báo thành công
-
-            Load_Form();
+            if (string.IsNullOrWhiteSpace(txtsoluong.Text))
+            {
+                MessageBox.Show("Vui long nhap so luong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtsoluong.Focus();
+                return false;
+            }
+            return true;
         }
-
         private void btnthem_Click(object sender, EventArgs e)
         {
-            them();
-            //themsanphamPX();
-            
-            //neeus sanr phaam ton tai ypdate lai san pham phieu xuat
-            aotu();
-            updatePX();
-            string masanpham = txtSP.Text;
-            string cuahang = macuahang;
-            dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
-            bsctsp.DataSource = dsctsp.ToList();
-            dataGridView1.DataSource = bsctsp;
-           // reset();
+            //them san pham vao list
+            if (CheckControl())
+            {
+                int ktthemlist = 16062000;
+                dssanpham sanpham = new dssanpham();
+                sanpham.MaSP = txtSP.Text;
+                sanpham.GiaNhap = txtdongia.Text;
+                sanpham.MaMau = txtmau.Text;
+                sanpham.MaSize = txtkichthuoc.Text;
+                sanpham.SoLuong = txtsoluong.Text;
+                foreach (dssanpham listsp in listsanpham)
+                {
+                    if(listsp.MaSP==txtSP.Text && listsp.MaMau==txtmau.Text && listsp.MaSize==txtkichthuoc.Text)
+                    {
+                        MessageBox.Show("san pham da co trong danh sach xuat hang", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ktthemlist = 0;
+                    }
+                }
+                if(ktthemlist==16062000)
+                {
+                    listsanpham.Add(sanpham);
+                    dtgv_ttkh.DataSource = null;
+                    dtgv_ttkh.DataSource = listsanpham;
+                    dtgv_ttkh.Refresh();
+                }
+            }
         }
 
         private void txtsoluong_TextChanged(object sender, EventArgs e)
@@ -463,39 +263,6 @@ namespace demo1
                 txttongtien.Text = thanhtien.ToString();
             }              
         }
-        private CTSanPhamDTO layTTSP_sua()
-        {
-            //tinh so luong con lai
-            string soluongkho = null;
-            string mactsp = null;
-            foreach (CTSanPhamDTO cv in dsctsp)
-            {
-                if (cv.MaSP == txtSP.Text && cv.MaMau==txtmau.Text && cv.KichThuoc==txtkichthuoc.Text)
-                {
-                    soluongkho = cv.SoLuong;
-                    mactsp = cv.MaCTSP;
-                }
-            }
-            float slupdates = Int32.Parse(soluongkho);
-            float soluongss = Int32.Parse(txtsoluong.Text);
-            float slconlai = slupdates - soluongss;
-            //end
-            if (slconlai <= 0)
-            {
-                slconlai = 0;
-            }
-            CTSanPhamDTO NewSP = new CTSanPhamDTO();
-            NewSP.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
-            NewSP.MaMau= string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
-            NewSP.KichThuoc = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
-            NewSP.SoLuong = slconlai.ToString();
-            NewSP.MaCTSP = mactsp;
-            NewSP.TrangThai = "1";
-            return NewSP;
-        }
-
-        
-
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView2.SelectedCells.Count > 0)
@@ -515,81 +282,169 @@ namespace demo1
             bunifuButton1.Visible = false;
             groupBox1.Visible = false;
             manguoinhan = txtMaChucVu.Text;
+            btnthem.Enabled = true;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            labtrangthai.Visible = false;
+            btnquanlypx.Visible = false;
             dachoncuahang();
         }
 
         //xuất hàng nhưng chọn đc nhiều CTSP
-        private void aotu()
+        private void aotuthemsanphampx()
         {
-            string kt = "";
             CTPhieuXuatDTO NewCT = new CTPhieuXuatDTO();
-            foreach (CTPhieuXuatDTO ct in dsctpx)
+            foreach (dssanpham listsp in listsanpham)
             {
-                if (txtSP.Text == ct.MaSP && txtmau.Text == ct.MaMau && txtkichthuoc.Text == ct.MaSize
-                    && ct.MaPX == txtMaPX.Text)
-                {
-                    CTPhieuXuatDTO layCTPXupdate()
-                    {
-                        string slcuakho = ct.SoLuong;
-                        string slnhapvaomoi = txtsoluong.Text;
-                        float slcuakhoint = Int32.Parse(slcuakho);
-                        float slnhapvaomoiint = Int32.Parse(slnhapvaomoi);
-                        float tongslhang = slcuakhoint + slnhapvaomoiint;
-                        NewCT.MaCTPX = ct.MaCTPX;
-                        NewCT.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
-                        NewCT.MaSP = string.IsNullOrEmpty(txtSP.Text) ? "" : txtSP.Text;
-                        NewCT.GiaNhap = string.IsNullOrEmpty(txtdongia.Text) ? "" : txtdongia.Text;
-                        NewCT.MaMau = string.IsNullOrEmpty(txtmau.Text) ? "" : txtmau.Text;
-                        NewCT.MaSize = string.IsNullOrEmpty(txtkichthuoc.Text) ? "" : txtkichthuoc.Text;
-                        NewCT.ChiecKhau = "No ";
-                        NewCT.TrangThai = "1";
-                        NewCT.SoLuong = tongslhang.ToString();
-                        return NewCT;
-                    }
-                    kt = "009";
-                    CTPhieuXuatDTO CTPXUD = layCTPXupdate();
-                    bool kqctsp = customerCTPXBUS.UpdateNV(CTPXUD);
-                    //update so luong chi tiết sp
-                    CTSanPhamDTO nv = layTTSP_sua();
-                    bool kqs = customerCTSPBUS.UpdateSL(nv);
-
-
-                    //update tien phieu xuat
-                    PhieuXuatDTO px = layTTKH_moi();
-                    bool kqpx = customerBUS.UpdateSL(px);
-
-
-                    MessageBox.Show("bạn vừa thay đổi số lượng sản phẩm");
-                    //thong báo thành công
+                CTPhieuXuatDTO layCTPX_List()
+                {                   
+                    CTPhieuXuatDTO NewKH = new CTPhieuXuatDTO();
+                    NewKH.MaCTPX = txtMaPX.Text + "_SP-0" + listsp.MaSP+ listsp.MaMau+ listsp.MaSize; 
+                    NewKH.MaPX = string.IsNullOrEmpty(txtMaPX.Text) ? "" : txtMaPX.Text;
+                    NewKH.MaSP = listsp.MaSP;
+                    NewKH.SoLuong = listsp.SoLuong;
+                    NewKH.GiaNhap = listsp.GiaNhap;
+                    NewKH.MaMau = listsp.MaMau;
+                    NewKH.MaSize = listsp.MaSize;
+                    NewKH.ChiecKhau = "No ";
+                    NewKH.TrangThai = "1";
+                    return NewKH;
                 }
-            }
-            if (kt != "009")
-            {
-                //them chi tiet phieeus xuaats
-                themsanphamPX();
-            }
-
+                CTPhieuXuatDTO khAdd = layCTPX_List();
+                bool kq = customerCTPXBUS.DKSP(khAdd);
+                //update so luong chi tiết sp
+                string macuahang = "admin";
+                dsctsps = customerCTSPBUS.Laydsctspmacuahang(macuahang);
+                bsctsp.DataSource = dsctsps.ToList();
+                CTSanPhamDTO layTTSP_sua()
+                {
+                    string soluongkho = null;
+                    string mactsp = null;
+                    foreach (CTSanPhamDTO ct in dsctsp)
+                    {
+                        if (ct.MaSP==listsp.MaSP && ct.MaMau==listsp.MaMau && ct.KichThuoc==listsp.MaSize && ct.MaCH==macuahang)
+                        {
+                            soluongkho = ct.SoLuong;
+                            mactsp = ct.MaCTSP;
+                        }
+                    }
+                    float slupdates = Int32.Parse(soluongkho);
+                    float soluongss = Int32.Parse(listsp.SoLuong);
+                    float slconlai = slupdates - soluongss;
+                    CTSanPhamDTO NewSP = new CTSanPhamDTO();
+                    NewSP.MaSP = listsp.MaSP;
+                    NewSP.MaMau = listsp.MaMau;
+                    NewSP.KichThuoc = listsp.MaSize;
+                    NewSP.SoLuong = slconlai.ToString();
+                    NewSP.MaCTSP = mactsp;
+                    NewSP.TrangThai = "1";
+                    return NewSP;
+                }
+                CTSanPhamDTO nv = layTTSP_sua();
+                bool kqs = customerCTSPBUS.UpdateSL(nv);                
+            }                      
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             int kt = 0;
-            foreach (CTPhieuXuatDTO ct in dsctpx)
+            foreach (dssanpham listsp in listsanpham)
             {
-                if(ct.MaPX==txtMaPX.Text)
+                if (listsp.MaSP !="")
                 {
                     kt = 1;
-                }    
-            }  
-            if(kt==1)
+                }
+            }
+            if (kt==1)
             {
                 MessageBox.Show("đã xuất sản phẩm đến cửa hàng: "+ txtTenChucVu.Text);
-                reset();
+                taophieuxuat();
+                aotuthemsanphampx();
+                Load_Form();
+                string masanpham = txtSP.Text;
+                string cuahang = macuahang;
+                dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
+                bsctsp.DataSource = dsctsp.ToList();
+                dataGridView1.DataSource = bsctsp;
+                btnthem.Enabled = false;
+                button1.Enabled = false;
+                button2.Enabled = false;
+                labtrangthai.Visible = true;
+                btnquanlypx.Visible = true;
             }    
            if(kt==0)
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm xuất đến cửa hàng: " + txtTenChucVu.Text);
+            }      
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("ban co muon xoa", "thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                listsanpham.RemoveAt(index);
+                dtgv_ttkh.DataSource = null;
+                dtgv_ttkh.DataSource = listsanpham;
+                dtgv_ttkh.Refresh();
             }
+        }
+        int index;
+        private void dtgv_ttkh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (dtgv_ttkh.SelectedCells.Count > 0)
+            {
+                int i;
+                i = dtgv_ttkh.CurrentRow.Index;
+                txtSP.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
+                txtmau.Text = dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
+                txtkichthuoc.Text = dtgv_ttkh.Rows[i].Cells[2].Value.ToString();
+                txtsoluong.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
+                txtdongia.Text = dtgv_ttkh.Rows[i].Cells[4].Value.ToString();
+                foreach (SanPhamDTO sp in dssp)
+                {
+                    if (sp.MaSP == txtSP.Text)
+                    {
+                        txttensp.Text = sp.TenSP;
+                    }
+                }
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listsanpham[index].MaSP = txtSP.Text;
+            listsanpham[index].MaMau = txtmau.Text;
+            listsanpham[index].MaSize = txtkichthuoc.Text;
+            listsanpham[index].SoLuong = txtsoluong.Text;
+            listsanpham[index].GiaNhap = txtdongia.Text;
+            dtgv_ttkh.DataSource = null;
+            dtgv_ttkh.DataSource = listsanpham;
+            dtgv_ttkh.Refresh();
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            txtMaPX.Text = "XH_" + "_" + DateTime.Now.ToString("ddMMyyyy-HHms");
+            dataGridView2.Visible = true;
+            bunifuButton1.Visible = true;
+            groupBox1.Visible = true;
+            choncuahang();
+            Load_Form();
+            listsanpham.Clear();
+        }
+
+        private void btnquanlypx_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            PhieuXuat phieuxuat = new PhieuXuat();
+            phieuxuat.FormBorderStyle = FormBorderStyle.None;
+            phieuxuat.Dock = DockStyle.Fill;
+            phieuxuat.MdiParent = this;
+            phieuxuat.Show();
         }
     }
 }

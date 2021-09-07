@@ -22,6 +22,10 @@ namespace BUS
         {
             return demo.layDSCTSP();
         }
+        public List<CTSanPhamDTO> Laydsctspmacuahang(string macuahang)
+        {
+            return demo.layctspmacuahang(macuahang);
+        }
         public CTSanPhamDTO layMau(string mamau)
         {
             return demo.layMau(mamau);

@@ -38,6 +38,21 @@ namespace DAO
             }).ToList();
             return Dsmau;
         }
+        public List<CTSanPhamDTO> layctspmacuahang(string ma)
+        {
+            List<CTSanPhamDTO> Dsmau = new List<CTSanPhamDTO>();
+            Dsmau = demos.CTSanPhams.Where(u => u.TrangThai == "1" && u.MaCH == ma).Select(u => new CTSanPhamDTO
+            {
+                MaCTSP = u.MaCTSP,
+                MaMau = u.MaMau,
+                KichThuoc = u.KichThuoc,
+                SoLuong = u.SoLuong,
+                MaSP = u.MaSP,
+                MaCH = u.MaCH,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dsmau;
+        }
         public List<CTSanPhamDTO> layDSctspch(string ma, string cuahang)
         {
             List<CTSanPhamDTO> Dsmau = new List<CTSanPhamDTO>();

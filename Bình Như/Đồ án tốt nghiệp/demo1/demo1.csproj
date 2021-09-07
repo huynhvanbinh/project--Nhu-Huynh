@@ -185,6 +185,7 @@
     <Compile Include="DoanhThuThang.Designer.cs">
       <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </Compile>
+    <Compile Include="dssanpham.cs" />
     <Compile Include="DTNgay.cs" />
     <Compile Include="DTThang.cs" />
     <Compile Include="Form1.cs">
@@ -332,6 +333,12 @@
     <Compile Include="XuatHangcs.Designer.cs">
       <DependentUpon>XuatHangcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuatHangNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuatHangNew.Designer.cs">
+      <DependentUpon>XuatHangNew.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XuatHangcs.resx">
       <DependentUpon>XuatHangcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuatHangNew.resx">
+      <DependentUpon>XuatHangNew.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="demoDataSet.xsc">
       <DependentUpon>demoDataSet.xsd</DependentUpon>

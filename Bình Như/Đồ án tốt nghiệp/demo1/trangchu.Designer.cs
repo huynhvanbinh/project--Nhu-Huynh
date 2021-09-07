@@ -709,9 +709,9 @@ namespace demo1
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(1273, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 80;
-            this.label3.Text = "Đăng suất";
+            this.label3.Text = "Đăng xuất";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // trangchu
