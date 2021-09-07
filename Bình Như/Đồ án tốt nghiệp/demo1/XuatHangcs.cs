@@ -320,7 +320,7 @@ namespace demo1
                 {
                     string soluongkho = null;
                     string mactsp = null;
-                    foreach (CTSanPhamDTO ct in dsctsp)
+                    foreach (CTSanPhamDTO ct in dsctsps)
                     {
                         if (ct.MaSP==listsp.MaSP && ct.MaMau==listsp.MaMau && ct.KichThuoc==listsp.MaSize && ct.MaCH==macuahang)
                         {
@@ -357,26 +357,27 @@ namespace demo1
             }
             if (kt==1)
             {
-                MessageBox.Show("đã xuất sản phẩm đến cửa hàng: "+ txtTenChucVu.Text);
-                taophieuxuat();
-                aotuthemsanphampx();
-                Load_Form();
-                string masanpham = txtSP.Text;
-                string cuahang = macuahang;
-                dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
-                bsctsp.DataSource = dsctsp.ToList();
-                dataGridView1.DataSource = bsctsp;
-                btnthem.Enabled = false;
-                button1.Enabled = false;
-                button2.Enabled = false;
-                labtrangthai.Visible = true;
-                btnquanlypx.Visible = true;
+                if (MessageBox.Show("Bạn có muốn xuất " + listsanpham.Count+ " sản phẩm đến cửa hàng: "+ txtTenChucVu.Text, "thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+                    taophieuxuat();
+                    aotuthemsanphampx();
+                    Load_Form();
+                    string masanpham = txtSP.Text;
+                    string cuahang = macuahang;
+                    dsctsp = customerCTSPBUS.LayDsctspch(masanpham, cuahang);
+                    bsctsp.DataSource = dsctsp.ToList();
+                    dataGridView1.DataSource = bsctsp;
+                    btnthem.Enabled = false;
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    labtrangthai.Visible = true;
+                    btnquanlypx.Visible = true;
+                }
             }    
            if(kt==0)
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm xuất đến cửa hàng: " + txtTenChucVu.Text);
             }      
-           
         }
 
         private void button1_Click(object sender, EventArgs e)

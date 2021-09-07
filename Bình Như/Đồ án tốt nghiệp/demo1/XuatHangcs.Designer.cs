@@ -310,7 +310,6 @@ namespace demo1
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtdongia.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;

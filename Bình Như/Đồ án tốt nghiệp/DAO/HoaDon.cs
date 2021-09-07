@@ -20,5 +20,6 @@ namespace DAO
         public string MaKH { get; set; }
         public string TongTien { get; set; }
         public string TrangThai { get; set; }
+        public string MaCH { get; set; }
     }
 }

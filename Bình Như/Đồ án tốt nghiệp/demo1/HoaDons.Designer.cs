@@ -546,7 +546,6 @@ namespace demo1
             this.txtMaNV.TabIndex = 30;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaNV.TextMarginBottom = 0;
-            this.txtMaNV.TextMarginLeft = 5;
             this.txtMaNV.TextMarginTop = 0;
             this.txtMaNV.TextPlaceholder = "Enter text";
             this.txtMaNV.UseSystemPasswordChar = false;

@@ -17,6 +17,7 @@ namespace DAO
             hd.MaNV = "";
             hd.MaKH = "";
             hd.TongTien = "";
+            hd.MaCH = "";
             hd.TrangThai = "1";
             demos.HoaDons.Add(hd);
             demos.SaveChanges();
@@ -30,6 +31,7 @@ namespace DAO
                 MaHD=u.MaHD,
                 NgayLap= u.NgayLap,
                 MaNV=u.MaNV,
+                MaCH=u.MaCH,
                 MaKH=u.MaKH,
                 TongTien=u.TongTien,
                 TrangThai=u.TrangThai,
@@ -45,6 +47,7 @@ namespace DAO
                 NgayLap = u.NgayLap,
                 MaNV = u.MaNV,
                 MaKH = u.MaKH,
+                MaCH=u.MaCH,
                 TongTien = u.TongTien,
                 TrangThai = u.TrangThai,
             }).ToList();
@@ -59,6 +62,7 @@ namespace DAO
                 NgayLap = u.NgayLap,
                 MaNV = u.MaNV,
                 MaKH = u.MaKH,
+                MaCH=u.MaCH,
                 TongTien = u.TongTien,
                 TrangThai = u.TrangThai,
             }).ToList();
@@ -73,6 +77,7 @@ namespace DAO
                 NgayLap = u.NgayLap,
                 MaNV = u.MaNV,
                 MaKH = u.MaKH,
+                MaCH=u.MaCH,
                 TongTien = u.TongTien,
                 TrangThai=u.TrangThai,
             }).SingleOrDefault();
@@ -88,6 +93,7 @@ namespace DAO
                 customer.NgayLap = sp.NgayLap;
                 customer.MaNV = sp.MaNV;
                 customer.MaKH = sp.MaKH;
+                customer.MaCH = sp.MaCH;
                 customer.TongTien = sp.TongTien;
                 customer.TrangThai = sp.TrangThai;
                 demos.HoaDons.Add(customer);

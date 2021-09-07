@@ -19,7 +19,6 @@ namespace DAO
         public string MaSP { get; set; }
         public string MaSize { get; set; }
         public string MaMau { get; set; }
-        public string MaCH { get; set; }
         public string GiaBan { get; set; }
         public string SoLuong { get; set; }
         public string MaKM { get; set; }

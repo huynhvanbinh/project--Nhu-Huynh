@@ -13,6 +13,7 @@ namespace DTO
         public string MaNV { get; set; }
         public string MaKH { get; set; }
         public string TongTien { get; set; }
+        public string MaCH { get; set; }
         public string TrangThai { get; set; }
     }
 }

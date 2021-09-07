@@ -16,7 +16,7 @@ namespace DAO
             ct.MaSP = "";
             ct.MaSize = "";
             ct.MaMau = "";
-            ct.MaCH = "";
+           
             ct.GiaBan = "";
             ct.SoLuong = "";
             ct.MaKM = "";
@@ -37,7 +37,7 @@ namespace DAO
                 MaSP = u.MaSP,
                 MaSize = u.MaSize,
                 MaMau = u.MaMau,
-                MaCH = u.MaCH,
+              
                 GiaBan = u.GiaBan,
                 SoLuong = u.SoLuong,
                 MaKM = u.MaKM,
@@ -56,7 +56,7 @@ namespace DAO
                 MaSP = u.MaSP,
                 MaSize = u.MaSize,
                 MaMau = u.MaMau,
-                MaCH = u.MaCH,
+           
                 GiaBan = u.GiaBan,
                 SoLuong = u.SoLuong,
                 MaKM = u.MaKM,
@@ -76,7 +76,7 @@ namespace DAO
                 customer.MaSP = ctpn.MaSP;
                 customer.MaMau = ctpn.MaMau;
                 customer.MaSize = ctpn.MaSize;
-                customer.MaCH = ctpn.MaCH;
+                
                 customer.SoLuong = ctpn.SoLuong;
                 customer.GiaBan = ctpn.GiaBan;
                 customer.MaKM = ctpn.MaKM;

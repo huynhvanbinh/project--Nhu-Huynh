@@ -31,7 +31,6 @@
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="MaSize" ColumnName="MaSize" />
           <ScalarProperty Name="MaMau" ColumnName="MaMau" />
-          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="MaKM" ColumnName="MaKM" />
@@ -114,6 +113,7 @@
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -291,6 +291,7 @@
     <Compile Include="SanPham.Designer.cs">
       <DependentUpon>SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="SanPhamban.cs" />
     <Compile Include="Size.cs">
       <SubType>Form</SubType>
     </Compile>
