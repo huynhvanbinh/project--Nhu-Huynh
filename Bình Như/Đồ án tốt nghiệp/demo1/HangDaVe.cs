@@ -69,9 +69,10 @@ namespace demo1
         }
         private void aotu()
         {
-            string kt = "";
+            string kt = "0";
             foreach (CTPhieuXuatDTO cv in dsctpx)
             {
+                kt = "0";
                 SanPhamDTO NewKH = new SanPhamDTO();
                 CTSanPhamDTO NewCT = new CTSanPhamDTO();
                 foreach (CTSanPhamDTO ct in dsctsp)
@@ -90,30 +91,28 @@ namespace demo1
                             NewCT.SoLuong = tongslhang.ToString();
                             return NewCT;
                         }
-                        kt = "009";
+                        kt = "16062000";
                         CTSanPhamDTO CTSPUD = layCTSPupdate();
                         bool kqctsp = customerCTSPBUS.UpdateNV(CTSPUD);
+                    }  
+                }
+                if (kt !="16062000")
+                {
+                    CTSanPhamDTO layCTSP_moi()
+                    {
+                        NewCT.MaCTSP = cv.MaSP +cv.MaMau+cv.MaSize+ DateTime.Now.ToString("ddMMyyyyHHmmss");
+                        NewCT.MaSP = cv.MaSP;
+                        NewCT.MaMau = cv.MaMau;
+                        NewCT.KichThuoc = cv.MaSize;
+                        NewCT.SoLuong = cv.SoLuong;
+                        NewCT.MaCH = macuahang;
+                        NewCT.TrangThai = "1";
+                        return NewCT;
                     }
-                }
-                CTSanPhamDTO layCTSP_moi()
-                {
-                    NewCT.MaCTSP = cv.MaSP  + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
-                    NewCT.MaSP =  cv.MaSP;
-                    NewCT.MaMau = cv.MaMau;
-                    NewCT.KichThuoc = cv.MaSize;
-                    NewCT.SoLuong = cv.SoLuong;
-                    NewCT.MaCH = macuahang;
-                    NewCT.TrangThai = "1";                 
-                    return NewCT;
-                }
-                  
-                if (cv.MaSP != kt && kt!="009")
-                {
                     //them chi tiet san pham
                     CTSanPhamDTO CT = layCTSP_moi();
                     bool kqctsp = customerCTSPBUS.DKKH(CT);
                 }
-              
             }
         }
         private void HangDaVe_Load(object sender, EventArgs e)

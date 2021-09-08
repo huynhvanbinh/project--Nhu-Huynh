@@ -1,0 +1,17 @@
+Phân quyền: (4 quyền)
+			quyền 1. Admin (Bình) 
+				- xem sản phẩn tại kho hàng, xem_sản phẩm-hóa đơn-danh thu-nhân viên-..... TẠI TỪNG CHI NHÁNH
+				- không có quyền bán sản phẩm
+				- thêm xóa sửa liên quan đến sản phẩm (Loại, Màu, Size, CT sản phẩm,......)
+				- NHAP XUAT KHO
+
+			quyền 3.chủ cửa hàng (Cửa hàng NHUHUYNH, cửa hàng TRANGVU, cửa hàng DIEUHIEN) 
+				- xem_sản phẩm-hóa đơn-danh thu-nhân viên-..... TẠI CỬA HÀNG CỦA  MÌNH
+				- không đc thêm, xóa, sửa tất cả liên quan đến sản phẩm, như Loại Sản Phẩm, Sản Phẩm, CTSP, sản phẩm nhập về từ kho hàng của Bình
+				- tính lương nhân viên
+				- bán sản phẩm
+
+			quyền 4: nhân viên QUAN LY tại từng cửa hàng
+				- bán sản phẩm
+				- chấm công
+				

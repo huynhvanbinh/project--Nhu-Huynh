@@ -79,13 +79,13 @@
     <Key>
       <PropertyRef Name="MaCTSP" />
     </Key>
-    <Property Name="MaCTSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaCTSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MaMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="KichThuoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CuaHang">
     <Key>

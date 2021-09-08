@@ -57,7 +57,7 @@ namespace demo1
         private CTSanPhamDTO layCTSP_moi()
         {
             CTSanPhamDTO NewSP = new CTSanPhamDTO();
-            NewSP.MaCTSP = masp + DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
+            NewSP.MaCTSP = txtMaSP.Text+labmamau.Text+labkichthuoc.Text+ DateTime.Now.ToString("ddMMyyyy") + DateTime.Now.ToString("HHmmss");
             NewSP.MaSP = string.IsNullOrEmpty(txtMaSP.Text) ? "" : txtMaSP.Text;
             NewSP.MaMau = string.IsNullOrEmpty(labmamau.Text) ? "" : labmamau.Text;
             NewSP.KichThuoc = string.IsNullOrEmpty(labkichthuoc.Text) ? "" : labkichthuoc.Text;

@@ -415,7 +415,6 @@ namespace demo1
             this.txtSP.TextMarginBottom = 0;
             this.txtSP.TextMarginLeft = 5;
             this.txtSP.TextMarginTop = 0;
-            this.txtSP.TextPlaceholder = "Ma sp";
             this.txtSP.UseSystemPasswordChar = false;
             this.txtSP.WordWrap = true;
             // 
@@ -572,7 +571,6 @@ namespace demo1
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaPX.TextMarginBottom = 0;
             this.txtMaPX.TextMarginLeft = 5;
-            this.txtMaPX.TextMarginTop = 0;
             this.txtMaPX.TextPlaceholder = "Mã phiếu xuất";
             this.txtMaPX.UseSystemPasswordChar = false;
             this.txtMaPX.WordWrap = true;

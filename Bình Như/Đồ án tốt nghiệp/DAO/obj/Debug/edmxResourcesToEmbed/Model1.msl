@@ -86,10 +86,10 @@
           <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
           <ScalarProperty Name="MaMau" ColumnName="MaMau" />
           <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
           <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

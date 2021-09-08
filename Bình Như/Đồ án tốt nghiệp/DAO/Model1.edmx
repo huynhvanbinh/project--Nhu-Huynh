@@ -82,13 +82,13 @@
           <Key>
             <PropertyRef Name="MaCTSP" />
           </Key>
-          <Property Name="MaCTSP" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MaCTSP" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="MaMau" Type="nvarchar" MaxLength="10" />
           <Property Name="KichThuoc" Type="nvarchar" MaxLength="10" />
-          <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
           <Property Name="SoLuong" Type="nvarchar" MaxLength="10" />
           <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
           <Property Name="MaSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="CuaHang">
           <Key>
@@ -418,13 +418,13 @@
           <Key>
             <PropertyRef Name="MaCTSP" />
           </Key>
-          <Property Name="MaCTSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaCTSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaMau" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="KichThuoc" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="CuaHang">
           <Key>
@@ -765,10 +765,10 @@
                 <ScalarProperty Name="MaCTSP" ColumnName="MaCTSP" />
                 <ScalarProperty Name="MaMau" ColumnName="MaMau" />
                 <ScalarProperty Name="KichThuoc" ColumnName="KichThuoc" />
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="MaCH" ColumnName="MaCH" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
