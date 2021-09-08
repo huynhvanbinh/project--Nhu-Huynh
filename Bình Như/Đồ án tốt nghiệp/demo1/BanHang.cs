@@ -37,6 +37,11 @@ namespace demo1
         BindingSource bscthd = new BindingSource();
         List<CTHoaDonDTO> dscthd = new List<CTHoaDonDTO>();
 
+
+        KhuyenMaiBUS customerTKMBUS = new KhuyenMaiBUS();
+        BindingSource bstkm = new BindingSource();
+        List<KhuyenMaiDTO> dstkm = new List<KhuyenMaiDTO>();
+
         CTKhuyenMaiBUS customerKMBUS = new CTKhuyenMaiBUS();
         BindingSource bskm = new BindingSource();
         List<CTKhuyenMaiDTO> dskm = new List<CTKhuyenMaiDTO>();
@@ -56,8 +61,11 @@ namespace demo1
             string ma = txtmahoadon.Text;
             dscthd = customerCTHDBUS.LayDssp(ma);
             bscthd.DataSource = dscthd.ToList();
-            cthd.DataSource = bscthd;           
-            // khoi tao load du lieu bang khuyến mãi
+            cthd.DataSource = bscthd;
+            //khoi tao load khuyen mai
+            dstkm = customerTKMBUS.LayDssp();
+            bstkm.DataSource = dstkm.ToList();
+            // khoi tao load du lieu bang chi tiet khuyến mãi
             dskm = customerKMBUS.LayDssp();
             bskm.DataSource = dskm.ToList();
             // san pham
@@ -67,10 +75,15 @@ namespace demo1
         }
      
         int khuyenmaiss = 0;
+        string giamgia="0";
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgv_ttsp.SelectedCells.Count > 0)
             {
+                txtmamau.Text = "";
+                txtkichthuoc.Text = "";
+                txtkhuyenmai.Text = "";
+                giamgia = "0";
                 int i;
                 i = dtgv_ttsp.CurrentRow.Index;
                 txtmasp.Text = dtgv_ttsp.Rows[i].Cells[0].Value.ToString();
@@ -79,20 +92,34 @@ namespace demo1
                 txtsoluongmuasanpham.Text = "";
                 txtthanhtien.Text = "";
                 //tim khuyến mãi
-                foreach (CTKhuyenMaiDTO cv in dskm)
+                string makhuyenmai = "16062000";
+                DateTime ngayhientai = DateTime.Now;
+                foreach (KhuyenMaiDTO cv in dstkm)
                 {
-                    khuyenmaiss = 0;
-                    if (txtmasp.Text.Equals(cv.MaSP))
-                    {
-                        MessageBox.Show("sản phẩm có chương trình khuyến mãi " + cv.GiamGia);
-                        txtkhuyenmai.Text = cv.GiamGia;
-                        khuyenmaiss = 1;
+                    DateTime ngaybatdau = Convert.ToDateTime(cv.NgayBatDau);
+                    DateTime ngayketthuc = Convert.ToDateTime(cv.NgayKetThuc);
+                    TimeSpan batdaudung = ngayhientai.Subtract(ngaybatdau);
+                    TimeSpan ketthucdung = ngayketthuc.Subtract(ngayhientai);
+                    int batdaudungs = batdaudung.Days;
+                    int ketthucdungs = ketthucdung.Days;
+                    if (batdaudungs>=0 && ketthucdungs>=0)
+                   {
+                        makhuyenmai = cv.MaKM;
                     }
                 }
-                if (khuyenmaiss == 0)
+                foreach (CTKhuyenMaiDTO cv in dskm)
                 {
-                    txtkhuyenmai.Text = "Không có khuyến mãi nào!";
-                    MessageBox.Show("sản phẩm không có chương trình khuyến mãi! hehe");
+                    if(cv.MaKM == makhuyenmai.ToString() && cv.MaSP==txtmasp.Text)
+                    {
+                       // cat bo % c#
+                        giamgia = cv.GiamGia;
+                        var charsToRemove = new string[] { "%"};
+                        foreach (var c in charsToRemove)
+                        {
+                            giamgia = giamgia.Replace(c, string.Empty);
+                        }
+                        txtkhuyenmai.Text = cv.GiamGia;
+                    }    
                 }
                 dataGridView1.Visible = true;
                 string masanpham = txtmasp.Text;
@@ -101,26 +128,6 @@ namespace demo1
                 dataGridView1.DataSource = bsctsp;
             }
 
-            //khoi tao ma chi tiết hóa đơn
-            int ma = 1;
-            foreach (CTHoaDonDTO cv in dscthd)
-            {
-                if (cv.MaHD.Equals(txtmahoadon.Text))
-                {
-                    ma++;
-                }
-            }
-            string km = null;
-            string giakm = null;
-            km = txtkhuyenmai.Text;
-            if (txtkhuyenmai.Text != "Không có khuyến mãi nào!")
-            {
-                giakm = km.Substring(0, 2);
-            }
-            if (khuyenmaiss == 0)
-            {
-                giakm = "0";
-            }
         }
         private string ExtractNumber(string original)
         {
@@ -128,16 +135,7 @@ namespace demo1
             return new string(original.Where(c => Char.IsDigit(c)).ToArray());
         }
         //khoi tao ma hoa don
-        public string mahoadon;
-        public string makhachhang;
-        public string manhanvien;
-        public string maKH;
-        public string tongtienhd;
-        public string tongtienhoadon;
-        public string mamau;
-        public string kichthuoc;
-
-       
+        public string manhanvien;      
         public string mach;
         public void load_2(object sender, EventArgs e)
         {
@@ -145,48 +143,11 @@ namespace demo1
             txtmahoadon.Text = "HD" + DateTime.Now.ToString("ddMMyyyyHHmmss");
             Load_Form();
         }
-        private void bunifuButton1_Click_1(object sender, EventArgs e)
-        {
-            //tim kiem san pham
-            foreach (SanPhamDTO sp in dssp)
-            {
-                if (sp.MaSP.Equals(txtmasp.Text))
-                {
-                    txtTenSP.Text = sp.TenSP;
-                    txtDonGia.Text = sp.DonGia;
-
-                    foreach (CTKhuyenMaiDTO cv in dskm)
-                    {
-                        khuyenmaiss = 0;
-                        if (txtmasp.Text.Equals(cv.MaSP))
-                        {
-                            MessageBox.Show("sản phẩm có chương trình khuyến mãi " + cv.GiamGia);
-                            txtkhuyenmai.Text = cv.GiamGia;
-                            khuyenmaiss = 1;
-                        }
-                    }
-                    if (khuyenmaiss == 0)
-                    {
-                        txtkhuyenmai.Text = "Không có khuyến mãi nào!";
-                        MessageBox.Show("sản phẩm không có chương trình khuyến mãi! hehe");
-                    }
-                    dataGridView1.Visible = true;
-                    string masanpham = txtmasp.Text;
-                    dsctsp = customerCTSPBUS.LayDsctspch(masanpham, macuahang);
-                    bsctsp.DataSource = dsctsp.ToList();
-                    dataGridView1.DataSource = bsctsp;
-                }
-            }
-        }
-
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             KhachHang khachhang = new KhachHang();
             khachhang.Show();
-        }
-
-       
-        
+        }               
         private HoaDonDTO layHD_moi()
         {
             int thanhtoan = 0;
@@ -194,7 +155,7 @@ namespace demo1
             {
                 int dongia = Int32.Parse(listsp.GiaBan);
                 int soluong = Int32.Parse(listsp.SoLuong);
-                thanhtoan = thanhtoan + dongia * soluong;
+                thanhtoan = thanhtoan + dongia * soluong- Int32.Parse(listsp.MaKM);
             }
             HoaDonDTO NewSP = new HoaDonDTO();
             NewSP.MaHD = string.IsNullOrEmpty(txtmahoadon.Text) ? "" : txtmahoadon.Text;
@@ -224,7 +185,8 @@ namespace demo1
                     NewSP.MaSize = listsp.MaSize;
                     NewSP.GiaBan = listsp.GiaBan;
                     NewSP.SoLuong = listsp.SoLuong;
-                    NewSP.MaCTHD = "CTHD" + "_" + DateTime.Now.ToString("ddMMyyyyhhmmss");
+                    NewSP.MaKM = listsp.MaKM;
+                    NewSP.MaCTHD = "CTHD" + "_" + txtmahoadon.Text+listsp.MaSP+listsp.MaMau+listsp.MaSize;
                     NewSP.TrangThai = "1";
                     return NewSP;
                 }
@@ -249,7 +211,7 @@ namespace demo1
                         }
                     }
                     float soluongsp = Int32.Parse(soluongsanpham);
-                    float soluongmua = Int32.Parse(txtsoluongmuasanpham.Text);
+                    float soluongmua = Int32.Parse(listsp.SoLuong);
                     float soluongupdate = soluongsp - soluongmua;
                     NewSP.SoLuong = soluongupdate.ToString();
                     return NewSP;
@@ -334,12 +296,15 @@ namespace demo1
         {
             if(txtsoluongmuasanpham.Text!="")
             {
-                string slmua = txtsoluongmuasanpham.Text;
-                float sluongmua = Int32.Parse(slmua);
-                string dongia = txtDonGia.Text;
-                float giamuavao = Int32.Parse(dongia);
-                float thanhtien = sluongmua * giamuavao;
+                float giamgias = Int32.Parse(txtsoluongmuasanpham.Text) * Int32.Parse(txtDonGia.Text)* (float.Parse(giamgia) / 100);
+                float thanhtien = Int32.Parse(txtsoluongmuasanpham.Text) * Int32.Parse(txtDonGia.Text) - giamgias ;
                 txtthanhtien.Text = thanhtien.ToString();
+                txtkhuyenmai.Text =giamgias.ToString();
+            }
+            if(txtsoluongmuasanpham.Text=="")
+            {
+                txtthanhtien.Text = "";
+                txtkhuyenmai.Text = giamgia.ToString() + "%";
             }    
         }
 
@@ -356,6 +321,12 @@ namespace demo1
                 txtsoluongmuasanpham.Focus();
                 return false;
             }
+            if(Int32.Parse(txtsoluongmuasanpham.Text)<=0)
+            {
+                MessageBox.Show("Số lượng phải lớn hơn 0", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtsoluongmuasanpham.Focus();
+                return false;
+            }    
             return true;
         }
 
@@ -363,6 +334,9 @@ namespace demo1
         {
             if (CheckControl())
             {
+                string masanpham = txtmasp.Text;
+                dsctsp = customerCTSPBUS.LayDsctspch(masanpham, macuahang);
+                bsctsp.DataSource = dsctsp.ToList();
                 int ktthemlist = 16062000;
                 SanPhamban sanpham = new SanPhamban();
                 sanpham.MaSP = txtmasp.Text;
@@ -371,13 +345,27 @@ namespace demo1
                 sanpham.SoLuong = txtsoluongmuasanpham.Text;
                 sanpham.MaKM = txtkhuyenmai.Text;
                 sanpham.GiaBan = txtDonGia.Text;
+                int ktsp = 14071999;
                 foreach (SanPhamban listsp in listsanphamban)
                 {
                     if (listsp.MaSP == txtmasp.Text && listsp.MaMau == txtmamau.Text && listsp.MaSize == txtkichthuoc.Text)
                     {
                         MessageBox.Show("san pham da ton tai trong hoa don", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         ktthemlist = 0;
+                        ktsp = 0;
                     }
+                }
+                foreach (CTSanPhamDTO cv in dsctsp)
+                {
+                    if(cv.MaSP==txtmasp.Text && cv.MaMau==txtmamau.Text && cv.KichThuoc==txtkichthuoc.Text && ktsp==14071999)
+                    {
+                        if(Int32.Parse(cv.SoLuong)-Int32.Parse(txtsoluongmuasanpham.Text) < 0)
+                        {
+                            MessageBox.Show("không đủ sản phẩm bán", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            ktthemlist = 0;
+                            txtsoluongmuasanpham.Focus();
+                        }    
+                    }    
                 }
                 if (ktthemlist == 16062000)
                 {

@@ -14,7 +14,6 @@ namespace DAO
             CTKhuyenMai pn = new CTKhuyenMai();
             pn.MaKM = "";
             pn.MaSP = "";
-            pn.MaCH = "";
             pn.GiamGia = "";
             pn.MaKH = "";
             pn.MaCTKM = "";
@@ -30,7 +29,6 @@ namespace DAO
             {
                 MaKM = u.MaKM,
                 MaSP=u.MaSP,
-                MaCH=u.MaCH,
                 GiamGia=u.GiamGia,
                 MaKH=u.MaKH,
                 MaCTKM=u.MaCTKM,
@@ -46,7 +44,6 @@ namespace DAO
             {
                 MaKM = u.MaKM,
                 MaSP = u.MaSP,
-                MaCH = u.MaCH,
                 GiamGia = u.GiamGia,
                 MaKH = u.MaKH,
                 MaCTKM = u.MaCTKM,
@@ -61,7 +58,6 @@ namespace DAO
             {
                 MaKM = u.MaKM,
                 MaSP = u.MaSP,
-                MaCH = u.MaCH,
                 GiamGia = u.GiamGia,
                 MaKH = u.MaKH,
                 MaCTKM = u.MaCTKM,
@@ -78,7 +74,6 @@ namespace DAO
             {
                 customer.MaKM = sp.MaKM;
                 customer.MaSP = sp.MaSP;
-                customer.MaCH = sp.MaCH;
                 customer.GiamGia = sp.GiamGia;
                 customer.MaKH = sp.MaKH;
                 customer.MaCTKM = sp.MaCTKM;
@@ -98,7 +93,6 @@ namespace DAO
             {
                 CTKhuyenMai customer = demos.CTKhuyenMais.Where(u => u.MaCTKM == hd.MaCTKM).SingleOrDefault();
                 customer.MaSP = hd.MaSP;
-                customer.MaCH = hd.MaCH;
                 customer.GiamGia = hd.GiamGia;
                 customer.MaKH = hd.MaKH;
                 demos.SaveChanges();

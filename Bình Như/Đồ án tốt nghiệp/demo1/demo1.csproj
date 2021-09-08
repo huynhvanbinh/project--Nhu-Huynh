@@ -126,12 +126,6 @@
     <Compile Include="CTSanPham.Designer.cs">
       <DependentUpon>CTSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="CTSPBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CTSPBanHang.Designer.cs">
-      <DependentUpon>CTSPBanHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="CuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,9 +351,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CTSanPham.resx">
       <DependentUpon>CTSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CTSPBanHang.resx">
-      <DependentUpon>CTSPBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuaHang.resx">
       <DependentUpon>CuaHang.cs</DependentUpon>

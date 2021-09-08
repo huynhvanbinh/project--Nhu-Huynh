@@ -40,7 +40,6 @@
     </Key>
     <Property Name="MaKM" Type="nvarchar" MaxLength="10" />
     <Property Name="MaSP" Type="nvarchar" MaxLength="10" />
-    <Property Name="MaCH" Type="nvarchar" MaxLength="20" />
     <Property Name="GiamGia" Type="nvarchar" MaxLength="10" />
     <Property Name="MaKH" Type="nvarchar" MaxLength="20" />
     <Property Name="MaCTKM" Type="nvarchar" MaxLength="20" Nullable="false" />

@@ -41,7 +41,6 @@
     </Key>
     <Property Name="MaKM" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="MaCH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="GiamGia" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="MaKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="MaCTKM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />

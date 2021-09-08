@@ -10,7 +10,6 @@ namespace DTO
     {
         public string MaKM { get; set; }
         public string MaSP { get; set; }
-        public string MaCH { get; set; }
         public string GiamGia { get; set; }
         public string MaKH { get; set; }
         public string MaCTKM { get; set; }

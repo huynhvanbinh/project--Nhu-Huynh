@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ae6f6125f1c4f4cb21160bdf7d3e01c" Name="Diagram1">
+      <Diagram DiagramId="2413966ff3684272a261daf7e3af71ea" Name="Diagram1">
         <EntityTypeShape EntityType="demoModel.ChamCong" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.ChucVu" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.CTHoaDon" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
@@ -16,7 +16,7 @@
         <EntityTypeShape EntityType="demoModel.HoaDon" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.KhachHang" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.KhichThuoc" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="demoModel.KhuyenMai" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="demoModel.KhuyenMai" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.LoaiSanPham" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.LuongNhanVien" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="demoModel.MauSac" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />

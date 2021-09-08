@@ -43,6 +43,7 @@ namespace demo1
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labtennv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@ namespace demo1
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labtennv = new System.Windows.Forms.Label();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
@@ -95,6 +96,17 @@ namespace demo1
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
+            // 
+            // labtennv
+            // 
+            this.labtennv.AutoSize = true;
+            this.labtennv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.labtennv.ForeColor = System.Drawing.Color.Red;
+            this.labtennv.Location = new System.Drawing.Point(128, 397);
+            this.labtennv.Name = "labtennv";
+            this.labtennv.Size = new System.Drawing.Size(75, 25);
+            this.labtennv.TabIndex = 46;
+            this.labtennv.Text = "TenNV";
             // 
             // label1
             // 
@@ -227,7 +239,6 @@ namespace demo1
             this.txtMaHD.SelectionStart = 0;
             this.txtMaHD.ShortcutsEnabled = true;
             this.txtMaHD.Size = new System.Drawing.Size(200, 35);
-            this.txtMaHD.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaHD.TabIndex = 29;
             this.txtMaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaHD.TextMarginBottom = 0;
@@ -463,7 +474,8 @@ namespace demo1
             this.Column7,
             this.Column8,
             this.Column9,
-            this.SoLuong});
+            this.SoLuong,
+            this.Column10});
             this.cthd.Location = new System.Drawing.Point(12, 301);
             this.cthd.Name = "cthd";
             this.cthd.Size = new System.Drawing.Size(550, 180);
@@ -499,16 +511,11 @@ namespace demo1
             this.SoLuong.HeaderText = "So luong";
             this.SoLuong.Name = "SoLuong";
             // 
-            // labtennv
+            // Column10
             // 
-            this.labtennv.AutoSize = true;
-            this.labtennv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.labtennv.ForeColor = System.Drawing.Color.Red;
-            this.labtennv.Location = new System.Drawing.Point(128, 397);
-            this.labtennv.Name = "labtennv";
-            this.labtennv.Size = new System.Drawing.Size(75, 25);
-            this.labtennv.TabIndex = 46;
-            this.labtennv.Text = "TenNV";
+            this.Column10.DataPropertyName = "MaKM";
+            this.Column10.HeaderText = "khuyến mãi";
+            this.Column10.Name = "Column10";
             // 
             // HoaDons
             // 
@@ -551,11 +558,12 @@ namespace demo1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridView cthd;
+        private System.Windows.Forms.Label labtennv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.Label labtennv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

@@ -45,7 +45,6 @@
           </Key>
           <Property Name="MaKM" Type="nvarchar" MaxLength="10" />
           <Property Name="MaSP" Type="nvarchar" MaxLength="10" />
-          <Property Name="MaCH" Type="nvarchar" MaxLength="20" />
           <Property Name="GiamGia" Type="nvarchar" MaxLength="10" />
           <Property Name="MaKH" Type="nvarchar" MaxLength="20" />
           <Property Name="MaCTKM" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -381,7 +380,6 @@
           </Key>
           <Property Name="MaKM" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="MaSP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="MaCH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="GiamGia" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="MaKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="MaCTKM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
@@ -724,7 +722,6 @@
               <MappingFragment StoreEntitySet="CTKhuyenMai">
                 <ScalarProperty Name="MaKM" ColumnName="MaKM" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
-                <ScalarProperty Name="MaCH" ColumnName="MaCH" />
                 <ScalarProperty Name="GiamGia" ColumnName="GiamGia" />
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
                 <ScalarProperty Name="MaCTKM" ColumnName="MaCTKM" />

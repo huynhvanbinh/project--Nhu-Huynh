@@ -43,7 +43,6 @@
         <MappingFragment StoreEntitySet="CTKhuyenMai">
           <ScalarProperty Name="MaKM" ColumnName="MaKM" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
-          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="GiamGia" ColumnName="GiamGia" />
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="MaCTKM" ColumnName="MaCTKM" />
