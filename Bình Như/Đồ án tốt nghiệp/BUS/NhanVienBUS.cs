@@ -14,14 +14,9 @@ namespace BUS
          {
              return demo.layDSKH();
          }
-        public List<NhanVienDTO> LayDskhNgay(string manhanvien, string manhanvien1, string manhanvien2, string manhanvien3, string manhanvien4
-          , string manhanvien5, string manhanvien6, string manhanvien7, string manhanvien8, string manhanvien9, string manhanvien10,
-            string manhanvien11, string manhanvien12, string manhanvien13, string manhanvien14, string manhanvien15, string manhanvien16,
-            string manhanvien17, string manhanvien18, string manhanvien19, string manhanvien20)
+        public List<NhanVienDTO> LayDsnvch(string mach)
         {
-            return demo.layDSKHNgay(manhanvien, manhanvien1, manhanvien2, manhanvien3, manhanvien4, manhanvien5, manhanvien6, manhanvien7,
-                manhanvien8, manhanvien9, manhanvien10, manhanvien11, manhanvien12, manhanvien13, manhanvien14, manhanvien15, manhanvien16,
-                manhanvien17, manhanvien18, manhanvien19, manhanvien20);
+            return demo.layDSNVCH(mach);
         }
         public NhanVienDTO layKH(string makh)
          {

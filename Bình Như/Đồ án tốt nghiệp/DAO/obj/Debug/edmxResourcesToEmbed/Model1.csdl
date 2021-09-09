@@ -4,13 +4,14 @@
     <Key>
       <PropertyRef Name="MaCC" />
     </Key>
-    <Property Name="MaCC" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Ngay" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MaCC" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaNV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoGioLam" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TrangThaiChamCong" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TangCa" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="TangCa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="ChucVu">
     <Key>
@@ -19,7 +20,6 @@
     <Property Name="MaCV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenChucVu" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NhanViens" Relationship="Self.FK_NhanVien_ChucVu" FromRole="ChucVu" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="CTHoaDon">
     <Key>
@@ -187,14 +187,13 @@
     <Key>
       <PropertyRef Name="MaNV" />
     </Key>
-    <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TenNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="SDT" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-    <Property Name="MaCV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaNV" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgayVaoLam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaCV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ChucVu" Relationship="Self.FK_NhanVien_ChucVu" FromRole="NhanVien" ToRole="ChucVu" />
-    <NavigationProperty Name="TaiKhoans" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="NhanVien" ToRole="TaiKhoan" />
+    <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
@@ -256,24 +255,11 @@
     <Key>
       <PropertyRef Name="TaiKhoan1" />
     </Key>
-    <Property Name="TaiKhoan1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NhanVien" Relationship="Self.FK_TaiKhoan_NhanVien" FromRole="TaiKhoan" ToRole="NhanVien" />
+    <Property Name="TaiKhoan1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
   </EntityType>
-  <Association Name="FK_NhanVien_ChucVu">
-    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="0..1" />
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ChucVu">
-        <PropertyRef Name="MaCV" />
-      </Principal>
-      <Dependent Role="NhanVien">
-        <PropertyRef Name="MaCV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_CTKhuyenMai_KhuyenMai">
     <End Role="KhuyenMai" Type="Self.KhuyenMai" Multiplicity="0..1" />
     <End Role="CTKhuyenMai" Type="Self.CTKhuyenMai" Multiplicity="*" />
@@ -283,18 +269,6 @@
       </Principal>
       <Dependent Role="CTKhuyenMai">
         <PropertyRef Name="MaKM" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TaiKhoan_NhanVien">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="NhanVien">
-        <PropertyRef Name="MaNV" />
-      </Principal>
-      <Dependent Role="TaiKhoan">
-        <PropertyRef Name="MaNV" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -322,17 +296,9 @@
     <EntitySet Name="Sizes" EntityType="Self.Size" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
-    <AssociationSet Name="FK_NhanVien_ChucVu" Association="Self.FK_NhanVien_ChucVu">
-      <End Role="ChucVu" EntitySet="ChucVus" />
-      <End Role="NhanVien" EntitySet="NhanViens" />
-    </AssociationSet>
     <AssociationSet Name="FK_CTKhuyenMai_KhuyenMai" Association="Self.FK_CTKhuyenMai_KhuyenMai">
       <End Role="KhuyenMai" EntitySet="KhuyenMais" />
       <End Role="CTKhuyenMai" EntitySet="CTKhuyenMais" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TaiKhoan_NhanVien" Association="Self.FK_TaiKhoan_NhanVien">
-      <End Role="NhanVien" EntitySet="NhanViens" />
-      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

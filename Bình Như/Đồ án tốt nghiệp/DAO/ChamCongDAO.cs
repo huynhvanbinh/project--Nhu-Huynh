@@ -16,6 +16,7 @@ namespace DAO
             hd.Ngay = null;
             hd.MaNV = "";
             hd.SoGioLam = "";
+            hd.MaCH = "";
             hd.TrangThaiChamCong = "";
             hd.TangCa = "";
             hd.TrangThai = "1";
@@ -32,6 +33,23 @@ namespace DAO
                 Ngay = u.Ngay,
                 MaNV = u.MaNV,
                 TangCa = u.TangCa,
+                MaCH=u.MaCH,
+                SoGioLam = u.SoGioLam,
+                TrangThaiChamCong = u.TrangThaiChamCong,
+                TrangThai = u.TrangThai,
+            }).ToList();
+            return Dssp;
+        }
+        public List<ChamCongDTO> layDSCCCH(string ngay, string mach)
+        {
+            List<ChamCongDTO> Dssp = new List<ChamCongDTO>();
+            Dssp = demos.ChamCongs.Where(u => u.TrangThai == "1" && u.Ngay == ngay && u.MaCH==mach).Select(u => new ChamCongDTO
+            {
+                MaCC = u.MaCC,
+                Ngay = u.Ngay,
+                MaNV = u.MaNV,
+                TangCa = u.TangCa,
+                MaCH=u.MaCH,
                 SoGioLam = u.SoGioLam,
                 TrangThaiChamCong = u.TrangThaiChamCong,
                 TrangThai = u.TrangThai,
@@ -46,6 +64,7 @@ namespace DAO
                 MaCC = u.MaCC,
                 Ngay = u.Ngay,
                 MaNV = u.MaNV,
+                MaCH=u.MaCH,
                 SoGioLam = u.SoGioLam,
                 TangCa = u.TangCa,
                 TrangThaiChamCong = u.TrangThaiChamCong,
@@ -60,6 +79,7 @@ namespace DAO
             {
                 MaCC = u.MaCC,
                 Ngay = u.Ngay,
+                MaCH=u.MaCH,
                 MaNV = u.MaNV,
                 SoGioLam = u.SoGioLam,
                 TrangThaiChamCong = u.TrangThaiChamCong,
@@ -76,6 +96,7 @@ namespace DAO
             {
                 customer.MaCC = sp.MaCC;
                 customer.Ngay = sp.Ngay;
+                customer.MaCH = sp.MaCH;
                 customer.MaNV = sp.MaNV;
                 customer.SoGioLam = sp.SoGioLam;
                 customer.TrangThaiChamCong = sp.TrangThaiChamCong;

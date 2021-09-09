@@ -18,7 +18,5 @@ namespace DAO
         public string MaNV { get; set; }
         public string MatKhau { get; set; }
         public string TrangThai { get; set; }
-    
-        public virtual NhanVien NhanVien { get; set; }
     }
 }

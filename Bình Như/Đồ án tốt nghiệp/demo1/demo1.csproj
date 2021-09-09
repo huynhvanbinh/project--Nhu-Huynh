@@ -316,12 +316,6 @@
     <Compile Include="trangchu.Designer.cs">
       <DependentUpon>trangchu.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TrangChus.Designer.cs">
-      <DependentUpon>TrangChus.cs</DependentUpon>
-    </Compile>
     <Compile Include="XuatHangcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,9 +436,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trangchu.resx">
       <DependentUpon>trangchu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrangChus.resx">
-      <DependentUpon>TrangChus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuatHangcs.resx">
       <DependentUpon>XuatHangcs.cs</DependentUpon>

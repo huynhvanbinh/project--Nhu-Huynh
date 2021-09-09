@@ -83,13 +83,13 @@ namespace demo1
             lay.Text = quyen;
             if (maquyen == "AD")
             {
-                MessageBox.Show("Toàn quyền hệ thống");
+                MessageBox.Show("đăng nhập thành công ", "thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 phieunhapxuat.Visible = true;
                 quanly.Visible = true;
             }
-            else if (maquyen == "NV")
+            else if (maquyen == "QLCN")
             {
-                MessageBox.Show("Đăng nhập quyền Nhân Viên");
+                MessageBox.Show("đăng nhập thành công ", "thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 phieunhapxuat.Visible = false;
             }
             labcuahang.Text = macuahang;
@@ -300,6 +300,7 @@ namespace demo1
             ChamCong chamcong = new ChamCong();
             chamcong.FormBorderStyle = FormBorderStyle.None;
             chamcong.Dock = DockStyle.Fill;
+            chamcong.machpublic = macuahang;
             chamcong.MdiParent = this;
             chamcong.Show();
         }
@@ -431,7 +432,7 @@ namespace demo1
                 foreach (TaiKhoanDTO kh in dskh)
                 {
                     if (kh.TaiKhoan.Equals(txtdangnhap.Text) && kh.MatKhau.Equals(GetMD5(txtpass.Text)))
-                    {
+                    {   
                         foreach (NhanVienDTO nv in dsnv)
                         {
                             if (kh.MaNV.Equals(nv.MaNV))
@@ -440,9 +441,8 @@ namespace demo1
                                 {
                                     if (nv.MaCV.Equals(cv.MaCV))
                                     {
-                                        MessageBox.Show("Dang nhap thanh cong với quyền " + cv.TenChucVu);
                                         quyen = nv.TenNV;
-                                        maquyen = cv.MaCV;
+                                        maquyen = cv.MaCV;                                           
                                         manhanvien = nv.MaNV;
                                         macuahang = nv.MaCH;
                                         trangchu_Load();

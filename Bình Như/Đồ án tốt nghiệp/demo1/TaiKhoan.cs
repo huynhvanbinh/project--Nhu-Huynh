@@ -26,7 +26,7 @@ namespace demo1
             }
             return str;
         }
-
+        public string MaNV;
         public TaiKhoan()
         {
             InitializeComponent();
@@ -68,14 +68,8 @@ namespace demo1
             NewKH.TrangThai = "1";
             return NewKH;
         }
-        private void reset()
-        {
-            txtTaiKhoan.Text = "";
-            txtMatKhau.Text = "";
-            txtmanhanvien.Text = "";
-            
-        }
-        private void Them_Click()
+       
+        private void btnthem_Click(object sender, EventArgs e)
         {
             TaiKhoanDTO khAdd = layTTKH_moi();
             if (khAdd.TaiKhoan == "")
@@ -83,25 +77,23 @@ namespace demo1
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
-
             bool kq = customerBUS.DKKH(khAdd);
             MessageBox.Show("Thêm thành công");
-            reset();
             Load_Form();
         }
-        private void bunifuButton3_Click(object sender, EventArgs e)
+
+        private void TaiKhoan_Load(object sender, EventArgs e)
         {
-            reset();
+            txtmanhanvien.Text = MaNV;
+            foreach (TaiKhoanDTO khs in dskh)
+            {
+                if(txtmanhanvien.Text==khs.MaNV)
+                {
+                    MessageBox.Show("nhân viên đã có tài khoản");
+                    btnthem.Enabled = false;
+                }  
+            }
         }
 
-        private void btnthem_Click(object sender, EventArgs e)
-        {
-            Them_Click();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            reset();
-        }
     }
 }

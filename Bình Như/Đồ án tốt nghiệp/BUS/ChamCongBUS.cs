@@ -14,6 +14,10 @@ namespace BUS
         {
             return demo.layDSSP(ngay);
         }
+        public List<ChamCongDTO> LayCCCH(string ngay, string mach)
+        {
+            return demo.layDSCCCH(ngay, mach);
+        }
         public List<ChamCongDTO> LayDsspdk()
         {
             return demo.layDSSPdk();

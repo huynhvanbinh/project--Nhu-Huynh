@@ -18,6 +18,8 @@ namespace demo1
         {
             InitializeComponent();
             dtgv_ttkh.AutoGenerateColumns = false;
+            labmach.Visible = false;
+            labchucvu.Visible = false;
             Load_Form();
         }
         NhanVienBUS customerBUS = new NhanVienBUS();
@@ -34,7 +36,7 @@ namespace demo1
         private void Load_Form()
         {
             Load_DSKH();
-            labmach.Visible = false;
+            
         }
         private void Load_DSKH()
         {
@@ -47,59 +49,66 @@ namespace demo1
             //cua hang
             dsch = customerCHBUS.LayDsch();
             bsch.DataSource = dsch.ToList();
-
+            dtpngay.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
-       
+
         private void dtgv_ttkh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgv_ttkh.SelectedCells.Count > 0)
             {
+                labmach.Visible = true;
+                labchucvu.Visible = true;
                 int i;
                 i = dtgv_ttkh.CurrentRow.Index;
                 txtMaNV.Text = dtgv_ttkh.Rows[i].Cells[0].Value.ToString();
                 txtTenNV.Text = dtgv_ttkh.Rows[i].Cells[1].Value.ToString();
                 txtSoDienThoai.Text = dtgv_ttkh.Rows[i].Cells[2].Value.ToString();
-                txtchucvu.Text = dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
+                labchucvu.Text= dtgv_ttkh.Rows[i].Cells[3].Value.ToString();
+                foreach (NhanVienDTO cv in dskh)
+                {
+                    if(cv.MaNV==txtMaNV.Text)
+                    {
+                        labmach.Text = cv.MaCH;
+                    }    
+                }
             }
         }
         private NhanVienDTO layTTKH_moi()
         {
-            NhanVienDTO NewKH = new NhanVienDTO();           
+            NhanVienDTO NewKH = new NhanVienDTO();
             NewKH.MaNV = string.IsNullOrEmpty(txtMaNV.Text) ? "" : txtMaNV.Text;
             NewKH.TenNV = string.IsNullOrEmpty(txtTenNV.Text) ? "" : txtTenNV.Text;
             NewKH.SDT = string.IsNullOrEmpty(txtSoDienThoai.Text) ? "" : txtSoDienThoai.Text;
-            NewKH.MaCV = string.IsNullOrEmpty(txtchucvu.Text) ? "" : txtchucvu.Text;
-            NewKH.MaCH=string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
+            NewKH.MaCH = string.IsNullOrEmpty(labmach.Text) ? "" : labmach.Text;
+            NewKH.NgayVaoLam = dtpngay.Value.ToString("dd/MM/yyyy");
+            NewKH.MaCV= string.IsNullOrEmpty(labchucvu.Text) ? "" : labchucvu.Text;
             NewKH.TrangThai = "1";
             return NewKH;
         }
 
         private void Them_Click(object sender, EventArgs e)
         {
-            NhanVienDTO khAdd = layTTKH_moi();
-            if (khAdd.TenNV == ""||khAdd.MaNV==""||khAdd.SDT==""||khAdd.MaCV=="")
+            if (CheckControl())
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-            else
-            {
+                txtMaNV.Text = labmach.Text + labchucvu.Text + DateTime.Now.ToString("ddMMyyyyHHmmss");
+                NhanVienDTO khAdd = layTTKH_moi();
                 bool kq = customerBUS.DKKH(khAdd);
                 MessageBox.Show("Thêm thành công");
-                reset();
                 Load_Form();
-            }    
+            }            
         }
-        private void reset()
-        {
-            txtMaNV.Text = "";
-            txtTenNV.Text = "";
-            txtSoDienThoai.Text = "";
-            txtchucvu.Text = "";
-        }
+
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            reset();
+            if(txtMaNV.Text=="")
+            {
+                MessageBox.Show("vui lòng chọn nhân viên tạo tài khoản");
+            }else
+            {
+                TaiKhoan tk = new TaiKhoan();
+                tk.MaNV = txtMaNV.Text;
+                tk.Show();
+            }    
         }
 
         // load du lieu len combobox
@@ -118,15 +127,12 @@ namespace demo1
 
         private void cmbchucvu_onItemSelected(object sender, EventArgs e)
         {
-            Load_DSKH();
-            int intMaNV = dtgv_ttkh.Rows.Count;
-           
+            labchucvu.Visible = true;
             foreach (ChucVuDTO sps in dskhs)
             {
                 if (cmbchucvu.selectedValue == sps.TenChucVu.ToString())
                 {
-                    txtchucvu.Text = sps.MaCV.ToString();
-                    txtMaNV.Text = sps.MaCV + "-0" + " " + intMaNV;
+                    labchucvu.Text = sps.MaCV;
                 }
             }
         }
@@ -175,7 +181,6 @@ namespace demo1
                 NhanVienDTO nv = layTTSP_sua();
                 bool kq = customerBUS.DELETENV(nv);
                 MessageBox.Show("Đã xóa một nhân viên");
-                reset();
                 Load_Form();
             }
         }
@@ -191,5 +196,35 @@ namespace demo1
                 }
             }
         }
+        public bool CheckControl()
+        {
+            if (string.IsNullOrWhiteSpace(txtTenNV.Text))
+            {
+                MessageBox.Show("Vui long nhap tên nhân viên", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenNV.Focus();
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSoDienThoai.Focus();
+                return false;
+            }
+            if (labchucvu.Visible==false)
+            {
+                MessageBox.Show("Vui lòng chọn chức vụ", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbchucvu.Focus();
+                return false;
+            }
+            if (labmach.Visible == false)
+            {
+                MessageBox.Show("Vui lòng chọn cửa hàng", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbcuahang.Focus();
+                return false;
+            }
+            return true;
+        }
+
+       
     }
 }

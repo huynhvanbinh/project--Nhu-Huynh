@@ -7,10 +7,11 @@
           <ScalarProperty Name="MaCC" ColumnName="MaCC" />
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="SoGioLam" ColumnName="SoGioLam" />
           <ScalarProperty Name="TrangThaiChamCong" ColumnName="TrangThaiChamCong" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="TangCa" ColumnName="TangCa" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -203,9 +204,10 @@
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="TenNV" ColumnName="TenNV" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="NgayVaoLam" ColumnName="NgayVaoLam" />
           <ScalarProperty Name="MaCV" ColumnName="MaCV" />
-          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
           <ScalarProperty Name="MaCH" ColumnName="MaCH" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

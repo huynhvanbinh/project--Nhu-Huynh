@@ -13,6 +13,7 @@ namespace DTO
         public string SDT { get; set; }
         public string MaCV { get; set; }
         public string MaCH { get; set; }
+        public string NgayVaoLam { get; set; }
         public string TrangThai { get; set; }
        
     }
