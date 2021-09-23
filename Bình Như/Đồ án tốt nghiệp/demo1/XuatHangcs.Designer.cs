@@ -310,6 +310,7 @@ namespace demo1
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtdongia.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
@@ -415,6 +416,7 @@ namespace demo1
             this.txtSP.TextMarginBottom = 0;
             this.txtSP.TextMarginLeft = 5;
             this.txtSP.TextMarginTop = 0;
+            this.txtSP.TextPlaceholder = "Ma sp";
             this.txtSP.UseSystemPasswordChar = false;
             this.txtSP.WordWrap = true;
             // 
@@ -571,6 +573,7 @@ namespace demo1
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaPX.TextMarginBottom = 0;
             this.txtMaPX.TextMarginLeft = 5;
+            this.txtMaPX.TextMarginTop = 0;
             this.txtMaPX.TextPlaceholder = "Mã phiếu xuất";
             this.txtMaPX.UseSystemPasswordChar = false;
             this.txtMaPX.WordWrap = true;
@@ -1330,7 +1333,7 @@ namespace demo1
             this.bunifuButton1.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Xuaats dden cua hang";
+            this.bunifuButton1.ButtonText = "Xuất đến cửa hàng";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;

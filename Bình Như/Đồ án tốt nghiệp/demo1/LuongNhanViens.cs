@@ -30,7 +30,11 @@ namespace demo1
         NhanVienBUS customerNVBUS = new NhanVienBUS();
         BindingSource bsnv = new BindingSource();
         List<NhanVienDTO> dsnv = new List<NhanVienDTO>();
-      
+        //luong nhan vien
+        LuongNhanVienBUS customerLNVBUS = new LuongNhanVienBUS();
+        BindingSource bslnv = new BindingSource();
+        List<LuongNhanVienDTO> dslnv = new List<LuongNhanVienDTO>();
+
         private void autolistluong()
         {
             foreach (ChamCongDTO cv in dscc)
@@ -39,6 +43,7 @@ namespace demo1
                 int ngaylam = 0;
                 int giolam = 0;
                 int tangca = 0;
+               
                 float hesoluong = 0;
                 DateTime hientai = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
                 DateTime ngay = Convert.ToDateTime(cv.Ngay);
@@ -61,6 +66,7 @@ namespace demo1
                                 if(cc.TangCa!="")
                                 {
                                     tangca = tangca + Int32.Parse(cc.TangCa);
+                                  
                                 }    
                                 ngaylam++;
                             }                                                        
@@ -94,7 +100,7 @@ namespace demo1
                         if(loainv==160600)
                         {
                             classLuongNhanVien luongnhanvien = new classLuongNhanVien();
-                            luongnhanvien.MaLuong = "LT" + DateTime.Now.ToString("MM-") + DateTime.Now.ToString("ddMMyyyyHHmmss");
+                            luongnhanvien.MaLuong = "LT" + cv.MaNV;
                             luongnhanvien.MaNV = cv.MaNV;
                             luongnhanvien.SoNgayLam = "NV PartTime";
                             luongnhanvien.LuongPartTime = txtluongpt.Text;
@@ -108,7 +114,7 @@ namespace demo1
                         if(loainv==04032000)
                         {
                             classLuongNhanVien luongnhanvien = new classLuongNhanVien();
-                            luongnhanvien.MaLuong = "LT" + DateTime.Now.ToString("MM-") + DateTime.Now.ToString("ddMMyyyyHHmmss");
+                            luongnhanvien.MaLuong = "LT" + cv.MaNV;
                             luongnhanvien.MaNV = cv.MaNV;
                             luongnhanvien.SoNgayLam = ngaylam.ToString();
                             luongnhanvien.LuongCoBan = txtluongcoban.Text;
@@ -118,6 +124,7 @@ namespace demo1
                             luongnhanvien.PhuCap = phucap.ToString();
                             float luong1ngay = (Int32.Parse(txtluongcoban.Text) * hesoluong) / 28;
                             luongnhanvien.TienLanh = (ngaylam*luong1ngay+phucap).ToString();
+                            luongnhanvien.Thuong = "0";
                             listluongnhanvien.Add(luongnhanvien);
                             dtgv_ttkh.DataSource = null;
                             dtgv_ttkh.DataSource = listluongnhanvien;
@@ -140,10 +147,127 @@ namespace demo1
             //load nhan vien
             dsnv = customerNVBUS.LayDskh();
             bsnv.DataSource = dscc.ToList();
+            //load luong nhan vien
+            dslnv = customerLNVBUS.LayDskh();
+            bslnv.DataSource = dscc.ToList();
             //load txt
             txtluongcoban.Text = "180000";
             txtphucap.Text = "2000";
             txtluongpt.Text = "1500";
+        }
+
+        private void txtluongcoban_TextChanged(object sender, EventArgs e)
+        {
+            int index = -1;
+            foreach (classLuongNhanVien listlnv in listluongnhanvien)
+            {
+                index++;
+                if(listlnv.LuongCoBan != null)
+                {
+                    listluongnhanvien[index].LuongCoBan = txtluongcoban.Text;
+                    int tangca = Int32.Parse(listluongnhanvien[index].TangCa);
+                    int phucap = Int32.Parse(txtphucap.Text) * Int32.Parse(tangca.ToString());
+                    float hesoluong = float.Parse(listluongnhanvien[index].ThamNien);
+                    int ngaylam = Int32.Parse(listluongnhanvien[index].SoNgayLam);
+                    float luong1ngay = (Int32.Parse(txtluongcoban.Text) * hesoluong) / 28;
+                    listluongnhanvien[index].TienLanh = (ngaylam * luong1ngay + phucap).ToString();
+                }                    
+            } 
+            dtgv_ttkh.DataSource = null;
+            dtgv_ttkh.DataSource = listluongnhanvien;
+            dtgv_ttkh.Refresh();
+        }
+
+        private void txtphucap_TextChanged(object sender, EventArgs e)
+        {
+            int index = -1;
+            foreach (classLuongNhanVien listlnv in listluongnhanvien)
+            {
+                index++;
+                if (listlnv.PhuCap != null)
+                {
+                    int tangca = Int32.Parse(listluongnhanvien[index].TangCa);
+                    int phucap = Int32.Parse(txtphucap.Text) * Int32.Parse(tangca.ToString());
+                    listluongnhanvien[index].PhuCap = phucap.ToString();
+                    float hesoluong = float.Parse(listluongnhanvien[index].ThamNien);
+                    int ngaylam = Int32.Parse(listluongnhanvien[index].SoNgayLam);
+                    float luong1ngay = (Int32.Parse(txtluongcoban.Text) * hesoluong) / 28;
+                    listluongnhanvien[index].TienLanh = (ngaylam * luong1ngay + phucap).ToString();
+                }
+            }
+            dtgv_ttkh.DataSource = null;
+            dtgv_ttkh.DataSource = listluongnhanvien;
+            dtgv_ttkh.Refresh();
+        }
+
+        private void txtluongpt_TextChanged(object sender, EventArgs e)
+        {
+            int index = -1;
+            foreach (classLuongNhanVien listlnv in listluongnhanvien)
+            {
+                index++;
+                if (listlnv.LuongPartTime != null)
+                {
+                    int giolam = Int32.Parse(listluongnhanvien[index].SoGiolam);
+                    listluongnhanvien[index].LuongPartTime = txtluongpt.Text;
+                    listluongnhanvien[index].TienLanh = (giolam * Int32.Parse(txtluongpt.Text)).ToString();
+                }
+            }
+            dtgv_ttkh.DataSource = null;
+            dtgv_ttkh.DataSource = listluongnhanvien;
+            dtgv_ttkh.Refresh();
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            foreach (classLuongNhanVien listsp in listluongnhanvien)
+            {
+                LuongNhanVienDTO layLuong_List()
+                {
+                    LuongNhanVienDTO NewKH = new LuongNhanVienDTO();
+                    NewKH.MaLuong = listsp.MaLuong;
+                    NewKH.MaNV = listsp.MaNV;
+                    NewKH.LuongCoBan = listsp.LuongCoBan;
+                    NewKH.SoNgayLam = listsp.SoNgayLam;
+                    NewKH.TangCa = listsp.TangCa;
+                    NewKH.ThamNien = listsp.ThamNien;
+                    NewKH.PhuCap = listsp.PhuCap;
+                    NewKH.Thuong = txtthuong.Text;
+                    NewKH.TienLanh = listsp.TienLanh;
+                    NewKH.LuongPartTime = listsp.LuongPartTime;
+                    NewKH.SoGioLam = listsp.SoGiolam;
+                    NewKH.Thuong = listsp.Thuong;
+                    NewKH.TrangThai = "1";
+                    return NewKH;
+                }
+                LuongNhanVienDTO khAdd = layLuong_List();
+                bool kq = customerLNVBUS.DKKH(khAdd);
+            }
+            txtluongcoban.Enabled = false;
+            txtluongpt.Enabled = false;
+            txtphucap.Enabled = false;
+            txtthuong.Enabled = false;
+            MessageBox.Show("đã chi trả xong lương tháng " + DateTime.Now.ToString("MM"));
+        }
+
+        private void txtthuong_TextChanged(object sender, EventArgs e)
+        {
+            int index = -1;
+            foreach (classLuongNhanVien listlnv in listluongnhanvien)
+            {
+                index++;
+                if (listlnv.LuongPartTime == null)
+                {
+                    listluongnhanvien[index].Thuong = txtthuong.Text;
+                    float hesoluong = float.Parse(listluongnhanvien[index].ThamNien);
+                    int ngaylam = Int32.Parse(listluongnhanvien[index].SoNgayLam);
+                    float luong1ngay = (Int32.Parse(txtluongcoban.Text) * hesoluong) / 28;
+                    listluongnhanvien[index].TienLanh = (ngaylam* luong1ngay + Int32.Parse(txtthuong.Text)).ToString();
+                }
+            }
+            dtgv_ttkh.DataSource = null;
+            dtgv_ttkh.DataSource = listluongnhanvien;
+            dtgv_ttkh.Refresh();
         }
     }
 }
