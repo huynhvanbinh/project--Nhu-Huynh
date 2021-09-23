@@ -772,3 +772,8 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.HangDaVe.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.NhapHang.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.LuongNhanViens.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.LoadingLuong.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\bin\Debug\CircularProgressBar.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\bin\Debug\WinFormAnimation.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\bin\Debug\CircularProgressBar.xml
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.Loadingphantramluong.resources

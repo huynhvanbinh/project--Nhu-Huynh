@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
@@ -247,9 +248,18 @@ namespace demo1
             txtluongpt.Enabled = false;
             txtphucap.Enabled = false;
             txtthuong.Enabled = false;
-            MessageBox.Show("đã chi trả xong lương tháng " + DateTime.Now.ToString("MM"));
+            bunifuButton1.Enabled = false;
+            using (Loadingphantramluong f1 = new Loadingphantramluong(loading))
+            {
+                f1.ShowDialog(this);
+            }
+            MessageBox.Show("đã chuyển khoản xong lương tháng " + DateTime.Now.ToString("MM"));
         }
-
+        void loading()
+        {
+            for (int i = 0; i < 1000; i++)
+                Thread.Sleep(10);
+        }
         private void txtthuong_TextChanged(object sender, EventArgs e)
         {
             int index = -1;

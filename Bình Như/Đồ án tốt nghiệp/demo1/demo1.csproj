@@ -52,6 +52,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -88,6 +91,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BanHang.cs">
@@ -224,6 +230,18 @@
     </Compile>
     <Compile Include="KhuyenMai.Designer.cs">
       <DependentUpon>KhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingLuong.Designer.cs">
+      <DependentUpon>LoadingLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loadingphantramluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loadingphantramluong.Designer.cs">
+      <DependentUpon>Loadingphantramluong.cs</DependentUpon>
     </Compile>
     <Compile Include="LoaiSanPham.cs">
       <SubType>Form</SubType>
@@ -373,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhuyenMai.resx">
       <DependentUpon>KhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingLuong.resx">
+      <DependentUpon>LoadingLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loadingphantramluong.resx">
+      <DependentUpon>Loadingphantramluong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoaiSanPham.resx">
       <DependentUpon>LoaiSanPham.cs</DependentUpon>
