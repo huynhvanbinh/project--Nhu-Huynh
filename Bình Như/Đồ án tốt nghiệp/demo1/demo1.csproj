@@ -108,17 +108,12 @@
     <Compile Include="ChucVu.Designer.cs">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="classLuongNhanVien.cs" />
     <Compile Include="CTKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CTKhuyenMai.Designer.cs">
       <DependentUpon>CTKhuyenMai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CTPhieuNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CTPhieuNhap.Designer.cs">
-      <DependentUpon>CTPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="CTSanPham.cs">
       <SubType>Form</SubType>
@@ -242,6 +237,12 @@
     <Compile Include="LuongNhanVien.Designer.cs">
       <DependentUpon>LuongNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="LuongNhanViens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongNhanViens.Designer.cs">
+      <DependentUpon>LuongNhanViens.cs</DependentUpon>
+    </Compile>
     <Compile Include="MauSac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,12 +305,6 @@
     <Compile Include="TaiKhoan.Designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="TCHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TCHoaDon.Designer.cs">
-      <DependentUpon>TCHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,12 +317,6 @@
     <Compile Include="XuatHangcs.Designer.cs">
       <DependentUpon>XuatHangcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="XuatHangNew.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XuatHangNew.Designer.cs">
-      <DependentUpon>XuatHangNew.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,9 +328,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CTKhuyenMai.resx">
       <DependentUpon>CTKhuyenMai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CTPhieuNhap.resx">
-      <DependentUpon>CTPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CTSanPham.resx">
       <DependentUpon>CTSanPham.cs</DependentUpon>
@@ -394,6 +380,9 @@
     <EmbeddedResource Include="LuongNhanVien.resx">
       <DependentUpon>LuongNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LuongNhanViens.resx">
+      <DependentUpon>LuongNhanViens.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MauSac.resx">
       <DependentUpon>MauSac.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,17 +420,11 @@
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TCHoaDon.resx">
-      <DependentUpon>TCHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="trangchu.resx">
       <DependentUpon>trangchu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XuatHangcs.resx">
       <DependentUpon>XuatHangcs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XuatHangNew.resx">
-      <DependentUpon>XuatHangNew.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="demoDataSet.xsc">
       <DependentUpon>demoDataSet.xsd</DependentUpon>

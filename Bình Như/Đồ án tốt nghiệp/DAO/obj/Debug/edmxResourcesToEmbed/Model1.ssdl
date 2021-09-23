@@ -148,19 +148,17 @@
     </Key>
     <Property Name="MaLuong" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="MaNV" Type="nvarchar" MaxLength="30" />
-    <Property Name="Thang" Type="nvarchar" MaxLength="30" />
-    <Property Name="Nam" Type="nvarchar" MaxLength="30" />
     <Property Name="LuongCoBan" Type="nvarchar" MaxLength="30" />
     <Property Name="SoNgayLam" Type="nvarchar" MaxLength="30" />
     <Property Name="TangCa" Type="nvarchar" MaxLength="30" />
     <Property Name="ThamNien" Type="nvarchar" MaxLength="30" />
     <Property Name="PhuCap" Type="nvarchar" MaxLength="30" />
     <Property Name="Thuong" Type="nvarchar" MaxLength="30" />
-    <Property Name="HoaHong" Type="nvarchar" MaxLength="30" />
     <Property Name="TienLanh" Type="nvarchar" MaxLength="30" />
     <Property Name="LuongPartTime" Type="nvarchar" MaxLength="30" />
     <Property Name="SoGiolam" Type="nvarchar" MaxLength="30" />
     <Property Name="TrangThai" Type="nvarchar" MaxLength="30" />
+    <Property Name="Ngay" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="MauSac">
     <Key>

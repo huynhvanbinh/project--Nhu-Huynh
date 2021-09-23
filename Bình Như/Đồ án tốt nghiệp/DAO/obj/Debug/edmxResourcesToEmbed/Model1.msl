@@ -161,19 +161,17 @@
         <MappingFragment StoreEntitySet="LuongNhanVien">
           <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-          <ScalarProperty Name="Thang" ColumnName="Thang" />
-          <ScalarProperty Name="Nam" ColumnName="Nam" />
           <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
           <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
           <ScalarProperty Name="TangCa" ColumnName="TangCa" />
           <ScalarProperty Name="ThamNien" ColumnName="ThamNien" />
           <ScalarProperty Name="PhuCap" ColumnName="PhuCap" />
           <ScalarProperty Name="Thuong" ColumnName="Thuong" />
-          <ScalarProperty Name="HoaHong" ColumnName="HoaHong" />
           <ScalarProperty Name="TienLanh" ColumnName="TienLanh" />
           <ScalarProperty Name="LuongPartTime" ColumnName="LuongPartTime" />
           <ScalarProperty Name="SoGiolam" ColumnName="SoGiolam" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

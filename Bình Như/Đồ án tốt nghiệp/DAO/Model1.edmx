@@ -153,19 +153,17 @@
           </Key>
           <Property Name="MaLuong" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="MaNV" Type="nvarchar" MaxLength="30" />
-          <Property Name="Thang" Type="nvarchar" MaxLength="30" />
-          <Property Name="Nam" Type="nvarchar" MaxLength="30" />
           <Property Name="LuongCoBan" Type="nvarchar" MaxLength="30" />
           <Property Name="SoNgayLam" Type="nvarchar" MaxLength="30" />
           <Property Name="TangCa" Type="nvarchar" MaxLength="30" />
           <Property Name="ThamNien" Type="nvarchar" MaxLength="30" />
           <Property Name="PhuCap" Type="nvarchar" MaxLength="30" />
           <Property Name="Thuong" Type="nvarchar" MaxLength="30" />
-          <Property Name="HoaHong" Type="nvarchar" MaxLength="30" />
           <Property Name="TienLanh" Type="nvarchar" MaxLength="30" />
           <Property Name="LuongPartTime" Type="nvarchar" MaxLength="30" />
           <Property Name="SoGiolam" Type="nvarchar" MaxLength="30" />
           <Property Name="TrangThai" Type="nvarchar" MaxLength="30" />
+          <Property Name="Ngay" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="MauSac">
           <Key>
@@ -459,19 +457,17 @@
           </Key>
           <Property Name="MaLuong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Thang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Nam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="LuongCoBan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="SoNgayLam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="TangCa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="ThamNien" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="PhuCap" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Thuong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="HoaHong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="TienLanh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="LuongPartTime" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="SoGiolam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="MauSac">
           <Key>
@@ -776,19 +772,17 @@
               <MappingFragment StoreEntitySet="LuongNhanVien">
                 <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-                <ScalarProperty Name="Thang" ColumnName="Thang" />
-                <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
                 <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
                 <ScalarProperty Name="TangCa" ColumnName="TangCa" />
                 <ScalarProperty Name="ThamNien" ColumnName="ThamNien" />
                 <ScalarProperty Name="PhuCap" ColumnName="PhuCap" />
                 <ScalarProperty Name="Thuong" ColumnName="Thuong" />
-                <ScalarProperty Name="HoaHong" ColumnName="HoaHong" />
                 <ScalarProperty Name="TienLanh" ColumnName="TienLanh" />
                 <ScalarProperty Name="LuongPartTime" ColumnName="LuongPartTime" />
                 <ScalarProperty Name="SoGiolam" ColumnName="SoGiolam" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

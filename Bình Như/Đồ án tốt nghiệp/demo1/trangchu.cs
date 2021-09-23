@@ -265,18 +265,7 @@ namespace demo1
             phieunhap.Show();
         }
 
-        private void cTPhiếuNhậpDemoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (this.ActiveMdiChild != null)
-            {
-                this.ActiveMdiChild.Close();
-            }
-            CTPhieuNhap ctpn = new CTPhieuNhap();
-            ctpn.FormBorderStyle = FormBorderStyle.None;
-            ctpn.Dock = DockStyle.Fill;
-            ctpn.MdiParent = this;
-            ctpn.Show();
-        }
+      
 
         private void phiếuXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -311,7 +300,7 @@ namespace demo1
             {
                 this.ActiveMdiChild.Close();
             }
-            LuongNhanVien luongnhanvien = new LuongNhanVien();
+            LuongNhanViens luongnhanvien = new LuongNhanViens();
             luongnhanvien.FormBorderStyle = FormBorderStyle.None;
             luongnhanvien.Dock = DockStyle.Fill;
             luongnhanvien.MdiParent = this;

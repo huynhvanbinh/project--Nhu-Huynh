@@ -619,7 +619,6 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.ChamCong.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.ChucVu.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTKhuyenMai.resources
-C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CTPhieuNhap.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.CuaHang.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.dangnhap.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.DSNhanVien.resources
@@ -637,7 +636,6 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.SanPham.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.Size.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.TaiKhoan.resources
-C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.TCHoaDon.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.trangchu.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.csproj.GenerateResource.cache
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\RdlCompile.cache
@@ -773,4 +771,4 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghi�
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.SPBanNhieuNhat.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.HangDaVe.resources
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.NhapHang.resources
-C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.XuatHangNew.resources
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\demo1\obj\Debug\demo1.LuongNhanViens.resources

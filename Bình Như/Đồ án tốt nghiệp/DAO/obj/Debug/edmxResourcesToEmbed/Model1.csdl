@@ -150,19 +150,17 @@
     </Key>
     <Property Name="MaLuong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MaNV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="Thang" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="Nam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="LuongCoBan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="SoNgayLam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TangCa" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="ThamNien" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="PhuCap" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Thuong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="HoaHong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TienLanh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="LuongPartTime" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="SoGiolam" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="MauSac">
     <Key>

@@ -69,8 +69,7 @@ namespace demo1
         {
             LuongNhanVienDTO NewKH = new LuongNhanVienDTO();
           
-            NewKH.Thang = DateTime.Now.ToString("MM");
-            NewKH.Nam = DateTime.Now.ToString("yyyy");
+          
             NewKH.TrangThai = "1";
             return NewKH;
         }
@@ -111,8 +110,7 @@ namespace demo1
                     NewKH.PhuCap = luongtangca.ToString() +" VNĐ";
                     NewKH.SoNgayLam = tongngay.ToString();
                     NewKH.TangCa = tangca.ToString()+ " Giờ";
-                    NewKH.Thang = DateTime.Now.ToString("MM");
-                    NewKH.Nam = DateTime.Now.ToString("yyyy");
+                   
                     NewKH.LuongCoBan = "10000";
                     int tiennvlanh = luongtangca + tongngay * 10000;
                     NewKH.TienLanh = tiennvlanh.ToString() + " VNĐ";
@@ -139,8 +137,7 @@ namespace demo1
         private LuongNhanVienDTO layTTKH_delete()
         {
             LuongNhanVienDTO NewKH = new LuongNhanVienDTO();
-            NewKH.Thang = DateTime.Now.ToString("MM");
-            NewKH.Nam = DateTime.Now.ToString("yyyy");
+            
             NewKH.TrangThai = "1";
             return NewKH;
         }

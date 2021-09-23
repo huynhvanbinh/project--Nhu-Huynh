@@ -14,15 +14,13 @@ namespace DAO
             LuongNhanVien chucvu = new LuongNhanVien();
             chucvu.MaLuong = "";
             chucvu.MaNV = "";
-            chucvu.Thang = "";
-            chucvu.Nam = "";
+            chucvu.Ngay = "";
             chucvu.LuongCoBan = "";
             chucvu.SoNgayLam = "";
             chucvu.TangCa = "";
             chucvu.ThamNien = "";
             chucvu.PhuCap = "";
             chucvu.Thuong = "";
-            chucvu.HoaHong = "";
             chucvu.TienLanh = "";
             chucvu.LuongPartTime = "";
             chucvu.SoGiolam = "";
@@ -38,15 +36,13 @@ namespace DAO
             {
                 MaLuong = u.MaLuong,
                 MaNV = u.MaNV,
-                Thang = u.Thang,
-                Nam = u.Nam,
+                Ngay = u.Ngay,
                 LuongCoBan = u.LuongCoBan,
                 SoNgayLam = u.SoNgayLam,
                 TangCa = u.TangCa,
                 ThamNien = u.ThamNien,
                 PhuCap = u.PhuCap,
                 Thuong = u.Thuong,
-                HoaHong = u.HoaHong,
                 TienLanh = u.TienLanh,
                 LuongPartTime = u.LuongPartTime,
                 SoGioLam = u.SoGiolam,
@@ -57,19 +53,17 @@ namespace DAO
         public List<LuongNhanVienDTO> layDSLT(string ngay, string nam)
         {
             List<LuongNhanVienDTO> Dskh = new List<LuongNhanVienDTO>();
-            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1" && u.Thang == ngay && u.Nam == nam).Select(u => new LuongNhanVienDTO
+            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1").Select(u => new LuongNhanVienDTO
             {
                 MaLuong = u.MaLuong,
                 MaNV = u.MaNV,
-                Thang = u.Thang,
-                Nam = u.Nam,
+                Ngay=u.Ngay,
                 LuongCoBan = u.LuongCoBan,
                 SoNgayLam = u.SoNgayLam,
                 TangCa = u.TangCa,
                 ThamNien = u.ThamNien,
                 PhuCap = u.PhuCap,
                 Thuong = u.Thuong,
-                HoaHong = u.HoaHong,
                 TienLanh = u.TienLanh,
                 LuongPartTime = u.LuongPartTime,
                 SoGioLam = u.SoGiolam,
@@ -80,19 +74,17 @@ namespace DAO
         public List<LuongNhanVienDTO> layDSCV(string ngay, string nam, string manv)
         {
             List<LuongNhanVienDTO> Dskh = new List<LuongNhanVienDTO>();
-            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1" && u.Thang == ngay && u.Nam == nam && u.MaNV != manv).Select(u => new LuongNhanVienDTO
+            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1"&& u.MaNV != manv).Select(u => new LuongNhanVienDTO
             {
                 MaLuong = u.MaLuong,
                 MaNV = u.MaNV,
-                Thang = u.Thang,
-                Nam = u.Nam,
+                Ngay = u.Ngay,
                 LuongCoBan = u.LuongCoBan,
                 SoNgayLam = u.SoNgayLam,
                 TangCa = u.TangCa,
                 ThamNien = u.ThamNien,
                 PhuCap = u.PhuCap,
                 Thuong = u.Thuong,
-                HoaHong = u.HoaHong,
                 TienLanh = u.TienLanh,
                 LuongPartTime = u.LuongPartTime,
                 SoGioLam = u.SoGiolam,
@@ -103,19 +95,17 @@ namespace DAO
         public List<LuongNhanVienDTO> layDSTK(string ngay, string nam, string noidung)
         {
             List<LuongNhanVienDTO> Dskh = new List<LuongNhanVienDTO>();
-            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1" && u.Thang == ngay && u.Nam == nam && u.MaNV == noidung).Select(u => new LuongNhanVienDTO
+            Dskh = demos.LuongNhanViens.Where(u => u.TrangThai == "1" && u.MaNV == noidung).Select(u => new LuongNhanVienDTO
             {
                 MaLuong = u.MaLuong,
                 MaNV = u.MaNV,
-                Thang = u.Thang,
-                Nam = u.Nam,
+                Ngay = u.Ngay,
                 LuongCoBan = u.LuongCoBan,
                 SoNgayLam = u.SoNgayLam,
                 TangCa = u.TangCa,
                 ThamNien = u.ThamNien,
                 PhuCap = u.PhuCap,
                 Thuong = u.Thuong,
-                HoaHong = u.HoaHong,
                 TienLanh = u.TienLanh,
                 LuongPartTime = u.LuongPartTime,
                 SoGioLam = u.SoGiolam,
@@ -130,15 +120,13 @@ namespace DAO
             {
                 MaLuong = u.MaLuong,
                 MaNV = u.MaNV,
-                Thang = u.Thang,
-                Nam = u.Nam,
+                Ngay = u.Ngay,
                 LuongCoBan = u.LuongCoBan,
                 SoNgayLam = u.SoNgayLam,
                 TangCa = u.TangCa,
                 ThamNien = u.ThamNien,
                 PhuCap = u.PhuCap,
                 Thuong = u.Thuong,
-                HoaHong = u.HoaHong,
                 TienLanh = u.TienLanh,
                 LuongPartTime = u.LuongPartTime,
                 SoGioLam = u.SoGiolam,
@@ -154,15 +142,13 @@ namespace DAO
             {
                 customer.MaLuong = kh.MaLuong;
                 customer.MaNV = kh.MaNV;
-                customer.Thang = kh.Thang;
-                customer.Nam = kh.Nam;
+                customer.Ngay = kh.Ngay;
                 customer.LuongCoBan = kh.LuongCoBan;
                 customer.SoNgayLam = kh.SoNgayLam;
                 customer.TangCa = kh.TangCa;
                 customer.ThamNien = kh.ThamNien;
                 customer.PhuCap = kh.PhuCap;
                 customer.Thuong = kh.Thuong;
-                customer.HoaHong = kh.HoaHong;
                 customer.TienLanh = kh.TienLanh;
                 customer.LuongPartTime = kh.LuongPartTime;
                 customer.SoGiolam = kh.SoGioLam;
@@ -187,7 +173,6 @@ namespace DAO
                 customer.ThamNien = kh.ThamNien;
                 customer.PhuCap = kh.PhuCap;
                 customer.Thuong = kh.Thuong;
-                customer.HoaHong = kh.HoaHong;
                 customer.TienLanh = kh.TienLanh;
                 customer.LuongPartTime = kh.LuongPartTime;
                 customer.SoGiolam = kh.SoGioLam;
