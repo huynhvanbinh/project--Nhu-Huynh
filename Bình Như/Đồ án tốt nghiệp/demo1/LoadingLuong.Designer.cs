@@ -35,7 +35,7 @@ namespace demo1
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(61, 129);
+            this.progressBar1.Location = new System.Drawing.Point(60, 115);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(434, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -45,17 +45,17 @@ namespace demo1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Location = new System.Drawing.Point(76, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 39);
+            this.label1.Size = new System.Drawing.Size(139, 39);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Chuyển khoản";
+            this.label1.Text = "Loading";
             // 
             // LoadingLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(586, 202);
             this.ControlBox = false;
             this.Controls.Add(this.progressBar1);

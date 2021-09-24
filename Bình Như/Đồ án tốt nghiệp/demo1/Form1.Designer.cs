@@ -93,7 +93,7 @@
             this.SDT,
             this.Column1,
             this.Column2});
-            this.dtgv_ttkh.Location = new System.Drawing.Point(12, 29);
+            this.dtgv_ttkh.Location = new System.Drawing.Point(12, 73);
             this.dtgv_ttkh.Name = "dtgv_ttkh";
             this.dtgv_ttkh.ReadOnly = true;
             this.dtgv_ttkh.RowTemplate.Height = 24;
@@ -145,7 +145,7 @@
             this.cmbchucvu.DisabledColor = System.Drawing.Color.Gray;
             this.cmbchucvu.ForeColor = System.Drawing.Color.White;
             this.cmbchucvu.items = new string[0];
-            this.cmbchucvu.Location = new System.Drawing.Point(695, 330);
+            this.cmbchucvu.Location = new System.Drawing.Point(695, 410);
             this.cmbchucvu.Name = "cmbchucvu";
             this.cmbchucvu.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbchucvu.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -157,7 +157,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::demo1.Properties.Resources.mayindemo;
-            this.pictureBox1.Location = new System.Drawing.Point(1007, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(1007, 100);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,7 +202,7 @@
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
-            this.bunifuButton3.Location = new System.Drawing.Point(924, 259);
+            this.bunifuButton3.Location = new System.Drawing.Point(924, 339);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties1.BorderRadius = 3;
@@ -266,7 +266,7 @@
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(924, 146);
+            this.bunifuButton2.Location = new System.Drawing.Point(924, 226);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.BorderRadius = 3;
@@ -330,7 +330,7 @@
             this.Xóa.IdleIconLeftImage = null;
             this.Xóa.IdleIconRightImage = null;
             this.Xóa.IndicateFocus = false;
-            this.Xóa.Location = new System.Drawing.Point(924, 91);
+            this.Xóa.Location = new System.Drawing.Point(924, 171);
             this.Xóa.Name = "Xóa";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties5.BorderRadius = 3;
@@ -384,7 +384,7 @@
             this.txtSoDienThoai.IconRight = null;
             this.txtSoDienThoai.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoDienThoai.Lines = new string[0];
-            this.txtSoDienThoai.Location = new System.Drawing.Point(695, 187);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(695, 267);
             this.txtSoDienThoai.MaxLength = 32767;
             this.txtSoDienThoai.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtSoDienThoai.Modified = false;
@@ -467,7 +467,7 @@
             this.Them.IdleIconLeftImage = null;
             this.Them.IdleIconRightImage = null;
             this.Them.IndicateFocus = false;
-            this.Them.Location = new System.Drawing.Point(924, 27);
+            this.Them.Location = new System.Drawing.Point(924, 107);
             this.Them.Name = "Them";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.BorderRadius = 3;
@@ -521,7 +521,7 @@
             this.txtTenNV.IconRight = null;
             this.txtTenNV.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenNV.Lines = new string[0];
-            this.txtTenNV.Location = new System.Drawing.Point(695, 111);
+            this.txtTenNV.Location = new System.Drawing.Point(695, 191);
             this.txtTenNV.MaxLength = 32767;
             this.txtTenNV.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtTenNV.Modified = false;
@@ -591,10 +591,11 @@
             this.txtMaNV.HideSelection = true;
             this.txtMaNV.IconLeft = null;
             this.txtMaNV.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaNV.IconPadding = 10;
             this.txtMaNV.IconRight = null;
             this.txtMaNV.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaNV.Lines = new string[0];
-            this.txtMaNV.Location = new System.Drawing.Point(695, 20);
+            this.txtMaNV.Location = new System.Drawing.Point(695, 100);
             this.txtMaNV.MaxLength = 32767;
             this.txtMaNV.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtMaNV.Modified = false;
@@ -609,7 +610,6 @@
             stateProperties18.FillColor = System.Drawing.Color.White;
             stateProperties18.ForeColor = System.Drawing.Color.Empty;
             stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMaNV.OnDisabledState = stateProperties18;
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties19.FillColor = System.Drawing.Color.Empty;
             stateProperties19.ForeColor = System.Drawing.Color.Empty;
@@ -645,7 +645,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(1007, 111);
+            this.label1.Location = new System.Drawing.Point(1007, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 24);
             this.label1.TabIndex = 15;
@@ -655,7 +655,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(581, 35);
+            this.label2.Location = new System.Drawing.Point(581, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 16;
@@ -665,7 +665,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(582, 126);
+            this.label3.Location = new System.Drawing.Point(582, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 17;
@@ -675,7 +675,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(582, 202);
+            this.label4.Location = new System.Drawing.Point(582, 282);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 20);
             this.label4.TabIndex = 18;
@@ -685,7 +685,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(581, 284);
+            this.label5.Location = new System.Drawing.Point(581, 364);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 20);
             this.label5.TabIndex = 19;
@@ -695,7 +695,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(585, 345);
+            this.label6.Location = new System.Drawing.Point(585, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 20);
             this.label6.TabIndex = 20;
@@ -705,7 +705,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(581, 399);
+            this.label7.Location = new System.Drawing.Point(581, 479);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 61;
@@ -718,7 +718,7 @@
             this.cmbcuahang.DisabledColor = System.Drawing.Color.Gray;
             this.cmbcuahang.ForeColor = System.Drawing.Color.White;
             this.cmbcuahang.items = new string[0];
-            this.cmbcuahang.Location = new System.Drawing.Point(695, 384);
+            this.cmbcuahang.Location = new System.Drawing.Point(695, 464);
             this.cmbcuahang.Name = "cmbcuahang";
             this.cmbcuahang.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cmbcuahang.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -731,7 +731,7 @@
             // 
             this.labmach.AutoSize = true;
             this.labmach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labmach.Location = new System.Drawing.Point(801, 399);
+            this.labmach.Location = new System.Drawing.Point(801, 479);
             this.labmach.Name = "labmach";
             this.labmach.Size = new System.Drawing.Size(78, 20);
             this.labmach.TabIndex = 64;
@@ -741,7 +741,7 @@
             // 
             this.dtpngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpngay.Location = new System.Drawing.Point(695, 277);
+            this.dtpngay.Location = new System.Drawing.Point(695, 357);
             this.dtpngay.Margin = new System.Windows.Forms.Padding(4);
             this.dtpngay.MaxDate = new System.DateTime(2024, 7, 16, 0, 0, 0, 0);
             this.dtpngay.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
@@ -754,7 +754,7 @@
             // 
             this.labchucvu.AutoSize = true;
             this.labchucvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labchucvu.Location = new System.Drawing.Point(805, 345);
+            this.labchucvu.Location = new System.Drawing.Point(805, 425);
             this.labchucvu.Name = "labchucvu";
             this.labchucvu.Size = new System.Drawing.Size(63, 20);
             this.labchucvu.TabIndex = 66;
@@ -764,7 +764,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 436);
+            this.ClientSize = new System.Drawing.Size(1174, 651);
             this.Controls.Add(this.labchucvu);
             this.Controls.Add(this.dtpngay);
             this.Controls.Add(this.labmach);

@@ -282,6 +282,12 @@
     <Compile Include="NhaCungCap.Designer.cs">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,12 +331,6 @@
     </Compile>
     <Compile Include="SPBanNhieuNhat.Designer.cs">
       <DependentUpon>SPBanNhieuNhat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="subMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="subMenu.Designer.cs">
-      <DependentUpon>subMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <SubType>Form</SubType>
@@ -431,6 +431,9 @@
     <EmbeddedResource Include="NhaCungCap.resx">
       <DependentUpon>NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhapHang.resx">
       <DependentUpon>NhapHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,9 +461,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SPBanNhieuNhat.resx">
       <DependentUpon>SPBanNhieuNhat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="subMenu.resx">
-      <DependentUpon>subMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
