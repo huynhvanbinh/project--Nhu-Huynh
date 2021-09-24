@@ -47,6 +47,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChamCongBUS.cs" />

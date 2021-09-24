@@ -148,3 +148,5 @@ D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.cspr
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.dll
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\obj\Debug\DAO.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\DAO\bin\Debug\VisualReactiveWinForms.xml

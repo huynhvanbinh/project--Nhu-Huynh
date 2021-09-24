@@ -178,3 +178,5 @@ D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\obj\Debug\BUS.cspr
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\obj\Debug\BUS.dll
 D:\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\obj\Debug\BUS.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\Bình Như\Đồ án tốt nghiệp\BUS\bin\Debug\VisualReactiveWinForms.xml

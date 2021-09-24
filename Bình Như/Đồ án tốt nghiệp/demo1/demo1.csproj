@@ -91,6 +91,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VisualReactiveWinForms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0ee513efc52b401d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Visual.Reactive.WinForms.1.0.0\lib\VisualReactiveWinForms.dll</HintPath>
+    </Reference>
     <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
     </Reference>
@@ -207,6 +210,12 @@
     <Compile Include="HoaDons.Designer.cs">
       <DependentUpon>HoaDons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +326,12 @@
     <Compile Include="SPBanNhieuNhat.Designer.cs">
       <DependentUpon>SPBanNhieuNhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="subMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="subMenu.Designer.cs">
+      <DependentUpon>subMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDons.resx">
       <DependentUpon>HoaDons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InHoaDon.rdlc" />
     <EmbeddedResource Include="InHoaDon.resx">
@@ -440,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SPBanNhieuNhat.resx">
       <DependentUpon>SPBanNhieuNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subMenu.resx">
+      <DependentUpon>subMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
