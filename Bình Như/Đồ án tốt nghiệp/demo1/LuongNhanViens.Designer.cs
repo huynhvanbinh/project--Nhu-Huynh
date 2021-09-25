@@ -591,6 +591,7 @@ namespace demo1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgv_ttkh);
             this.Name = "LuongNhanViens";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LuongNhanViens";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();
             this.ResumeLayout(false);

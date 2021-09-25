@@ -95,9 +95,9 @@ namespace demo1
                                         MessageBox.Show("Dang nhap thanh cong với quyền " + cv.TenChucVu);
                                         Home tc = new Home();
                                         //tc.quyen = nv.TenNV;
-                                        //tc.maquyen = cv.MaCV;
-                                        //tc.manhanvien = nv.MaNV;
-                                        //tc.macuahang = nv.MaCH;
+                                        tc.maquyen = cv.MaCV;
+                                        tc.manhanvien = nv.MaNV;
+                                        tc.macuahang = nv.MaCH;
                                         this.Visible = false;
                                         tc.Show();
                                     }    

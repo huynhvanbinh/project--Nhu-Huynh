@@ -425,7 +425,6 @@ namespace demo1
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtkichthuoc.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
@@ -450,6 +449,7 @@ namespace demo1
             this.txtkichthuoc.TabIndex = 78;
             this.txtkichthuoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtkichthuoc.TextMarginBottom = 0;
+            this.txtkichthuoc.TextMarginLeft = 5;
             this.txtkichthuoc.TextMarginTop = 0;
             this.txtkichthuoc.TextPlaceholder = "";
             this.txtkichthuoc.UseSystemPasswordChar = false;
@@ -657,9 +657,12 @@ namespace demo1
             this.txtmamau.SelectionStart = 0;
             this.txtmamau.ShortcutsEnabled = true;
             this.txtmamau.Size = new System.Drawing.Size(200, 35);
+            this.txtmamau.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmamau.TabIndex = 77;
             this.txtmamau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmamau.TextMarginBottom = 0;
+            this.txtmamau.TextMarginLeft = 5;
+            this.txtmamau.TextMarginTop = 0;
             this.txtmamau.TextPlaceholder = "";
             this.txtmamau.UseSystemPasswordChar = false;
             this.txtmamau.WordWrap = true;
@@ -732,6 +735,7 @@ namespace demo1
             this.txtmahoadon.OnIdleState = stateProperties16;
             this.txtmahoadon.PasswordChar = '\0';
             this.txtmahoadon.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtmahoadon.PlaceholderText = "";
             this.txtmahoadon.ReadOnly = false;
             this.txtmahoadon.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtmahoadon.SelectedText = "";
@@ -739,9 +743,11 @@ namespace demo1
             this.txtmahoadon.SelectionStart = 0;
             this.txtmahoadon.ShortcutsEnabled = true;
             this.txtmahoadon.Size = new System.Drawing.Size(200, 35);
+            this.txtmahoadon.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtmahoadon.TabIndex = 71;
             this.txtmahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtmahoadon.TextMarginBottom = 0;
+            this.txtmahoadon.TextMarginLeft = 5;
             this.txtmahoadon.TextMarginTop = 0;
             this.txtmahoadon.TextPlaceholder = "";
             this.txtmahoadon.UseSystemPasswordChar = false;
@@ -963,6 +969,7 @@ namespace demo1
             this.txtkhuyenmai.SelectionStart = 0;
             this.txtkhuyenmai.ShortcutsEnabled = true;
             this.txtkhuyenmai.Size = new System.Drawing.Size(200, 35);
+            this.txtkhuyenmai.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtkhuyenmai.TabIndex = 57;
             this.txtkhuyenmai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtkhuyenmai.TextMarginBottom = 0;
@@ -1070,7 +1077,6 @@ namespace demo1
             this.txtTenSP.HideSelection = true;
             this.txtTenSP.IconLeft = null;
             this.txtTenSP.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSP.IconPadding = 10;
             this.txtTenSP.IconRight = null;
             this.txtTenSP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenSP.Lines = new string[0];
@@ -1110,9 +1116,11 @@ namespace demo1
             this.txtTenSP.SelectionStart = 0;
             this.txtTenSP.ShortcutsEnabled = true;
             this.txtTenSP.Size = new System.Drawing.Size(200, 35);
+            this.txtTenSP.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtTenSP.TabIndex = 45;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenSP.TextMarginBottom = 0;
+            this.txtTenSP.TextMarginLeft = 5;
             this.txtTenSP.TextMarginTop = 0;
             this.txtTenSP.TextPlaceholder = "";
             this.txtTenSP.UseSystemPasswordChar = false;
@@ -1167,7 +1175,6 @@ namespace demo1
             stateProperties35.FillColor = System.Drawing.Color.Empty;
             stateProperties35.ForeColor = System.Drawing.Color.Empty;
             stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDonGia.OnHoverState = stateProperties35;
             stateProperties36.BorderColor = System.Drawing.Color.Silver;
             stateProperties36.FillColor = System.Drawing.Color.White;
             stateProperties36.ForeColor = System.Drawing.Color.Black;
@@ -1183,6 +1190,7 @@ namespace demo1
             this.txtDonGia.SelectionStart = 0;
             this.txtDonGia.ShortcutsEnabled = true;
             this.txtDonGia.Size = new System.Drawing.Size(200, 35);
+            this.txtDonGia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtDonGia.TabIndex = 48;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDonGia.TextMarginBottom = 0;
@@ -1435,6 +1443,7 @@ namespace demo1
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label7);
             this.Name = "BanHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanHang";
             this.Load += new System.EventHandler(this.load_2);
             this.groupBox2.ResumeLayout(false);

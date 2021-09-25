@@ -568,7 +568,6 @@ namespace demo1
             this.txtMaPX.SelectionStart = 0;
             this.txtMaPX.ShortcutsEnabled = true;
             this.txtMaPX.Size = new System.Drawing.Size(200, 35);
-            this.txtMaPX.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtMaPX.TabIndex = 125;
             this.txtMaPX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaPX.TextMarginBottom = 0;
@@ -1649,6 +1648,7 @@ namespace demo1
             this.Controls.Add(this.btnthem);
             this.Controls.Add(this.groupBox2);
             this.Name = "XuatHangcs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XuatHangcs";
             this.Load += new System.EventHandler(this.XuatHangcs_Load);
             this.groupBox2.ResumeLayout(false);

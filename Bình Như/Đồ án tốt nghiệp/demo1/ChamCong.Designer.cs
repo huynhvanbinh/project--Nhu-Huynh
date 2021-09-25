@@ -72,6 +72,11 @@ namespace demo1
             this.label4 = new System.Windows.Forms.Label();
             this.labtangca = new System.Windows.Forms.Label();
             this.nhanvien = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Them = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dtgv_ttkh = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,11 +89,6 @@ namespace demo1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -354,11 +354,9 @@ namespace demo1
             this.txtsdt.SelectionStart = 0;
             this.txtsdt.ShortcutsEnabled = true;
             this.txtsdt.Size = new System.Drawing.Size(200, 40);
-            this.txtsdt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtsdt.TabIndex = 92;
             this.txtsdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtsdt.TextMarginBottom = 0;
-            this.txtsdt.TextMarginLeft = 5;
             this.txtsdt.TextMarginTop = 0;
             this.txtsdt.TextPlaceholder = "";
             this.txtsdt.UseSystemPasswordChar = false;
@@ -429,8 +427,7 @@ namespace demo1
             this.txttennv.SelectionLength = 0;
             this.txttennv.SelectionStart = 0;
             this.txttennv.ShortcutsEnabled = true;
-            this.txttennv.Size = new System.Drawing.Size(234, 40);
-            this.txttennv.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txttennv.Size = new System.Drawing.Size(200, 40);
             this.txttennv.TabIndex = 91;
             this.txttennv.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txttennv.TextMarginBottom = 0;
@@ -570,6 +567,42 @@ namespace demo1
             this.nhanvien.Size = new System.Drawing.Size(605, 255);
             this.nhanvien.TabIndex = 85;
             this.nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.nhanvien_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaNV";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Nhân Viên";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenNV";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Nhân Viên";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "MaCV";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Chức Vụ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgayVaoLam";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày vào làm";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // Them
             // 
@@ -870,42 +903,6 @@ namespace demo1
             this.bunifuButton2.UseDefaultRadiusAndThickness = true;
             this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaNV";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Nhân Viên";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenNV";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên Nhân Viên";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số Điện Thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "MaCV";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Chức Vụ";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgayVaoLam";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày vào làm";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // ChamCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -925,6 +922,7 @@ namespace demo1
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChamCong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChamCong";
             this.Load += new System.EventHandler(this.ChamCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nhanvien)).EndInit();

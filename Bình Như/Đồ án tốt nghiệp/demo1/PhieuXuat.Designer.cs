@@ -747,6 +747,7 @@ namespace demo1
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PhieuXuat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhieuXuat";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();
             this.groupBox1.ResumeLayout(false);

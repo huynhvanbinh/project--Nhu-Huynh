@@ -13,11 +13,30 @@ namespace demo1
 {
     public partial class Home : Form
     {
+        //bien dung cho form
+        public string macuahang;
+        public string manhanvien;
+        public string maquyen;
         public Home()
         {
             InitializeComponent();
             hienicon();
         }
+        void quyenadmin()
+        {
+            tabchamcong.Visible = false;
+            tab4.Visible = false;
+        }
+        void quyenquanly()
+        {
+            tabxuathang.Visible = false;
+            tabnhaphang.Visible = false;
+            btnphieuxuat.Visible = false;
+            btnkhuyenmai.Visible = false;
+            btncuahang.Visible = false;
+            btnluongnhanvien.Visible = false;
+        }
+
         bool menuExpanded = false;
         private void MouseDetect_Tick(object sender, EventArgs e)
         {
@@ -60,6 +79,8 @@ namespace demo1
             //tab cai dat
             btnngonngu.IconVisible = true;
             btngiaodien.IconVisible = true;
+            //tab quan ly
+            btnluongnhanvien.IconVisible = true;
         }
         private void sideMenu_Click(object sender, EventArgs e)
         {
@@ -75,36 +96,130 @@ namespace demo1
        
         private void banhang(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             palsubmenu.Visible = false;
-            BanHang bh = new BanHang();
-            bh.MdiParent = this;
-            bh.Show();
-            palMainMenu.Width = 50;
+            BanHang banhang = new BanHang();
+            banhang.FormBorderStyle = FormBorderStyle.None;
+            banhang.Dock = DockStyle.Fill;
+            banhang.macuahang = macuahang;
+            banhang.manhanvien = manhanvien;
+            banhang.MdiParent = this;
+            banhang.Show();
         }
 
         private void chamcong(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             palsubmenu.Visible = false;
-            palMainMenu.Width = 50;
+            ChamCong chamcong = new ChamCong();
+            chamcong.FormBorderStyle = FormBorderStyle.None;
+            chamcong.Dock = DockStyle.Fill;
+            chamcong.machpublic = macuahang;
+            chamcong.MdiParent = this;
+            chamcong.Show();
         }
 
         private void nhaphang(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             palsubmenu.Visible = false;
-            palMainMenu.Width = 50;
+            NhapHang nhaphang = new NhapHang();
+            nhaphang.FormBorderStyle = FormBorderStyle.None;
+            nhaphang.Dock = DockStyle.Fill;
+            nhaphang.MdiParent = this;
+            nhaphang.Show();
         }
 
         private void xuathang(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             palsubmenu.Visible = false;
-            palMainMenu.Width = 50;
+            XuatHangcs xuathang = new XuatHangcs();
+            xuathang.FormBorderStyle = FormBorderStyle.None;
+            xuathang.Dock = DockStyle.Fill;
+            xuathang.manv = manhanvien;
+            xuathang.macuahang = macuahang;
+            xuathang.MdiParent = this;
+            xuathang.Show();
         }
 
         private void help(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
             palsubmenu.Visible = false;
-            palMainMenu.Width = 50;
+            XuatHangcs xuathang = new XuatHangcs();
+            xuathang.FormBorderStyle = FormBorderStyle.None;
+            xuathang.Dock = DockStyle.Fill;
+            xuathang.MdiParent = this;
+            xuathang.Show();
         }
 
+        private void btnluongnhanvien_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            palsubmenu.Visible = false;
+            LuongNhanViens luongnhanvien = new LuongNhanViens();
+            luongnhanvien.FormBorderStyle = FormBorderStyle.None;
+            luongnhanvien.Dock = DockStyle.Fill;
+            luongnhanvien.MdiParent = this;
+            luongnhanvien.Show();
+        }
+
+        private void btnphieunhap_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            PhieuNhap phieunhap = new PhieuNhap();
+            phieunhap.FormBorderStyle = FormBorderStyle.None;
+            phieunhap.Dock = DockStyle.Fill;
+            phieunhap.MdiParent = this;
+            phieunhap.manv = manhanvien;
+            phieunhap.Show();
+        }
+
+        private void btnphieuxuat_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                this.ActiveMdiChild.Close();
+            }
+            PhieuXuat phieuxuat = new PhieuXuat();
+            phieuxuat.FormBorderStyle = FormBorderStyle.None;
+            phieuxuat.Dock = DockStyle.Fill;
+            phieuxuat.MdiParent = this;
+            phieuxuat.Show();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            if(maquyen == "AD")
+            {
+                quyenadmin();
+            }    
+            if(maquyen == "QLCN")
+            {
+                quyenquanly();
+            }    
+        }
     }
 }

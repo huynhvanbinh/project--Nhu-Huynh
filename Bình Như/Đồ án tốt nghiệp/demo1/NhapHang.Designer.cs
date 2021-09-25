@@ -822,6 +822,7 @@ namespace demo1
             this.Controls.Add(this.cmbkichthuoc);
             this.Controls.Add(this.dtgv_ttkh);
             this.Name = "NhapHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhapHang";
             this.Load += new System.EventHandler(this.NhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ttkh)).EndInit();

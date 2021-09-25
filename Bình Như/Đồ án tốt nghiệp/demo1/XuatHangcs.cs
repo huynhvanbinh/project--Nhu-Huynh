@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
@@ -26,7 +27,13 @@ namespace demo1
         }
         public string manv = "";
         public string tenNV;
-      
+
+        void loading()
+        {
+            for (int i = 0; i < 500; i++)
+                Thread.Sleep(10);
+        }
+
         PhieuXuatBUS customerBUS = new PhieuXuatBUS();
         BindingSource bs = new BindingSource();
         List<PhieuXuatDTO> dskhs = new List<PhieuXuatDTO>();
@@ -359,6 +366,10 @@ namespace demo1
             {
                 if (MessageBox.Show("Bạn có muốn xuất " + listsanpham.Count+ " sản phẩm đến cửa hàng: "+ txtTenChucVu.Text, "thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
+                    using (LoadingLuong f1 = new LoadingLuong(loading))
+                    {
+                        f1.ShowDialog(this);
+                    }
                     taophieuxuat();
                     aotuthemsanphampx();
                     Load_Form();
@@ -444,8 +455,7 @@ namespace demo1
             PhieuXuat phieuxuat = new PhieuXuat();
             phieuxuat.FormBorderStyle = FormBorderStyle.None;
             phieuxuat.Dock = DockStyle.Fill;
-            phieuxuat.MdiParent = this;
-            phieuxuat.Show();
+            phieuxuat.ShowDialog();
         }
     }
 }

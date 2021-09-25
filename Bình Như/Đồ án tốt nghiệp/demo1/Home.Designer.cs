@@ -30,7 +30,7 @@ namespace demo1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation7 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.palMainMenu = new System.Windows.Forms.Panel();
             this.tabhelp = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -66,6 +66,7 @@ namespace demo1
             this.btngiaodien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnluongnhanvien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.palMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -443,22 +444,22 @@ namespace demo1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation7.AnimateOnlyDifferences = true;
+            animation7.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.BlindCoeff")));
+            animation7.LeafCoeff = 0F;
+            animation7.MaxTime = 1F;
+            animation7.MinTime = 0F;
+            animation7.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicCoeff")));
+            animation7.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation7.MosaicShift")));
+            animation7.MosaicSize = 0;
+            animation7.Padding = new System.Windows.Forms.Padding(0);
+            animation7.RotateCoeff = 0F;
+            animation7.RotateLimit = 0F;
+            animation7.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.ScaleCoeff")));
+            animation7.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation7.SlideCoeff")));
+            animation7.TimeCoeff = 0F;
+            animation7.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation7;
             // 
             // palsubmenu
             // 
@@ -500,7 +501,7 @@ namespace demo1
             this.tabControl1.Location = new System.Drawing.Point(3, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 354);
+            this.tabControl1.Size = new System.Drawing.Size(200, 399);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -512,7 +513,7 @@ namespace demo1
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 328);
+            this.tabPage1.Size = new System.Drawing.Size(192, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "0";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -633,6 +634,7 @@ namespace demo1
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnluongnhanvien);
             this.tabPage2.Controls.Add(this.btncuahang);
             this.tabPage2.Controls.Add(this.btnkhuyenmai);
             this.tabPage2.Controls.Add(this.btnsanpham);
@@ -644,7 +646,7 @@ namespace demo1
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 328);
+            this.tabPage2.Size = new System.Drawing.Size(192, 373);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "v";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -838,6 +840,7 @@ namespace demo1
             this.btnphieuxuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnphieuxuat.Textcolor = System.Drawing.Color.Gray;
             this.btnphieuxuat.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnphieuxuat.Click += new System.EventHandler(this.btnphieuxuat_Click);
             // 
             // btnphieunhap
             // 
@@ -876,6 +879,7 @@ namespace demo1
             this.btnphieunhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnphieunhap.Textcolor = System.Drawing.Color.Gray;
             this.btnphieunhap.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnphieunhap.Click += new System.EventHandler(this.btnphieunhap_Click);
             // 
             // btnnhanvien
             // 
@@ -923,7 +927,7 @@ namespace demo1
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(192, 328);
+            this.tabPage3.Size = new System.Drawing.Size(192, 373);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1027,6 +1031,45 @@ namespace demo1
             this.label1.TabIndex = 0;
             this.label1.Text = "cửa hàng như huỳnh";
             // 
+            // btnluongnhanvien
+            // 
+            this.btnluongnhanvien.Active = false;
+            this.btnluongnhanvien.Activecolor = System.Drawing.Color.Gainsboro;
+            this.btnluongnhanvien.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnluongnhanvien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnluongnhanvien.BorderRadius = 0;
+            this.btnluongnhanvien.ButtonText = "    Lương NV";
+            this.btnluongnhanvien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.btnluongnhanvien, BunifuAnimatorNS.DecorationType.None);
+            this.btnluongnhanvien.DisabledColor = System.Drawing.Color.Gray;
+            this.btnluongnhanvien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnluongnhanvien.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnluongnhanvien.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnluongnhanvien.Iconimage")));
+            this.btnluongnhanvien.Iconimage_right = null;
+            this.btnluongnhanvien.Iconimage_right_Selected = null;
+            this.btnluongnhanvien.Iconimage_Selected = null;
+            this.btnluongnhanvien.IconMarginLeft = 0;
+            this.btnluongnhanvien.IconMarginRight = 0;
+            this.btnluongnhanvien.IconRightVisible = false;
+            this.btnluongnhanvien.IconRightZoom = 0D;
+            this.btnluongnhanvien.IconVisible = false;
+            this.btnluongnhanvien.IconZoom = 90D;
+            this.btnluongnhanvien.IsTab = true;
+            this.btnluongnhanvien.Location = new System.Drawing.Point(3, 311);
+            this.btnluongnhanvien.Name = "btnluongnhanvien";
+            this.btnluongnhanvien.Normalcolor = System.Drawing.Color.WhiteSmoke;
+            this.btnluongnhanvien.OnHovercolor = System.Drawing.Color.Gainsboro;
+            this.btnluongnhanvien.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnluongnhanvien.selected = false;
+            this.btnluongnhanvien.Size = new System.Drawing.Size(186, 44);
+            this.btnluongnhanvien.TabIndex = 25;
+            this.btnluongnhanvien.Tag = "0";
+            this.btnluongnhanvien.Text = "    Lương NV";
+            this.btnluongnhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnluongnhanvien.Textcolor = System.Drawing.Color.Gray;
+            this.btnluongnhanvien.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnluongnhanvien.Click += new System.EventHandler(this.btnluongnhanvien_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1040,6 +1083,7 @@ namespace demo1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Home_Load);
             this.palMainMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1091,5 +1135,6 @@ namespace demo1
         private System.Windows.Forms.TabPage tabPage3;
         private Bunifu.Framework.UI.BunifuFlatButton btnngonngu;
         private Bunifu.Framework.UI.BunifuFlatButton btngiaodien;
+        private Bunifu.Framework.UI.BunifuFlatButton btnluongnhanvien;
     }
 }
