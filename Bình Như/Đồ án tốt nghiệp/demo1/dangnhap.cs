@@ -93,11 +93,11 @@ namespace demo1
                                     if(nv.MaCV.Equals(cv.MaCV))
                                     {
                                         MessageBox.Show("Dang nhap thanh cong với quyền " + cv.TenChucVu);
-                                        trangchu tc = new trangchu();
-                                        tc.quyen = nv.TenNV;
-                                        tc.maquyen = cv.MaCV;
-                                        tc.manhanvien = nv.MaNV;
-                                        tc.macuahang = nv.MaCH;
+                                        Home tc = new Home();
+                                        //tc.quyen = nv.TenNV;
+                                        //tc.maquyen = cv.MaCV;
+                                        //tc.manhanvien = nv.MaNV;
+                                        //tc.macuahang = nv.MaCH;
                                         this.Visible = false;
                                         tc.Show();
                                     }    

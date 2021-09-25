@@ -15,7 +15,8 @@ namespace demo1
     {
         public Home()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            hienicon();
         }
         bool menuExpanded = false;
         private void MouseDetect_Tick(object sender, EventArgs e)
@@ -42,54 +43,68 @@ namespace demo1
                 }
             }
         }
+        void hienicon()
+        {
+            //Home
+            btndanhthu.IconVisible = true;
+            btnnghenhac.IconVisible = true;
+            btngoogle.IconVisible = true;
+            //Quan ly
+            btnnhanvien.IconVisible = true;
+            btnphieunhap.IconVisible = true;
+            btnphieuxuat.IconVisible = true;
+            btnsanpham.IconVisible = true;
+            btnhoadon.IconVisible = true;
+            btnkhuyenmai.IconVisible = true;
+            btncuahang.IconVisible = true;
+            //tab cai dat
+            btnngonngu.IconVisible = true;
+            btngiaodien.IconVisible = true;
+        }
         private void sideMenu_Click(object sender, EventArgs e)
         {
-            //if (activeForm != null)
-            //    activeForm.Close();
             palsubmenu.Visible = true;
             VSReactive<int>.SetState("menu", int.Parse(((Control)sender).Tag.ToString()));
-
             VSReactive<int>.Subscribe("menu", w => tabControl1.SelectedIndex = w);
         }
-       // private Form activeForm = null;
         void loading()
         {
             for (int i = 0; i < 500; i++)
                 Thread.Sleep(10);
         }
-        //public void openpanlForm(Form panlForm)
-        //{
-        //    using (LoadingLuong f1 = new LoadingLuong(loading))
-        //    {
-        //        f1.ShowDialog(this);
-        //    }
-        //    if (activeForm != null)
-        //        activeForm.Close();
-        //    activeForm = panlForm;
-        //    panlForm.TopLevel = false;
-        //    panlForm.FormBorderStyle = FormBorderStyle.None;
-        //    panlForm.Dock = DockStyle.Fill;
-        //    panelForm.Controls.Add(panlForm);
-        //    panelForm.Tag = panlForm;
-        //    panlForm.BringToFront();
-        //    panlForm.Show();     
-        //}
-
+       
         private void banhang(object sender, EventArgs e)
         {
             palsubmenu.Visible = false;
-            //openpanlForm(new BanHang());
             BanHang bh = new BanHang();
             bh.MdiParent = this;
             bh.Show();
             palMainMenu.Width = 50;
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        private void chamcong(object sender, EventArgs e)
         {
-            Form1 bh = new Form1();
-            bh.MdiParent = this;
-            bh.Show();
+            palsubmenu.Visible = false;
+            palMainMenu.Width = 50;
         }
+
+        private void nhaphang(object sender, EventArgs e)
+        {
+            palsubmenu.Visible = false;
+            palMainMenu.Width = 50;
+        }
+
+        private void xuathang(object sender, EventArgs e)
+        {
+            palsubmenu.Visible = false;
+            palMainMenu.Width = 50;
+        }
+
+        private void help(object sender, EventArgs e)
+        {
+            palsubmenu.Visible = false;
+            palMainMenu.Width = 50;
+        }
+
     }
 }
