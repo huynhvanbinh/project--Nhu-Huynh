@@ -5,11 +5,13 @@
 <div class="css-treeview">
     <h4>Loại sản phẩm</h4>
     <ul class="tree-list-pad">
+        @{var gt = Session["SanPhamLoai"];}
+        <li><a href="@Url.Action("SanPham","SanPham", new { @Ma=gt})">Tất cả</a></li>
         @foreach (var groupItem in Model.GroupBy(n => n.LoaiSanPham))
         {
 
-            <li><a href="mens.html">@groupItem.Key.TenLoai</a></li>
-            
+            <li><a href="@Url.Action("SPLoai","SanPham", new { @MaLoai=groupItem.Key.MaLoai, @Ma= gt})">@groupItem.Key.TenLoai</a></li>
+
         }
 
     </ul>

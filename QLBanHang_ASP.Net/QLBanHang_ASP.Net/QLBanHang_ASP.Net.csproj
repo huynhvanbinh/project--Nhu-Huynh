@@ -570,6 +570,7 @@
     <Content Include="Views\Home\MenuPartial.cshtml" />
     <Content Include="Views\SanPham\SanPham.cshtml" />
     <Content Include="Views\SanPham\MenuSanPham.cshtml" />
+    <Content Include="Views\SanPham\SPLoai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

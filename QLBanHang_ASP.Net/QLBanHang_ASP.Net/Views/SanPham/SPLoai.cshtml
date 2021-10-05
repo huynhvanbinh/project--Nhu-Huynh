@@ -3,7 +3,7 @@
 @model PagedList.IPagedList<SanPham>
 @{
 
-    ViewBag.Title = "SanPham";
+    ViewBag.Title = "SPLoai";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body>
@@ -20,7 +20,11 @@
                 <div class="clearfix"></div>
             </div>
             <div class="col-md-8 products-right">
-                <h5>Product <span>Tất cả</span></h5>
+                @foreach (var groupby in Model.GroupBy(n => n.LoaiSanPham))
+                {
+                    <h5>Product <span>@groupby.Key.TenLoai</span></h5>
+                }
+
                 <div class="sort-grid">
                     <div class="sorting">
                         <h6>Sort By</h6>
@@ -159,8 +163,8 @@
         @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page, @Ma = ViewBag.Ma }))
     </div>
     <style>
-        .dlink{
-            text-align:center;
+        .dlink {
+            text-align: center;
         }
     </style>
     <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
