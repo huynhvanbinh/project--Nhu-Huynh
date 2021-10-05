@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using QLBanHang_ASP.Net.Models;
 
 namespace QLBanHang_ASP.Net.Controllers
@@ -11,9 +12,10 @@ namespace QLBanHang_ASP.Net.Controllers
     {
         QLBanHangEntities db = new QLBanHangEntities();
 
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View();
+            var lstSP = db.SanPhams;
+            return View(lstSP);
         }
         [HttpGet]
         public ActionResult MenuPartial()

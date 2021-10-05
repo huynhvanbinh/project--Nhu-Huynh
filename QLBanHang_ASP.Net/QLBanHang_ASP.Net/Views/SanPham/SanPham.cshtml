@@ -1,17 +1,192 @@
-﻿
+﻿@using QLBanHang_ASP.Net.Models;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<SanPham>
 @{
+
     ViewBag.Title = "SanPham";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body>
+    <!-- header -->
+    <!-- banner-bootom-w3-agileits -->
+    <div class="banner-bootom-w3-agileits">
+        <div class="container">
+            <!-- mens -->
 
-    <h2>SanPham</h2>
+            <div class="col-md-4 products-left">
 
+                @Html.Action("MenuSanPham", "SanPham")
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-md-8 products-right">
+                <h5>Product <span>Compare(0)</span></h5>
+                <div class="sort-grid">
+                    <div class="sorting">
+                        <h6>Sort By</h6>
+                        <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null">Default</option>
+                            <option value="null">Name(A - Z)</option>
+                            <option value="null">Name(Z - A)</option>
+                            <option value="null">Price(High - Low)</option>
+                            <option value="null">Price(Low - High)</option>
+                            <option value="null">Model(A - Z)</option>
+                            <option value="null">Model(Z - A)</option>
+                        </select>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="sorting">
+                        <h6>Showing</h6>
+                        <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null">7</option>
+                            <option value="null">14</option>
+                            <option value="null">28</option>
+                            <option value="null">35</option>
+                        </select>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                @{ int i = 0;}
+                @foreach (var item in Model)
+                {
+                    if (i < 3)
+                    {
+                        <div class="col-md-4 product-men">
+                            <div class="men-pro-item simpleCart_shelfItem">
+                                <div class="men-thumb-item">
+                                    <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-front" style="height:245.39px;">
+                                    <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                    @if (item.Moi == "1")
+                                    {
+                                        <span class="product-new-top">New</span>
+                                    }
+                                </div>
+                                <div class="item-info-product ">
+                                    <h4><a href="single.html">@item.TenSP</a></h4>
+                                    <div class="info-product-price">
+                                        <span class="item_price">$260.99</span>
+                                        <del>$@item.DonGia</del>
+                                    </div>
+                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="business" value=" ">
+                                                <input type="hidden" name="item_name" value="Party Men's Blazer">
+                                                <input type="hidden" name="amount" value="30.99">
+                                                <input type="hidden" name="discount_amount" value="1.00">
+                                                <input type="hidden" name="currency_code" value="USD">
+                                                <input type="hidden" name="return" value=" ">
+                                                <input type="hidden" name="cancel_return" value=" ">
+                                                <input type="submit" name="submit" value="Add to cart" class="button">
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    i++;
+                }
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="single-pro">
+                @{ int kt = 0;}
+                @foreach (var item in Model)
+                {
+                    if (kt > 2)
+                    {
+                        <div class="col-md-3 product-men">
+                            <div class="men-pro-item simpleCart_shelfItem">
+                                <div class="men-thumb-item">
+                                    <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-front" style="height:245.39px;">
+                                    <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                        </div>
+                                    </div>
+                                    @if (item.Moi == "1")
+                                    {
+                                        <span class="product-new-top">New</span>
+                                    }
+                                </div>
+                                <div class="item-info-product ">
+                                    <h4><a href="single.html">@item.TenSP</a></h4>
+                                    <div class="info-product-price">
+                                        <span class="item_price">$45.99</span>
+                                        <del>$@item.DonGia</del>
+                                    </div>
+                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input type="hidden" name="cmd" value="_cart" />
+                                                <input type="hidden" name="add" value="1" />
+                                                <input type="hidden" name="business" value=" " />
+                                                <input type="hidden" name="item_name" value="Formal Blue Shirt" />
+                                                <input type="hidden" name="amount" value="30.99" />
+                                                <input type="hidden" name="discount_amount" value="1.00" />
+                                                <input type="hidden" name="currency_code" value="USD" />
+                                                <input type="hidden" name="return" value=" " />
+                                                <input type="hidden" name="cancel_return" value=" " />
+                                                <input type="submit" name="submit" value="Add to cart" class="button" />
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    kt++;
+                }
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dlink">
+        Trang @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page, @Ma = ViewBag.Ma }))
+    </div>
+    <style>
+        .dlink{
+            text-align:center;
+        }
+    </style>
     <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
     <!-- js -->
     <script type="text/javascript" src="~/Content/js/jquery-2.1.4.min.js"></script>
     <!-- //js -->
+    <script src="~/Content/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
     <script src="~/Content/js/modernizr.custom.js"></script>
     <!-- Custom-JavaScript-File-Links -->
     <!-- cart-js -->
@@ -28,38 +203,26 @@
     </script>
 
     <!-- //cart-js -->
-    <!-- script for responsive tabs -->
-    <script src="~/Content/js/easy-responsive-tabs.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#horizontalTab').easyResponsiveTabs({
-                type: 'default', //Types: default, vertical, accordion
-                width: 'auto', //auto or any width like 600px
-                fit: true,   // 100% fit in a container
-                closed: 'accordion', // Start closed if in accordion view
-                activate: function (event) { // Callback function if tab is switched
-                    var $tab = $(this);
-                    var $info = $('#tabInfo');
-                    var $name = $('span', $info);
-                    $name.text($tab.text());
-                    $info.show();
+    <!---->
+    <script type='text/javascript'>
+        //<![CDATA[
+        $(window).load(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 9000,
+                values: [1000, 7000],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
                 }
             });
-            $('#verticalTab').easyResponsiveTabs({
-                type: 'vertical',
-                width: 'auto',
-                fit: true
-            });
-        });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+        });//]]>
+
     </script>
-    <!-- //script for responsive tabs -->
-    <!-- stats -->
-    <script src="~/Content/js/jquery.waypoints.min.js"></script>
-    <script src="~/Content/js/jquery.countup.js"></script>
-    <script>
-        $('.counter').countUp();
-    </script>
-    <!-- //stats -->
+    <script type="text/javascript" src="~/Content/js/jquery-ui.js"></script>
+    <!---->
     <!-- start-smoth-scrolling -->
     <script type="text/javascript" src="~/Content/js/move-top.js"></script>
     <script type="text/javascript" src="~/Content/js/jquery.easing.min.js"></script>
