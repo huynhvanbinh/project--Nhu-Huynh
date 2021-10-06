@@ -14,15 +14,17 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class LoaiSanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LoaiSanPham()
         {
             this.SanPhams = new HashSet<SanPham>();
         }
     
-        public int MaLoai { get; set; }
+        public string MaLoai { get; set; }
         public string TenLoai { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

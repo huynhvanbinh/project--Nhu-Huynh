@@ -15,16 +15,15 @@ namespace QLBanHang_ASP.Net.Models
     public partial class CTSanPham
     {
         public int MaCTSP { get; set; }
-        public Nullable<int> MaSP { get; set; }
-        public Nullable<int> MaMau { get; set; }
+        public string MaSP { get; set; }
         public string MaSize { get; set; }
-        public Nullable<int> MaCH { get; set; }
+        public string MaMau { get; set; }
         public Nullable<int> SoLuong { get; set; }
+        public string MaCH { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
-        public virtual SanPham SanPham { get; set; }
         public virtual MauSac MauSac { get; set; }
+        public virtual SanPham SanPham { get; set; }
         public virtual Size Size { get; set; }
-        public virtual CuaHang CuaHang { get; set; }
     }
 }

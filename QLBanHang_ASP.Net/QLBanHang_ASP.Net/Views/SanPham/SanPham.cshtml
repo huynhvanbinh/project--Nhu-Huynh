@@ -59,10 +59,10 @@
                                     <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                            <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                         </div>
                                     </div>
-                                    @if (item.Moi == "1")
+                                    @if (item.moi == "1")
                                     {
                                         <span class="product-new-top">New</span>
                                     }
@@ -113,10 +113,10 @@
                                     <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                     <div class="men-cart-pro">
                                         <div class="inner-men-cart-pro">
-                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                            <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                         </div>
                                     </div>
-                                    @if (item.Moi == "1")
+                                    @if (item.moi == "1")
                                     {
                                         <span class="product-new-top">New</span>
                                     }

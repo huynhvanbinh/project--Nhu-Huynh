@@ -14,9 +14,9 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class TaiKhoan
     {
-        public string TaiKhoan1 { get; set; }
+        public string Username { get; set; }
         public string MatKhau { get; set; }
-        public Nullable<int> MaNV { get; set; }
+        public string MaNV { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }

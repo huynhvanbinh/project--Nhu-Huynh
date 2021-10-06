@@ -14,15 +14,17 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class MauSac
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MauSac()
         {
             this.CTSanPhams = new HashSet<CTSanPham>();
         }
     
-        public int MaMau { get; set; }
+        public string MaMau { get; set; }
         public string TenMau { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTSanPham> CTSanPhams { get; set; }
     }
 }

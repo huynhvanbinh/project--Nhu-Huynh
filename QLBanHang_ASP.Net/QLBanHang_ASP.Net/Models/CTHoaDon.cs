@@ -15,19 +15,18 @@ namespace QLBanHang_ASP.Net.Models
     public partial class CTHoaDon
     {
         public int MaCTHD { get; set; }
-        public Nullable<int> MaDDH { get; set; }
-        public Nullable<int> MaHD { get; set; }
-        public Nullable<int> MaSP { get; set; }
+        public string MaDDH { get; set; }
+        public string MaHD { get; set; }
+        public string MaSP { get; set; }
         public string MaSize { get; set; }
-        public Nullable<int> MaMau { get; set; }
-        public Nullable<int> MaKM { get; set; }
+        public string MaMau { get; set; }
+        public string MaKM { get; set; }
         public Nullable<int> GiaBan { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        public virtual DonDatHang DonDatHang { get; set; }
         public virtual HoaDon HoaDon { get; set; }
         public virtual SanPham SanPham { get; set; }
-        public virtual KhuyenMai KhuyenMai { get; set; }
-        public virtual DonDatHang DonDatHang { get; set; }
     }
 }

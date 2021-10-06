@@ -14,22 +14,18 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class CuaHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CuaHang()
         {
-            this.CTSanPhams = new HashSet<CTSanPham>();
-            this.HoaDons = new HashSet<HoaDon>();
-            this.NhanViens = new HashSet<NhanVien>();
             this.PhieuXuats = new HashSet<PhieuXuat>();
         }
     
-        public int MaCH { get; set; }
+        public string MaCH { get; set; }
         public string TenCH { get; set; }
         public string DiaChi { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
-        public virtual ICollection<CTSanPham> CTSanPhams { get; set; }
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
-        public virtual ICollection<NhanVien> NhanViens { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuXuat> PhieuXuats { get; set; }
     }
 }

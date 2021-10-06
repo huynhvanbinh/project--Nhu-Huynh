@@ -10,11 +10,11 @@ namespace QLBanHang_ASP.Net.Controllers
     public class SanPhamController : Controller
     {
         // GET: SanPham
-        QLBanHangEntities db = new QLBanHangEntities();
+        ShopQuanAoEntities db = new ShopQuanAoEntities();
         [HttpGet]
         public ActionResult SanPham(int? page, string Ma)
         {
-            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioTinh == Ma);
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioiTinh == Ma);
             int PageSize = 15;
             int PageNumber = (page ?? 1);
             ViewBag.ListSP = lstSanPhamLMT;
@@ -25,7 +25,7 @@ namespace QLBanHang_ASP.Net.Controllers
         [HttpPost]
         public ActionResult SanPham(int? page, string Ma, FormCollection f)
         {
-            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioTinh == Ma);
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioiTinh == Ma);
             int PageSize = 15;
             int PageNumber = (page ?? 1);
             ViewBag.ListSP = lstSanPhamLMT;
@@ -36,15 +36,15 @@ namespace QLBanHang_ASP.Net.Controllers
 
         public ActionResult MenuSanPham(int? page, string Ma)
         {
-            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioTinh == Ma);
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioiTinh == Ma);
             return PartialView(lstSanPhamLMT);
         }
 
 
         [HttpGet]
-        public ActionResult SPLoai(int? page, string Ma, int MaLoai)
+        public ActionResult SPLoai(int? page, string Ma, string MaLoai)
         {
-            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioTinh == Ma && n.MaLoai==MaLoai);
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioiTinh == Ma && n.Maloai==MaLoai);
             int PageSize = 15;
             int PageNumber = (page ?? 1);
             ViewBag.ListSP = lstSanPhamLMT;
@@ -55,15 +55,22 @@ namespace QLBanHang_ASP.Net.Controllers
         }
 
         [HttpPost]
-        public ActionResult SPLoai(int? page, string Ma, int MaLoai, FormCollection f)
+        public ActionResult SPLoai(int? page, string Ma, string MaLoai, FormCollection f)
         {
-            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioTinh == Ma && n.MaLoai==MaLoai);
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.GioiTinh == Ma && n.Maloai==MaLoai);
             int PageSize = 15;
             int PageNumber = (page ?? 1);
             ViewBag.ListSP = lstSanPhamLMT;
             ViewBag.Ma = Ma;
             ViewBag.MaLoai = MaLoai;
             return View(lstSanPhamLMT.OrderBy(n => n.MaSP).ToPagedList(PageNumber, PageSize));
+        }
+
+        public ActionResult CTSanPham(string MaSP, string MaLoai)
+        {
+            var lstSanPhamLMT = db.SanPhams.Where(n => n.Maloai==MaLoai);
+            Session["MaSP"] = MaSP;
+            return View(lstSanPhamLMT);
         }
     }
 }

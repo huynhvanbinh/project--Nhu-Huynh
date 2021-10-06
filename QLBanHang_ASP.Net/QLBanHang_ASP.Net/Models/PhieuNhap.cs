@@ -14,17 +14,19 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class PhieuNhap
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuNhap()
         {
             this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
         }
     
-        public int MaPN { get; set; }
-        public string NgayLap { get; set; }
+        public string MaPN { get; set; }
+        public string Ngay { get; set; }
         public Nullable<int> ThanhToan { get; set; }
-        public Nullable<int> MaNV { get; set; }
+        public string MaNV { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }

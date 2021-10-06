@@ -174,88 +174,88 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ChamCong.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChucVu.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTHoaDon.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTKhuyenMai.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTPhieuNhap.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTPhieuXuat.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CTSanPham.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CuaHang.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DonDatHang.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HoaDon.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhachHang.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KhuyenMai.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiKH.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiSanPham.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MauSac.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NhanVien.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuNhap.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhieuXuat.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLSanPham.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSanPham.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLSanPham.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSanPham.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLSanPham.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSanPham.edmx</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPham.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopQuanAoVB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopQuanAoVB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopQuanAoVB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopQuanAoVB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopQuanAoVB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Size.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TaiKhoan.cs">
-      <DependentUpon>QLSanPham.tt</DependentUpon>
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -505,15 +505,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\QLSanPham.Context.tt">
+    <Content Include="Models\ShopQuanAoVB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSanPham.edmx</DependentUpon>
-      <LastGenOutput>QLSanPham.Context.cs</LastGenOutput>
+      <DependentUpon>ShopQuanAoVB.edmx</DependentUpon>
+      <LastGenOutput>ShopQuanAoVB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QLSanPham.tt">
+    <Content Include="Models\ShopQuanAoVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSanPham.edmx</DependentUpon>
-      <LastGenOutput>QLSanPham.cs</LastGenOutput>
+      <DependentUpon>ShopQuanAoVB.edmx</DependentUpon>
+      <LastGenOutput>ShopQuanAoVB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -526,12 +526,12 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="Models\QLSanPham.edmx">
+    <EntityDeploy Include="Models\ShopQuanAoVB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLSanPham.Designer.cs</LastGenOutput>
+      <LastGenOutput>ShopQuanAoVB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\QLSanPham.edmx.diagram">
-      <DependentUpon>QLSanPham.edmx</DependentUpon>
+    <Content Include="Models\ShopQuanAoVB.edmx.diagram">
+      <DependentUpon>ShopQuanAoVB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -571,6 +571,7 @@
     <Content Include="Views\SanPham\SanPham.cshtml" />
     <Content Include="Views\SanPham\MenuSanPham.cshtml" />
     <Content Include="Views\SanPham\SPLoai.cshtml" />
+    <Content Include="Views\SanPham\CTSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

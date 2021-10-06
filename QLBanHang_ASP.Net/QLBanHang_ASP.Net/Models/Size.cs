@@ -14,6 +14,7 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class Size
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Size()
         {
             this.CTSanPhams = new HashSet<CTSanPham>();
@@ -22,8 +23,9 @@ namespace QLBanHang_ASP.Net.Models
         public string MaSize { get; set; }
         public string TenSize { get; set; }
         public string CanNang { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
+        public string KichThuoc { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTSanPham> CTSanPhams { get; set; }
     }
 }

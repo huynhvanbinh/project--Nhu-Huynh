@@ -14,15 +14,17 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class ChucVu
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ChucVu()
         {
             this.NhanViens = new HashSet<NhanVien>();
         }
     
-        public int MaCV { get; set; }
-        public string TenChucVu { get; set; }
+        public string MaCV { get; set; }
+        public string TenCV { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }

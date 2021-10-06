@@ -14,11 +14,11 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class ChamCong
     {
-        public int MaCC { get; set; }
-        public Nullable<int> MaNV { get; set; }
-        public Nullable<int> MaCH { get; set; }
+        public string MaCC { get; set; }
+        public string MaNV { get; set; }
+        public string MaCH { get; set; }
         public string Ngay { get; set; }
-        public Nullable<int> SoGioLam { get; set; }
+        public string SoGioLam { get; set; }
         public Nullable<int> TangCa { get; set; }
         public Nullable<int> TrangThai { get; set; }
     

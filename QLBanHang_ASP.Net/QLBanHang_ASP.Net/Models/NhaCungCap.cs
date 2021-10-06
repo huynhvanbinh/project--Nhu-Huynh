@@ -14,8 +14,8 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class NhaCungCap
     {
-        public int MaNCC { get; set; }
-        public string TenNCC { get; set; }
+        public string MaNCC { get; set; }
+        public string TenMCC { get; set; }
         public string SDT { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }

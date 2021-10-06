@@ -317,7 +317,7 @@
                     <!--/tab_one-->
                     <div class="tab1">
                         @{ int i = 0;}
-                        @foreach (var item in Model.Where(n => n.GioTinh == "Nam"))
+                        @foreach (var item in Model.Where(n => n.GioiTinh == "Nam"))
                         {
                             if (i < 12)
                             {
@@ -328,10 +328,10 @@
                                             <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
-                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                    <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                                 </div>
                                             </div>
-                                            @if (item.Moi == "1")
+                                            @if (item.moi == "1")
                                             {
                                                 <span class="product-new-top">New</span>
                                             }
@@ -378,7 +378,7 @@
                     <div class="tab2">
 
                         @{ int kt = 0;}
-                        @foreach (var item in Model.Where(n => n.GioTinh == "Nữ"))
+                        @foreach (var item in Model.Where(n => n.GioiTinh == "Nữ"))
                         {
                             if (kt < 12)
                             {
@@ -389,10 +389,10 @@
                                             <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
-                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                    <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                                 </div>
                                             </div>
-                                            @if (item.Moi == "1")
+                                            @if (item.moi == "1")
                                             {
                                                 <span class="product-new-top">New</span>
                                             }
@@ -432,7 +432,7 @@
                     <!--//tab_two-->
                     <div class="tab3">
                         @{ int kttui = 0;}
-                        @foreach (var item in Model.Where(n => n.MaLoai==6))
+                        @foreach (var item in Model.Where(n => n.Maloai== "ML06102021154705"))
                         {
                             if (kttui < 12)
                             {
@@ -443,10 +443,10 @@
                                             <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
-                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                    <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                                 </div>
                                             </div>
-                                            @if (item.Moi == "1")
+                                            @if (item.moi == "1")
                                             {
                                                 <span class="product-new-top">New</span>
                                             }
@@ -485,7 +485,7 @@
                     </div>
                     <div class="tab4">
                          @{ int ktdep = 0;}
-                        @foreach (var item in Model.Where(n => n.MaLoai == 3))
+                        @foreach (var item in Model.Where(n => n.Maloai == "ML06102021154702"))
                         {
                             if (ktdep < 12)
                             {
@@ -496,10 +496,10 @@
                                             <img src="~/Content/HinhAnhSP/@item.HinhAnh" alt="" class="pro-image-back" style="height:245.39px;">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro">
-                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                    <a href="@Url.Action("CTSanPham","SanPham", new { @MaSP=item.MaSP, @MaLoai=item.Maloai})" class="link-product-add-cart">Quick View</a>
                                                 </div>
                                             </div>
-                                            @if (item.Moi == "1")
+                                            @if (item.moi == "1")
                                             {
                                                 <span class="product-new-top">New</span>
                                             }

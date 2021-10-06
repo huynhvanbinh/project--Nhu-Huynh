@@ -15,12 +15,12 @@ namespace QLBanHang_ASP.Net.Models
     public partial class CTKhuyenMai
     {
         public int MaCTKM { get; set; }
-        public Nullable<int> MaKM { get; set; }
-        public Nullable<int> MaSP { get; set; }
+        public string MaKM { get; set; }
+        public string MaSP { get; set; }
         public string GiamGia { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
-        public virtual SanPham SanPham { get; set; }
         public virtual KhuyenMai KhuyenMai { get; set; }
+        public virtual SanPham SanPham { get; set; }
     }
 }

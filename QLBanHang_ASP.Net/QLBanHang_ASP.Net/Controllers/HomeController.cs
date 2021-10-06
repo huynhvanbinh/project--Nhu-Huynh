@@ -10,7 +10,7 @@ namespace QLBanHang_ASP.Net.Controllers
 {
     public class HomeController : Controller
     {
-        QLBanHangEntities db = new QLBanHangEntities();
+        ShopQuanAoEntities db = new ShopQuanAoEntities();
 
         public ActionResult Index(int? page)
         {

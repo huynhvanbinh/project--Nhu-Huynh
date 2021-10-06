@@ -14,20 +14,21 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class DonDatHang
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DonDatHang()
         {
             this.CTHoaDons = new HashSet<CTHoaDon>();
         }
     
-        public int MaDDH { get; set; }
+        public string MaDDH { get; set; }
         public string NgayDat { get; set; }
-        public string TrinhTrangGiaoHang { get; set; }
+        public string TrangThaiGiaoHang { get; set; }
         public string DaThanhToan { get; set; }
-        public Nullable<int> MaKH { get; set; }
+        public string MaKH { get; set; }
         public Nullable<int> DaHuy { get; set; }
-        public Nullable<int> TongTien { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
         public virtual KhachHang KhachHang { get; set; }
     }

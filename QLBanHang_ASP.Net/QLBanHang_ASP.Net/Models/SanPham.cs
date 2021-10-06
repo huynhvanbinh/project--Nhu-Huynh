@@ -14,31 +14,34 @@ namespace QLBanHang_ASP.Net.Models
     
     public partial class SanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SanPham()
         {
             this.CTHoaDons = new HashSet<CTHoaDon>();
             this.CTKhuyenMais = new HashSet<CTKhuyenMai>();
-            this.CTPhieuNhaps = new HashSet<CTPhieuNhap>();
-            this.CTPhieuXuats = new HashSet<CTPhieuXuat>();
             this.CTSanPhams = new HashSet<CTSanPham>();
         }
     
-        public int MaSP { get; set; }
+        public string MaSP { get; set; }
         public string TenSP { get; set; }
         public Nullable<int> DonGia { get; set; }
-        public Nullable<int> MaLoai { get; set; }
+        public string Maloai { get; set; }
         public Nullable<int> GiaNhap { get; set; }
         public string MoTa { get; set; }
         public string ThongTin { get; set; }
         public string HinhAnh { get; set; }
-        public string GioTinh { get; set; }
-        public string Moi { get; set; }
+        public string HinhAnh1 { get; set; }
+        public string HinhAnh2 { get; set; }
+        public string HinhAnh3 { get; set; }
+        public string GioiTinh { get; set; }
+        public string moi { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTKhuyenMai> CTKhuyenMais { get; set; }
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
-        public virtual ICollection<CTPhieuXuat> CTPhieuXuats { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTSanPham> CTSanPhams { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
     }
