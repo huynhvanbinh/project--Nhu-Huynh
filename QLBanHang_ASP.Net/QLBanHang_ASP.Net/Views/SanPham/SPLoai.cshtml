@@ -22,6 +22,7 @@
             <div class="col-md-8 products-right">
                 @foreach (var groupby in Model.GroupBy(n => n.LoaiSanPham))
                 {
+                    
                     <h5>Product <span>@groupby.Key.TenLoai</span></h5>
                 }
 

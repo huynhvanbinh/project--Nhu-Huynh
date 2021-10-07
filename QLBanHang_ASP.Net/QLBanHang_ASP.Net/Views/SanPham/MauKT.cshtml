@@ -1,0 +1,34 @@
+﻿@using QLBanHang_ASP.Net.Models;
+@model IEnumerable<CTSanPham>
+<div class="occasional">
+    @if (Model.Count() <=0)
+    {
+        <h5>Màu : Loading</h5>
+        <h5>Kích thước : Loading</h5>
+    }
+    else
+    {
+        <h5>Màu :</h5>
+        foreach (var groupItem in Model.GroupBy(n => n.MauSac))
+        {
+           
+                <div class="colr ert">
+                    <label class="radio"><input type="radio" name="radio" ><i></i>@groupItem.Key.TenMau</label>
+                </div>
+            
+
+        }
+        <div class="clearfix"> </div>
+        <h5>Kích thước :</h5>
+        foreach (var groupItems in Model.GroupBy(n => n.Size))
+        {
+            
+                <div class="colr ert">
+                    <label class="radio"><input type="radio" name="radio1" ><i></i>@groupItems.Key.TenSize</label>
+                </div>
+            
+        }
+
+    }
+
+</div>

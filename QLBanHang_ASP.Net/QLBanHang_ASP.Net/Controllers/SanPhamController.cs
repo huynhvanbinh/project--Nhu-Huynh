@@ -69,8 +69,14 @@ namespace QLBanHang_ASP.Net.Controllers
         public ActionResult CTSanPham(string MaSP, string MaLoai)
         {
             var lstSanPhamLMT = db.SanPhams.Where(n => n.Maloai==MaLoai);
-            Session["MaSP"] = MaSP;
+            ViewBag.CTSP  = db.CTSanPhams.Where(n => n.MaSP == MaSP);
+            Session["MaSP"] = MaSP;           
             return View(lstSanPhamLMT);
+        }
+        public ActionResult MauKT(string MaSP)
+        {
+            var lstSanPhamMAUSIZE = db.CTSanPhams.Where(n => n.MaSP == MaSP);
+            return PartialView(lstSanPhamMAUSIZE);
         }
     }
 }
