@@ -59,3 +59,6 @@ C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\PagedList.Mvc.dll
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\PagedList.xml
 C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\PagedList.Mvc.xml
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\CaptchaMvc.dll
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\CaptchaMvc.pdb
+C:\Users\Van_Binh_16\Desktop\project--Nhu-Huynh\QLBanHang_ASP.Net\QLBanHang_ASP.Net\bin\CaptchaMvc.xml
