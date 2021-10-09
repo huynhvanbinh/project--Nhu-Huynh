@@ -1,7 +1,8 @@
 ﻿@using QLBanHang_ASP.Net.Models;
 @model IEnumerable<CTSanPham>
 <div class="occasional">
-    @if (Model.Count() <=0)
+    @{ int imau = 0; int ikichthuoc = 0;}
+    @if (Model.Count() <= 0)
     {
         <h5>Màu : Loading</h5>
         <h5>Kích thước : Loading</h5>
@@ -11,24 +12,28 @@
         <h5>Màu :</h5>
         foreach (var groupItem in Model.GroupBy(n => n.MauSac))
         {
-           
-                <div class="colr ert">
-                    <label class="radio"><input type="radio" name="radio" ><i></i>@groupItem.Key.TenMau</label>
-                </div>
-            
-
+            <div class="colr ert">
+                <label class="radio"><input type="radio" name="radio"><i></i>@groupItem.Key.TenMau</label>
+            </div>
         }
         <div class="clearfix"> </div>
         <h5>Kích thước :</h5>
         foreach (var groupItems in Model.GroupBy(n => n.Size))
         {
-            
-                <div class="colr ert">
-                    <label class="radio"><input type="radio" name="radio1" ><i></i>@groupItems.Key.TenSize</label>
-                </div>
-            
-        }
+            <div class="colr ert">
+                <label class="radio"><input type="radio" name="radio1" id="@groupItems.Key.TenSize"><i></i>@groupItems.Key.TenSize</label>
+            </div>
 
+
+            <script language="javascript">
+                document.getElementById('@groupItems.Key.TenSize').onclick = function (e) {
+                    if (this.checked) {
+
+                        alert(@groupItems.Key.TenSize);
+                   }
+                };
+            </script>
+        }
     }
 
 </div>

@@ -1,11 +1,14 @@
-﻿<style>
+﻿@using QLBanHang_ASP.Net.Models;
+@model KhachHang
+
+
+<style>
     .w3l-loginblock {
         background-color: black;
         position: fixed;
         top: 5%;
         left: 30%;
         width: 40%;
-       
         margin: auto;
         background-color: rgba(0,0,0,.9);
         z-index: 99;
@@ -13,9 +16,10 @@
         border-style: solid;
         border-color: aqua;
     }
+
     .modal-content {
         border-width: 0px;
-        padding:0px;
+        padding: 0px;
     }
 </style>
 
@@ -33,19 +37,20 @@
         <div class="modal-body modal-body-sub_agile">
             <div class="modal_body_left modal_body_left1">
                 <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
-                <form action="#" method="post">
+                @using (Html.BeginForm())
+                {
                     <div class="styled-input agile-styled-input-top">
-                        <input type="text" name="Name" required="">
-                        <label>Name</label>
+                        @Html.TextBox("TaiKhoan")
+                        <label>Số điện thoại</label>
                         <span></span>
                     </div>
                     <div class="styled-input">
-                        <input type="email" name="Email" required="">
-                        <label>Email</label>
+                        @Html.Password("MatKhau")
+                        <label>Mật khẩu</label>
                         <span></span>
                     </div>
                     <input type="submit" value="Sign In">
-                </form>
+                }
                 <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                     <li>
                         <a href="#" class="facebook">
@@ -73,12 +78,12 @@
                     </li>
                 </ul>
                 <div class="clearfix"></div>
-                <p><a href="#" data-toggle="modal" data-target="#myModal2"> Don't have an account?</a></p>
+                @Html.ActionLink("Don't have an account?","CreateAccount","Login")"
 
             </div>
-            
+
             <div class="clearfix"></div>
         </div>
     </div>
     <!-- //Modal content-->
-    </div>
+</div>

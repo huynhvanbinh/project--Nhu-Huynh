@@ -1,5 +1,6 @@
 ﻿@using QLBanHang_ASP.Net.Models;
 @model IEnumerable<SanPham>
+
 @{
     ViewBag.Title = "CTSanPham";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,13 +10,14 @@
 
     <div class="banner-bootom-w3-agileits">
 
-        @{var loai = Session["MaSP"]; int i = 0;}
+
+        @{var loai = Session["MaSP"]; int i = 0;string mau="1";string kt = "1";}
 
         <div class="container">
             @foreach (var item in Model)
             {
                 if (@item.MaSP == Convert.ToString(loai))
-                {
+                { 
                     <div class="col-md-4 single-right-left ">
                         <div class="grid images_3_of_2">
                             <div class="flexslider">
@@ -47,10 +49,48 @@
                                 <label for="rating1">1</label>
                             </span>
                         </div>
+                        @{ IEnumerable<CTSanPham> lstCTSP = (IEnumerable<CTSanPham>)ViewBag.CTSP;}
+  
+                        <h5>Màu :</h5>
+                        @foreach (var itemctsp in lstCTSP.GroupBy(n => n.MauSac))
+                        {
 
+                            <div class="colr ert">
+                                <label class="radio"><input type="radio" name="radio" id="@itemctsp.Key.TenMau"><i></i>@itemctsp.Key.TenMau</label>
+                            </div>
+                            
+                    <script language="javascript">
+                                document.getElementById('@itemctsp.Key.TenMau').onclick = function (e) {
+                                    if (this.checked) {
+                                       @itemctsp.Key.TenMau=@itemctsp.Key.TenMau;
+                                    }
+                                };
+                    </script>
+                            mau = @itemctsp.Key.TenMau;
+                        }
+                        <div class="clearfix"> </div>
+                        <h5>Kích thước :</h5>
+                        @foreach (var itemctsp in lstCTSP.GroupBy(n => n.Size))
+                        {
+                    <div class="colr ert">
+                        <label class="radio"><input type="radio" name="@itemctsp.Key.TenSize" id="@itemctsp.Key.TenSize"><i></i>@itemctsp.Key.TenSize</label>
+                   
+                    </div>
+                          
+                            <script language="javascript">
+                              document.getElementById('@itemctsp.Key.TenSize').onclick = function (e) {
+                                if (this.checked) {
+                                   
+                                  }
+                                    };
+                            </script>
+                            kt = @itemctsp.Key.TenSize;
+                            
+                        }
 
-                        @Html.Action("MauKT", "SanPham")
+                        @*@Html.Action("MauKT", "SanPham")*@
                         <div class="occasion-cart">
+                            
                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                                 <form action="#" method="post">
                                     <fieldset>
@@ -63,7 +103,8 @@
                                         <input type="hidden" name="currency_code" value="USD">
                                         <input type="hidden" name="return" value=" ">
                                         <input type="hidden" name="cancel_return" value=" ">
-                                        <input type="submit" name="submit" value="Add to cart" class="button">
+                                        <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @strURL = Request.Url.ToString() });;" class="item_add"><input value="Add to cart" class="button"></a>
+
                                     </fieldset>
                                 </form>
                             </div>
@@ -169,10 +210,12 @@
                     <!--/slider_owl-->
                 }
             }
+        
             <div class="w3_agile_latest_arrivals">
                 <h3 class="wthree_text_info">Sản phẩm <span>tương tự</span></h3>
                 @foreach (var items in Model.Where(n => n.MaSP != Convert.ToString(loai)))
                 {
+                
                     if (i < 4)
                     {
                         <div class="col-md-3 product-men single">
@@ -225,6 +268,10 @@
     </div>
     <!--//single_page-->
     <!--/grids-->
+
+
+
+
 
 
 

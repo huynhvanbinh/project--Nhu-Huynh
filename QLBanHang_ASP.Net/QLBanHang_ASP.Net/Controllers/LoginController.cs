@@ -78,10 +78,21 @@ namespace QLBanHang_ASP.Net.Controllers
         [HttpPost]
         public ActionResult DangNhap(KhachHang kh)
         {
-            Session["ThongBao"] = 1;
+            kh.MatKhau = md5(kh.MatKhau);
+            KhachHang tvs = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == kh.SDT && n.MatKhau == kh.MatKhau);
+            if (tvs != null)
+            {
+                Session["TaiKhoan"] = tvs;
+                return RedirectToAction("Index", "Home");
+            }
+            Session["ThongBao"] = null;
             return View();
         }
+        public ActionResult DangXuat()
+        {
+            Session["TaiKhoan"] = null;
+            return RedirectToAction("Index", "Home");
+        }
 
-    
     }
 }
