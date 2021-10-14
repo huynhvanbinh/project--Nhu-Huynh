@@ -80,9 +80,12 @@ namespace QLBanHang_ASP.Net.Controllers
         {
             kh.MatKhau = md5(kh.MatKhau);
             KhachHang tvs = db.KhachHangs.SingleOrDefault(n => n.TaiKhoan == kh.SDT && n.MatKhau == kh.MatKhau);
+            var ddh = db.DonDatHangs.Where(n => n.TrangThaiGiaoHang == "chờ shop check" && n.MaKH==tvs.MaKH);
             if (tvs != null)
             {
+                Session["Dem"] = ddh.Count();
                 Session["TaiKhoan"] = tvs;
+                Session["DonHang"] = ddh;
                 return RedirectToAction("Index", "Home");
             }
             Session["ThongBao"] = null;

@@ -205,6 +205,9 @@
     <Compile Include="Models\DonDatHang.cs">
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GioHang.cs">
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\HoaDon.cs">
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
@@ -400,6 +403,7 @@
     <Content Include="Content\HinhAnhSP\v7.jpg" />
     <Content Include="Content\HinhAnhSP\v8.jpg" />
     <Content Include="Content\HinhAnhSP\v9.jpg" />
+    <Content Include="Content\HinhAnhSP\vd.jpg" />
     <Content Include="Content\HinhAnhSP\vn1.jpg" />
     <Content Include="Content\HinhAnhSP\vn10.jpg" />
     <Content Include="Content\HinhAnhSP\vn11.jpg" />
@@ -453,6 +457,7 @@
     <Content Include="Content\images\d1.jpg" />
     <Content Include="Content\images\d2.jpg" />
     <Content Include="Content\images\d3.jpg" />
+    <Content Include="Content\images\gh1.png" />
     <Content Include="Content\images\inner1.jpg" />
     <Content Include="Content\images\inner2.jpg" />
     <Content Include="Content\images\log_pic.jpg" />
@@ -583,10 +588,12 @@
     <Content Include="Views\SanPham\MauKT.cshtml" />
     <Content Include="Views\Login\CreateAccount.cshtml" />
     <Content Include="Views\Login\DangNhap.cshtml" />
+    <Content Include="Views\Shared\HeaderTopParital.cshtml" />
+    <Content Include="Views\Cart\GioHangPartial.cshtml" />
+    <Content Include="Views\Cart\XemGioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\ItemGioHang\" />
   </ItemGroup>
   <ItemGroup>

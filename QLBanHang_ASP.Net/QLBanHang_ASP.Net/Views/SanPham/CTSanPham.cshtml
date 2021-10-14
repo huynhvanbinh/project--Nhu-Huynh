@@ -11,7 +11,7 @@
     <div class="banner-bootom-w3-agileits">
 
 
-        @{var loai = Session["MaSP"]; int i = 0;string mau="1";string kt = "1";}
+        @{var loai = Session["MaSP"]; int i = 0;string mau="1";string kt = "1";string sl="1";}
 
         <div class="container">
             @foreach (var item in Model)
@@ -33,7 +33,9 @@
                         </div>
                     </div>
                     <div class="col-md-8 single-right-left simpleCart_shelfItem">
+
                         <h3>@item.TenSP</h3>
+
                         <p><span class="item_price">$650</span> <del>@item.DonGia</del></p>
                         <div class="rating1">
                             <span class="starRating">
@@ -50,7 +52,7 @@
                             </span>
                         </div>
                         @{ IEnumerable<CTSanPham> lstCTSP = (IEnumerable<CTSanPham>)ViewBag.CTSP;}
-  
+
                         <h5>Màu :</h5>
                         @foreach (var itemctsp in lstCTSP.GroupBy(n => n.MauSac))
                         {
@@ -58,56 +60,64 @@
                             <div class="colr ert">
                                 <label class="radio"><input type="radio" name="radio" id="@itemctsp.Key.TenMau"><i></i>@itemctsp.Key.TenMau</label>
                             </div>
-                            
-                    <script language="javascript">
+
+                            <script language="javascript">
                                 document.getElementById('@itemctsp.Key.TenMau').onclick = function (e) {
                                     if (this.checked) {
-                                       @itemctsp.Key.TenMau=@itemctsp.Key.TenMau;
-                                    }
+                                                                     }
                                 };
-                    </script>
+                            </script>
+
                             mau = @itemctsp.Key.TenMau;
                         }
                         <div class="clearfix"> </div>
                         <h5>Kích thước :</h5>
                         @foreach (var itemctsp in lstCTSP.GroupBy(n => n.Size))
                         {
-                    <div class="colr ert">
-                        <label class="radio"><input type="radio" name="@itemctsp.Key.TenSize" id="@itemctsp.Key.TenSize"><i></i>@itemctsp.Key.TenSize</label>
-                   
-                    </div>
-                          
+                            <div class="colr ert">
+                                <label class="radio"><input type="radio" name="@itemctsp.Key.TenSize" id="@itemctsp.Key.TenSize"><i></i>@itemctsp.Key.TenSize</label>
+
+                            </div>
+
                             <script language="javascript">
                               document.getElementById('@itemctsp.Key.TenSize').onclick = function (e) {
                                 if (this.checked) {
-                                   
+
                                   }
                                     };
                             </script>
+
                             kt = @itemctsp.Key.TenSize;
-                            
+
+                        }
+                        <div class="clearfix"> </div>
+                       
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @Html.ValidationSummary(true)
+                    <h5>Số lượng:  <input type="number" id="quantity" name="quantity" min="1" max="5"></h5>
+                            sl = "1";
                         }
 
                         @*@Html.Action("MauKT", "SanPham")*@
                         <div class="occasion-cart">
-                            
-                            <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                <form action="#" method="post">
-                                    <fieldset>
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="add" value="1">
-                                        <input type="hidden" name="business" value=" ">
-                                        <input type="hidden" name="item_name" value="Wing Sneakers">
-                                        <input type="hidden" name="amount" value="650.00">
-                                        <input type="hidden" name="discount_amount" value="1.00">
-                                        <input type="hidden" name="currency_code" value="USD">
-                                        <input type="hidden" name="return" value=" ">
-                                        <input type="hidden" name="cancel_return" value=" ">
-                                        <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @strURL = Request.Url.ToString() });;" class="item_add"><input value="Add to cart" class="button"></a>
+                            @if (Session["TaiKhoan"] != null && Session["TaiKhoan"] != "")
+                            {
+                                <hr />
+                                <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @sl = sl, @strURL = Request.Url.ToString() }); data-toggle=" modal" style="background-color:aqua"> Thêm vào giỏ hàng </a>
+                                <hr />
+                                <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @strURL = Request.Url.ToString() }) data-toggle=" modal" style="background-color:coral"> Đặt hàng </a>
 
-                                    </fieldset>
-                                </form>
-                            </div>
+                            }
+                            else
+                            {
+                                <p>Đăng nhập để tiếp tục mua hàng</p>
+                                <a href="@Url.Action("DangNhap","Login")" data-toggle="modal" style="background-color:aqua"> Sign In </a>
+                            }
+
+
 
                         </div>
                         <ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">

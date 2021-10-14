@@ -119,6 +119,19 @@
     <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_DonDatHang" FromRole="DonDatHang" ToRole="CTHoaDon" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK_DonDatHang_KhachHang" FromRole="DonDatHang" ToRole="KhachHang" />
   </EntityType>
+  <EntityType Name="GioHang">
+    <Key>
+      <PropertyRef Name="MaGH" />
+    </Key>
+    <Property Name="MaGH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaMau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="TrinhTrangDonHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="HoaDon">
     <Key>
       <PropertyRef Name="MaHD" />
@@ -559,6 +572,7 @@
     <EntitySet Name="CTSanPhams" EntityType="Self.CTSanPham" />
     <EntitySet Name="CuaHangs" EntityType="Self.CuaHang" />
     <EntitySet Name="DonDatHangs" EntityType="Self.DonDatHang" />
+    <EntitySet Name="GioHangs" EntityType="Self.GioHang" />
     <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
     <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
     <EntitySet Name="KhuyenMais" EntityType="Self.KhuyenMai" />

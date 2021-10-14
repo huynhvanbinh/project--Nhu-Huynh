@@ -104,6 +104,19 @@
     <Property Name="DaHuy" Type="int" />
     <Property Name="TrangThai" Type="int" />
   </EntityType>
+  <EntityType Name="GioHang">
+    <Key>
+      <PropertyRef Name="MaGH" />
+    </Key>
+    <Property Name="MaGH" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaMau" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="int" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="TrinhTrangDonHang" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="HoaDon">
     <Key>
       <PropertyRef Name="MaHD" />
@@ -517,6 +530,7 @@
     <EntitySet Name="CTSanPham" EntityType="Self.CTSanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CuaHang" EntityType="Self.CuaHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DonDatHang" EntityType="Self.DonDatHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GioHang" EntityType="Self.GioHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" Schema="dbo" store:Type="Tables" />

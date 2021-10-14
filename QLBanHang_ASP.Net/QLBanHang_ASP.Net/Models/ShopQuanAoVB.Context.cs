@@ -34,6 +34,7 @@ namespace QLBanHang_ASP.Net.Models
         public virtual DbSet<CTSanPham> CTSanPhams { get; set; }
         public virtual DbSet<CuaHang> CuaHangs { get; set; }
         public virtual DbSet<DonDatHang> DonDatHangs { get; set; }
+        public virtual DbSet<GioHang> GioHangs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }

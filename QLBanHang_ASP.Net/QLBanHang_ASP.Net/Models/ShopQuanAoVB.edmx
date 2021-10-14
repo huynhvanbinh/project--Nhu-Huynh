@@ -109,6 +109,19 @@
           <Property Name="DaHuy" Type="int" />
           <Property Name="TrangThai" Type="int" />
         </EntityType>
+        <EntityType Name="GioHang">
+          <Key>
+            <PropertyRef Name="MaGH" />
+          </Key>
+          <Property Name="MaGH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MaKH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaMau" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaSize" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="int" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="TrinhTrangDonHang" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHD" />
@@ -522,6 +535,7 @@
           <EntitySet Name="CTSanPham" EntityType="Self.CTSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CuaHang" EntityType="Self.CuaHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DonDatHang" EntityType="Self.DonDatHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GioHang" EntityType="Self.GioHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhuyenMai" EntityType="Self.KhuyenMai" Schema="dbo" store:Type="Tables" />
@@ -744,6 +758,19 @@
           <Property Name="TrangThai" Type="Int32" />
           <NavigationProperty Name="CTHoaDons" Relationship="Self.FK_CTHoaDon_DonDatHang" FromRole="DonDatHang" ToRole="CTHoaDon" />
           <NavigationProperty Name="KhachHang" Relationship="Self.FK_DonDatHang_KhachHang" FromRole="DonDatHang" ToRole="KhachHang" />
+        </EntityType>
+        <EntityType Name="GioHang">
+          <Key>
+            <PropertyRef Name="MaGH" />
+          </Key>
+          <Property Name="MaGH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaMau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="TrinhTrangDonHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -1185,6 +1212,7 @@
           <EntitySet Name="CTSanPhams" EntityType="Self.CTSanPham" />
           <EntitySet Name="CuaHangs" EntityType="Self.CuaHang" />
           <EntitySet Name="DonDatHangs" EntityType="Self.DonDatHang" />
+          <EntitySet Name="GioHangs" EntityType="Self.GioHang" />
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
           <EntitySet Name="KhuyenMais" EntityType="Self.KhuyenMai" />
@@ -1400,6 +1428,20 @@
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
                 <ScalarProperty Name="DaHuy" ColumnName="DaHuy" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GioHangs">
+            <EntityTypeMapping TypeName="ShopQuanAoModel.GioHang">
+              <MappingFragment StoreEntitySet="GioHang">
+                <ScalarProperty Name="MaGH" ColumnName="MaGH" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+                <ScalarProperty Name="MaMau" ColumnName="MaMau" />
+                <ScalarProperty Name="MaSize" ColumnName="MaSize" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="TrinhTrangDonHang" ColumnName="TrinhTrangDonHang" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
