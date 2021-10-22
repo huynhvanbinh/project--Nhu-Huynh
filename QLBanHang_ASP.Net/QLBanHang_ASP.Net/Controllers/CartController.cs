@@ -118,5 +118,21 @@ namespace QLBanHang_ASP.Net.Controllers
   
             return RedirectToAction("XemGioHang");
         }
+
+        public ActionResult DonDatHang()
+        {
+            KhachHang tv = (KhachHang)Session["TaiKhoan"];
+            string makh = null;
+            if (Session["TaiKhoan"] != null)
+            {
+                makh = tv.MaKH;
+            }
+            var lstddh = db.DonDatHangs.Where(n => n.MaKH == makh && n.TrangThaiGiaoHang == "chờ shop check");
+            ViewBag.CTDDH = db.CTHoaDons;
+            return View(lstddh);
+        }
+
+
+        
     }
 }

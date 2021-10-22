@@ -1,0 +1,70 @@
+﻿@using QLBanHang_ASP.Net.Models;
+@model IEnumerable<DonDatHang>
+@{
+    ViewBag.Title = "DonDatHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Đơn đặt hàng</h2>
+<hr />
+@foreach (var item in Model)
+{
+<div class="container">
+    <div class="col-md-4 single-right-left ">
+        <div class="grid images_3_of_2">
+            <div class="flexslider">
+                <div class="clearfix"></div>
+                <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                    <img src="~/Content/HinhAnhSP/b2.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 single-right-left simpleCart_shelfItem">
+        <h3>Mã đơn hàng: @item.MaDDH</h3>
+        <p><span class="item_price">Ngày đặt: @item.NgayDat</span></p>
+        @{ IEnumerable<CTHoaDon> lstCTDDH = (IEnumerable<CTHoaDon>)ViewBag.CTDDH;}
+        @{ int i = 0; int? tam = 0; int? tongtien = 0;}
+        @foreach (var dh in lstCTDDH)
+        {
+            if (dh.MaDDH == item.MaDDH)
+            {
+                i++;
+                tam = dh.SoLuong * dh.GiaBan;
+                tongtien = tongtien + tam;
+            }
+        }
+        <p><span class="item_price">Tổng sản phẩm: @i</span></p>
+        @if (item.DaThanhToan == "No")
+        {
+            <p><sptian class="item_price">Tổng tiền thanh toán: @tongtien (thanh toán khi nhận hàng)</sptian></p>
+        }
+        else
+        {
+            <p><sptian class="item_price">Tổng tiền thanh toán: @tongtien</sptian></p>
+        }
+        <p style="color:red;"><sptian class="item_price">Trạng thái đơn hàng: @item.TrangThaiGiaoHang</sptian></p>
+        <a class="huy" href="default.asp" >Hủy</a>
+    </div>
+    <div class="clearfix"> </div>
+    <hr />
+</div>
+}
+
+<style>
+    .huy:link, .huy:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .huy:hover, .huy:active {
+        background-color: red;
+    }
+</style>
+
+
+

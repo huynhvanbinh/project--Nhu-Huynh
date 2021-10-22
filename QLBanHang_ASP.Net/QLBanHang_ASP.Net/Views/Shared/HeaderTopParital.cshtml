@@ -35,8 +35,7 @@
 
                             @if (Session["DonHang"] != null && Session["DonHang"] != "")
                             {
-                                
-                                @Html.ActionLink("Đơn hàng new", "DangXuat", "Login",new { @class = "mau" })
+                                <a href="@Url.Action("DonDatHang","Cart")" data-toggle="modal"> Đơn hàng <sup class="supnew">new</sup> </a>
                             }
                             <br />
                             @Html.ActionLink("Tài khoản của tôi", "DangXuat", "Login")
@@ -128,7 +127,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        .mau{
+        .supnew{
             color:red;
         }
     </style>
