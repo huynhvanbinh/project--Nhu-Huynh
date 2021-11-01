@@ -16,7 +16,7 @@ namespace demo1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dangnhap());
+            Application.Run(new trangchu());
         }
 
         public static bool IsInDesignMode()
