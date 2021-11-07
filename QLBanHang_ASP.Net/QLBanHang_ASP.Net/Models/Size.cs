@@ -24,6 +24,7 @@ namespace QLBanHang_ASP.Net.Models
         public string TenSize { get; set; }
         public string CanNang { get; set; }
         public string KichThuoc { get; set; }
+        public string TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTSanPham> CTSanPhams { get; set; }

@@ -22,5 +22,7 @@ namespace QLBanHang_ASP.Net.Models
         public Nullable<int> TrangThai { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public string TrinhTrangDonHang { get; set; }
+    
+        public virtual KhachHang KhachHang { get; set; }
     }
 }

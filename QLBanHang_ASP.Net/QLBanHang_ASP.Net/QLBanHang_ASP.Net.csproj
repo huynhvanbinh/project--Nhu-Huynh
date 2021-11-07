@@ -184,6 +184,9 @@
     <Compile Include="Models\ChucVu.cs">
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CTDonDatHang.cs">
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CTHoaDon.cs">
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
@@ -222,6 +225,9 @@
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoaiSanPham.cs">
+      <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LuongNhanVien.cs">
       <DependentUpon>ShopQuanAoVB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MauSac.cs">

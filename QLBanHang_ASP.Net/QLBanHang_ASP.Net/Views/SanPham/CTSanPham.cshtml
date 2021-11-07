@@ -68,7 +68,7 @@
                                 };
                             </script>
 
-                            mau = @itemctsp.Key.TenMau;
+                            mau = @itemctsp.Key.MaMau;
                         }
                         <div class="clearfix"> </div>
                         <h5>Kích thước :</h5>
@@ -87,29 +87,20 @@
                                     };
                             </script>
 
-                            kt = @itemctsp.Key.TenSize;
+                            kt = @itemctsp.Key.MaSize;
 
                         }
                         <div class="clearfix"> </div>
                        
-                        @using (Html.BeginForm())
-                        {
-                            @Html.AntiForgeryToken()
-
-                            @Html.ValidationSummary(true)
-                    <h5>Số lượng:  <input type="number" id="quantity" name="quantity" min="1" max="5"></h5>
-                            sl = "1";
-                        }
+                     
 
                         @*@Html.Action("MauKT", "SanPham")*@
                         <div class="occasion-cart">
                             @if (Session["TaiKhoan"] != null && Session["TaiKhoan"] != "")
                             {
                                 <hr />
-                                <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @sl = sl, @strURL = Request.Url.ToString() }); data-toggle=" modal" style="background-color:aqua"> Thêm vào giỏ hàng </a>
-                                <hr />
-                                <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @strURL = Request.Url.ToString() }); data-toggle=" modal" style="background-color:coral"> Đặt hàng </a>
-
+                                <a href="@Url.Action("CreateCart", "Cart", new { @MaSP = item.MaSP, @mau = mau, @kt = kt, @strURL = Request.Url.ToString() })"; data-toggle=" modal" style="background-color:aqua"> Thêm vào giỏ hàng </a>
+                                
                             }
                             else
                             {

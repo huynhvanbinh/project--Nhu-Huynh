@@ -19,6 +19,7 @@ namespace QLBanHang_ASP.Net.Models
         {
             this.ChamCongs = new HashSet<ChamCong>();
             this.HoaDons = new HashSet<HoaDon>();
+            this.LuongNhanViens = new HashSet<LuongNhanVien>();
             this.PhieuNhaps = new HashSet<PhieuNhap>();
             this.PhieuXuats = new HashSet<PhieuXuat>();
             this.TaiKhoans = new HashSet<TaiKhoan>();
@@ -37,6 +38,8 @@ namespace QLBanHang_ASP.Net.Models
         public virtual ChucVu ChucVu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LuongNhanVien> LuongNhanViens { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

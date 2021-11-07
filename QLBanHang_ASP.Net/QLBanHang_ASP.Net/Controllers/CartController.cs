@@ -12,8 +12,9 @@ namespace QLBanHang_ASP.Net.Controllers
         ShopQuanAoEntities db = new ShopQuanAoEntities();
         // GET: Cart
         
-        public ActionResult CreateCart(string MaSP, string mau, string kt, string strURL,  GioHang gh, string sl)
+        public ActionResult CreateCart(string MaSP, string mau, string kt, string strURL)
         {
+            GioHang gh = new GioHang();
             gh.MaGH= DateTime.Now.ToString("MMddyyyyHHmmss");
             gh.MaSP = MaSP;
             gh.MaMau = mau;
@@ -70,7 +71,7 @@ namespace QLBanHang_ASP.Net.Controllers
             return View(lstgh);
         }
 
-
+        string madh;
         public ActionResult DatHang()
         {
             DonDatHang ddh = new DonDatHang();
@@ -81,12 +82,13 @@ namespace QLBanHang_ASP.Net.Controllers
                 ddh.MaKH = tv.MaKH;
             }
             ddh.NgayDat = DateTime.Now.ToString("MM/dd/yyyy");
-            ddh.TrangThaiGiaoHang = "chờ shop check";
+            ddh.TrangThaiGiaoHang = "chờ xử lý";
             ddh.DaHuy = 1;
             ddh.DaThanhToan = "No";
      
             ddh.TrangThai = 1;
-            ddh.MaDDH = DateTime.Now.ToString("MMddyyyyHHmmss");
+            madh=DateTime.Now.ToString("MMddyyyyHHmmss");
+            ddh.MaDDH = madh; 
             db.DonDatHangs.Add(ddh);
             db.SaveChanges();
 
@@ -94,12 +96,12 @@ namespace QLBanHang_ASP.Net.Controllers
             var lstsp = db.SanPhams;
             foreach (var item in lstgh)
             {
-                CTHoaDon cthd = new CTHoaDon();
-                cthd.MaDDH = ddh.MaDDH;
+                CTDonDatHang cthd = new CTDonDatHang();
                 cthd.MaSP = item.MaSP;
                 cthd.MaSize = item.MaSize;
                 cthd.MaMau = item.MaMau;
-               
+                cthd.MaDDH = madh;
+                cthd.MaCTDDH= DateTime.Now.ToString("MMddyyyyHHmmss");
                 foreach (var itemsp in lstsp)
                 {
                     if(item.MaSP==itemsp.MaSP)
@@ -110,12 +112,11 @@ namespace QLBanHang_ASP.Net.Controllers
                 item.TrinhTrangDonHang = "Đã mua";
                 cthd.SoLuong = item.SoLuong;
                 cthd.TrangThai = 1;
-                db.CTHoaDons.Add(cthd);
+                db.CTDonDatHangs.Add(cthd);
                 db.SaveChanges();
                 Session["GioHang"] = cthd;
             }
-            db.SaveChanges();
-  
+            db.SaveChanges();  
             return RedirectToAction("XemGioHang");
         }
 
@@ -127,8 +128,8 @@ namespace QLBanHang_ASP.Net.Controllers
             {
                 makh = tv.MaKH;
             }
-            var lstddh = db.DonDatHangs.Where(n => n.MaKH == makh && n.TrangThaiGiaoHang == "chờ shop check");
-            ViewBag.CTDDH = db.CTHoaDons;
+            var lstddh = db.DonDatHangs.Where(n => n.MaKH == makh && n.TrangThaiGiaoHang == "chờ xử lý");
+            ViewBag.CTDDH = db.CTDonDatHangs;
             return View(lstddh);
         }
 

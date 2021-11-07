@@ -30,11 +30,7 @@ namespace QLBanHang_ASP.Net.Models
         public string MoTa { get; set; }
         public string ThongTin { get; set; }
         public string HinhAnh { get; set; }
-        public string HinhAnh1 { get; set; }
-        public string HinhAnh2 { get; set; }
-        public string HinhAnh3 { get; set; }
         public string GioiTinh { get; set; }
-        public string moi { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

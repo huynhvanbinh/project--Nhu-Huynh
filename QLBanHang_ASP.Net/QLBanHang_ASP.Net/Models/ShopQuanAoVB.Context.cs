@@ -27,6 +27,7 @@ namespace QLBanHang_ASP.Net.Models
     
         public virtual DbSet<ChamCong> ChamCongs { get; set; }
         public virtual DbSet<ChucVu> ChucVus { get; set; }
+        public virtual DbSet<CTDonDatHang> CTDonDatHangs { get; set; }
         public virtual DbSet<CTHoaDon> CTHoaDons { get; set; }
         public virtual DbSet<CTKhuyenMai> CTKhuyenMais { get; set; }
         public virtual DbSet<CTPhieuNhap> CTPhieuNhaps { get; set; }
@@ -40,6 +41,7 @@ namespace QLBanHang_ASP.Net.Models
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
         public virtual DbSet<LoaiKH> LoaiKHs { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
+        public virtual DbSet<LuongNhanVien> LuongNhanViens { get; set; }
         public virtual DbSet<MauSac> MauSacs { get; set; }
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }

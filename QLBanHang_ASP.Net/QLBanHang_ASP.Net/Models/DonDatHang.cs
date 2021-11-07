@@ -17,7 +17,7 @@ namespace QLBanHang_ASP.Net.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DonDatHang()
         {
-            this.CTHoaDons = new HashSet<CTHoaDon>();
+            this.CTDonDatHangs = new HashSet<CTDonDatHang>();
         }
     
         public string MaDDH { get; set; }
@@ -29,7 +29,7 @@ namespace QLBanHang_ASP.Net.Models
         public Nullable<int> TrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTHoaDon> CTHoaDons { get; set; }
+        public virtual ICollection<CTDonDatHang> CTDonDatHangs { get; set; }
         public virtual KhachHang KhachHang { get; set; }
     }
 }

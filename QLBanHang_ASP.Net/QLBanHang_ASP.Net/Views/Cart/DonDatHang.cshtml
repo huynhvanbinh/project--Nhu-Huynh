@@ -23,7 +23,7 @@
     <div class="col-md-8 single-right-left simpleCart_shelfItem">
         <h3>Mã đơn hàng: @item.MaDDH</h3>
         <p><span class="item_price">Ngày đặt: @item.NgayDat</span></p>
-        @{ IEnumerable<CTHoaDon> lstCTDDH = (IEnumerable<CTHoaDon>)ViewBag.CTDDH;}
+        @{ IEnumerable<CTDonDatHang> lstCTDDH = (IEnumerable<CTDonDatHang>)ViewBag.CTDDH;}
         @{ int i = 0; int? tam = 0; int? tongtien = 0;}
         @foreach (var dh in lstCTDDH)
         {
@@ -35,7 +35,7 @@
             }
         }
         <p><span class="item_price">Tổng sản phẩm: @i</span></p>
-        @if (item.DaThanhToan == "No")
+        @if (item.DaThanhToan == "Thanh toán khi nhận hàng")
         {
             <p><sptian class="item_price">Tổng tiền thanh toán: @tongtien (thanh toán khi nhận hàng)</sptian></p>
         }
