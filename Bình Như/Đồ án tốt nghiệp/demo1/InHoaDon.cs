@@ -44,7 +44,6 @@ namespace demo1
             this.HoaDonTableAdapter.Fill(this.demoDataSet.HoaDon);
             txtMaChucVu.Text = mahd;
             HienThi();
-
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
