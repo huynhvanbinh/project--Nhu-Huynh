@@ -20,7 +20,6 @@ namespace QLBanHang_ASP.Net.Models
         public string MaSize { get; set; }
         public string MaMau { get; set; }
         public Nullable<int> SoLuong { get; set; }
-        public Nullable<int> GiaNhap { get; set; }
         public Nullable<int> TrangThai { get; set; }
     
         public virtual PhieuXuat PhieuXuat { get; set; }

@@ -81,7 +81,6 @@
     <Property Name="MaSize" Type="nvarchar" MaxLength="50" />
     <Property Name="MaMau" Type="nvarchar" MaxLength="50" />
     <Property Name="SoLuong" Type="int" />
-    <Property Name="GiaNhap" Type="int" />
     <Property Name="TrangThai" Type="int" />
   </EntityType>
   <EntityType Name="CTSanPham">
@@ -212,11 +211,11 @@
       <PropertyRef Name="MaNCC" />
     </Key>
     <Property Name="MaNCC" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="TenMCC" Type="nvarchar" MaxLength="50" />
     <Property Name="SDT" Type="nvarchar" MaxLength="50" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThai" Type="int" />
+    <Property Name="TenMCC" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -246,10 +245,9 @@
     </Key>
     <Property Name="MaPX" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Ngay" Type="nvarchar" MaxLength="50" />
-    <Property Name="ThanhToan" Type="int" />
     <Property Name="MaNV" Type="nvarchar" MaxLength="50" />
     <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
-    <Property Name="TrangThai" Type="int" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>

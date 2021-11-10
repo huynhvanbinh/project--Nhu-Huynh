@@ -4,33 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="901d78bd990a456ea90564692fa06207" Name="Diagram1">
+      <Diagram DiagramId="815837d7412c4216a2cd137794dbcdcc" Name="Diagram1">
         <EntityTypeShape EntityType="ShopQuanAoModel.ChamCong" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.ChucVu" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.CTDonDatHang" Width="1.5" PointX="16.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.CTDonDatHang" Width="1.5" PointX="16.5" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.CTHoaDon" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.CTKhuyenMai" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.CTPhieuNhap" Width="1.5" PointX="7.5" PointY="17.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.CTPhieuXuat" Width="1.5" PointX="10.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.CTPhieuXuat" Width="1.5" PointX="10.5" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.CTSanPham" Width="1.5" PointX="10.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.CuaHang" Width="1.5" PointX="6" PointY="21.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.DonDatHang" Width="1.5" PointX="14.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.GioHang" Width="1.5" PointX="14.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.CuaHang" Width="1.5" PointX="6" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.DonDatHang" Width="1.5" PointX="14.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.GioHang" Width="1.5" PointX="14.25" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.HoaDon" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.KhachHang" Width="1.5" PointX="12" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.KhuyenMai" Width="1.5" PointX="5.25" PointY="27.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.LoaiKH" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.KhachHang" Width="1.5" PointX="12" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.KhuyenMai" Width="1.5" PointX="5.25" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.LoaiKH" Width="1.5" PointX="9.75" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.LoaiSanPham" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.LuongNhanVien" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.MauSac" Width="1.5" PointX="8.25" PointY="21.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.NhanVien" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.PhieuNhap" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.PhieuXuat" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.PhieuXuat" Width="1.5" PointX="8.25" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.SanPham" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ShopQuanAoModel.Size" Width="1.5" PointX="8.25" PointY="23.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.sysdiagram" Width="1.5" PointX="9.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopQuanAoModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.sysdiagram" Width="1.5" PointX="9.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopQuanAoModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="24" IsExpanded="true" />
         <AssociationConnector Association="ShopQuanAoModel.FK_ChamCong_NhanVien" ManuallyRouted="false" />
         <AssociationConnector Association="ShopQuanAoModel.FK_NhanVien_ChucVu" ManuallyRouted="false" />
         <AssociationConnector Association="ShopQuanAoModel.FK_CTDonDatHang_DonDatHang" ManuallyRouted="false" />

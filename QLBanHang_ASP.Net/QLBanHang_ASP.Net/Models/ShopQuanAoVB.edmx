@@ -86,7 +86,6 @@
           <Property Name="MaSize" Type="nvarchar" MaxLength="50" />
           <Property Name="MaMau" Type="nvarchar" MaxLength="50" />
           <Property Name="SoLuong" Type="int" />
-          <Property Name="GiaNhap" Type="int" />
           <Property Name="TrangThai" Type="int" />
         </EntityType>
         <EntityType Name="CTSanPham">
@@ -217,11 +216,11 @@
             <PropertyRef Name="MaNCC" />
           </Key>
           <Property Name="MaNCC" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="TenMCC" Type="nvarchar" MaxLength="50" />
           <Property Name="SDT" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
           <Property Name="TrangThai" Type="int" />
+          <Property Name="TenMCC" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -251,10 +250,9 @@
           </Key>
           <Property Name="MaPX" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Ngay" Type="nvarchar" MaxLength="50" />
-          <Property Name="ThanhToan" Type="int" />
           <Property Name="MaNV" Type="nvarchar" MaxLength="50" />
           <Property Name="MaCH" Type="nvarchar" MaxLength="50" />
-          <Property Name="TrangThai" Type="int" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -774,7 +772,6 @@
           <Property Name="MaSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaMau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SoLuong" Type="Int32" />
-          <Property Name="GiaNhap" Type="Int32" />
           <Property Name="TrangThai" Type="Int32" />
           <NavigationProperty Name="PhieuXuat" Relationship="Self.FK_CTPhieuXuat_PhieuXuat" FromRole="CTPhieuXuat" ToRole="PhieuXuat" />
         </EntityType>
@@ -923,11 +920,11 @@
             <PropertyRef Name="MaNCC" />
           </Key>
           <Property Name="MaNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenMCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TrangThai" Type="Int32" />
+          <Property Name="TenMCC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -966,10 +963,9 @@
           </Key>
           <Property Name="MaPX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ngay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ThanhToan" Type="Int32" />
           <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TrangThai" Type="Int32" />
+          <Property Name="TrangThai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CTPhieuXuats" Relationship="Self.FK_CTPhieuXuat_PhieuXuat" FromRole="PhieuXuat" ToRole="CTPhieuXuat" />
           <NavigationProperty Name="CuaHang" Relationship="Self.FK_PhieuXuat_CuaHang" FromRole="PhieuXuat" ToRole="CuaHang" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_PhieuXuat_NhanVien" FromRole="PhieuXuat" ToRole="NhanVien" />
@@ -1496,7 +1492,6 @@
                 <ScalarProperty Name="MaSize" ColumnName="MaSize" />
                 <ScalarProperty Name="MaMau" ColumnName="MaMau" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1639,11 +1634,11 @@
             <EntityTypeMapping TypeName="ShopQuanAoModel.NhaCungCap">
               <MappingFragment StoreEntitySet="NhaCungCap">
                 <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
-                <ScalarProperty Name="TenMCC" ColumnName="TenMCC" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TenMCC" ColumnName="TenMCC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1676,7 +1671,6 @@
               <MappingFragment StoreEntitySet="PhieuXuat">
                 <ScalarProperty Name="MaPX" ColumnName="MaPX" />
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-                <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="MaCH" ColumnName="MaCH" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />

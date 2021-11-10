@@ -89,7 +89,6 @@
     <Property Name="MaSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaMau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
-    <Property Name="GiaNhap" Type="Int32" />
     <Property Name="TrangThai" Type="Int32" />
     <NavigationProperty Name="PhieuXuat" Relationship="Self.FK_CTPhieuXuat_PhieuXuat" FromRole="CTPhieuXuat" ToRole="PhieuXuat" />
   </EntityType>
@@ -238,11 +237,11 @@
       <PropertyRef Name="MaNCC" />
     </Key>
     <Property Name="MaNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TenMCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="Int32" />
+    <Property Name="TenMCC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -281,10 +280,9 @@
     </Key>
     <Property Name="MaPX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Ngay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="ThanhToan" Type="Int32" />
     <Property Name="MaNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="TrangThai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CTPhieuXuats" Relationship="Self.FK_CTPhieuXuat_PhieuXuat" FromRole="PhieuXuat" ToRole="CTPhieuXuat" />
     <NavigationProperty Name="CuaHang" Relationship="Self.FK_PhieuXuat_CuaHang" FromRole="PhieuXuat" ToRole="CuaHang" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK_PhieuXuat_NhanVien" FromRole="PhieuXuat" ToRole="NhanVien" />

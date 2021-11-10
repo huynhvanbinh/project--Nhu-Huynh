@@ -87,7 +87,6 @@
           <ScalarProperty Name="MaSize" ColumnName="MaSize" />
           <ScalarProperty Name="MaMau" ColumnName="MaMau" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="GiaNhap" ColumnName="GiaNhap" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -230,11 +229,11 @@
       <EntityTypeMapping TypeName="ShopQuanAoModel.NhaCungCap">
         <MappingFragment StoreEntitySet="NhaCungCap">
           <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
-          <ScalarProperty Name="TenMCC" ColumnName="TenMCC" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TenMCC" ColumnName="TenMCC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -267,7 +266,6 @@
         <MappingFragment StoreEntitySet="PhieuXuat">
           <ScalarProperty Name="MaPX" ColumnName="MaPX" />
           <ScalarProperty Name="Ngay" ColumnName="Ngay" />
-          <ScalarProperty Name="ThanhToan" ColumnName="ThanhToan" />
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="MaCH" ColumnName="MaCH" />
           <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
