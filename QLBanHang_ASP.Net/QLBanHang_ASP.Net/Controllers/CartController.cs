@@ -66,7 +66,7 @@ namespace QLBanHang_ASP.Net.Controllers
             {
                 makh = tv.MaKH;
             }
-            var lstgh= db.GioHangs.Where(n => n.MaKH == makh && n.TrinhTrangDonHang == "chờ xác nhận");
+            var lstgh= db.GioHangs.Where(n => n.MaKH == makh );
             ViewBag.SP = db.SanPhams;
             return View(lstgh);
         }
@@ -81,7 +81,7 @@ namespace QLBanHang_ASP.Net.Controllers
             {
                 ddh.MaKH = tv.MaKH;
             }
-            ddh.NgayDat = DateTime.Now.ToString("MM/dd/yyyy");
+            ddh.NgayDat = DateTime.Now.ToString("dd/MM/yyyy");
             ddh.TrangThaiGiaoHang = "chờ xử lý";
             ddh.DaHuy = 1;
             ddh.DaThanhToan = "No";
@@ -117,7 +117,7 @@ namespace QLBanHang_ASP.Net.Controllers
                 Session["GioHang"] = cthd;
             }
             db.SaveChanges();  
-            return RedirectToAction("XemGioHang");
+            return RedirectToAction("XemGioHang", "Cart");
         }
 
         public ActionResult DonDatHang()
@@ -128,7 +128,7 @@ namespace QLBanHang_ASP.Net.Controllers
             {
                 makh = tv.MaKH;
             }
-            var lstddh = db.DonDatHangs.Where(n => n.MaKH == makh && n.TrangThaiGiaoHang == "chờ xử lý");
+            var lstddh = db.DonDatHangs.Where(n => n.MaKH == makh);
             ViewBag.CTDDH = db.CTDonDatHangs;
             return View(lstddh);
         }
