@@ -3,10 +3,7 @@
 3. Phiếu nhập ( quản lý phiếu nhập hàng, tạo phiếu nhập)
 4. Phiếu xuất ( quản lý phiếu xuất hàng, tạo phiếu xuất - Kiểm tra sản phẩm đã đến chi nhánh hay chưa)
 5. Quản lý khuyến mãi sản phẩm
-6. Đặt hàng
-	6.1 Đặt hàng online ( web ASP.net)
-	6.2 Duyệt đơn hàng cho khách
-	6.3 Giao hàng đến đơn vị vận chuyển ( Giao Hàng Nhanh)
+6. Web
 7. Quản lý cửa hàng
 8. Quản lý nhà cung cấp
 9. Quản lý khách hàng
@@ -17,4 +14,7 @@
 14. Bán hàng
 15. Quản lý hóa đơn, chi tiết hóa đơn
 16. Đưa được database lên Somee ( miễn phí dung lượng database < 300Mb)
-17. Tạo được file setup, có thể triển khai cho doanh nghiệp cực nhỏ ( tiểu thương ở chợ)
+	https://somee.com/DOKA/DOU/DOMP/DOMSSQL/DOMSSQLDatabaseDefault.aspx?k1k3k5=f8ZyMWxz6c6F8aS5Sph8%2bpioHGL7y8T83uTMIpTOj3Q%3d
+	tk: TrangVu17
+	Mk: VanBinh1234
+17. Tạo được file setup, có thể triển khai cho doanh nghiệp nhỏ ( tiểu thương ở chợ)
